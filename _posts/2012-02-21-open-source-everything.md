@@ -14,17 +14,18 @@ I was committed to follow the golden rule:
 * HTML is for content
 * CSS is for layout
 
-Frameworks such as Bootstrap fail at keeping this dichotomy clear. Some examples:
+Frameworks such as [Bootstrap](http://twitter.github.com/bootstrap/) fail at keeping this dichotomy clear. Some examples:
 
-* `.span4`, `.offset4` to define column widths and column margins
-* `.navbar-fixed-top` class to apply an alternate style for the top bar
-* `.table-bordered` class for a table with borders
-* `.form-horizontal` class for a float left with right-alined labels
-* `.tabs-left`, `.tabs-right`, `.tabs-below` classes
+* `.span4` and `.offset4` to define column widths and column margins
+* `.navbar-fixed-top` to apply an alternate style for the top bar
+* `.table-bordered` for a table with borders
+* `.form-horizontal` for a float left with right-alined labels
+* `.tabs-left` `.tabs-right` `.tabs-below` classes
 
-All Bootstrap's classes aren't weighted with style instead of content description. Buttons are quite well implemented: variations use function, not color: `.btn-primary`, `.btn-info`, `.btn-warning`.
+All Bootstrap's classes aren't weighted with style instead of content description. Buttons are quite well implemented. Variations use function, not color:
+`.btn-primary` `.btn-info` `.btn-warning`.
 
-Anyway, let's not overlook the purpose of Bootstrap: quickly build a website, through HTML blocks and classes, *without* having to write one line of CSS. **Everything** is defined in the HTML. If you think about it, programmers only generate HTML code, and never touch the CSS file. So providing full control, from content to style, through HTML *only*, seems evident.
+Anyway, let's not overlook the purpose of Bootstrap: quickly build a website, through HTML blocks and classes, *without* having to write one line of CSS. **Everything** is defined in the HTML. If you think about it, programmers merely generate HTML code, and never touch the CSS file. So providing full control, from content to style, through HTML *only*, seems evident.
 
 If I had to launch a website rapidly, I could set it up quite quickly. But I'd still have to take some layout decisions: font, color, positioning, spacing, dimensions... And though I've done it more than a hundred times, it wouldn't be straightforward.
 
