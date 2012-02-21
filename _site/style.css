@@ -1,0 +1,46 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{ margin:0; padding:0;}
+table{ border-collapse:collapse; border-spacing:0;}
+fieldset,img{ border:0;}
+address,caption,cite,code,dfn,var{ font-style:normal; font-weight:normal;}
+ol,ul{ list-style:none;}
+caption,th{ text-align:left;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-weight:normal;}
+q:before,q:after{ content:'';}
+abbr,acronym{ border:0;}
+
+html{ overflow-x:hidden;}
+body{ background:white; color:#666; font-family:Verdana,Arial,sans-serif; font-size:13px; line-height:20px; margin:0 auto; width:750px;}
+a{ color:#c30; cursor:pointer; outline:none; position:relative; text-decoration:none;}
+a:active{ top:1px;}
+header,footer,footer a,article a:first-child,time,aside,aside a{ color:#ccc;}
+
+header,footer{ font-size:11px; line-height:15px; padding:40px 0;}
+header strong{ display:block; font-size:16px; line-height:20px;}
+footer{ clear:both;}
+footer a,aside a{ border-bottom:1px dotted #ccc;}
+footer a:hover,aside a:hover{ border-bottom:1px solid #666; color:#666;}
+
+h1{ font-weight:bold;}
+h1,h1 a{ color:#333;}
+h1 a:hover{ color:#c30;}
+
+nav,article{ float:left; position:relative; width:500px;}
+nav li{ margin-bottom:10px; position:relative;}
+nav li:last-child{ margin-bottom:0;}
+nav h1{ font-size:16px;}
+nav time{ top:1px;}
+
+article h1{ font-size:18px;  margin-bottom:10px;}
+article > a:first-child,time{ display:block; font-size:9px; position:absolute; right:520px; text-transform:uppercase; white-space:nowrap;}
+article p,article ul,article ol,article blockquote{ margin-bottom:10px;}
+article p:last-child{ margin-bottom:0;}
+article ul,article ol{ padding-left:20px;}
+article ul{ list-style-type:square;}
+article ol{ list-style-type:decimal;}
+article code{ background:#eee; border:1px solid #ccc; border-radius:3px; font-size:10px; padding:1px 3px; text-shadow:0 1px 0 #fff;}
+
+aside{ float:right; font-size:10px; line-height:15px; width:150px;}
+aside,aside a{ color:#999;}
+aside section{ margin-bottom:15px;}
+aside section:last-child{ margin-bottom:0;}
+aside h2{ font-weight:bold;}
