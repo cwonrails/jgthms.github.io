@@ -37,6 +37,7 @@ article ul,article ol{ padding-left:20px;}
 article ul{ list-style-type:square;}
 article ol{ list-style-type:decimal;}
 article code{ background:#073642; border-radius:3px; color:#b58900; font-size:11px; padding:0 3px 1px; white-space:nowrap;}
+article blockquote{ background:#073642; border-left:2px solid #586e75; color:#eee8d5; font-style:italic; padding:5px 10px;}
 
 aside{ float:right; font-size:10px; line-height:15px; width:150px;}
 aside section{ margin-bottom:15px;}
