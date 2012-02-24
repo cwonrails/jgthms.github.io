@@ -32,7 +32,7 @@ nav time{ position:absolute; right:510px; top:0; white-space:nowrap;}
 
 article h1{ font-size:18px;}
 article p,article ul,article ol,article blockquote{ margin-bottom:10px;}
-article p:last-child{ margin-bottom:0;}
+article p:last-child,article blockquote:last-child{ margin-bottom:0;}
 article ul,article ol{ padding-left:20px;}
 article ul{ list-style-type:square;}
 article ol{ list-style-type:decimal;}
