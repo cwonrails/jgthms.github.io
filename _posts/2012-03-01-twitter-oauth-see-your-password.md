@@ -18,4 +18,4 @@ I read these bullet points as:
 * things this application (bitly) can do
 * things this application can't do *but could have asked permission to*
 
-So, is this '*See your Twitter password*' a confirmation that the application won't be able to see your Twitter password, or is it an option? The latter would feel terribly unsecure.
+So, is this '*See your Twitter password*' a global confirmation that no application could *ever* see your Twitter password, or is it only this application's authorization setting? The latter would feel terribly unsecure.
