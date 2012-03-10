@@ -11,11 +11,11 @@ So I have to fall back on one of my nicknames, based upon my first: boomshanka (
 
 But again, username choice is often constrained by:
 
-* availabilty (jthomas, jeremythomas, jeremyt... always taken)
+* availability (jthomas, jeremythomas, jeremyt... always taken)
 * character count (boomy, bbx or jt, is almost always too short)
-* special characters (space, underscores)
-* required characters (rare)
+* special characters (spaces, underscores)
+* required characters (like numbers, rare though)
 
 So, among dozens of websites, I end up with a dozen of different logins which I would like my browser to remember, without compromising the security of having *also* my passwords stored.
 
-Even the solution of forcing users to use their email as login isn't viable because it's so fucking long to write. 
+Even the solution of forcing users to use their email as login isn't viable because it's terribly long to write. 
