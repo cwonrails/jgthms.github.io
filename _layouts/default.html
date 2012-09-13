@@ -73,6 +73,21 @@
           text: R(m)
         });
         c.html(a);
+
+        i = $('section:first-child p a');
+        i.hover(
+          function() {
+            $(this).data('title', $(this).attr('title')).removeAttr('title');
+            n = $(this).data('title');
+            s = $('<strong/>', {
+              text: n
+            });
+            h = $(this).parent().parent().find('h3');
+            h.append(' &rarr; ').append(s);
+          }, function() {
+            h.html('Portfolio');
+          }
+        );
         
     });
     </script>

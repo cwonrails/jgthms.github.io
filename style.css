@@ -31,6 +31,7 @@ time{ color:#93a1a1; display:block; font-size:.875rem; font-style:italic; margin
 aside{ left:60%; max-width:474px; position:absolute; top:80px; width:35%;}
 aside,aside a{ color:#93a1a1;}
 section{ clear:left; padding-bottom:2rem;}
+section h3 strong{ background:#859900; border-radius:4px; color:#fff; padding:3px 12px 5px; text-transform:none;}
 section:first-child p{ position:relative; right:4px;}
 section:first-child h3{ color:#859900;}
 section:nth-child(2) h3{ color:#b58900;}
