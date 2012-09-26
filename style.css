@@ -38,9 +38,8 @@ section:nth-child(2) h3{ color:#b58900;}
 section:nth-child(3) h3{ color:#268bd2;}
 section img{ border-color:transparent; display:block; float:left; margin:0;}
 section a:hover img{ border-color:#859900;}
-#h{ background:url(jt.png) no-repeat 0 0; height:25px; left:50px; overflow:hidden; position:absolute; text-indent:-290486px; top:40px; width:20px;}
-
 footer{ bottom:20px; font-size:12px; position:fixed; right:20px;}
+#h{ background:url(jt.png) no-repeat 0 0; height:25px; left:50px; overflow:hidden; position:absolute; text-indent:-290486px; top:40px; width:20px;}
 
 @media only screen and (max-width: 1040px) {
   h3{ font-size:.75rem;}
@@ -57,9 +56,9 @@ only screen and (min-device-pixel-ratio : 1.5) {
   body{ width:auto;}
   nav,article{ margin:0; max-width:none; padding:0 20px 20px 20px;}
   aside{ background:#fdf6e3; left:0; max-width:none; padding:20px; position:static; width:auto;}
+  footer{ background:#eee8d5; padding:20px; position:static;}
   #h{ left:20px; position:absolute;}
 }
-
 
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
@@ -69,4 +68,3 @@ only screen and (min-device-pixel-ratio : 1.5) {
   section img{ border:none; border-radius:0; margin-left:-3px;}
   #h{ left:20px; position:absolute;}
 }
-
