@@ -29,7 +29,7 @@ nav,article{ margin:0 auto; max-width:700px; padding:0 120px;}
 time{ color:#93a1a1; display:block; font-size:.875rem; font-style:italic; margin:.5em 0 2em;}
 
 aside{ left:60%; max-width:474px; position:absolute; top:80px; width:35%;}
-aside,aside a{ color:#93a1a1;}
+aside,aside a,footer,footer a{ color:#93a1a1;}
 section{ clear:left; padding-bottom:2rem;}
 section h3 strong{ background:#859900; border-radius:4px; color:#fff; padding:3px 12px 5px; text-transform:none;}
 section:first-child p{ position:relative; right:4px;}
@@ -39,6 +39,8 @@ section:nth-child(3) h3{ color:#268bd2;}
 section img{ border-color:transparent; display:block; float:left; margin:0;}
 section a:hover img{ border-color:#859900;}
 #h{ background:url(jt.png) no-repeat 0 0; height:25px; left:50px; overflow:hidden; position:absolute; text-indent:-290486px; top:40px; width:20px;}
+
+footer{ bottom:20px; font-size:12px; position:fixed; right:20px;}
 
 @media only screen and (max-width: 1040px) {
   h3{ font-size:.75rem;}
