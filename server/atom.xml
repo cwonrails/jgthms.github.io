@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Jeremy Thomas</title>
+ <link href="http://jgthms.com/atom.xml" rel="self"/>
+ <link href="http://jgthms.com/"/>
+ <updated>2012-10-05T00:16:59+02:00</updated>
+ <id>http://jgthms.com/</id>
+ <author>
+   <name>JT</name>
+   <email>bbxdesign@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Microsoft Com Not A Website</title>
+   <link href="http://jgthms.com/microsoft-com-not-a-website.html"/>
+   <updated>2012-10-05T00:00:00+02:00</updated>
+   <id>http://jgthms.com/microsoft-com-not-a-website</id>
+   <content type="html">&lt;p&gt;Microsoft.com is not a website&lt;/p&gt;
+
+&lt;p&gt;The new &lt;a href='http://www.microsoft.com/en-us/default.aspx'&gt;Microsoft.com&lt;/a&gt; is a success. There has been much praise about its responsiveness, its simplicity and its clarity. Well-deserved praise I must say, as the design led by Trent Walton&amp;#8217;s agency &lt;a href='http://paravelinc.com/'&gt;Paravel&lt;/a&gt; is very well-thought.&lt;/p&gt;
+
+&lt;p&gt;Problem is: it&amp;#8217;s not a website. It&amp;#8217;s a portal.&lt;/p&gt;
+
+&lt;p&gt;Considering it&amp;#8217;s a single page (and I&amp;#8217;ve done a &lt;a href='http://www.cambodiavietnam2010.com/'&gt;couple&lt;/a&gt; &lt;a href='http://reachthethrone.com/'&gt;myself&lt;/a&gt;), I can hardly call it a website. Wikipedia itself calls a website a &lt;em&gt;set of related web&lt;/em&gt;&lt;em&gt;pages&lt;/em&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Definitions aside, I have yet to find a link on MS.com that ends up on a page using the &lt;em&gt;same&lt;/em&gt; layout. I&amp;#8217;ve tried the navigation menu, the big slides, the footer links&amp;#8230; I wasn&amp;#8217;t able to stay on the same website (which would have turned it in one actually).&lt;/p&gt;
+
+&lt;p&gt;Clearly, the role of a navigation menu is to provide &lt;strong&gt;hierarchy&lt;/strong&gt;, offering a snapshot of the sitemap, but most of all act as a &lt;strong&gt;guide&lt;/strong&gt; to refer to throughout &lt;em&gt;our&lt;/em&gt; navigation. What&amp;#8217;s the point in providing a menu when actually using it makes it suddenly disappear?&lt;/p&gt;
+
+&lt;p&gt;Here are the 2 options:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;build a full-scale Microsoft website that is consistent throughout its products&lt;/li&gt;
+
+&lt;li&gt;make Microsoft.com look like what it really is: a portal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Obviously, the latter is &lt;em&gt;not&lt;/em&gt; recommended, considering how portals are outdated and not user-friendly, and considering the great design MS can now work with as a solid base. So, I&amp;#8217;ll wait for a complete rebuild of their website(s). And I secretly hope it&amp;#8217;s already in the pipeline.&lt;/p&gt;
+
+&lt;p&gt;The Microsoft.com redesign currently looks like a great step forward, but it&amp;#8217;s not as long as it remains half-baked as it is. And providing a &amp;#8216;Feedback&amp;#8217; button may be a hint of what not to do.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Firefox's wrong textarea resizing</title>
+   <link href="http://jgthms.com/firefox-wrong-textarea-resizing.html"/>
+   <updated>2012-09-13T00:00:00+02:00</updated>
+   <id>http://jgthms.com/firefox-wrong-textarea-resizing</id>
+   <content type="html">&lt;p&gt;We, as web designers, tend to dread styling textareas (I know I do). The line-height adjustments can be tricky, the font-family is never inherited, the scrollbar has to be taken into account and padding can mess things up as well. Furthermore, making a textarea graphically appealing can be challenging, considering the sometimes tricky background styling reactions. So we either go for a minimalist textarea (plain background color, no border), or venture to design a gorgeous 3D shadowed rounded gradient-colored textarea box that is meant to look desirable but not necessarily usable.&lt;/p&gt;
+
+&lt;p&gt;When Google Chrome came out 4 years ago, among the top-located tabs, omnibar and dazzling speed, what new feature that struck me was the default ability for a textarea to be resized at will by the user. It was a small but oh so useful little innovation that proved to be a huge improvement in user experience.&lt;/p&gt;
+
+&lt;p&gt;If we didn&amp;#8217;t choose to go for the simple minimalist styling, chances are any resizing of the textarea was doomed to break our design. Should we then define a &lt;code&gt;resize: none&lt;/code&gt; on our textareas and risk infuriating our users? Definitely, no.&lt;/p&gt;
+
+&lt;p&gt;Luckily, CSS 3 support spread quite quickly and allowed us to resort to its new fancy properties and style shadows, rounded corners and gradients dynamically, without using any fixed image.&lt;/p&gt;
+
+&lt;p&gt;Firefox was keen enough to implement textarea resizing as well. But here&amp;#8217;s the problem: Chrome (by default) only allows users to &lt;strong&gt;expand&lt;/strong&gt; the textarea, from whatever size the designer initially coded. On the other hand, Firefox &lt;em&gt;also&lt;/em&gt; allows users to &lt;strong&gt;reduce&lt;/strong&gt; the textarea size. As far as I know, I&amp;#8217;ve never encountered a user who was eager to reduce the size of a textarea. Quite the opposite actually: designers (myself included) often implement ridiculously small textareas to fit in their layout, which brings the user to feel restricted by this decision.&lt;/p&gt;
+
+&lt;p&gt;One workaround is to set both &lt;code&gt;width&lt;/code&gt; &lt;strong&gt;and&lt;/strong&gt; &lt;code&gt;min-width&lt;/code&gt; (as well for height) at the same value to prevent further reduction. But I wish Firefox was smart enough to include this behavior as a default.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>iA Writer's new document</title>
+   <link href="http://jgthms.com/ia-writer-new-document.html"/>
+   <updated>2012-03-16T00:00:00+01:00</updated>
+   <id>http://jgthms.com/ia-writer-new-document</id>
+   <content type="html">&lt;p&gt;iA Writer for iPhone &lt;a href='http://www.iawriter.com/'&gt;just came out&lt;/a&gt;. 0,79€ for both iPhone &lt;em&gt;and&lt;/em&gt; iPad (that I plan on upgrading to iOS 5) apps? Instant download!&lt;/p&gt;
+
+&lt;p&gt;I haven&amp;#8217;t used it intensively yet but one thing that &lt;em&gt;really&lt;/em&gt; bothered me (or at least surprised me for its lack of common sense) is that taping the &amp;#8221;+&amp;#8221; icon to create new document does &lt;strong&gt;just&lt;/strong&gt; that. And I mean &lt;em&gt;only&lt;/em&gt; that: it adds a new .txt file called &amp;#8220;Document&amp;#8221; &lt;em&gt;but doesn&amp;#8217;t open it&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;In what context would you want to create a document without the intent to actually begin writing in it ??&lt;/p&gt;
+
+&lt;p&gt;I personaly don&amp;#8217;t plan on filling my iCloud space with empty 0.1kb-sized documents.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>CopyPasteCharacter is unusable</title>
+   <link href="http://jgthms.com/copypastecharacter-unusable.html"/>
+   <updated>2012-03-12T00:00:00+01:00</updated>
+   <id>http://jgthms.com/copypastecharacter-unusable</id>
+   <content type="html">&lt;p&gt;I used to love &lt;a href='http://copypastecharacter.com/'&gt;CopyPasteCharacter&lt;/a&gt; because it provided me special but useful characters that are hard to generate (especially since I mainly work on Windows).&lt;/p&gt;
+
+&lt;p&gt;The ones I sometimes used were:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;#8594; right arrow&lt;/li&gt;
+
+&lt;li&gt;&amp;#8220; double quotes&lt;/li&gt;
+
+&lt;li&gt;&amp;#9829; heart&lt;/li&gt;
+
+&lt;li&gt;&amp;#9835; notes&lt;/li&gt;
+
+&lt;li&gt;&amp;#8800; different&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;among others. But because I primarily write in French, my text contains a fair amount of accents: è, à, û, ô, î, and also ç, which are very common. My issue was with the capitalized version of these characters, even though a French keyboard (AZERTY), through its different layout (which modifies a dozen of keys) gives access to more &lt;em&gt;popular&lt;/em&gt; French characters.&lt;/p&gt;
+
+&lt;p&gt;So, whenever I needed a &amp;#192;, &amp;#199; or &amp;#201;, I navigated to CopyPasteCharacter where these 3 characters (among others) were directly provided on the home page.&lt;/p&gt;
+
+&lt;p&gt;The website&amp;#8217;s new disposition has killed this workflow because the characters are now divided in sets. The problem is that the default set (called &lt;em&gt;Our favorite set&lt;/em&gt;), although nice-looking, consists of a lot of unnecessary characters. A pencil? A doubled male sign? A conical taper? An asterism???&lt;/p&gt;
+
+&lt;p&gt;Anyway, I&amp;#8217;ve got 3 options now:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;browse&lt;/strong&gt; for a character, but the &amp;#8220;Alphabetical order&amp;#8221; is &lt;em&gt;full&lt;/em&gt; of noise. &lt;img alt='CopyPasteCharacter noise' src='/i/copypastecharacter-noise.png' /&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;strong&gt;search&lt;/strong&gt; for a character, but it&amp;#8217;s a slow process and usually results in the same amount of noise.&lt;/li&gt;
+
+&lt;li&gt;&lt;strong&gt;create a set&lt;/strong&gt;. &lt;em&gt;Oh dear&amp;#8230;&lt;/em&gt; &lt;a href='/remember-login-not-password.html'&gt;Another login&lt;/a&gt;&amp;#8230; And I often need those special characters when I&amp;#8217;m &lt;em&gt;not&lt;/em&gt; at home.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Maybe I&amp;#8217;m the only one annoyed by this new setup. It&amp;#8217;s just that I used to be only two clicks away from copying the character I needed, while now it has become a dreadful process.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Remember login, not password</title>
+   <link href="http://jgthms.com/remember-login-not-password.html"/>
+   <updated>2012-03-06T00:00:00+01:00</updated>
+   <id>http://jgthms.com/remember-login-not-password</id>
+   <content type="html">&lt;p&gt;I wish browsers would prompt me, not only to remember my password (which actually remember &lt;em&gt;both&lt;/em&gt; login and password), but also my login &lt;em&gt;only&lt;/em&gt;. The thing is, I don&amp;#8217;t mind having my login stored in my browser (and consequentially giving other users potential access to) because it can be (and sometimes is) publically known.&lt;/p&gt;
+
+&lt;p&gt;The problem I encounter is due to my quite common name: Jeremy Thomas. I&amp;#8217;m French, but this name is not only common in France but in English-speaking countries too, which are more prone to hold early users of web apps, and thus early &lt;em&gt;subscribers&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;So I have to fall back on one of my nicknames, based upon my first: boomshanka (which is also widely-adopted). These are boomy, boomybx, bbx&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;But again, username choice is often constrained by:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;availability (jthomas, jeremythomas, jeremyt&amp;#8230; always taken)&lt;/li&gt;
+
+&lt;li&gt;character count (boomy, bbx or jt, is almost always too short)&lt;/li&gt;
+
+&lt;li&gt;special characters (spaces, underscores)&lt;/li&gt;
+
+&lt;li&gt;required characters (like numbers, rare though)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, among dozens of websites, I end up with a dozen of different logins which I would like my browser to remember, without compromising the security of having &lt;em&gt;also&lt;/em&gt; my passwords stored.&lt;/p&gt;
+
+&lt;p&gt;Even the solution of forcing users to use their email as login isn&amp;#8217;t viable because it&amp;#8217;s terribly long to write.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Twitter OAuth 'See your password'</title>
+   <link href="http://jgthms.com/twitter-oauth-see-your-password.html"/>
+   <updated>2012-03-01T00:00:00+01:00</updated>
+   <id>http://jgthms.com/twitter-oauth-see-your-password</id>
+   <content type="html">&lt;p&gt;I love OAuth. I love it because I tend to register with many different usernames, many different passwords (and variations of them), many different emails (with GMail&amp;#8217;s dot trick), so I end up spending more time logging in than actually signing up.&lt;/p&gt;
+
+&lt;p&gt;To efficiently use OAuth, you need a service to which you&amp;#8217;re constantly logged in. Twitter is one of them. And because it&amp;#8217;s widely adopted among users, it&amp;#8217;s widely adopted among developers setting up an authentification system for their web app.&lt;/p&gt;
+
+&lt;p&gt;OAuth not only provides access to your account, but &lt;em&gt;different&lt;/em&gt; levels of access. And although OAuth seems more secure and rapid than an old-school sign up, I still read &lt;em&gt;what&lt;/em&gt; the application I&amp;#8217;m granting access to can do with my Twitter account.&lt;/p&gt;
+
+&lt;p&gt;What often strikes me when I authenticate via Twitter is what the third-party application &lt;em&gt;can&amp;#8217;t&lt;/em&gt; do:&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Twitter OAuth See your Twitter password' src='/i/twitter-see-your-password.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;I read these bullet points as:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;things this application (bitly) can do&lt;/li&gt;
+
+&lt;li&gt;things this application can&amp;#8217;t do &lt;em&gt;but could have asked permission to&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, is this &amp;#8217;&lt;em&gt;See your Twitter password&lt;/em&gt;&amp;#8217; a global confirmation that no application could &lt;em&gt;ever&lt;/em&gt; see your Twitter password, or is it only this application&amp;#8217;s authorization setting? The latter would feel terribly unsecure.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Tumblr and the source problem</title>
+   <link href="http://jgthms.com/tumblr-source-problem.html"/>
+   <updated>2012-02-28T00:00:00+01:00</updated>
+   <id>http://jgthms.com/tumblr-source-problem</id>
+   <content type="html">&lt;p&gt;Tumblr is more a community than a blogging engine.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;#8217;re registered on WordPress.com, chances are you &lt;em&gt;write&lt;/em&gt; a blog. Whether you&amp;#8217;re a literature fan, a passionate photographer or a technology enthousiast, you &lt;strong&gt;produce&lt;/strong&gt; content for others to read. And those readers aren&amp;#8217;t necessarily (and probably aren&amp;#8217;t) registered to WordPress.com because consuming this content doesn&amp;#8217;t require to be. You either subscribe to the RSS feed or visit the blog daily. You&amp;#8217;re a visitor.&lt;/p&gt;
+
+&lt;p&gt;Tumblr holds the same features, but adds two new ones:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the Dashboard&lt;/li&gt;
+
+&lt;li&gt;the Reblog&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Dashboard is like a homemade RSS reader: you follow Tumblr blogs and find them aggregated on your Tumblr home page. It&amp;#8217;s a &lt;strong&gt;consumer&lt;/strong&gt; feature. The only difference with a regular RSS reader is that you&amp;#8217;re limited to Tumblr blogs. But because there is that second feature, users don&amp;#8217;t feel the lack.&lt;/p&gt;
+
+&lt;p&gt;The Reblog is quite particular: you produce content on your blog without producing &lt;em&gt;any&lt;/em&gt;. I considerer it a product because although your blog will publish it as a duplicate, any visitor of yours will probably only see this version and will consume it as though you were its creator. So Reblogging is &lt;em&gt;production after consumption&lt;/em&gt;: you&amp;#8217;ve seen something on a Tumblr blog, you republish it on your own. It&amp;#8217;s not a simple link: it&amp;#8217;s a complete new post.&lt;/p&gt;
+
+&lt;p&gt;The only difference with a &lt;em&gt;normal&lt;/em&gt; post is the presence of a source link (usually preceded by the word &amp;#8220;Via&amp;#8221;). This source link is the Tumblr post from which this Reblog comes from, but it&amp;#8217;s not necessarily the &lt;strong&gt;original&lt;/strong&gt; post. And when, after having clicked half a dozen of &amp;#8220;via&amp;#8221; links you finally end up on the original post, you still don&amp;#8217;t know the &lt;strong&gt;source&lt;/strong&gt;. Why? Because posting on Tumblr doesn&amp;#8217;t require to. This attitude is emphasized by the use of the bookmarklet, which grabs any image of the current page and uploads it anonymously on Tumblr&amp;#8217;s servers.&lt;/p&gt;
+
+&lt;p&gt;So when I find a beautiful picture of which I want to find similar ones, and I finally reach the source, I still don&amp;#8217;t know where it comes from, because the source according to Tumblr is the original post, not the content&amp;#8217;s origin.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Solarized Jekyll Theme</title>
+   <link href="http://jgthms.com/solarized-jekyll-theme.html"/>
+   <updated>2012-02-24T00:00:00+01:00</updated>
+   <id>http://jgthms.com/solarized-jekyll-theme</id>
+   <content type="html">&lt;p&gt;As I&amp;#8217;ve decided to design this blog without any image nor CSS 3 fancy feature (gradients &amp;amp; shadows particularly), I had to come up with a perfect color scheme, pleasing to read and visually balanced.&lt;/p&gt;
+
+&lt;p&gt;There are &lt;em&gt;millions&lt;/em&gt; of predefined color &lt;a href='http://kuler.adobe.com/'&gt;palettes&lt;/a&gt; &lt;a href='http://www.colourlovers.com/palettes'&gt;available&lt;/a&gt; to download. And I&amp;#8217;m bad at browsing and taking a quick decision with a whole world of options ahead of me.&lt;/p&gt;
+
+&lt;p&gt;So I had to find that &lt;em&gt;one&lt;/em&gt; particular color theme that makes you forget all the others and regret not having found it before.&lt;/p&gt;
+
+&lt;p&gt;When looking for a performant JavaScript syntax highlighter, I discovered the exceptional &lt;a href='http://softwaremaniacs.org/soft/highlight/en/'&gt;highlight.js&lt;/a&gt; (auto-detects the language, needs only 2 files) which provides a handfull of color styles. And one of them instantly caught my eye: &lt;strong&gt;&lt;a href='http://ethanschoonover.com/solarized'&gt;Solarized&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Its tagline reads as:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Precision colors for machines and people&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Precise, it is. Balanced, too. And gorgeous, hell yeah! It&amp;#8217;s a color palette meant for terminal and gui applications, and works incredibly well as a theme for IDEs &amp;amp; text editors.&lt;/p&gt;
+
+&lt;p&gt;Why not make use for it in a &lt;em&gt;blog&lt;/em&gt; theme?&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Bootstrap is for programmers</title>
+   <link href="http://jgthms.com/bootstrap-is-for-programmers.html"/>
+   <updated>2012-02-21T00:00:00+01:00</updated>
+   <id>http://jgthms.com/bootstrap-is-for-programmers</id>
+   <content type="html">&lt;p&gt;I am no programmer.&lt;/p&gt;
+
+&lt;p&gt;My work as a web designer consisted of graphic design and HTML / CSS templates. I never used any framework or IDE: I wrote every line using Notepad++. This light setup forced me to be very efficient in my HTML markup and CSS syntax.&lt;/p&gt;
+
+&lt;p&gt;In HTML, I used the fewest tags possible, or should I say, &lt;em&gt;necessary&lt;/em&gt;. Classes were used with parcimony, but provided enough flexibility for the programmer who would use my code. Names used for classes described the content, not the style applied.&lt;/p&gt;
+
+&lt;p&gt;I was committed to follow the golden rule:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTML is for content&lt;/li&gt;
+
+&lt;li&gt;CSS is for layout&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Frameworks such as &lt;a href='http://twitter.github.com/bootstrap/'&gt;Bootstrap&lt;/a&gt; fail at keeping this dichotomy clear. Some examples:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.span4&lt;/code&gt; and &lt;code&gt;.offset4&lt;/code&gt; to define column widths and column margins&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;.navbar-fixed-top&lt;/code&gt; to apply an alternate style for the top bar&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;.table-bordered&lt;/code&gt; for a table with borders&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;.form-horizontal&lt;/code&gt; for a float left with right-alined labels&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;.tabs-left&lt;/code&gt; &lt;code&gt;.tabs-right&lt;/code&gt; &lt;code&gt;.tabs-below&lt;/code&gt; classes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All Bootstrap&amp;#8217;s classes aren&amp;#8217;t weighted with style instead of content description. Buttons are quite well implemented. Variations use function, not color: &lt;code&gt;.btn-primary&lt;/code&gt; &lt;code&gt;.btn-info&lt;/code&gt; &lt;code&gt;.btn-warning&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Anyway, let&amp;#8217;s not overlook the purpose of Bootstrap: quickly build a website, through HTML blocks and classes, &lt;em&gt;without&lt;/em&gt; having to write one line of CSS. &lt;strong&gt;Everything&lt;/strong&gt; is defined in the HTML. If you think about it, programmers merely generate HTML code, and never touch the CSS file. So providing full control, from content to style, through HTML &lt;em&gt;only&lt;/em&gt;, seems evident.&lt;/p&gt;
+
+&lt;p&gt;If I had to launch a website rapidly, I could set it up quite quickly. But I&amp;#8217;d still have to take some layout decisions: font, color, positioning, spacing, dimensions&amp;#8230; And though I&amp;#8217;ve done it more than a hundred times, it wouldn&amp;#8217;t be straightforward.&lt;/p&gt;
+
+&lt;p&gt;So I&amp;#8217;d set aside my wish to keep content apart from layout and use Bootstrap, because it&amp;#8217;s incredibly well designed.&lt;/p&gt;</content>
+ </entry>
+ 
+ 
+</feed>

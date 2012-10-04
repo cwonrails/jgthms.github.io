@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<title>Firefox's wrong textarea resizing</title>
+    <meta name="author" content="J.Thomas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="alternate" href="/atom.xml" type="application/atom+xml" title="jgthms">
+		<link rel="icon" href="favicon.ico">
+	</head>
+  <body>
+    <a id="h" href="/">JT</a>
+    <article data-id="firefox-wrong-textarea-resizing">
+  <h1>Firefox's wrong textarea resizing</h1>
+  <time>13 Sep 2012</time>
+  <p>We, as web designers, tend to dread styling textareas (I know I do). The line-height adjustments can be tricky, the font-family is never inherited, the scrollbar has to be taken into account and padding can mess things up as well. Furthermore, making a textarea graphically appealing can be challenging, considering the sometimes tricky background styling reactions. So we either go for a minimalist textarea (plain background color, no border), or venture to design a gorgeous 3D shadowed rounded gradient-colored textarea box that is meant to look desirable but not necessarily usable.</p>
+
+<p>When Google Chrome came out 4 years ago, among the top-located tabs, omnibar and dazzling speed, what new feature that struck me was the default ability for a textarea to be resized at will by the user. It was a small but oh so useful little innovation that proved to be a huge improvement in user experience.</p>
+
+<p>If we didn&#8217;t choose to go for the simple minimalist styling, chances are any resizing of the textarea was doomed to break our design. Should we then define a <code>resize: none</code> on our textareas and risk infuriating our users? Definitely, no.</p>
+
+<p>Luckily, CSS 3 support spread quite quickly and allowed us to resort to its new fancy properties and style shadows, rounded corners and gradients dynamically, without using any fixed image.</p>
+
+<p>Firefox was keen enough to implement textarea resizing as well. But here&#8217;s the problem: Chrome (by default) only allows users to <strong>expand</strong> the textarea, from whatever size the designer initially coded. On the other hand, Firefox <em>also</em> allows users to <strong>reduce</strong> the textarea size. As far as I know, I&#8217;ve never encountered a user who was eager to reduce the size of a textarea. Quite the opposite actually: designers (myself included) often implement ridiculously small textareas to fit in their layout, which brings the user to feel restricted by this decision.</p>
+
+<p>One workaround is to set both <code>width</code> <strong>and</strong> <code>min-width</code> (as well for height) at the same value to prevent further reduction. But I wish Firefox was smart enough to include this behavior as a default.</p>
+</article>
+
+    <aside>
+      <section>
+        <h3>Portfolio</h3>
+        <p>
+          <a href="http://www.cambodiavietnam2010.com/" title="Cambodia Vietnam 2010"><img src="i/cambodia-vietnam.png" alt="Cambodia Vietnam 2010"></a>
+          <a href="http://life.jthom.as" title="JThomas"><img src="i/jthomas.png" alt="JT"></a>
+          <a href="http://australietrip.fr" title="Australie Trip"><img src="i/australie-trip.png" alt="Australie Trip"></a>
+          <a href="http://www.editions-magellan.com/" title="Editions Magellan"><img src="i/magellan.png" alt="Editions Magellan"></a>
+          <a href="http://wordpress.bbxdesign.com/" title="Le Tutoriel WordPress"><img src="i/wordpress.png" alt="WordPress"></a>
+          <a href="http://bbxdesign.com/" title="bbxdesign"><img src="i/bbxdesign.png" alt="bbxdesign"></a>
+        </p>
+        <div style="clear:left"></div>
+      </section>
+      <section>
+        <h3>About</h3>
+        <p>I'm a former front-end developer and graphic designer. I quit my job in summer 2011 but remain connected to the web world and occasionally write about it.<br>
+        You can also <a href="/atom.xml">subscribe to the RSS feed</a>.</p>
+      </section>
+      <section>
+        <h3>Contact</h3>
+        <p id="c">Please enable JavaScript to view my email.</p>
+      </section>
+    </aside>
+    <footer>
+      Design <em>highly</em> inspired by <a href="http://ianstormtaylor.com/">Ian Storm Taylor</a>.
+    </footer>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    
+        R = function(s) {
+            return R13(R5(s));
+        }
+
+        R5 = function(s) {
+            var b = [],c,i = s.length,a = '0'.charCodeAt(),z = a + 10;
+            while (i--) { 
+                c = s.charCodeAt(i);
+                if (c >= a && c < z) { b[i] = String.fromCharCode(((c - a + 5) % (10)) + a); }
+                else { b[i] = s.charAt(i); }
+            }
+            return b.join('');
+        }
+
+        R13 = function(s) {
+            var b = [],c,i = s.length,a = 'a'.charCodeAt(),z = a + 26,A = 'A'.charCodeAt(),Z = A + 26;
+            while (i--) {
+                c = s.charCodeAt(i);
+                if (c >= a && c < z) { b[i] = String.fromCharCode(((c - a + 13) % (26)) + a); }
+                else if (c >= A && c < Z) { b[i] = String.fromCharCode(((c - A + 13) % (26)) + A); }
+                else { b[i] = s.charAt(i); }
+            }
+            return b.join('');
+        }
+        
+        c = $('#c');
+        t = 'znvygb:'
+        m = 'ookqrfvta@tznvy.pbz';
+        a = $('<a/>', {
+          href: R(t+m),
+          title: 'Contact me',
+          text: R(m)
+        });
+        c.html(a);
+
+        i = $('section:first-child p a');
+        i.hover(
+          function() {
+            $(this).data('title', $(this).attr('title')).removeAttr('title');
+            n = $(this).data('title');
+            s = $('<strong/>', {
+              text: n
+            });
+            h = $(this).parent().parent().find('h3');
+            h.append(' &rarr; ').append(s);
+          }, function() {
+            h.html('Portfolio');
+          }
+        );
+        
+    });
+    </script>
+  </body>
+</html>

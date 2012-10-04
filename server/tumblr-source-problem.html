@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<title>Tumblr and the source problem</title>
+    <meta name="author" content="J.Thomas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="alternate" href="/atom.xml" type="application/atom+xml" title="jgthms">
+		<link rel="icon" href="favicon.ico">
+	</head>
+  <body>
+    <a id="h" href="/">JT</a>
+    <article data-id="tumblr-source-problem">
+  <h1>Tumblr and the source problem</h1>
+  <time>28 Feb 2012</time>
+  <p>Tumblr is more a community than a blogging engine.</p>
+
+<p>If you&#8217;re registered on WordPress.com, chances are you <em>write</em> a blog. Whether you&#8217;re a literature fan, a passionate photographer or a technology enthousiast, you <strong>produce</strong> content for others to read. And those readers aren&#8217;t necessarily (and probably aren&#8217;t) registered to WordPress.com because consuming this content doesn&#8217;t require to be. You either subscribe to the RSS feed or visit the blog daily. You&#8217;re a visitor.</p>
+
+<p>Tumblr holds the same features, but adds two new ones:</p>
+
+<ul>
+<li>the Dashboard</li>
+
+<li>the Reblog</li>
+</ul>
+
+<p>The Dashboard is like a homemade RSS reader: you follow Tumblr blogs and find them aggregated on your Tumblr home page. It&#8217;s a <strong>consumer</strong> feature. The only difference with a regular RSS reader is that you&#8217;re limited to Tumblr blogs. But because there is that second feature, users don&#8217;t feel the lack.</p>
+
+<p>The Reblog is quite particular: you produce content on your blog without producing <em>any</em>. I considerer it a product because although your blog will publish it as a duplicate, any visitor of yours will probably only see this version and will consume it as though you were its creator. So Reblogging is <em>production after consumption</em>: you&#8217;ve seen something on a Tumblr blog, you republish it on your own. It&#8217;s not a simple link: it&#8217;s a complete new post.</p>
+
+<p>The only difference with a <em>normal</em> post is the presence of a source link (usually preceded by the word &#8220;Via&#8221;). This source link is the Tumblr post from which this Reblog comes from, but it&#8217;s not necessarily the <strong>original</strong> post. And when, after having clicked half a dozen of &#8220;via&#8221; links you finally end up on the original post, you still don&#8217;t know the <strong>source</strong>. Why? Because posting on Tumblr doesn&#8217;t require to. This attitude is emphasized by the use of the bookmarklet, which grabs any image of the current page and uploads it anonymously on Tumblr&#8217;s servers.</p>
+
+<p>So when I find a beautiful picture of which I want to find similar ones, and I finally reach the source, I still don&#8217;t know where it comes from, because the source according to Tumblr is the original post, not the content&#8217;s origin.</p>
+</article>
+
+    <aside>
+      <section>
+        <h3>Portfolio</h3>
+        <p>
+          <a href="http://www.cambodiavietnam2010.com/" title="Cambodia Vietnam 2010"><img src="i/cambodia-vietnam.png" alt="Cambodia Vietnam 2010"></a>
+          <a href="http://life.jthom.as" title="JThomas"><img src="i/jthomas.png" alt="JT"></a>
+          <a href="http://australietrip.fr" title="Australie Trip"><img src="i/australie-trip.png" alt="Australie Trip"></a>
+          <a href="http://www.editions-magellan.com/" title="Editions Magellan"><img src="i/magellan.png" alt="Editions Magellan"></a>
+          <a href="http://wordpress.bbxdesign.com/" title="Le Tutoriel WordPress"><img src="i/wordpress.png" alt="WordPress"></a>
+          <a href="http://bbxdesign.com/" title="bbxdesign"><img src="i/bbxdesign.png" alt="bbxdesign"></a>
+        </p>
+        <div style="clear:left"></div>
+      </section>
+      <section>
+        <h3>About</h3>
+        <p>I'm a former front-end developer and graphic designer. I quit my job in summer 2011 but remain connected to the web world and occasionally write about it.<br>
+        You can also <a href="/atom.xml">subscribe to the RSS feed</a>.</p>
+      </section>
+      <section>
+        <h3>Contact</h3>
+        <p id="c">Please enable JavaScript to view my email.</p>
+      </section>
+    </aside>
+    <footer>
+      Design <em>highly</em> inspired by <a href="http://ianstormtaylor.com/">Ian Storm Taylor</a>.
+    </footer>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    
+        R = function(s) {
+            return R13(R5(s));
+        }
+
+        R5 = function(s) {
+            var b = [],c,i = s.length,a = '0'.charCodeAt(),z = a + 10;
+            while (i--) { 
+                c = s.charCodeAt(i);
+                if (c >= a && c < z) { b[i] = String.fromCharCode(((c - a + 5) % (10)) + a); }
+                else { b[i] = s.charAt(i); }
+            }
+            return b.join('');
+        }
+
+        R13 = function(s) {
+            var b = [],c,i = s.length,a = 'a'.charCodeAt(),z = a + 26,A = 'A'.charCodeAt(),Z = A + 26;
+            while (i--) {
+                c = s.charCodeAt(i);
+                if (c >= a && c < z) { b[i] = String.fromCharCode(((c - a + 13) % (26)) + a); }
+                else if (c >= A && c < Z) { b[i] = String.fromCharCode(((c - A + 13) % (26)) + A); }
+                else { b[i] = s.charAt(i); }
+            }
+            return b.join('');
+        }
+        
+        c = $('#c');
+        t = 'znvygb:'
+        m = 'ookqrfvta@tznvy.pbz';
+        a = $('<a/>', {
+          href: R(t+m),
+          title: 'Contact me',
+          text: R(m)
+        });
+        c.html(a);
+
+        i = $('section:first-child p a');
+        i.hover(
+          function() {
+            $(this).data('title', $(this).attr('title')).removeAttr('title');
+            n = $(this).data('title');
+            s = $('<strong/>', {
+              text: n
+            });
+            h = $(this).parent().parent().find('h3');
+            h.append(' &rarr; ').append(s);
+          }, function() {
+            h.html('Portfolio');
+          }
+        );
+        
+    });
+    </script>
+  </body>
+</html>

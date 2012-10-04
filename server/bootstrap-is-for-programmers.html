@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<title>Bootstrap is for programmers</title>
+    <meta name="author" content="J.Thomas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="alternate" href="/atom.xml" type="application/atom+xml" title="jgthms">
+		<link rel="icon" href="favicon.ico">
+	</head>
+  <body>
+    <a id="h" href="/">JT</a>
+    <article data-id="bootstrap-is-for-programmers">
+  <h1>Bootstrap is for programmers</h1>
+  <time>21 Feb 2012</time>
+  <p>I am no programmer.</p>
+
+<p>My work as a web designer consisted of graphic design and HTML / CSS templates. I never used any framework or IDE: I wrote every line using Notepad++. This light setup forced me to be very efficient in my HTML markup and CSS syntax.</p>
+
+<p>In HTML, I used the fewest tags possible, or should I say, <em>necessary</em>. Classes were used with parcimony, but provided enough flexibility for the programmer who would use my code. Names used for classes described the content, not the style applied.</p>
+
+<p>I was committed to follow the golden rule:</p>
+
+<ul>
+<li>HTML is for content</li>
+
+<li>CSS is for layout</li>
+</ul>
+
+<p>Frameworks such as <a href='http://twitter.github.com/bootstrap/'>Bootstrap</a> fail at keeping this dichotomy clear. Some examples:</p>
+
+<ul>
+<li><code>.span4</code> and <code>.offset4</code> to define column widths and column margins</li>
+
+<li><code>.navbar-fixed-top</code> to apply an alternate style for the top bar</li>
+
+<li><code>.table-bordered</code> for a table with borders</li>
+
+<li><code>.form-horizontal</code> for a float left with right-alined labels</li>
+
+<li><code>.tabs-left</code> <code>.tabs-right</code> <code>.tabs-below</code> classes</li>
+</ul>
+
+<p>All Bootstrap&#8217;s classes aren&#8217;t weighted with style instead of content description. Buttons are quite well implemented. Variations use function, not color: <code>.btn-primary</code> <code>.btn-info</code> <code>.btn-warning</code>.</p>
+
+<p>Anyway, let&#8217;s not overlook the purpose of Bootstrap: quickly build a website, through HTML blocks and classes, <em>without</em> having to write one line of CSS. <strong>Everything</strong> is defined in the HTML. If you think about it, programmers merely generate HTML code, and never touch the CSS file. So providing full control, from content to style, through HTML <em>only</em>, seems evident.</p>
+
+<p>If I had to launch a website rapidly, I could set it up quite quickly. But I&#8217;d still have to take some layout decisions: font, color, positioning, spacing, dimensions&#8230; And though I&#8217;ve done it more than a hundred times, it wouldn&#8217;t be straightforward.</p>
+
+<p>So I&#8217;d set aside my wish to keep content apart from layout and use Bootstrap, because it&#8217;s incredibly well designed.</p>
+</article>
+
+    <aside>
+      <section>
+        <h3>Portfolio</h3>
+        <p>
+          <a href="http://www.cambodiavietnam2010.com/" title="Cambodia Vietnam 2010"><img src="i/cambodia-vietnam.png" alt="Cambodia Vietnam 2010"></a>
+          <a href="http://life.jthom.as" title="JThomas"><img src="i/jthomas.png" alt="JT"></a>
+          <a href="http://australietrip.fr" title="Australie Trip"><img src="i/australie-trip.png" alt="Australie Trip"></a>
+          <a href="http://www.editions-magellan.com/" title="Editions Magellan"><img src="i/magellan.png" alt="Editions Magellan"></a>
+          <a href="http://wordpress.bbxdesign.com/" title="Le Tutoriel WordPress"><img src="i/wordpress.png" alt="WordPress"></a>
+          <a href="http://bbxdesign.com/" title="bbxdesign"><img src="i/bbxdesign.png" alt="bbxdesign"></a>
+        </p>
+        <div style="clear:left"></div>
+      </section>
+      <section>
+        <h3>About</h3>
+        <p>I'm a former front-end developer and graphic designer. I quit my job in summer 2011 but remain connected to the web world and occasionally write about it.<br>
+        You can also <a href="/atom.xml">subscribe to the RSS feed</a>.</p>
+      </section>
+      <section>
+        <h3>Contact</h3>
+        <p id="c">Please enable JavaScript to view my email.</p>
+      </section>
+    </aside>
+    <footer>
+      Design <em>highly</em> inspired by <a href="http://ianstormtaylor.com/">Ian Storm Taylor</a>.
+    </footer>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    
+        R = function(s) {
+            return R13(R5(s));
+        }
+
+        R5 = function(s) {
+            var b = [],c,i = s.length,a = '0'.charCodeAt(),z = a + 10;
+            while (i--) { 
+                c = s.charCodeAt(i);
+                if (c >= a && c < z) { b[i] = String.fromCharCode(((c - a + 5) % (10)) + a); }
+                else { b[i] = s.charAt(i); }
+            }
+            return b.join('');
+        }
+
+        R13 = function(s) {
+            var b = [],c,i = s.length,a = 'a'.charCodeAt(),z = a + 26,A = 'A'.charCodeAt(),Z = A + 26;
+            while (i--) {
+                c = s.charCodeAt(i);
+                if (c >= a && c < z) { b[i] = String.fromCharCode(((c - a + 13) % (26)) + a); }
+                else if (c >= A && c < Z) { b[i] = String.fromCharCode(((c - A + 13) % (26)) + A); }
+                else { b[i] = s.charAt(i); }
+            }
+            return b.join('');
+        }
+        
+        c = $('#c');
+        t = 'znvygb:'
+        m = 'ookqrfvta@tznvy.pbz';
+        a = $('<a/>', {
+          href: R(t+m),
+          title: 'Contact me',
+          text: R(m)
+        });
+        c.html(a);
+
+        i = $('section:first-child p a');
+        i.hover(
+          function() {
+            $(this).data('title', $(this).attr('title')).removeAttr('title');
+            n = $(this).data('title');
+            s = $('<strong/>', {
+              text: n
+            });
+            h = $(this).parent().parent().find('h3');
+            h.append(' &rarr; ').append(s);
+          }, function() {
+            h.html('Portfolio');
+          }
+        );
+        
+    });
+    </script>
+  </body>
+</html>

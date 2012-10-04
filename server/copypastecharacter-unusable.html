@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<title>CopyPasteCharacter is unusable</title>
+    <meta name="author" content="J.Thomas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="alternate" href="/atom.xml" type="application/atom+xml" title="jgthms">
+		<link rel="icon" href="favicon.ico">
+	</head>
+  <body>
+    <a id="h" href="/">JT</a>
+    <article data-id="copypastecharacter-unusable">
+  <h1>CopyPasteCharacter is unusable</h1>
+  <time>12 Mar 2012</time>
+  <p>I used to love <a href='http://copypastecharacter.com/'>CopyPasteCharacter</a> because it provided me special but useful characters that are hard to generate (especially since I mainly work on Windows).</p>
+
+<p>The ones I sometimes used were:</p>
+
+<ul>
+<li>&#8594; right arrow</li>
+
+<li>&#8220; double quotes</li>
+
+<li>&#9829; heart</li>
+
+<li>&#9835; notes</li>
+
+<li>&#8800; different</li>
+</ul>
+
+<p>among others. But because I primarily write in French, my text contains a fair amount of accents: è, à, û, ô, î, and also ç, which are very common. My issue was with the capitalized version of these characters, even though a French keyboard (AZERTY), through its different layout (which modifies a dozen of keys) gives access to more <em>popular</em> French characters.</p>
+
+<p>So, whenever I needed a &#192;, &#199; or &#201;, I navigated to CopyPasteCharacter where these 3 characters (among others) were directly provided on the home page.</p>
+
+<p>The website&#8217;s new disposition has killed this workflow because the characters are now divided in sets. The problem is that the default set (called <em>Our favorite set</em>), although nice-looking, consists of a lot of unnecessary characters. A pencil? A doubled male sign? A conical taper? An asterism???</p>
+
+<p>Anyway, I&#8217;ve got 3 options now:</p>
+
+<ul>
+<li><strong>browse</strong> for a character, but the &#8220;Alphabetical order&#8221; is <em>full</em> of noise. <img alt='CopyPasteCharacter noise' src='/i/copypastecharacter-noise.png' /></li>
+
+<li><strong>search</strong> for a character, but it&#8217;s a slow process and usually results in the same amount of noise.</li>
+
+<li><strong>create a set</strong>. <em>Oh dear&#8230;</em> <a href='/remember-login-not-password.html'>Another login</a>&#8230; And I often need those special characters when I&#8217;m <em>not</em> at home.</li>
+</ul>
+
+<p>Maybe I&#8217;m the only one annoyed by this new setup. It&#8217;s just that I used to be only two clicks away from copying the character I needed, while now it has become a dreadful process.</p>
+</article>
+
+    <aside>
+      <section>
+        <h3>Portfolio</h3>
+        <p>
+          <a href="http://www.cambodiavietnam2010.com/" title="Cambodia Vietnam 2010"><img src="i/cambodia-vietnam.png" alt="Cambodia Vietnam 2010"></a>
+          <a href="http://life.jthom.as" title="JThomas"><img src="i/jthomas.png" alt="JT"></a>
+          <a href="http://australietrip.fr" title="Australie Trip"><img src="i/australie-trip.png" alt="Australie Trip"></a>
+          <a href="http://www.editions-magellan.com/" title="Editions Magellan"><img src="i/magellan.png" alt="Editions Magellan"></a>
+          <a href="http://wordpress.bbxdesign.com/" title="Le Tutoriel WordPress"><img src="i/wordpress.png" alt="WordPress"></a>
+          <a href="http://bbxdesign.com/" title="bbxdesign"><img src="i/bbxdesign.png" alt="bbxdesign"></a>
+        </p>
+        <div style="clear:left"></div>
+      </section>
+      <section>
+        <h3>About</h3>
+        <p>I'm a former front-end developer and graphic designer. I quit my job in summer 2011 but remain connected to the web world and occasionally write about it.<br>
+        You can also <a href="/atom.xml">subscribe to the RSS feed</a>.</p>
+      </section>
+      <section>
+        <h3>Contact</h3>
+        <p id="c">Please enable JavaScript to view my email.</p>
+      </section>
+    </aside>
+    <footer>
+      Design <em>highly</em> inspired by <a href="http://ianstormtaylor.com/">Ian Storm Taylor</a>.
+    </footer>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    
+        R = function(s) {
+            return R13(R5(s));
+        }
+
+        R5 = function(s) {
+            var b = [],c,i = s.length,a = '0'.charCodeAt(),z = a + 10;
+            while (i--) { 
+                c = s.charCodeAt(i);
+                if (c >= a && c < z) { b[i] = String.fromCharCode(((c - a + 5) % (10)) + a); }
+                else { b[i] = s.charAt(i); }
+            }
+            return b.join('');
+        }
+
+        R13 = function(s) {
+            var b = [],c,i = s.length,a = 'a'.charCodeAt(),z = a + 26,A = 'A'.charCodeAt(),Z = A + 26;
+            while (i--) {
+                c = s.charCodeAt(i);
+                if (c >= a && c < z) { b[i] = String.fromCharCode(((c - a + 13) % (26)) + a); }
+                else if (c >= A && c < Z) { b[i] = String.fromCharCode(((c - A + 13) % (26)) + A); }
+                else { b[i] = s.charAt(i); }
+            }
+            return b.join('');
+        }
+        
+        c = $('#c');
+        t = 'znvygb:'
+        m = 'ookqrfvta@tznvy.pbz';
+        a = $('<a/>', {
+          href: R(t+m),
+          title: 'Contact me',
+          text: R(m)
+        });
+        c.html(a);
+
+        i = $('section:first-child p a');
+        i.hover(
+          function() {
+            $(this).data('title', $(this).attr('title')).removeAttr('title');
+            n = $(this).data('title');
+            s = $('<strong/>', {
+              text: n
+            });
+            h = $(this).parent().parent().find('h3');
+            h.append(' &rarr; ').append(s);
+          }, function() {
+            h.html('Portfolio');
+          }
+        );
+        
+    });
+    </script>
+  </body>
+</html>
