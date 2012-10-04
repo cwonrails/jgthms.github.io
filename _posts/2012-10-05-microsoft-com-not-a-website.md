@@ -7,7 +7,7 @@ The new [Microsoft.com](http://www.microsoft.com/en-us/default.aspx) is a succes
 
 Problem is: it's not a website. It's a portal.
 
-Considering it's a single page (and I've done a [couple](http://www.cambodiavietnam2010.com/) [myself](http://reachthethrone.com/)), I can hardly call it a website. Wikipedia itself calls a website a *set of related web **pages***.
+Considering it's a single page (and I've done a [couple](http://www.cambodiavietnam2010.com/) [myself](http://reachthethrone.com/)), I can hardly call it a website. Wikipedia itself calls a website a *set of related web pages*.
 
 Definitions aside, I have yet to find a link on MS.com that ends up on a page using the *same* layout. I've tried the navigation menu, the big slides, the footer links...
 I wasn't able to stay on the same website (which would have turned it in one actually).
