@@ -22,31 +22,34 @@ blockquote{ background:#fdf6e3; border-left:2px solid #eee8d5; color:#b58900; fo
 blockquote p{ margin:0;}
 img{ border:4px solid #eee8d5; border-radius:4px; margin:1em 0;}
 
+#h{ background:url(jt.png) no-repeat 0 0; height:25px; left:50px; overflow:hidden; position:absolute; text-indent:-290486px; top:40px; width:20px;}
 nav li{ display:block;}
 nav a{ text-decoration:none;}
-
 nav,article{ margin:0 auto; max-width:700px; padding:0 120px;}
+
+article{ min-height:570px;} /* (aside + footer) - (html padding - article p margin) */
 time{ color:#93a1a1; display:block; font-size:.875rem; font-style:italic; margin:.5em 0 2em;}
 
-aside{ left:60%; max-width:474px; position:absolute; top:80px; width:35%;}
+i{ background:#fdf6e3; display:block; height:100%; position:fixed; right:0; top:0; width:40%; z-index:1;}
+aside{ left:65%; max-width:462px; position:absolute; top:80px; width:30%; z-index:2;}
 aside,aside a,footer,footer a{ color:#93a1a1;}
 section{ clear:left; padding-bottom:2rem;}
+section:last-child{ padding-bottom:0;}
 section h3 strong{ background:#859900; border-radius:4px; color:#fff; padding:3px 12px 5px; text-transform:none;}
 section:first-child p{ position:relative; right:4px;}
 section:first-child h3{ color:#859900;}
 section:nth-child(2) h3{ color:#b58900;}
 section:nth-child(3) h3{ color:#268bd2;}
-section img{ border-color:transparent; display:block; float:left; margin:0;}
+section img{ border-color:transparent; display:block; float:left; margin:0 -4px -4px 0;}
 section a:hover img{ border-color:#859900;}
-footer{ bottom:20px; font-size:12px; position:fixed; right:20px;}
-#h{ background:url(jt.png) no-repeat 0 0; height:25px; left:50px; overflow:hidden; position:absolute; text-indent:-290486px; top:40px; width:20px;}
+footer{ background:#eee8d5; bottom:0; font-size:11px; padding:1em 0; position:fixed; right:0; text-align:center; width:40%; z-index:3;}
 
 @media only screen and (max-width: 1040px) {
   h3{ font-size:.75rem;}
+  #h{ left:30px; top:30px;}
   nav,article{ padding:0 80px;}
   aside{ font-size:.875em;}
-  section img{ height:60px; width;100px;}
-  #h{ left:30px; top:30px;}
+  section img{ border-width:2px; height:60px; margin:0 -2px -2px 0; width;100px;}
 }
 
 @media only screen and (max-width: 880px),
@@ -54,17 +57,18 @@ only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
   html{ padding-bottom:0;}
   body{ width:auto;}
-  nav,article{ margin:0; max-width:none; padding:0 20px 20px 20px;}
-  aside{ background:#fdf6e3; left:0; max-width:none; padding:20px; position:static; width:auto;}
-  footer{ background:#eee8d5; padding:20px; position:static;}
   #h{ left:20px; position:absolute;}
+  nav,article{ margin:0; max-width:none; padding:0 20px 20px 20px;}
+  i{ display:none;}
+  aside{ background:#fdf6e3; left:0; max-width:none; padding:20px; position:static; width:auto;}
+  footer{ position:static; width:auto;}
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
+  #h{ left:20px; position:absolute;}
   aside{ padding:20px 0 20px 20px;}
   section p{ padding-right:20px;}
   section:first-child p{ padding-right:0;}
   section img{ border:none; border-radius:0; margin-left:-3px;}
-  #h{ left:20px; position:absolute;}
 }
