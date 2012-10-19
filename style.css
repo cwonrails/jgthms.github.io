@@ -27,7 +27,7 @@ nav li{ display:block;}
 nav a{ text-decoration:none;}
 nav,article{ margin:0 auto; max-width:700px; padding:0 120px;}
 
-article{ min-height:570px;} /* (aside + footer) - (html padding - article p margin) */
+/* article{ min-height:570px;} (aside + footer) - (html padding - article p margin) */
 time{ color:#93a1a1; display:block; font-size:.875rem; font-style:italic; margin:.5em 0 2em;}
 
 i{ background:#fdf6e3; display:block; height:100%; position:fixed; right:0; top:0; width:40%; z-index:1;}
@@ -42,7 +42,7 @@ section:nth-child(2) h3{ color:#b58900;}
 section:nth-child(3) h3{ color:#268bd2;}
 section img{ border-color:transparent; display:block; float:left; margin:0 -4px -4px 0;}
 section a:hover img{ border-color:#859900;}
-footer{ background:#eee8d5; bottom:0; font-size:11px; padding:1em 0; position:fixed; right:0; text-align:center; width:40%; z-index:3;}
+footer{ font-size:11px; padding-bottom:1em; right:0; z-index:3;}
 
 @media only screen and (max-width: 1040px) {
   h3{ font-size:.75rem;}
