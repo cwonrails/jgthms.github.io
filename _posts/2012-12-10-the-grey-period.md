@@ -43,6 +43,13 @@ Concerning GMail, I don't know if it's the cheap-looking buttons (that really lo
 
 A lot of the websites mentioned are actually apps. Maybe avoiding colors is a design's [silent protagonist](http://en.wikipedia.org/wiki/Silent_protagonist): it helps the user identify itself with the website. No color, no obvious identity, just you and the app.
 
+But even Apple seem to have caught the trend.
+
+<figure>
+<img alt="Apple from color to grey" src="/i/apple-from-color-to-grey.png"><br>
+<figcaption>Left: Mac OS 10.6 Snow Leopard. Right: Mac OS 10.7 Lion</figcaption>
+</figure>
+
 Like gradients and shadows, it's easier to mess up a color palette than sticking to greyscale. Compared to the 16,777,216 hexadecimal codes available, 256 shades of grey is quite fewer parameters to handle but you [can't really do much with them](http://gmailblog.blogspot.fr/2012/12/the-gmail-app-for-iphone-and-ipad.html).
 
 Choosing grey is actually **not** choosing.  
