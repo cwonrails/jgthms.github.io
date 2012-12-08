@@ -43,7 +43,7 @@ Concerning GMail, I don't know if it's the cheap-looking buttons (that really lo
 
 A lot of the websites mentioned are actually apps. Maybe avoiding colors is a design's [silent protagonist](http://en.wikipedia.org/wiki/Silent_protagonist): it helps the user identify itself with the website. No color, no obvious identity, just you and the app.
 
-But even Apple seem to have heading towards that direction.
+But even Apple seems to be heading towards that direction.
 
 <figure>
 <img alt="Apple from color to grey" src="/i/apple-from-color-to-grey.png"><br>
