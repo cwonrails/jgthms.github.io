@@ -13,6 +13,7 @@ body{ color:#586e75; font:1.25rem/1.5 'ff-meta-serif-web-pro',Georgia,serif; wid
 a,img{ color:#dc322f; transition:all 125ms ease-out; -moz-transition:all 125ms ease-out; -webkit-transition:all 125ms ease-out;}
 a:visited{ color:#6c71c4;}
 a:hover{ color:#073642;}
+time{ color:#93a1a1; display:block; font-size:.875rem; font-style:italic; margin:.5em 0 2em;}
 p,ul,ol{ margin:1em 0;}
 ul{ list-style:inside disc;}
 h1,h2,h3{ font-family:'Open Sans',Arial,sans-serif; font-weight:bold; line-height:1;}
@@ -30,6 +31,9 @@ td,th{ padding:1em;}
 td{ background:#fdf6e3;}
 th{ background:#eee8d5;}
 td.empty{ background:none; border:none;}
+.related{ background:#eee8d5; border-radius:4px; font-size:.875em; margin-top:2em; padding:1.25em;}
+.related ul{ margin-bottom:0;}
+.related time{ display:inline; margin:0;}
 
 #h{ background:#2aa198 url(/i/jgthms.png) no-repeat 0 0; height:50px; left:15px; overflow:hidden; position:absolute; text-indent:-290486px; top:15px; width:50px;}
 #h:hover{ background-color:#073642;}
@@ -38,7 +42,6 @@ nav h2{ font-size:1.5rem;}
 nav a{ text-decoration:none;}
 nav,article{ margin:0 auto; max-width:960px; padding:0 80px;}
 
-time{ color:#93a1a1; display:block; font-size:.875rem; font-style:italic; margin:.5em 0 2em;}
 
 i{ background:#fdf6e3; display:block; height:100%; position:fixed; right:0; top:0; width:30%; z-index:1;}
 aside{ font-size:1.125rem; left:73%; max-width:462px; position:absolute; top:80px; width:25%; z-index:2;}
