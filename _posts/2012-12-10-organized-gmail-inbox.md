@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Organizing your inbox
+title: Organized Gmail Inbox
 ---
 
-I've often read about how email was broken. Maybe it's because I only receive about 10 mails per day or because GMail's interface with some plugins suits me well, but I'm actually very happy with it. But ever since Google forced me to switch to their latest interface, my labels' colors became a bit messed up and I decided to use the opportunity to reorganize my inbox flow.
+I've often read about how email was broken. Maybe it's because I only receive about 10 mails per day or because GMail's interface with some plugins suits me well, but I'm actually very happy with it. But when Google forced me to switch to their latest interface, my labels' colors became a bit messed up and I decided to use the opportunity to reorganize my inbox flow.
 
 I set up a simple rule to follow:
 
