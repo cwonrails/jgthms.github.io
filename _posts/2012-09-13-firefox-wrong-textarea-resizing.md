@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Firefox's wrong textarea resizing
+category: Interface
 ---
 
 We, as web designers, tend to dread styling textareas (I know I do). The line-height adjustments can be tricky, the font-family is never inherited, the scrollbar has to be taken into account and padding can mess things up as well. Furthermore, making a textarea graphically appealing can be challenging, considering the sometimes tricky background styling reactions. So we either go for a minimalist textarea (plain background color, no border), or venture to design a gorgeous 3D shadowed rounded gradient-colored textarea box that is meant to look desirable but not necessarily usable.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Microsoft.com is not a website
+category: Thoughts
 ---
 
 The new [Microsoft.com](http://www.microsoft.com/en-us/default.aspx) is a success. There has been much praise about its responsiveness, its simplicity and its clarity. Well-deserved praise I must say, as the design led by Trent Walton's agency [Paravel](http://paravelinc.com/) is very well-thought.

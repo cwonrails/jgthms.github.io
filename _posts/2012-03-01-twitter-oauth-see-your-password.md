@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Twitter OAuth 'See your password'
+category: Thoughts
 ---
 
 I love OAuth. I love it because I tend to register with many different usernames, many different passwords (and variations of them), many different emails (with GMail's dot trick), so I end up spending more time logging in than actually signing up.

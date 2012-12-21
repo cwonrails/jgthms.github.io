@@ -1,6 +1,7 @@
 ---
 layout: post
 title: When a designer programs
+category: Thoughts
 ---
 
 Launching a website requires mainly 3 parts:

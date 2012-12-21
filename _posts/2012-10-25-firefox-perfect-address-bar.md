@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Firefox and the perfect address bar
+category: Interface
 ---
 
 Google Chrome has spread the concept of the *Omnibox*: merging a browser's URL bar with the search bar. Type anything, and it'll access one of these 5 sources:

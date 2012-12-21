@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Bootstrap is for programmers
+category: Thoughts
 ---
 
 I am no programmer.

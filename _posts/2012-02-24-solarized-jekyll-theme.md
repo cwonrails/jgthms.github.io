@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Solarized Jekyll Theme
+category: Design
 ---
 
 As I've decided to design this blog without any image nor CSS 3 fancy feature (gradients & shadows particularly), I had to come up with a perfect color scheme, pleasing to read and visually balanced.
