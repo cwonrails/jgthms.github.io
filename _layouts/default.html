@@ -99,7 +99,7 @@
               text: n
             });
             h = $(this).parent().parent().find('h3');
-            h.append(' &rarr; ').append(s);
+            h.html(s);
           }, function() {
             h.html('Portfolio');
           }

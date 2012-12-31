@@ -55,12 +55,12 @@ aside object{ margin-top:.5em;}
 section{ clear:left; padding-bottom:2rem;}
 section:last-child{ padding-bottom:0;}
 section h3 strong{ background:#859900; border-radius:4px; color:#fff; padding:3px 12px 5px; text-transform:none;}
-section:first-child p{ position:relative; right:4px;}
+section:first-child p{ position:relative; /*right:4px;*/}
 section:first-child h3{ color:#859900;}
 section:nth-child(2) h3{ color:#d33682;}
 section:nth-child(3) h3{ color:#b58900;}
 section:nth-child(4) h3{ color:#268bd2;}
-section img{ border-color:transparent; display:block; float:left; margin:0 -4px -4px 0;}
+section img{ border-color:transparent; border:none; display:block; float:left; /*margin:0 -4px -4px 0;*/}
 section a:nth-child(2n+3) img{ clear:left;}
 section a:hover img{ border-color:#859900;}
 footer{ font-size:.75em; padding-bottom:1em; right:0; z-index:3;}
@@ -68,7 +68,7 @@ footer{ font-size:.75em; padding-bottom:1em; right:0; z-index:3;}
 @media only screen and (max-width: 1240px) {
   h3{ font-size:.75rem;}
   aside{ font-size:.875rem;}
-  section img{ border-width:2px; height:60px; margin:0 -2px -2px 0; width:100px;}
+  section img{ border-width:2px; border:none; height:60px; /*margin:0 -2px -2px 0;*/ width:100px;}
 }
 
 @media only screen and (max-width: 880px),
