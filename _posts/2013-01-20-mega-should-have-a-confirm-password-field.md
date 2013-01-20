@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mega should have a confirm password
+title: Mega should have a confirm password field
 category: Thoughts
 ---
 
@@ -12,14 +12,13 @@ Anyway, it was the opportunity to try out Mega's cloud storage system. So I deci
 
 I filled the fields quickly, but then realized 2 things:
 
-* Is the "Your name" field actually your username? So I changed it.
-* There was no "Confirm password" field. So I cleared that field, and retyped my password *carefully*.
+* Is the "*Your name*" field actually your username as well? Just in case, I changed it.
+* There was no "*Confirm password*" field. So I cleared that field, and retyped my password *carefully*.
 
 Upon receiving my confirmation email (establishing the fact that I had typed it correctly), I tried to login, but was prompted with the message "*Invalid password*".
 
-I looked for the usually available "*Forgot password?*" link but it wasn't present. So I went to the help section and found this paragraph:
+I looked for the usually available "*Forgot password?*" link but it wasn't present. So I went to the help section and found the paragraph "*I have forgotten my password. Can I reset it?*":
 
-> I have forgotten my password. Can I reset it?
 > Unfortunately, your MEGA password is not just a password - it is the master encryption key to all of your data. If you lose it, you lose access to all of your files that are not in a shared folder and that you have no previously exported file or folder key for.
 
 I learned 2 things:
