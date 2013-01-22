@@ -2,6 +2,7 @@
 layout: post
 title: What Django could learn from WordPress
 category: Thoughts
+published: false
 ---
 
 As a designer who only knows a little about programming, WordPress has been my software of choice when building dynamic websites. Although being a blog engine, when WP introduced its Custom Post (and Custom Taxonomy) capabilities, it became a very *decent* CMS. I say "decent" because most programmers would frown upon the term "CMS" when discussing WP. But when it comes to building lightweight websites with a simple administration, it has really proved flexible and easy to setup, especially for a designer, thanks to WP's themes engine.
