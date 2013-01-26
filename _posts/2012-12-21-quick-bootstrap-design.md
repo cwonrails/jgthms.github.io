@@ -2,9 +2,12 @@
 layout: post
 title: Quick Bootstrap Design
 category: Design
+sticky: true
 ---
 
-[![Bootstrap Solarized](/i/bootstrap-solarized.png)](/h/solarized.html)
+<figure>
+  <a href="/h/solarized.html"><img alt="Bootstrap Solarized" src="/i/bootstrap-solarized.png"></a>
+</figure>
 
 There was a recent post on 24ways.org that explained [How to Make Your Site Look Half-Decent in Half an Hour](http://24ways.org/2012/how-to-make-your-site-look-half-decent/). It was made by a programmer and aimed towards programmers. The final result wasn't universally well received because it probably didn't meet most programmer's expectations. I'm a designer, and the final result didn't appeal much to me. But still: the article wasn't about the end result, it was about the **process**.
 

@@ -2,6 +2,7 @@
 layout: post
 title: Bootstrap is for programmers
 category: Thoughts
+sticky: true
 ---
 
 I am no programmer.

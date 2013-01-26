@@ -2,6 +2,7 @@
 layout: post
 title: Tumblr and the source problem
 category: Thoughts
+sticky: true
 ---
 
 Tumblr is more a community than a blogging engine.

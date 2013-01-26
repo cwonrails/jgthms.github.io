@@ -2,6 +2,7 @@
 layout: post
 title: The Grey Period
 category: Design
+sticky: true
 ---
 
 Ever since Google launched its redesign, I've been wanting to point out a design direction that many websites seem to take: killing colors.
@@ -9,31 +10,37 @@ Ever since Google launched its redesign, I've been wanting to point out a design
 ## Amazon
 
 ![Amazon Color](/i/amazon-color.png)
+
 ![Amazon Grey](/i/amazon-grey.png)
 
 ## GMail
 
 ![GMail Color](/i/gmail-color.png)
+
 ![GMail Grey](/i/gmail-grey.png)
 
 ## GCalendar
 
 ![GCalendar Color](/i/gcalendar-color.png)
+
 ![GCalendar Grey](/i/gcalendar-grey.png)
 
 ## GReader
 
 ![GReader Color](/i/greader-color.png)
+
 ![GReader Grey](/i/greader-grey.png)
 
 ## WordPress
 
 ![WordPress Color](/i/wordpress-color.png)
+
 ![WordPress Grey](/i/wordpress-grey.png)
 
 ## Digg
 
 ![Digg Color](/i/digg-color.png)
+
 ![Digg Grey](/i/digg-grey.png)
 
 Are the newer versions prettier? That's for you to decide. But overall, they seem to lack depth and hierarchy.
@@ -47,8 +54,8 @@ A lot of the websites mentioned are actually apps. Maybe avoiding colors is a de
 But even Apple seems to be heading towards that direction.
 
 <figure>
-<img alt="Apple from color to grey" src="/i/apple-from-color-to-grey.png"><br>
-<figcaption>Left: Mac OS 10.6 Snow Leopard. Right: Mac OS 10.7 Lion</figcaption>
+  <img alt="Apple from color to grey" src="/i/apple-from-color-to-grey.png"><br>
+  <figcaption>Left: Mac OS 10.6 Snow Leopard. Right: Mac OS 10.7 Lion</figcaption>
 </figure>
 
 Like gradients and shadows, it's easier to mess up a color palette than sticking to greyscale. Compared to the 16,777,216 hexadecimal codes available, 256 shades of grey is quite fewer parameters to handle but you [can't really do much with them](http://gmailblog.blogspot.fr/2012/12/the-gmail-app-for-iphone-and-ipad.html).
