@@ -13,7 +13,7 @@ If you're a developer running your own blog, chances are you have thought about 
 
 ## The insider's administration
 
-There's a learning curve with those kinds of admin. It can either be an admin developed by someone you know, or an one that is not exactly user friendly.
+There's a learning curve with those kinds of admin. It can either be an admin developed by someone you know, or one that is not exactly user friendly.
 
 For example, let's imagine I own a clothes store and ask you to develop my shopping website. The admin can be anything you want, as long as I know how to use it. The key here is that I'm in contact with you, so even if the admin isn't obvious to interact with, you can teach me. Plus, you can adjust some design elements for my convenience. Anyone else trying to use my admin would feel slightly lost, but that's not a problem because the admin was meant for me and I was taught how to use it.
 
