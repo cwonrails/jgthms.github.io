@@ -24,7 +24,7 @@ footer a{ color:#586e75; padding:1px 4px 2px;}
 footer p:first-child{ margin-bottom:20px;}
 
 nav{ box-shadow:0 1px 1px rgba(0,0,0,.04); display:inline-block; font-size:12px; height:26px; margin-top:16px; position:relative; z-index:1986;}
-nav a{ background:none; border:1px solid #e9e9e9; color:#d33682; float:left; height:24px; line-height:22px; margin-left:-1px; padding:0 12px 0 10px; position:relative;}
+nav a{ background:none; border:1px solid #e9e9e9; color:#d33682; float:left; height:24px; line-height:24px; margin-left:-1px; padding:0 12px 0 10px; position:relative;}
 nav a:first-child{ border-radius:4px 0 0 4px; color:#3389c5;}
 nav a:nth-child(3){ color:#859900;}
 nav a:last-child{ border-radius:0 4px 4px 0; color:#b58900; margin-right:0;}
@@ -41,7 +41,7 @@ h1{ color:#93a1a1; font-size:12px; position:relative; text-align:center; top:-3p
 h1:before{ content:"# ";}
 h1:after{ content:" #";}
 h2{ font-family:'Open Sans',Arial,sans-serif; font-weight:bold;}
-time, code, figcaption{ background:#f5f5f5; border:1px solid #e9e9e9; border-radius:2px; color:#93a1a1; font-size:11px; height:14px; line-height:14px; padding:0 4px 1px; white-space:nowrap;}
+time, code, figcaption{ background:#f5f5f5; border:1px solid #e9e9e9; border-radius:2px; color:#93a1a1; font-size:11px; padding:0 4px 1px; white-space:nowrap;}
 code{ font-size:12px; position:relative; top:-2px;}
 figcaption{ display:inline-block;}
 b{ border:1px solid #e9e9e9; border-radius:0 0 4px 4px; box-shadow:0 1px 0 white; display:inline-block; font-size:11px; padding:2px 8px 3px; position:absolute; text-shadow:0 1px 0 rgba(255,255,255,.25); white-space:nowrap; z-index:1982;}
@@ -51,8 +51,8 @@ td.empty{ background:none; border:none;}
 h2 time, article time, article figure, table{ font-family:'Courier New',monospace;}
 
 .a{ margin-top:24px;}
-.a li{ margin-bottom:4px; position:relative;}
-.a a{ background:none; border-bottom-color:transparent; display:inline-block; font-family:'Open Sans',Arial,sans-serif; font-size:16px; font-weight:normal; margin-left:4px; padding:3px 6px 4px;}
+.a li{ margin-bottom:6px; position:relative;}
+.a a{ background:none; border-bottom-color:transparent; font-family:'Open Sans',Arial,sans-serif; font-size:16px; font-weight:normal; margin-left:4px; padding:3px 6px 4px;}
 .a .s a{ font-weight:bold;}
 .a a:hover{ background:#3389c5; border-color:#065383;}
 .a a:visited, article a:visited{ color:#93a1a1;}
@@ -86,9 +86,10 @@ article figure a:hover img{ border-color:#065383;}
 section{ border-bottom:1px solid #e9e9e9; font-size:12px; margin-bottom:20px; padding-bottom:20px;}
 section:first-of-type{ margin-top:32px;}
 section:last-of-type{ border-bottom:none; margin-bottom:0; padding-bottom:0;}
-section img{ float:left; margin-right:20px;}
+section a{ float:left; margin-right:20px;}
+section img{ display:block;}
 section h2{ font-size:14px; margin-bottom:8px;}
-section h2 a{ border:1px solid #e9e9e9; border-radius:4px; box-shadow:0 1px 0 white; color:#d33682; display:inline-block; padding:4px 8px 6px;}
+section h2 a{ border:1px solid #e9e9e9; border-radius:4px; box-shadow:0 1px 0 white; color:#d33682; display:inline-block; float:none; margin:0; padding:4px 8px 6px;}
 section p{ color:#93a1a1;}
 
 /* CSS 3 nonsense */
