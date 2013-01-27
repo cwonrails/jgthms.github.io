@@ -111,6 +111,7 @@
         
       $('a[href=#info]').click(function() {
         $('html, body').animate({scrollTop:$(document).height()}, 'slow');
+        $('footer').css({'border-top-color': '#000', 'color': '#000'});
         return false;
       });
         
