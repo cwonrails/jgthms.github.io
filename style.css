@@ -19,7 +19,7 @@ header{ border-bottom:1px solid #e9e9e9; height:60px; margin-bottom:40px; paddin
 #logo{ background:none; border:none; position:absolute; top:0; left:-80px; padding:0;}
 #logo:hover{ background:none;}
 footer{ background:url(water.png) no-repeat center bottom; border-top:1px solid #e9e9e9; color:#93a1a1; font-size:11px; margin:40px auto 20px; padding:20px 20px 180px; text-align:center;}
-footer:hover{ color:#000;}
+footer:hover{ border-top-color:#000; color:#000;}
 footer a{ color:#586e75; padding:1px 4px 2px;}
 footer p:first-child{ margin-bottom:20px;}
 
@@ -53,7 +53,8 @@ h2 time, article time, article figure, table{ font-family:'Courier New',monospac
 .a{ margin-top:24px;}
 .a li{ margin-bottom:6px; position:relative;}
 .a a{ background:none; border-bottom-color:transparent; font-family:'Open Sans',Arial,sans-serif; font-size:16px; font-weight:normal; margin-left:4px; padding:3px 6px 4px;}
-.a .s a{ font-weight:bold;}
+.a .s a{ color:#cb4b16; font-weight:bold;}
+.a .s a:hover{ color:#fff;}
 .a a:hover{ background:#3389c5; border-color:#065383;}
 .a a:visited, article a:visited{ color:#93a1a1;}
 .a a:hover:visited, article a:hover:visited{ background:#93a1a1 !important; border-bottom-color:#586e75 !important; color:#fff;}
@@ -69,6 +70,10 @@ article ul,
 article p{ text-align:left;}
 article p:first-of-type{ margin-top:0;}
 article p:last-child{ margin-bottom:0;}
+article h1:before,
+article h1:after,
+article h2:before,
+article h2:after{ font-size:.75em; font-weight:normal; margin:0 8px;}
 article h2{ color:#859900; margin:32px 0;}
 article h2:before{ content:"## ";}
 article h2:after{ content:" ##";}
@@ -86,12 +91,13 @@ article figure a:hover img{ border-color:#065383;}
 section{ border-bottom:1px solid #e9e9e9; font-size:12px; margin-bottom:20px; padding-bottom:20px;}
 section:first-of-type{ margin-top:32px;}
 section:last-of-type{ border-bottom:none; margin-bottom:0; padding-bottom:0;}
-section a{ float:left; margin-right:20px; padding:0;}
+section a{ border:none; float:left; margin-right:20px; padding:0;}
 section a:hover{ border-color:#821248;}
 section img{ display:block;}
 section h2{ font-size:14px; margin-bottom:8px;}
 section h2 a{ border:1px solid #e9e9e9; border-radius:4px; box-shadow:0 1px 0 white; color:#d33682; display:inline-block; float:none; margin:0; padding:4px 8px 6px;}
 section p{ color:#93a1a1;}
+section:hover p{ color:#000;}
 
 /* CSS 3 nonsense */
 
