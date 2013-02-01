@@ -11,7 +11,7 @@ q:before,q:after{ content:'';}
 abbr,acronym{ border:0;}
 
 html{ overflow-y:scroll;}
-body{ background:white url(pattern.png) repeat center top; color:#586e75; font-family:'Courier New',monospace; font-size:16px; line-height:1.5; margin:0 auto; padding-top:40px; width:620px;}
+body{ background:white url(pattern.png) repeat center top; color:#586e75; font-family:'Open Sans',Arial,sans-serif; font-size:20px; line-height:1.5; margin:0 auto; padding-top:40px; width:740px;}
 a{ background:#fdf6e3; border-bottom:1px solid #eee8d5; color:#3389c5; cursor:pointer; padding:2px 4px 0; text-decoration:none;}
 a:hover{ background:#3389c5; border-bottom-color:#065383; color:#fff;}
 
@@ -23,21 +23,21 @@ footer:hover{ border-top-color:#000; color:#000;}
 footer a{ color:#586e75; padding:1px 4px 2px;}
 footer p:first-child{ margin-bottom:20px;}
 
-nav{ box-shadow:0 1px 1px rgba(0,0,0,.04); display:inline-block; font-size:12px; height:26px; margin-top:16px; position:relative; z-index:1986;}
-nav a{ background:none; border:1px solid #e9e9e9; color:#d33682; float:left; height:24px; line-height:24px; margin-left:-1px; padding:0 12px 0 10px; position:relative;}
+nav{ box-shadow:0 1px 1px rgba(0,0,0,.04); display:inline-block; font-size:12px; height:28px; margin-top:15px; position:relative; z-index:1986;}
+nav a{ background:none; border:1px solid #e9e9e9; color:#d33682; float:left; font-size:13px; height:26px; line-height:26px; margin-left:-1px; padding:0 16px; position:relative;}
 nav a:first-child{ border-radius:4px 0 0 4px; color:#3389c5;}
 nav a:nth-child(3){ color:#859900;}
 nav a:last-child{ border-radius:0 4px 4px 0; color:#b58900; margin-right:0;}
-nav a:hover,  nav .c, section h2 a:hover{ background:#d33682; border-color:#821248; box-shadow:0 0 0 1px #db5c99 inset; color:#fff !important; z-index:1986;}
-nav a:active, nav .c, nav .c:hover{ box-shadow:0 0 0 1px #db5c99 inset;}
-nav a:first-child:hover, nav a:first-child.c{ background:#3389c5; border-color:#065383; box-shadow:0 0 0 1px #5ba4d5 inset;}
-nav a:first-child:active, nav a:first-child.c{ box-shadow:0 0 0 1px #5ba4d5 inset;}
-nav a:nth-child(3):hover, nav a:nth-child(3).c{ background:#859900; border-color:#738212; box-shadow:0 0 0 1px #adbe40 inset;}
-nav a:nth-child(3).c{ box-shadow:0 0 0 1px #adbe40 inset, 0 2px 2px rgba(0,0,0,.25) inset;}
-nav a:last-child:hover, nav a:last-child.c{ background:#b58900; border-color:#826612; box-shadow:0 0 0 1px #ccaa40 inset;}
-nav a:last-child:active, nav a:last-child.c{ box-shadow:0 0 0 1px #ccaa40 inset;}
+nav a:hover,  nav .c, section h2 a:hover{ background:#d33682; border-color:#d33682; /*border-color:#821248; box-shadow:0 0 0 1px #db5c99 inset;*/ color:#fff !important; z-index:1986;}
+/*nav a:active, nav .c, nav .c:hover{ box-shadow:0 0 0 1px #db5c99 inset;}*/
+nav a:first-child:hover, nav a:first-child.c{ background:#3389c5; border-color:#3389c5; /*border-color:#065383; box-shadow:0 0 0 1px #5ba4d5 inset;*/}
+/*nav a:first-child:active, nav a:first-child.c{ box-shadow:0 0 0 1px #5ba4d5 inset;}*/
+nav a:nth-child(3):hover, nav a:nth-child(3).c{ background:#859900; border-color:#859900; /*border-color:#738212; box-shadow:0 0 0 1px #adbe40 inset;*/}
+/*nav a:nth-child(3).c{ box-shadow:0 0 0 1px #adbe40 inset, 0 2px 2px rgba(0,0,0,.25) inset;}*/
+nav a:last-child:hover, nav a:last-child.c{ background:#b58900; border-color:#b58900; /*border-color:#826612; box-shadow:0 0 0 1px #ccaa40 inset;*/}
+/*nav a:last-child:active, nav a:last-child.c{ box-shadow:0 0 0 1px #ccaa40 inset;}*/
 
-h1{ color:#93a1a1; font-size:12px; position:relative; text-align:center; top:-3px;}
+h1{ color:#93a1a1; font-size:14px; position:relative; text-align:center; top:-3px;}
 h1:before{ content:"# ";}
 h1:after{ content:" #";}
 h2{ font-family:'Open Sans',Arial,sans-serif; font-weight:bold;}
@@ -48,11 +48,11 @@ b{ border:1px solid #e9e9e9; border-radius:0 0 4px 4px; box-shadow:0 1px 0 white
 table{ font-size:12px; width:100%;}
 td, th{ background:#fff; border:1px solid #e9e9e9; padding:4px 8px; text-align:left;}
 td.empty{ background:none; border:none;}
-h2 time, article time, article figure, table{ font-family:'Courier New',monospace;}
+footer, h1, h2 time, article time, article figure, table{ font-family:'Courier New',monospace;}
 
 .a{ margin-top:24px;}
-.a li{ margin-bottom:6px; position:relative;}
-.a a{ background:none; border-bottom-color:transparent; font-family:'Open Sans',Arial,sans-serif; font-size:16px; font-weight:normal; margin-left:4px; padding:3px 6px 4px;}
+.a li{ position:relative;}
+.a a{ background:none; border-bottom-color:transparent; display:inline-block; font-family:'Open Sans',Arial,sans-serif; font-size:16px; font-weight:normal; margin-left:4px; padding:3px 6px 4px;}
 .a .s a{ color:#cb4b16; font-weight:bold;}
 .a .s a:hover{ background:#cb4b16; border-bottom-color:#832c06; color:#fff;}
 .a a:hover{ background:#3389c5; border-color:#065383;}
@@ -61,7 +61,7 @@ h2 time, article time, article figure, table{ font-family:'Courier New',monospac
 /* Weird behavior without the !important feature */
 
 article{ font-family:FF,Georgia,serif; position:relative; text-align:center;}
-article h1{ color:#000; font-family:'Open Sans',Arial,sans-serif; font-size:20px; font-weight:bold;}
+article h1{ color:#000; font-family:'Open Sans',Arial,sans-serif; font-size:24px; font-weight:bold;}
 article time{ display:inline-block; margin-bottom:40px; position:static;}
 article h2,
 article ul,
@@ -78,7 +78,7 @@ article h2{ color:#859900; margin:32px 0;}
 article h2:before{ content:"## ";}
 article h2:after{ content:" ##";}
 article ul li{ position:relative;}
-article ul li:before, article blockquote:before{ content:"*"; position:absolute; right:630px;}
+article ul li:before, article blockquote:before{ content:"*"; position:absolute; right:756px;}
 article blockquote{ color:#93a1a1; font-style:italic; position:relative;}
 article blockquote:before{ content:">"; font-style:normal;}
 article img{ border:1px solid #e9e9e9; display:block; margin:1em auto; max-width:618px;}
@@ -88,7 +88,7 @@ article figure img{ margin-bottom:0;}
 article figure a img{ border-color:#eee8d5;}
 article figure a:hover img{ border-color:#065383;}
 
-section{ border-bottom:1px solid #e9e9e9; font-size:12px; margin-bottom:20px; padding-bottom:20px;}
+section{ border-bottom:1px solid #e9e9e9; font-size:14px; margin-bottom:20px; padding-bottom:20px;}
 section:first-of-type{ margin-top:32px;}
 section:last-of-type{ border-bottom:none; margin-bottom:0; padding-bottom:0;}
 section a{ border:none; float:left; margin-right:20px; padding:0;}
