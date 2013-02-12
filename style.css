@@ -26,16 +26,19 @@ footer p:first-child{ margin-bottom:20px;}
 nav{ box-shadow:0 1px 1px rgba(0,0,0,.04); display:inline-block; font-size:12px; height:28px; margin-top:15px; position:relative; z-index:1986;}
 nav a{ background:none; border:1px solid #d9d9d9; color:#d33682; float:left; font-size:13px; height:26px; line-height:26px; margin-left:-1px; padding:0 16px; position:relative;}
 nav a:first-child{ border-radius:4px 0 0 4px; color:#3389c5;}
-nav a:nth-child(3){ color:#859900;}
-nav a:last-child{ border-radius:0 4px 4px 0; color:#b58900; margin-right:0;}
+/*nav a:nth-child(3){ color:#859900;}*/
+nav a:last-child{ border-radius:0 4px 4px 0; color:#859900; /*color:#b58900;*/ margin-right:0;}
 nav a:hover,  nav .c, section h2 a:hover{ background:#d33682; border-color:#821248; /*border-color:#821248; box-shadow:0 0 0 1px #db5c99 inset;*/ color:#fff !important; z-index:1986;}
 /*nav a:active, nav .c, nav .c:hover{ box-shadow:0 0 0 1px #db5c99 inset;}*/
 nav a:first-child:hover, nav a:first-child.c{ background:#3389c5; border-color:#065383; /*border-color:#065383; box-shadow:0 0 0 1px #5ba4d5 inset;*/}
 /*nav a:first-child:active, nav a:first-child.c{ box-shadow:0 0 0 1px #5ba4d5 inset;}*/
-nav a:nth-child(3):hover, nav a:nth-child(3).c{ background:#859900; border-color:#738212; /*border-color:#738212; box-shadow:0 0 0 1px #adbe40 inset;*/}
+/*nav a:nth-child(3):hover, nav a:nth-child(3).c{ background:#859900; border-color:#738212; /*border-color:#738212; box-shadow:0 0 0 1px #adbe40 inset;}*/
 /*nav a:nth-child(3).c{ box-shadow:0 0 0 1px #adbe40 inset, 0 2px 2px rgba(0,0,0,.25) inset;}*/
-nav a:last-child:hover, nav a:last-child.c{ background:#b58900; border-color:#826612; /*border-color:#826612; box-shadow:0 0 0 1px #ccaa40 inset;*/}
+nav a:last-child:hover, nav a:last-child.c{ background:#859900; border-color:#738212; /*background:#b58900; border-color:#826612; border-color:#826612; box-shadow:0 0 0 1px #ccaa40 inset;*/}
 /*nav a:last-child:active, nav a:last-child.c{ box-shadow:0 0 0 1px #ccaa40 inset;}*/
+#c, #i{ background:url(i.png) no-repeat 0 0; border:none; display:block; float:right; height:16px; opacity:.5; overflow:hidden; margin:22px 0 0 8px; padding:0; text-indent:-290486px; width:16px;}
+#i{ background-position:0 -16px;}
+#c:hover, #i:hover{ opacity:1;}
 
 h1{ color:#93a1a1; font-size:16px; font-style:italic; position:relative; text-align:center; top:-3px;}
 h1:before{ content:"# ";}
@@ -102,6 +105,10 @@ section h2{ font-size:14px; margin-bottom:8px;}
 section h2 a{ border:1px solid #e9e9e9; border-radius:4px; box-shadow:0 1px 0 white; color:#d33682; display:inline-block; float:none; margin:0; padding:4px 8px 6px;}
 section p{ color:#93a1a1;}
 section:hover p{ color:#000;}
+
+.m{ text-align:center;}
+.m, .m iframe{ margin-top:32px;}
+.sc{ background:url(sc.png) no-repeat 0 0; display:inline-block; padding:1px 0 1px 40px;}
 
 /* CSS 3 nonsense */
 

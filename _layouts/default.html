@@ -18,13 +18,19 @@
         {% if page.nav == 'portfolio' %}
           <a title="Thoughts about the Web" href="/"># Articles</a>
           <a class="c" href="portfolio.html" title="Selected works"># Portfolio</a>
+          <a href="music.html" title="Electronic sound waves"># Music</a>
+        {% elsif page.nav == 'music' %}
+          <a title="Thoughts about the Web" href="/"># Articles</a>
+          <a href="portfolio.html" title="Selected works"># Portfolio</a>
+          <a class="c" href="music.html" title="Electronic sound waves"># Music</a>
         {% else %}
           <a class="c" title="Thoughts about the Web" href="/"># Articles</a>
           <a href="portfolio.html" title="Selected works"># Portfolio</a>
+          <a href="music.html" title="Electronic sound waves"># Music</a>
         {% endif %}
-        <a id="c" title="Please enable JavaScript"># Contact</a>
-        <a title="Profile, RSS, and source repo" href="#info"># Info</a>
       </nav>
+      <a id="i" title="Profile, RSS, and source repo" href="#info"># Info</a>
+      <a id="c" title="Please enable JavaScript"># Contact</a>
     </header>
     {{ content }}
 		<footer id="info">
