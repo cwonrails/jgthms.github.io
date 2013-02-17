@@ -90,7 +90,7 @@ article blockquote{ color:#93a1a1; font-style:italic; position:relative;}
 article blockquote:before{ content:">"; font-style:normal;}
 article img{ border:1px solid #e9e9e9; display:block; margin:1em auto; max-width:618px;}
 article figure{ font-size:11px; margin:0 0 1em 0; text-align:center;}
-article figure a{ border:none; display:block; padding:0;}
+article figure a{ background:none; border:none; display:block; padding:0;}
 article figure img{ margin-bottom:0;}
 article figure a img{ border-color:#eee8d5;}
 article figure a:hover img{ border-color:#065383;}

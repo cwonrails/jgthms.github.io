@@ -5,7 +5,8 @@ category: Thoughts
 sticky: true
 ---
 
-I'm going to copy/paste what I've said about SoundCloud in a [previous comment](http://news.ycombinator.com/item?id=4871076): I love SoundCloud.
+I'm going to copy/paste what I've said about SoundCloud in a [previous comment](http://news.ycombinator.com/item?id=4871076):  
+I love SoundCloud.
 
 I remember how it was difficult for people like me to upload their music on the web in order to share it. The only viable option was the MySpace music section (which required a different MySpace account). Even renowned artists used it. But the music player was just a single feature among the whole MySpace package, and the resulting experience for both the uploader and the viewer was unconvincing.
 
@@ -49,8 +50,9 @@ When navigating back to your SoundCloud tab, unless you clearly see a "Pause" bu
 
 Yes, there's a "Play" icon in the title bar, but being not interactive and not obvious either, it's quite helpless.
 
-![SoundCloud Title UI](/i/soundcloud-title-ui.png)
-
+<figure>
+  <a href="https://soundcloud.com/jgthms/see-you-at-the-lights"><img alt="SoundCloud Title UI" src="/i/soundcloud-title-ui.png"></a>
+</figure>
 
 ## Lack of controls
 
