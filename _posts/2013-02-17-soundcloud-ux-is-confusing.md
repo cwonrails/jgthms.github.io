@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SoundCloud's UX is confusing
-category: Thoughts
+category: Interface
 sticky: true
 ---
 
