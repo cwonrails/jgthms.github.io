@@ -2,6 +2,7 @@
 layout: post
 title: Path is destined to grow slowly
 category: Thoughts
+sticky: true
 ---
 
 Like millions of people, I've had a Facebook account for years. I don't remember how many "Friends" I have, but it's obviously many more than its true state. In the last year and a half, I've only logged in twice to my account (once to post my [album](http://reachthethrone.com/), once to post a [Daft Punk remix](https://soundcloud.com/jgthms/daft-punk-random-access-memories-jthomas-remix)). But apart from that, I haven't had any activity or even read *any* story from my news feed. I also deleted hundreds of pictures, dozens of "Liked" pages, and unnecessary profile informations (including my birthday). I eventually changed my password to a 100 characters-long random string to prevent myself from logging in back too easily.
