@@ -48,7 +48,7 @@ footer p{ margin-bottom: 1em;}
 footer a{ color: #907eb2;}
 
 article time{ color: #ccc; font-size: 16px;}
-article h2{ margin-top: 2em;}
+article h2{ color: #333; display: block; font-size: 24px; margin-top: 2em; padding: 0;}
 article p, article ul{ margin: 1em 0;}
 article ul li{ position: relative;}
 article ul li:before, article blockquote:before{ color: #ccc; content: "*"; left: -1em; position: absolute; top: 4px;}
