@@ -10,29 +10,28 @@
 		<link rel="icon" href="/jt.ico">
 	</head>
   <body>
-    <header>
-      <a id="logo" href="/">
-        <strong>JT</strong>
-        <em>Thoughts of a retired designer</em>
-      </a>
-    </header>
     {{ content }}
     <div style="clear: both;"></div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="/jquery-1.10.1.min.js"></script>
+    <script src="/jquery.easing.min.js"></script>
     <script>
     $(document).ready(function(){
 
       var test = $('#test');
       var viewer = $('#viewer');
+      var reel = $('#viewer strong');
       var images = $('#viewer img');
       var links = $('#portfolio ul li a');
       var position = viewer.offset();
       var count = images.size();
       var i = 0;
 
+      reel.css('width', 220 * count);
+
       function Display(i) {
-        images.hide();
-        images.eq(i).show();
+        reel.stop().animate({
+          left: -(220 * i)
+        }, 500, 'easeOutExpo');
         links.removeClass('on');
         links.eq(i).addClass('on');
         link = links.eq(i).attr('href');
@@ -55,7 +54,7 @@
       timer = setInterval( function() {
         i = (i + 1) % count;
         Display(i);
-      }, 3000);
+      }, 5000);
 
       R = function(s) {
           return R13(R5(s));

@@ -17,6 +17,7 @@ a:hover{ color: #333; text-decoration: underline;}
 
 h1{ color: #1a94bd; font-size: 28px; font-weight: bold;}
 h2{ border-radius: 4px; color: #fff; display: inline-block; font-size: 16px; margin: 1em 0; padding: .125em .625em .25em;}
+/*h2{ box-shadow: 0 1px 1px rgba(0, 0, 0, .125) inset; text-shadow: 0 1px 1px rgba(0, 0, 0, .25);}*/
 
 header{ padding: 60px 0; text-align: center;}
 header a{ color: #e3b8b8; display: inline-block;}
@@ -38,17 +39,18 @@ aside{ color: #ccc; float: right; font-size: 14px; width: 220px;}
 aside a{ color: #ccc;}
 #music h2{ background: #b9bf72; margin-top: 0;}
 #portfolio h2{ background: #7cb185;}
-#viewer{ display: block; height: 132px; margin-bottom: 1em; position: relative; width: 220px;}
-#viewer img{ cursor: pointer; display: none; left: 0; position: absolute; top: 0;}
-#viewer img:first-child{ display: block;}
-#portfolio ul li a.on{ color: #7cb185;}
+#viewer{ border-radius: 4px; display: block; height: 132px; margin-bottom: 1em; overflow: hidden; position: relative; width: 220px;}
+#viewer strong{ display: block; left: 0; position: absolute; top: 0;}
+#viewer img{ cursor: pointer; float: left;}
+#viewer span{ box-shadow: 0 1px 1px rgba(0, 0, 0, .25) inset; display: block; height: 100%; left: 0; position: absolute; top: 0; width: 100%;}
+#portfolio ul li a.on{ color: #7cb185; font-weight: bold;}
 #portfolio ul li a.on:hover{ color: #333;}
 footer h2{ background: #907eb2;}
 footer p{ margin-bottom: 1em;}
 footer a{ color: #907eb2;}
 
 article time{ color: #ccc; font-size: 16px;}
-article h2{ color: #333; display: block; font-size: 24px; margin-top: 2em; padding: 0;}
+article h2{ box-shadow: none; color: #333; display: block; font-size: 24px; margin-top: 2em; padding: 0; text-shadow: none;}
 article p, article ul{ margin: 1em 0;}
 article ul li{ position: relative;}
 article ul li:before, article blockquote:before{ color: #ccc; content: "*"; left: -1em; position: absolute; top: 4px;}
@@ -56,8 +58,20 @@ article blockquote{ font-style: italic; position: relative;}
 article blockquote:before{ content: ">"; font-style: normal; top: 0;}
 article a{ text-decoration: underline;}
 article code{ background: whitesmoke; border: 1px solid #ccc; border-radius: 4px; color: #999; font-size: 18px; padding: .125em .25em;}
+article img{ max-width: 100%;}
 figure{ margin: 2em; text-align: center;}
 figcaption{ color: #ccc; font-size: 16px; margin-top: 1em;}
+
+/* Gosquared login boxshadow */
+
+/*article img{ box-shadow: 
+  0 1px 2px rgba(0, 0, 0, 0.2),
+  0 0 1px rgba(0, 0, 0, 0.3),
+  0 0 1px 1px rgba(255, 255, 255, 0.2) inset,
+  0 1px 0 rgba(255, 255, 255, 0.2) inset,
+  0 -1px 2px rgba(0, 0, 0, 0.05) inset
+}
+figure img{ box-shadow: none;}*/
 
 /* CSS 3 nonsense */
 
@@ -76,3 +90,28 @@ transition: color 500ms ease-out;}
 -ms-transition: all 500ms ease-out;
 -o-transition: all 500ms ease-out;
 transition: all 500ms ease-out;}
+
+/* Animation */
+
+.animated{ animation-duration: .5s; animation-fill-mode: both;}
+#logo{ animation-delay: .25s; animation-name: down;}
+#articles, #music, #portfolio, footer{ animation-name: up;}
+#articles{ animation-delay: .5s;}
+#music{ animation-delay: .75s;}
+#portfolio{ animation-delay: 1s;}
+footer{ animation-delay: 1.25s;}
+
+@keyframes up{
+  0%{ opacity: 0; transform: translateY(20px); }
+  100%{ opacity: 1; transform: translateY(0);}
+}
+
+@keyframes down{
+  0%{ opacity: 0; transform: translateY(-20px);  }
+  100%{ opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fade{
+  0%{ opacity: 0;}
+  100%{ opacity: 1;}
+}
