@@ -11,36 +11,41 @@ q: before,q: after{ content: '';}
 abbr,acronym{ border: 0;}
 
 html{ overflow-y: scroll;}
-body{ background: white; color: #5b818e; font-family: 'Open Sans',Arial,sans-serif; font-size: 20px; line-height: 1.5; margin: 0 auto 80px; width: 940px;}
+body{ background: white; color: #5b818e; font-family: 'Open Sans',Arial,sans-serif; font-size: 20px; line-height: 1.5; margin: 0 auto 120px; width: 940px;}
 a{ color: #1a94bd; text-decoration: none;}
 a:hover{ color: #333; text-decoration: underline;}
 
 h1{ color: #1a94bd; font-size: 28px; font-weight: bold;}
-h2{ color: #1a94bd; font-size: 24px; margin: 1em 0;}
+h2{ border-radius: 4px; color: #fff; display: inline-block; font-size: 16px; margin: 1em 0; padding: .125em .625em .25em;}
 
-header{ padding: 80px 0; text-align: center;}
+header{ padding: 60px 0; text-align: center;}
 header a{ color: #e3b8b8; display: inline-block;}
+header strong{ background: #db7272 url(jt.png) no-repeat center center; border-radius: 60px; display: inline-block; height: 120px; overflow: hidden; text-indent: -290486px; width: 120px;}
 header em{ display: block; font-size: 13px;}
 header a:hover{ color: #db7272; text-decoration: none;}
 
 section{ float: left; width: 620px;}
-#articles h2{ color: #b8d9e4; margin-top: 0;}
+#articles h2{ background: #1a94bd; margin-top: 0;}
 #articles li{ font-size: 18px; margin-bottom: .5em;}
 #articles h3{ display: inline;}
 #articles .sticky h3{ font-size: 20px; font-weight: bold;}
 #articles a:visited, article a:visited{ color: #999;}
 #articles a:visited:hover, article a:visited:hover{ color: #333;}
 #articles time{ color: #ccc; float: right; font-size: 12px;}
-#articles li:hover time, footer:hover, footer:hover a{ color: #999;}
+#articles li:hover time, footer:hover{ color: #999;}
 
-aside{ color: #ccc; float: right; width: 220px;}
+aside{ color: #ccc; float: right; font-size: 14px; width: 220px;}
 aside a{ color: #ccc;}
-#music h2{ color: #dfe3b8; margin-top: 0;}
-#portfolio h2{ color: #b8e3bf;}
-footer{ font-size: 14px;}
-footer h2{ color: #c6b8e3;}
+#music h2{ background: #b9bf72; margin-top: 0;}
+#portfolio h2{ background: #7cb185;}
+#viewer{ display: block; height: 132px; margin-bottom: 1em; position: relative; width: 220px;}
+#viewer img{ cursor: pointer; display: none; left: 0; position: absolute; top: 0;}
+#viewer img:first-child{ display: block;}
+#portfolio ul li a.on{ color: #7cb185;}
+#portfolio ul li a.on:hover{ color: #333;}
+footer h2{ background: #907eb2;}
 footer p{ margin-bottom: 1em;}
-footer li a{ text-decoration: underline;}
+footer a{ color: #907eb2;}
 
 article time{ color: #ccc; font-size: 16px;}
 article h2{ margin-top: 2em;}
@@ -56,17 +61,18 @@ figcaption{ color: #ccc; font-size: 16px; margin-top: 1em;}
 
 /* CSS 3 nonsense */
 
-header a,
-#articles:hover h2,
-#music:hover h2,
-#portfolio:hover h2,
-footer:hover h2,
-#articles li:hover time,
-footer:hover,
-footer:hover a
+a,
+time,
+footer
 { -webkit-transition: color 500ms ease-out;
 -moz-transition: color 500ms ease-out;
 -ms-transition: color 500ms ease-out;
 -o-transition: color 500ms ease-out;
 transition: color 500ms ease-out;}
-/* Need to list only :hover events to prevent weird startup behavior */
+
+#viewer img
+{ -webkit-transition: all 500ms ease-out;
+-moz-transition: all 500ms ease-out;
+-ms-transition: all 500ms ease-out;
+-o-transition: all 500ms ease-out;
+transition: all 500ms ease-out;}
