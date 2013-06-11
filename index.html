@@ -9,25 +9,23 @@ title: J. Thomas (thoughts of a retired designer)
     <em>Thoughts of a retired designer</em>
   </a>
 </header>
-<section>
-  <div id="articles" class="animated">
-    <p id="toggle">
-      <a id="all" class="on">All</a>
-      <a id="recommended">Recommended</a>
-    </p>
-    <h2>Articles</h2>
-    <ul>
-    {% for post in site.posts %}
-      <li{% if post.recommended == true %} class="recommended"{% endif %}>
-        <h3>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </h3>
-        <time>{{ post.date | date_to_string }}</time>
-      </li>
-    {% endfor %}
-    </ul>
-  </div>
-</section>
+<div id="articles" class="animated">
+  <p id="toggle">
+    <a id="all" class="on">All</a>
+    <a id="recommended">Recommended</a>
+  </p>
+  <h2>Articles</h2>
+  <ul>
+  {% for post in site.posts %}
+    <li{% if post.recommended == true %} class="recommended"{% endif %}>
+      <h3>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h3>
+      <time>{{ post.date | date_to_string }}</time>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
 <aside>
   <div id="music" class="animated">
     <h2>Music</h2>
