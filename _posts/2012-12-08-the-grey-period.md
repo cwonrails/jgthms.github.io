@@ -2,7 +2,7 @@
 layout: post
 title: The Grey Period
 category: Design
-sticky: true
+recommended: true
 ---
 
 Ever since Google launched its redesign, I've been wanting to point out a design direction that many websites seem to take: killing colors.

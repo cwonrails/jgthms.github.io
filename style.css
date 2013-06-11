@@ -12,7 +12,7 @@ abbr,acronym{ border: 0;}
 
 html{ overflow-y: scroll;}
 body{ background: white; color: #5b818e; font-family: 'Open Sans',Arial,sans-serif; font-size: 20px; line-height: 1.5; margin: 0 auto 120px; width: 940px;}
-a{ color: #1a94bd; text-decoration: none;}
+a{ color: #1a94bd; cursor: pointer; text-decoration: none;}
 a:hover{ color: #333; text-decoration: underline;}
 
 h1{ color: #1a94bd; font-size: 28px; font-weight: bold;}
@@ -27,9 +27,13 @@ header a:hover{ color: #db7272; text-decoration: none;}
 
 section{ float: left; width: 620px;}
 #articles h2{ background: #69b7d1; margin-top: 0;}
+#toggle{ display: inline-block; float: right; font-size: 16px; padding: .125em 0 .25em;}
+#toggle a{ display: inline-block; margin-left: .625em;}
+#toggle .on{ color: #333; cursor: default; font-weight: bold;}
+#toggle .on:hover{ text-decoration: none;}
 #articles li{ font-size: 18px; margin-bottom: .5em;}
 #articles h3{ display: inline;}
-#articles .sticky h3{ font-size: 20px; font-weight: bold;}
+#articles .recommended h3{ font-size: 20px; font-weight: bold;}
 #articles a:visited, article a:visited{ color: #999;}
 #articles a:visited:hover, article a:visited:hover{ color: #333;}
 #articles time{ color: #ccc; float: right; font-size: 12px;}

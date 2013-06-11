@@ -2,7 +2,7 @@
 layout: post
 title: When a designer programs
 category: Thoughts
-sticky: true
+recommended: true
 ---
 
 Launching a website requires mainly 3 parts:

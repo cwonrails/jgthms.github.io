@@ -2,7 +2,7 @@
 layout: post
 title: There are 3 levels of administration
 category: Thoughts
-sticky: true
+recommended: true
 ---
 
 For every web application, there is an administration to design. Its complexity and ease of use depends on who is meant to interact with it.

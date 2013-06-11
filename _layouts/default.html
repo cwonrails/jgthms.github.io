@@ -15,7 +15,23 @@
     <script src="/jquery-1.10.1.min.js"></script>
     <script src="/jquery.easing.min.js"></script>
     <script>
-    $(document).ready(function(){
+    $(document).ready( function() {
+
+      var all = $('#all');
+      var recommended = $('#recommended');
+      var articles = $('#articles li').not('.recommended');
+
+      recommended.click( function() {
+        articles.stop().slideUp(500, 'easeOutExpo');
+        all.removeClass('on');
+        $(this).addClass('on');
+      });
+
+      all.click( function() {
+        articles.stop().slideDown(500, 'easeOutExpo');
+        recommended.removeClass('on');
+        $(this).addClass('on');
+      });
 
       var test = $('#test');
       var viewer = $('#viewer');

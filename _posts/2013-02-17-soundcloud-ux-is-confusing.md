@@ -2,7 +2,7 @@
 layout: post
 title: SoundCloud's UX is confusing
 category: Interface
-sticky: true
+recommended: true
 ---
 
 I'm going to copy/paste what I've said about SoundCloud in a [previous comment](http://news.ycombinator.com/item?id=4871076):  

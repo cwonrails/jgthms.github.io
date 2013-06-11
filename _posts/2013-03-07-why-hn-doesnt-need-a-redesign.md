@@ -2,7 +2,7 @@
 layout: post
 title: Why HN doesn't need a redesign
 category: Thoughts
-sticky: true
+recommended: true
 ---
 
 I don't exactly remember how I discovered Hacker News. [My account](http://news.ycombinator.com/user?id=bbx) is 1295 days old, which means I subscribed on August 20, 2009. HN's homepage on [that particular date](http://web.archive.org/web/20090820010834/http://news.ycombinator.com/) was filled with stories about \_why's disappearance which, in retrospect, is probably the event that led me to HN in the first place, considering I was learning Ruby at that time.

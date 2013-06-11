@@ -2,7 +2,7 @@
 layout: post
 title: Quick Bootstrap Design
 category: Design
-sticky: true
+recommended: true
 ---
 
 <figure>
