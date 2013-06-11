@@ -26,7 +26,7 @@ header em{ display: block; font-size: 13px;}
 header a:hover{ color: #db7272; text-decoration: none;}
 
 section{ float: left; width: 620px;}
-#articles h2{ background: #1a94bd; margin-top: 0;}
+#articles h2{ background: #69b7d1; margin-top: 0;}
 #articles li{ font-size: 18px; margin-bottom: .5em;}
 #articles h3{ display: inline;}
 #articles .sticky h3{ font-size: 20px; font-weight: bold;}
@@ -37,7 +37,7 @@ section{ float: left; width: 620px;}
 
 aside{ color: #ccc; float: right; font-size: 14px; width: 220px;}
 aside a{ color: #ccc;}
-#music h2{ background: #b9bf72; margin-top: 0;}
+#music h2{ background: #bec288; margin-top: 0;}
 #portfolio h2{ background: #7cb185;}
 #viewer{ border-radius: 4px; display: block; height: 132px; margin-bottom: 1em; overflow: hidden; position: relative; width: 220px;}
 #viewer strong{ display: block; left: 0; position: absolute; top: 0;}
@@ -45,7 +45,7 @@ aside a{ color: #ccc;}
 #viewer span{ box-shadow: 0 1px 1px rgba(0, 0, 0, .25) inset; display: block; height: 100%; left: 0; position: absolute; top: 0; width: 100%;}
 #portfolio ul li a.on{ color: #7cb185; font-weight: bold;}
 #portfolio ul li a.on:hover{ color: #333;}
-footer h2{ background: #907eb2;}
+footer h2{ background: #9b8db8;}
 footer p{ margin-bottom: 1em;}
 footer a{ color: #907eb2;}
 
