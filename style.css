@@ -21,7 +21,7 @@ h2{ border-radius: 4px; color: #fff; display: inline-block; font-size: 16px; mar
 
 header{ padding: 60px 0; text-align: center;}
 header a{ color: #e3b8b8; display: inline-block;}
-header strong{ background: #db7272 url(jt.png) no-repeat center center; border-radius: 60px; display: inline-block; height: 120px; overflow: hidden; text-indent: -290486px; width: 120px;}
+header strong{ background: #db7272 url(jt.png) no-repeat center center; border-radius: 60px; display: inline-block; height: 120px; margin-bottom: .5em; overflow: hidden; text-indent: -290486px; width: 120px;}
 header em{ display: block; font-size: 13px;}
 header a:hover{ color: #db7272; text-decoration: none;}
 
@@ -79,16 +79,10 @@ a,
 time,
 footer
 { -webkit-transition: color 500ms ease-out;
--moz-transition: color 500ms ease-out;
--ms-transition: color 500ms ease-out;
--o-transition: color 500ms ease-out;
 transition: color 500ms ease-out;}
 
 #viewer img
 { -webkit-transition: all 500ms ease-out;
--moz-transition: all 500ms ease-out;
--ms-transition: all 500ms ease-out;
--o-transition: all 500ms ease-out;
 transition: all 500ms ease-out;}
 
 /* Animation */
@@ -101,17 +95,40 @@ transition: all 500ms ease-out;}
 #portfolio{ animation-delay: 1s;}
 footer{ animation-delay: 1.25s;}
 
+.animated{ -webkit-animation-duration: .5s; -webkit-animation-fill-mode: both;}
+#logo{ -webkit-animation-delay: .25s; -webkit-animation-name: down;}
+#articles, #music, #portfolio, footer{ -webkit-animation-name: up;}
+#articles{ -webkit-animation-delay: .5s;}
+#music{ -webkit-animation-delay: .75s;}
+#portfolio{ -webkit-animation-delay: 1s;}
+footer{ -webkit-animation-delay: 1.25s;}
+
 @keyframes up{
-  0%{ opacity: 0; transform: translateY(20px); }
+  0%{ opacity: 0; transform: translateY(20px);}
   100%{ opacity: 1; transform: translateY(0);}
 }
 
 @keyframes down{
-  0%{ opacity: 0; transform: translateY(-20px);  }
+  0%{ opacity: 0; transform: translateY(-20px);}
   100%{ opacity: 1; transform: translateY(0);}
 }
 
 @keyframes fade{
+  0%{ opacity: 0;}
+  100%{ opacity: 1;}
+}
+
+@-webkit-keyframes up{
+  0%{ opacity: 0; -webkit-transform: translateY(20px);}
+  100%{ opacity: 1; -webkit-transform: translateY(0);}
+}
+
+@-webkit-keyframes down{
+  0%{ opacity: 0; -webkit-transform: translateY(-20px);}
+  100%{ opacity: 1; -webkit-transform: translateY(0);}
+}
+
+@-webkit-keyframes fade{
   0%{ opacity: 0;}
   100%{ opacity: 1;}
 }
