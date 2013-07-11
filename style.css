@@ -41,7 +41,8 @@ header a:hover{ color: #db7272; text-decoration: none;}
 aside{ color: #ccc; float: right; font-size: 14px; width: 220px;}
 aside a{ color: #ccc;}
 #music h2{ background: #bec288; margin-top: 0;}
-#music object{ display: block;}
+#player{ height: 200px; overflow: hidden; width: 200px;}
+#player img, #player object{ display: block;}
 #portfolio h2{ background: #7cb185;}
 #viewer{ border-radius: 4px; display: block; height: 132px; margin-bottom: 1em; overflow: hidden; position: relative; width: 220px;}
 #viewer strong{ display: block; left: 0; position: absolute; top: 0;}
