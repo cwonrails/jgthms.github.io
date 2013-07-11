@@ -35,7 +35,7 @@ header a:hover{ color: #db7272; text-decoration: none;}
 #articles .recommended h3{ font-size: 20px; font-weight: bold;}
 #articles a:visited, article a:visited{ color: #999;}
 #articles a:visited:hover, article a:visited:hover{ color: #333;}
-#articles time{ color: #ccc; float: right; font-size: 12px; padding-top: .5em;}
+#articles time{ color: #ccc; float: right; font-size: 12px; margin-left: 1em; padding-top: .5em;}
 #articles li:hover time, footer:hover{ color: #999;}
 
 aside{ color: #ccc; float: right; font-size: 14px; width: 220px;}
@@ -58,14 +58,16 @@ footer p{ margin-bottom: 1em;}
 footer a{ color: #907eb2;}
 
 article time{ color: #ccc; font-size: 16px;}
-article h2{ box-shadow: none; color: #333; display: block; font-size: 24px; margin-top: 2em; padding: 0; text-shadow: none;}
+article h2{ border-bottom: 1px solid #ccc; border-radius: 0; box-shadow: none; color: #333; display: block; font-size: 28px; margin-top: 2em; padding: 0 0 .5em; text-shadow: none;}
+article h3{ color: #333; font-size: 24px; margin-top: 2em;}
 article p, article ul{ margin: 1em 0;}
 article ul li, article blockquote{ margin-left: 1em; position: relative;}
 article ul li:before, article blockquote:before{ color: #ccc; content: "*"; left: -1em; position: absolute; top: 4px;}
 article blockquote{ font-style: italic;}
 article blockquote:before{ content: ">"; font-style: normal; top: 0;}
 article a{ text-decoration: underline;}
-article code{ background: whitesmoke; border: 1px solid #ccc; border-radius: 4px; color: #999; font-size: 18px; padding: .125em .25em;}
+article code, article pre{ background: whitesmoke; border: 1px solid #ccc; border-radius: 4px; color: #999; font-size: 18px; padding: .125em .25em;}
+article pre code{ border: none; padding: 0;}
 article img{ max-width: 100%;}
 figure{ margin: 2em; text-align: center;}
 figcaption{ color: #ccc; font-size: 16px; margin-top: 1em;}

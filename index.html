@@ -18,10 +18,10 @@ title: J. Thomas (thoughts of a retired designer)
   <ul>
   {% for post in site.posts %}
     <li{% if post.recommended == true %} class="recommended"{% endif %}>
+      <time>{{ post.date | date_to_string }}</time>
       <h3>
         <a href="{{ post.url }}">{{ post.title }}</a>
       </h3>
-      <time>{{ post.date | date_to_string }}</time>
     </li>
   {% endfor %}
   </ul>
