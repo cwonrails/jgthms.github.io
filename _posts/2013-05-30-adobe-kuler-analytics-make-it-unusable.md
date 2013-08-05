@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adobe Kuler's analytics makes it unusable
+title: Adobe Kuler's analytics make it unusable
 category : Thoughts
 ---
 
