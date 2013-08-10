@@ -54,6 +54,7 @@ nav, #contact, #hello, .title, .post-title, #side, .project{ font-family: Bitter
 
 header{ height: 100px; padding: 80px 0; position: relative; text-align: center;}
 #logo, #contact{ background: #db7272 url(jt.png) no-repeat center center; border-radius: 50px; display: block; height: 100px; left: 0; overflow: hidden; position: absolute; text-indent: -290486px; top: 80px; width: 100px;}
+#logo.loading{ background-image: url(loader.gif);}
 nav{ font-size: 16px; font-style: italic; padding-top: 38px;}
 nav a{ border-bottom: 4px solid transparent; color: white; display: inline-block; margin: 0 30px; padding: 4px 8px;}
 nav a:visited{ color: white;}
@@ -108,7 +109,7 @@ nav a:hover{ color: white; text-decoration: none;}
 
 .project{ border-radius: 4px; color: white; float: left; height: 250px; line-height: 1; margin: 0 0 40px 60px; overflow: hidden; text-indent: 10px; width: 300px;}
 .project:nth-child(3n-2){ margin-left: 0;}
-.project-image{ border-radius: 4px; display: block; margin-bottom: 10px;}
+.project-image{ border-radius: 4px; display: block; height: 180px; margin-bottom: 10px;}
 .project-name{ color: white; font-size: 20px; padding: 6px 0 4px;}
 .project-description{ color: #7cb185; font-size: 14px; font-style: italic;}
 .project:visited{ color: white;}

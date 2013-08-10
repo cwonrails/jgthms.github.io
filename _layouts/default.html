@@ -34,6 +34,8 @@
     <script>
     $(document).ready( function() {
 
+      var navigating = false;
+
       IsArticle = function(url) {
         if (url == '/articles.html') {
           Articles();
@@ -41,9 +43,13 @@
       }
 
       Display = function(url) {
+        $('#logo').addClass('loading');
         $('#content').fadeOut(500, 'easeOutExpo', function() {
           $('#content').load(url + ' .page', function() {
+            $('#logo').removeClass('loading');
             $('#content').fadeIn(500, 'easeOutExpo');
+            document.title = $('#content').find('.page').data('title');
+            navigating = true;
             IsArticle(url);
           });
         });
@@ -132,7 +138,9 @@
       c.attr('href', R(t+m));
 
       $(window).bind('popstate', function() {
-        Display(window.location.pathname);
+        if (navigating) {
+          Display(window.location.pathname);
+        }
       });
         
     });
