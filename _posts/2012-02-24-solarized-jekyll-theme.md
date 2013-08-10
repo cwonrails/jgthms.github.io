@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Solarized Jekyll Theme
+introduction: The Solarized color scheme isn't for programmers only.
 category: Design
 ---
+
+**Update**: as I've modified my design since, this post isn't as relevant as before. But you can check the design in the Colophon section.
 
 As I've decided to design this blog without any image nor CSS 3 fancy feature (gradients & shadows particularly), I had to come up with a perfect color scheme, pleasing to read and visually balanced.
 

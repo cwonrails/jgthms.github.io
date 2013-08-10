@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Update bookmark
+introduction: Bookmarks are not always meant to remain unchanged through time.
 category: Thoughts
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title: How iOS 7 can still end up looking
 category : Design
+introduction: iOS 7's interface both stunned most designers and gave them an excuse to score some Dribbble shots.
 ---
 
 The new iOS 7 icons made most (if not all) designers cringe. They don't criticize the decision to head for a flatter (but not completely flat) layout but rather the execution. The acid unpleasant visual result is probably due to the fact that [Jony Ive put Apple's marketing team in charge of iOS 7 icon design](http://www.macrumors.com/2013/06/12/jony-ive-put-apples-marketing-team-in-charge-of-ios-7-icon-design/).

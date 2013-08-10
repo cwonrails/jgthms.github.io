@@ -2,6 +2,7 @@
 layout: post
 title: Designing a single page with CSS animations, keyframes and a full-size background cover
 category : Design
+introduction: I wasn't using the jt.ms domain I bought last year and thought it would be a good opportunity to play with CSS 3 animations.
 recommended: true
 ---
 

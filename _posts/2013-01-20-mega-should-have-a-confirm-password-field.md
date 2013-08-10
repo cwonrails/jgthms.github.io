@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mega should have a confirm password field
+introduction: Especially when it's not exactly a password.
 category: Thoughts
 ---
 

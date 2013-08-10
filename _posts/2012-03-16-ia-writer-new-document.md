@@ -2,6 +2,7 @@
 layout: post
 title: iA Writer's new document
 category: Interface
+introduction: A small disturbance that can turn into a major annoyance.
 ---
 
 iA Writer for iPhone [just came out](http://www.iawriter.com/). 0,79€ for both iPhone *and* iPad (that I plan on upgrading to iOS 5) apps? Instant download!

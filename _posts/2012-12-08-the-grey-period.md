@@ -2,6 +2,7 @@
 layout: post
 title: The Grey Period
 category: Design
+introduction: You put colors in your interface? That's so vintage.
 recommended: true
 ---
 

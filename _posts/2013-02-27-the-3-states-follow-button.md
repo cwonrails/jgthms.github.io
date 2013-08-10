@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The 3-states follow button
+introduction: Make use of the hover state to hide the action and display the current state.
 category: Interface
 ---
 

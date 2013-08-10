@@ -16,35 +16,130 @@ html{
   -webkit-background-size: cover;
 }
 html{ overflow-y: scroll;}
-body{ color: #5b818e; font: 16px/1.5 'Open Sans',Arial,sans-serif; width: 100%;}
+body{ color: #5b818e; font: 20px/1.5 'Open Sans',Arial,sans-serif; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); width: 100%;}
 a{ color: #3d9cbc; cursor: pointer; text-decoration: none;}
 a:hover{ color: #0d111e; text-decoration: underline;}
+a:visited{ color: #8b69d1;}
 
 .wrap{ margin: 0 auto; width: 1020px;}
-nav, #hello, .title, .post-title{ font-family: Bitter, Georgia, serif;}
-.title{ color: white; font-size: 20px; height: 80px; font-style: italic; margin-bottom: 20px; text-align: center;}
+nav, #contact, #hello, .title, .post-title, #side, .project{ font-family: Bitter, Georgia, serif;}
+.title{ color: white; display: none; font-size: 20px; height: 80px; font-style: italic; margin-bottom: 20px; text-align: center;}
+.main{ background: white; border-radius: 8px; margin-bottom: 40px; min-height: 400px; padding: 10px 0; position: relative;}
 
-header{ height: 100px; padding: 80px 0 40px; position: relative; text-align: center;}
-#logo{ background: #db7272 url(jt.png) no-repeat center center; border-radius: 50px; display: block; height: 100px; left: 0; overflow: hidden; position: absolute; text-indent: -290486px; top: 80px; width: 100px;}
+.post-title{ font-size: 24px; line-height: 1.25;}
+.post-format{ background: #d5d5d5; border-radius: 20px; display: none; height: 40px; width: 40px;}
+.post-info{ font-size: 12px; line-height: 20px; text-align: right;}
+.post-date{ color: #ccc; display: block;}
+.post-category{ display: block; font-weight: normal;}
+.post-category span{ color: #ccc;}
+.post-introduction{ font-size: 16px; margin-top: 0.5em;}
+.post-content h2{ border-bottom: 1px solid #ccc; border-radius: 0; box-shadow: none; color: #0d111e; display: block; font-size: 28px; margin-top: 2em; padding: 0 0 .5em; text-shadow: none;}
+.post-content h3{ color: #0d111e; font-size: 24px; margin-top: 2em;}
+.post-content p, .post-content ul{ margin: 1em 0;}
+.post-content ul li, .post-content blockquote{ margin-left: 1em; position: relative;}
+.post-content ul li:before, .post-content blockquote:before{ color: #ccc; content: "*"; left: -1em; position: absolute; top: 4px;}
+.post-content blockquote{ font-style: italic;}
+.post-content blockquote:before{ content: ">"; font-style: normal; top: 0;}
+.post-content a{ text-decoration: underline;}
+.post-content code, .post-content pre{ background: whitesmoke; border: 1px solid #ccc; border-radius: 4px; color: #999; font-size: 18px; padding: .125em .25em;}
+.post-content pre code{ border: none; padding: 0;}
+.post-content img{ max-width: 100%;}
+.post-content figure{ margin: 2em; text-align: center;}
+.post-content figcaption{ color: #ccc; font-size: 16px; margin-top: 1em;}
+.post-content table{ width:100%;}
+.post-content td, .post-content th{ padding:1em;}
+.post-content td{ background:#fdf6e3;}
+.post-content th{ background:#eee8d5;}
+.post-content td.empty{ background:none; border:none;}
+
+header{ height: 100px; padding: 80px 0; position: relative; text-align: center;}
+#logo, #contact{ background: #db7272 url(jt.png) no-repeat center center; border-radius: 50px; display: block; height: 100px; left: 0; overflow: hidden; position: absolute; text-indent: -290486px; top: 80px; width: 100px;}
 nav{ font-size: 16px; font-style: italic; padding-top: 38px;}
-nav li{ display: inline; margin: 0 40px;}
-nav a{ color: white; display: inline-block;}
-nav a:hover{ text-decoration: none;}
+nav a{ border-bottom: 4px solid transparent; color: white; display: inline-block; margin: 0 30px; padding: 4px 8px;}
+nav a:visited{ color: white;}
+nav a:hover{ color: white; text-decoration: none;}
+#nav-home:hover, #nav-home.on{ border-bottom-color: #db7272;}
+#nav-articles:hover, #nav-articles.on{ border-bottom-color: #3d9cbc;}
+#nav-portfolio:hover, #nav-portfolio.on{ border-bottom-color: #7cb185;}
+#nav-music:hover, #nav-music.on{ border-bottom-color: #bec288;}
+#nav-info:hover, #nav-info.on{ border-bottom-color: #555;}
+#contact{ background: rgba(255, 255, 255, 0.04); color: rgba(255, 255, 255, 0.16); font-size: 13px; font-style: italic; left: auto; line-height: 100px; right: 0; text-align: center; text-indent: 0; text-shadow: none;}
+#contact:hover{ background: white; color: #0d111e; text-decoration: none;}
 
-#home{ display: none;}
+/* 01 Home */
+
 #hello{ color: white; font-size: 32px; height: 144px; left: 0; margin-top: -72px; position: absolute; top: 50%; text-align: center; width: 100%;}
 #hello strong{ display: block; font-weight: normal; margin: 0 auto; width: 1020px;}
 
-#main{ background: white; border-radius: 4px; margin-bottom: 40px; position: relative;}
-#main article{ float: left; width: 820px;}
-#main aside{ background: #f5f5f5; border-radius: 0 4px 4px 0; float: right; height: 100%; padding: 0 20px; position: absolute; right: 0; top: 0; width: 160px;}
-#main article section{ border-bottom: 2px solid #f5f5f5; min-height: 40px; padding: 20px 40px 20px 120px; position: relative;}
-#main article section:last-child{ border-bottom: none;}
-#main article .post-title{ padding-top: 8px;}
-#main article .recommended .post-title{ padding-top: 5px;}
-#main article .post-format{ left: 40px; position: absolute; top: 20px;}
+/* 02 Articles */
 
-.post-format{ background: #d5d5d5; border-radius: 20px; height: 40px; width: 40px;}
-.post-date{ display: none;}
-.post-title{ font-size: 20px; line-height: 1.25;}
-.recommended .post-title{ font-size: 24px; font-weight: bold;}
+#articles{ text-shadow: none;}
+
+#list{ float: left; width: 820px;}
+#list section{ border-bottom: 1px solid #eee; padding: 20px 20px 20px 40px; position: relative;}
+#list .post-title{ margin-right: 80px; padding-top: 5px;}
+#list .post-format{ left: 40px; position: absolute; top: 20px;}
+#list .post-info{ float: right;}
+#list .post-introduction{ margin-right: 80px;}
+#list section:last-child{ border-bottom: none;}
+#list .recommended{ padding-bottom: 30px; padding-top: 30px;}
+#list .recommended .post-title{ font-size: 28px; font-weight: bold; padding-top: 2px;}
+#list .recommended .post-title a{ color: #555;}
+#list .recommended .post-title a:visited{ color: #8b69d1;}
+#list .recommended .post-title a:hover{ color: #0d111e;}
+#list .recommended .post-format{ top: 30px;}
+#list .recommended .post-introduction{ font-size: 20px;}
+
+#side{ background: #f5f5f5; border-radius: 0 8px 8px 0; color: #999; float: right; font-size: 16px; height: 100%; padding: 0 20px; position: absolute; right: 0; top: 0; width: 160px;}
+#side section{ padding-top: 20px;}
+#side p,
+#side li{ margin-top: 0.25em;}
+#side ul{ font-style: italic;}
+#side .on{ color: #555; font-style: normal; font-weight: bold;}
+#introductions{ background: #3d9cbc; background: -moz-linear-gradient(left,  #3d9cbc 50%, #db7272 50%); background: -webkit-linear-gradient(left,  #3d9cbc 50%,#db7272 50%); background: linear-gradient(to right,  #3d9cbc 50%,#db7272 50%); border-radius: 10px; box-shadow: inset 0 1px 4px hsla(0,0%,0%,.5), 0 -1px 2px 2px hsla(0,0%,0%,.25); display: block; height: 20px; margin-top: 10px; width: 60px;}
+#introductions:after{ background-color: #eee; background-image: -webkit-linear-gradient(hsla(0,0%,100%,.1), hsla(0,0%,0%,.1)); border-radius: 10px; box-shadow: inset 0 1px 1px 1px hsla(0,0%,100%,1), inset 0 -1px 1px 1px hsla(0,0%,0%,.25), 0 1px 3px 1px hsla(0,0%,0%,.5), 0 0 2px hsla(0,0%,0%,.25); content: ''; display: block; height: 20px; left: 0; position: relative; top: 0; width: 40px; -webkit-appearance: none; -webkit-transition: .25s; }
+#introductions.on:after{ left: 20px;}
+#side em{ display: block; font-size: 11px; font-style: normal; line-height: 1.75; padding-top: 20px;}
+#side em a{ color: #555;}
+
+/* 03 Portfolio */
+
+.project{ border-radius: 4px; color: white; float: left; height: 250px; line-height: 1; margin: 0 0 40px 60px; overflow: hidden; text-indent: 10px; width: 300px;}
+.project:nth-child(3n-2){ margin-left: 0;}
+.project-image{ border-radius: 4px; display: block; margin-bottom: 10px;}
+.project-name{ color: white; font-size: 20px; padding: 6px 0 4px;}
+.project-description{ color: #7cb185; font-size: 14px; font-style: italic;}
+.project:visited{ color: white;}
+.project:hover{ background: #7cb185; color: white; text-decoration: none;}
+.project:hover .project-image{ border-radius: 0;}
+.project:hover .project-description{ color: #555; text-shadow: none;}
+
+/* 04 Music */
+
+.set{ clear: both; float: left; margin-bottom: 40px; min-height: 200px; width: 100%;}
+.set-image{ float: left;}
+.set-player{ float: right; width: 740px;}
+
+/* 05 Info */
+
+#info{ color: white;}
+#info a{ color: white; text-decoration: underline;}
+#info p{ margin-bottom: 1em;}
+
+/* Single */
+
+#single{ text-shadow: none;}
+#single .main{ padding: 40px;}
+#single .post-title{ color: #0d111e; font-size: 32px; font-weight: bold;}
+#single .post-date{ margin-top: 1em;}
+
+a {
+  transition: background 500ms ease-out, border 500ms ease-out, color 500ms ease-out;
+  -moz-transition: background 500ms ease-out, border 500ms ease-out, color 500ms ease-out;
+  -ms-transition: background 500ms ease-out, border 500ms ease-out, color 500ms ease-out;
+  -o-transition: background 500ms ease-out, border 500ms ease-out, color 500ms ease-out;
+  -webkit-transition: background 500ms ease-out, border 500ms ease-out, color 500ms ease-out;
+}
+
+
+

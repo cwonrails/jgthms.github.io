@@ -2,6 +2,7 @@
 layout: post
 title: Why HN doesn't need a redesign
 category: Thoughts
+introduction: It's not about the interface. It's about the experience.
 recommended: true
 ---
 

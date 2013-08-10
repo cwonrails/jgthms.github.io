@@ -2,6 +2,7 @@
 layout: post
 title: Organized Gmail Inbox
 category: Interface
+introduction: Just set a simple set of rules. Then follow them. That's it.
 recommended: true
 ---
 

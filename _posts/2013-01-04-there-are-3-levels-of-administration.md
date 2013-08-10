@@ -2,6 +2,7 @@
 layout: post
 title: There are 3 levels of administration
 category: Thoughts
+introduction: An administration system is as easy to use as its development is difficult.
 recommended: true
 ---
 

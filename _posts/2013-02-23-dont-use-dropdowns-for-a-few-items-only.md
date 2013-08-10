@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Don't use dropdowns for a few items only
+introduction: Decluttering screen real estate doesn't mean using it wrong.
 category: Interface
 ---
 

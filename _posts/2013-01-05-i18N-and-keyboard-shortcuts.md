@@ -1,6 +1,7 @@
 ---
 layout: post
 title: I18N and keyboard shortcuts
+introduction: Translating your app isn't only through words.
 category: Thoughts
 ---
 

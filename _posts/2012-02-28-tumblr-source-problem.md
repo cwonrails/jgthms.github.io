@@ -2,6 +2,7 @@
 layout: post
 title: Tumblr and the source problem
 category: Thoughts
+introduction: Who still cares where something on the web comes from?
 recommended: true
 ---
 

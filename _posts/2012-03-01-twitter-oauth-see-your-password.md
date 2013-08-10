@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Twitter OAuth 'See your password'
+introduction: Sometimes repeating what's obvious can make the user question your website's security.
 category: Thoughts
 ---
 

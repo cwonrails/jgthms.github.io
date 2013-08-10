@@ -2,6 +2,7 @@
 layout: post
 title: Adobe Kuler's analytics make it unusable
 category : Thoughts
+introduction: I use Firefox add-ons to block various useless scripts. It never prevented me from seamlessly browsing the web. Until now.
 ---
 
 Adobe just released a new version of their color tool [Kuler](https://kuler.adobe.com). I was surprised though to stumble upon an empty page:
