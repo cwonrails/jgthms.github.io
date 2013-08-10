@@ -24,7 +24,7 @@ a:visited{ color: #8b69d1;}
 .wrap{ margin: 0 auto; width: 1020px;}
 nav, #contact, #hello, .title, .post-title, #side, .project{ font-family: Bitter, Georgia, serif;}
 .title{ color: white; display: none; font-size: 20px; height: 80px; font-style: italic; margin-bottom: 20px; text-align: center;}
-.main{ background: white; border-radius: 8px; margin-bottom: 40px; min-height: 400px; padding: 10px 0; position: relative;}
+.main{ background: white; border-radius: 8px; margin-bottom: 40px; min-height: 500px; padding: 10px 0; position: relative;}
 
 .post-title{ font-size: 24px; line-height: 1.25;}
 .post-format{ background: #d5d5d5; border-radius: 20px; display: none; height: 40px; width: 40px;}
@@ -65,6 +65,8 @@ nav a:hover{ color: white; text-decoration: none;}
 #nav-info:hover, #nav-info.on{ border-bottom-color: #555;}
 #contact{ background: rgba(255, 255, 255, 0.04); color: rgba(255, 255, 255, 0.16); font-size: 13px; font-style: italic; left: auto; line-height: 100px; right: 0; text-align: center; text-indent: 0; text-shadow: none;}
 #contact:hover{ background: white; color: #0d111e; text-decoration: none;}
+
+#loader{ background: rgba(13, 17, 30, 0.86) url(loader.gif) no-repeat center center; display: none; height: 100%; left: 0; position: fixed; top: 0; width: 100%; z-index: 1986;}
 
 /* 01 Home */
 
@@ -133,7 +135,7 @@ nav a:hover{ color: white; text-decoration: none;}
 #single .post-title{ color: #0d111e; font-size: 32px; font-weight: bold;}
 #single .post-date{ margin-top: 1em;}
 
-a {
+a{
   transition: background 500ms ease-out, border 500ms ease-out, color 500ms ease-out;
   -moz-transition: background 500ms ease-out, border 500ms ease-out, color 500ms ease-out;
   -ms-transition: background 500ms ease-out, border 500ms ease-out, color 500ms ease-out;
@@ -141,5 +143,11 @@ a {
   -webkit-transition: background 500ms ease-out, border 500ms ease-out, color 500ms ease-out;
 }
 
+.animated{ -webkit-animation-duration: 500ms; -webkit-animation-fill-mode: both; -webkit-animation-name: hello; -webkit-animation-timing-function: ease-out;}
+
+@-webkit-keyframes hello {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}
 
 

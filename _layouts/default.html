@@ -12,7 +12,7 @@
 	</head>
   <body>
     <header class="wrap">
-      <a id="logo" class="animated" href="/">
+      <a id="logo" href="/">
         <strong>JT</strong>
       </a>
       <nav>
@@ -24,73 +24,81 @@
       </nav>
       <a id="contact" title="Please enable JavaScript to view my email">Contact</a>
     </header>
-    {{ content }}
+    <div id="content">
+      {{ content }}
+    </div>
     <div style="clear: both;"></div>
+    <div id="loader"></div>
     <script src="/jquery-1.10.1.min.js"></script>
     <script src="/jquery.easing.min.js"></script>
     <script>
     $(document).ready( function() {
 
-      var current_url = window.location.pathname;
-      var current_path = current_url.substr(current_url.lastIndexOf('/') + 1);
-
-      var views = {
-        articles: 1,
-        portfolio: 2,
-        music: 3,
-        info: 4
+      IsArticle = function(url) {
+        if (url == '/articles.html') {
+          Articles();
+        }
       }
 
-      var pages = $('.page');
-      var tabs = $('nav a');
-
-      Navigate = function(p) {
-        tabs.removeClass('on');
-        pages.hide();
-        var view = (p == '') ? 0 : views[p];
-        tabs.eq(view).addClass('on');
-        pages.eq(view).show();
+      Display = function(url) {
+        $('#content').fadeOut(500, 'easeOutExpo', function() {
+          $('#content').load(url + ' .page', function() {
+            $('#content').fadeIn(500, 'easeOutExpo');
+            IsArticle(url);
+          });
+        });
       }
 
-      // tabs.click( function() {
-      //   var url = $(this).attr('href');
-      //   var path = url.substr(url.lastIndexOf('/') + 1);
-      //   alert(path);
-      //   path = path.replace('.html', '');
-      //   history.replaceState(null, '', url);
-      //   Navigate(path);
-      //   return false;
-      // });
+      // Articles
 
-      var posts = $('#list section');
-      var filters = $('#filters li a');
-      var categories = $('#categories li a');
-      var displayed = ['.post', ''];
-
-      Display = function(target) {
-        posts.not(displayed.join('')).stop().slideUp(500, 'easeOutExpo');;
-        posts.filter(displayed.join('')).stop().slideDown(500, 'easeOutExpo');
-        target.parent().siblings().find('a').removeClass('on');
-        target.addClass('on');
+      Articles = function() {
+        var posts = $('#list section');
+        var titles = $('#list .post-title a');
+        var filters = $('#filters li a');
+        var categories = $('#categories li a');
+        var introductions = $('#introductions');
+        var displayed = ['.post', ''];
+        Sort = function(target) {
+          posts.not(displayed.join('')).stop().slideUp(500, 'easeOutExpo');;
+          posts.filter(displayed.join('')).stop().slideDown(500, 'easeOutExpo');
+          target.parent().siblings().find('a').removeClass('on');
+          target.addClass('on');
+        }
+        titles.click( function() {
+          var url = $(this).attr('href');
+          history.pushState(null, '', url);
+          Display(url);
+          return false;
+        });
+        filters.click( function() {
+          displayed[0] = '.' + $(this).data('view');
+          Sort($(this));
+        });
+        categories.click( function() {
+          var view = ($(this).data('view')) ? '.' + $(this).data('view') : '';
+          displayed[1] = view;
+          Sort($(this));
+        });
+        introductions.click( function() {
+          posts.find('.post-introduction').slideToggle(500, 'easeOutExpo');
+          introductions.toggleClass('on');
+        });
       }
 
-      filters.click( function() {
-        displayed[0] = '.' + $(this).data('view');
-        Display($(this));
+      IsArticle(window.location.pathname);
+
+      // Navigation
+
+      $('nav a').click( function() {
+        $(this).siblings().removeClass('on');
+        $(this).addClass('on');
+        var url = $(this).attr('href');
+        history.pushState(null, '', url);
+        Display(url);
+        return false;
       });
 
-      categories.click( function() {
-        var view = ($(this).data('view')) ? '.' + $(this).data('view') : '';
-        displayed[1] = view;
-        Display($(this));
-      });
-
-      var introductions = $('#introductions');
-
-      introductions.click( function() {
-        posts.find('.post-introduction').slideToggle(500, 'easeOutExpo');
-        introductions.toggleClass('on');
-      });
+      // Contact
 
       R = function(s) {
         return R13(R5(s));
@@ -123,11 +131,9 @@
       c.attr('title', R(t+m));
       c.attr('href', R(t+m));
 
-      // $(window).bind('popstate', function() {
-      //   var new_url = window.location.pathname;
-      //   var new_path = new_url.substr(new_url.lastIndexOf('/') + 1);
-      //   Navigate(new_path);
-      // });
+      $(window).bind('popstate', function() {
+        Display(window.location.pathname);
+      });
         
     });
     </script>
