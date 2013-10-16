@@ -33,7 +33,7 @@ nav, #contact, #hello, .title, .post-title, #side, .project{ font-family: Bitter
 .post-category{ display: block; font-weight: normal;}
 .post-category span{ color: #ccc;}
 .post-introduction{ font-size: 16px; margin-top: 0.5em;}
-.post-content h2{ border-bottom: 1px solid #ccc; border-radius: 0; box-shadow: none; color: #0d111e; display: block; font-size: 28px; margin-top: 2em; padding: 0 0 .5em; text-shadow: none;}
+.post-content h2{ border-bottom: 1px solid #ccc; border-radius: 0; box-shadow: none; color: #0d111e; display: block; font-size: 28px; font-weight: bold; margin-top: 2em; padding: 0 0 .5em; text-shadow: none;}
 .post-content h3{ color: #0d111e; font-size: 24px; margin-top: 2em;}
 .post-content p, .post-content ul{ margin: 1em 0;}
 .post-content ul li, .post-content blockquote{ margin-left: 1em; position: relative;}

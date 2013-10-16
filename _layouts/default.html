@@ -35,6 +35,7 @@
     <script>
     $(document).ready( function() {
 
+      /*
       var navigating = false;
 
       IsArticle = function(url) {
@@ -103,6 +104,39 @@
         history.pushState(null, '', url);
         Display(url);
         return false;
+      });
+
+      */
+
+      // Sidebar
+
+      var posts = $('#list section');
+      var titles = $('#list .post-title a');
+      var filters = $('#filters li a');
+      var categories = $('#categories li a');
+      var introductions = $('#introductions');
+      var displayed = ['.post', ''];
+
+      introductions.click( function() {
+        posts.find('.post-introduction').slideToggle(500, 'easeOutExpo');
+        introductions.toggleClass('on');
+      });
+
+      Sort = function(target) {
+        posts.not(displayed.join('')).stop().slideUp(500, 'easeOutExpo');;
+        posts.filter(displayed.join('')).stop().slideDown(500, 'easeOutExpo');
+        target.parent().siblings().find('a').removeClass('on');
+        target.addClass('on');
+      }
+
+      filters.click( function() {
+        displayed[0] = '.' + $(this).data('view');
+        Sort($(this));
+      });
+      categories.click( function() {
+        var view = ($(this).data('view')) ? '.' + $(this).data('view') : '';
+        displayed[1] = view;
+        Sort($(this));
       });
 
       // Contact
