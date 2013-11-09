@@ -69,12 +69,14 @@ body.colophon #logo{ background-color: #dbc81f;}
 #side .on:hover{ color: #449fdb; cursor: default; text-decoration: none;}
 
 .post{ border-top: 1px solid #ededed; padding: 30px;}
-.post-info{ color: #dbdbdb; float: right; font-size: 12px; line-height: 1.25; margin-left: 60px; text-align: right;}
+.post:hover{ border-top-color: #449fdb;}
+.post-info{ color: #b0b0b0; float: right; font-size: 12px; line-height: 1.25; margin-left: 60px; text-align: right;}
+.post:hover .post-info{ color: #4a4a4a;}
 .post-date{ display: block;}
 .post-category{ font-size: 11px;}
 .post-title{ font-size: 24px; font-weight: normal; max-width: 460px;}
 .post-title a{ border-bottom: none; color: #4a4a4a;}
-.post-title a:hover{ color: #449fdb;}
+.post-title a:hover{ color: #449fdb; text-decoration: none;}
 .post-introduction{ clear: both; color: #7a7a7a; font-size: 14px; line-height: 1.25; margin-top: 1em;}
 
 .recommended{ background: lightyellow;}
@@ -124,6 +126,7 @@ body.colophon #logo{ background-color: #dbc81f;}
 
 #colophon a{ color: #dbc81f;}
 #colophon p{ margin: 1em 0;}
+#colophon p:first-of-type{ margin-top: 2em;}
 .version{ border-top: 4px solid #dbc81f; display: block; margin-top: 2em;}
 .version:hover{ text-decoration: none;}
 .version-name{ background: #f5f5f5; color: #4a4a4a; font-size: 13px; line-height: 29px; padding-left: 0.5em; text-transform: uppercase;}
@@ -131,12 +134,20 @@ body.colophon #logo{ background-color: #dbc81f;}
 
 /* CSS 3 */
 
-a{
+a, .post-info{
   transition: background 250ms ease-out, border 250ms ease-out, color 250ms ease-out;
   -moz-transition: background 250ms ease-out, border 250ms ease-out, color 250ms ease-out;
   -ms-transition: background 250ms ease-out, border 250ms ease-out, color 250ms ease-out;
   -o-transition: background 250ms ease-out, border 250ms ease-out, color 250ms ease-out;
   -webkit-transition: background 250ms ease-out, border 250ms ease-out, color 250ms ease-out;
+}
+
+.post{
+  transition: border 250ms ease-out;
+  -moz-transition: border 250ms ease-out;
+  -ms-transition: border 250ms ease-out;
+  -o-transition: border 250ms ease-out;
+  -webkit-transition: border 250ms ease-out;
 }
 
 /* Responsiveness */
