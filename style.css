@@ -16,7 +16,7 @@ img{ max-width: 100%;}
 
 /* Fonts */
 
-#nav a, .title, .subtitle, .post-title, .post-content h2, .post-content h3, .project-name, .version-name{ font-weight: bold;}
+.title, .subtitle, .post-title, .post-content h2, .post-content h3, .project-name{ font-family: Bitter, Georgia, serif; font-weight: bold;}
 
 /* Common */
 
@@ -129,7 +129,7 @@ body.colophon #logo{ background-color: #dbc81f;}
 #colophon p:first-of-type{ margin-top: 2em;}
 .version{ border-top: 4px solid #dbc81f; display: block; margin-top: 2em;}
 .version:hover{ text-decoration: none;}
-.version-name{ background: #f5f5f5; color: #4a4a4a; font-size: 13px; line-height: 29px; padding-left: 0.5em; text-transform: uppercase;}
+.version-name{ background: #f5f5f5; color: #4a4a4a; font-size: 13px; font-weight: bold; line-height: 29px; padding-left: 0.5em; text-transform: uppercase;}
 .version-name em{ background: #dbc81f; color: white; float: right; font-style: normal; height: 29px; text-align: center; width: 29px;}
 
 /* CSS 3 */
