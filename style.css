@@ -9,14 +9,14 @@ q: before, q: after{ content: '';}
 abbr, acronym{ border: 0;}
 
 html{ overflow-y: scroll;}
-body{ background: white; color: #4a4a4a; font: 16px/1.5 Verdana, Arial, sans-serif; padding: 60px 40px 60px 240px;}
+body{ background: white; color: #4a4a4a; font: 16px/1.5 'Open Sans', Verdana, Arial, sans-serif; padding: 60px 40px 60px 240px;}
 a{ color: #449fdb; cursor: pointer; text-decoration: none;}
 a:hover{ text-decoration: underline;}
 img{ max-width: 100%;}
 
 /* Fonts */
 
-#nav a, .title, .subtitle, .post-title, .post-content h2, .post-content h3, .project-name, .version-name{ font-family: Montserrat, Arial, sans-serif; font-weight: bold;}
+#nav a, .title, .subtitle, .post-title, .post-content h2, .post-content h3, .project-name, .version-name{ font-weight: bold;}
 
 /* Common */
 
