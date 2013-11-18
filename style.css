@@ -5,7 +5,7 @@ address, caption, cite, code, dfn, var{ font-style: normal; font-weight: normal;
 ol, ul{ list-style: none;}
 caption, th{ text-align: left;}
 h1, h2, h3, h4, h5, h6{ font-size: 100%; font-weight: normal;}
-q: before, q: after{ content: '';}
+q:before, q:after{ content: '';}
 abbr, acronym{ border: 0;}
 
 html{ overflow-y: scroll;}
@@ -16,7 +16,7 @@ img{ max-width: 100%;}
 
 /* Fonts */
 
-.title, .subtitle, .post-title, .post-content h2, .post-content h3, .project-name{ font-family: Bitter, Georgia, serif; font-weight: bold;}
+.title, .subtitle, .post-title, .post-content h2, .post-content h3, .project-name, #close{ font-family: Bitter, Georgia, serif; font-weight: bold;}
 
 /* Common */
 
@@ -108,13 +108,22 @@ body.colophon #logo{ background-color: #dbc81f;}
 
 /* 03 Portfolio */
 
+#portfolio{ max-width: 900px; width: auto;}
+#portfolio .intro{ margin: 2em 0;}
 #portfolio a{ color: #57b037;}
-.project{ float: left; margin: 2em 2em 0 0; width: 300px;}
+#grid{ position: relative;}
+.project{ display: inline-block; vertical-align: top; width: 300px;}
 .project:nth-child(2n-1){ margin-right: 0;}
 .project:hover{ text-decoration: none;}
 .project-image{ display: block;}
-.project-name{ color: #4a4a4a; font-size: 21px; line-height: 1; margin-top: 0.5em;}
-.project-description{ font-size: 14px; line-height: 1; margin-top: 0.25em;}
+#preview{ height: 0; position: relative; overflow: hidden; width: 100%; z-index: 1;}
+.project-name{ font-size: 29px; line-height: 1; padding: 30px;}
+.project-description{ font-size: 21px; padding: 0 30px;}
+.project-link{ height: 42px; padding: 30px 30px 60px;}
+.project-link a{ border: 3px solid white; border-radius: 4px; float: left; height: 36px; line-height: 36px; padding: 0 20px;}
+.project-link a:hover{ text-decoration: none;}
+#arrow{ border: 20px solid transparent; height: 0; left: 130px; position: absolute; top: -40px; width: 0; z-index: 2;}
+#close{ cursor: pointer; font-size: 29px; position: absolute; right: 30px; top: 20px;}
 
 /* 04 Music */
 

@@ -30,11 +30,44 @@
 		<div id="loader"></div>
 		<script src="/jquery-1.10.1.min.js"></script>
 		<script src="/jquery.easing.min.js"></script>
+		<script src="/grid.js"></script>
 		<script>
 		$(document).ready( function() {
 
+			// Contact
 
-			// Sidebar
+			function R(s) {
+				return R13(R5(s));
+			}
+
+			function R5(s) {
+				var b = [], c, i = s.length, a = '0'.charCodeAt(), z = a + 10;
+				while (i--) { 
+					c = s.charCodeAt(i);
+					if (c >= a && c < z) { b[i] = String.fromCharCode(((c - a + 5) % (10)) + a); }
+					else { b[i] = s.charAt(i); }
+				}
+				return b.join('');
+			}
+
+			function R13(s) {
+				var b = [], c, i = s.length, a = 'a'.charCodeAt(), z = a + 26, A = 'A'.charCodeAt(), Z = A + 26;
+				while (i--) {
+					c = s.charCodeAt(i);
+					if (c >= a && c < z) { b[i] = String.fromCharCode(((c - a + 13) % (26)) + a); }
+					else if (c >= A && c < Z) { b[i] = String.fromCharCode(((c - A + 13) % (26)) + A); }
+					else { b[i] = s.charAt(i); }
+				}
+				return b.join('');
+			}
+			
+			var $c = $('#contact');
+			var t = 'znvygb:'
+			var m = 'ookqrfvta@tznvy.pbz';
+			$c.attr('title', R(t+m));
+			$c.attr('href', R(t+m));
+
+			// Filters
 
 			var $posts = $('#list article');
 			var $filters = $('#filters li a');
@@ -42,19 +75,19 @@
 			var $introductions = $('#introductions a');
 			var displayed = ['.post', ''];
 
+			function Sort(target) {
+				$posts.not(displayed.join('')).stop().slideUp(500, 'easeOutExpo');;
+				$posts.filter(displayed.join('')).stop().slideDown(500, 'easeOutExpo');
+				target.parent().siblings().find('a').removeClass('on');
+				target.addClass('on');
+			}
+
 			$introductions.click( function() {
 				if (!$(this).hasClass('on')) {
 					$posts.find('.post-introduction').slideToggle(500, 'easeOutExpo');
 					$introductions.toggleClass('on');
 				}
 			});
-
-			Sort = function(target) {
-				$posts.not(displayed.join('')).stop().slideUp(500, 'easeOutExpo');;
-				$posts.filter(displayed.join('')).stop().slideDown(500, 'easeOutExpo');
-				target.parent().siblings().find('a').removeClass('on');
-				target.addClass('on');
-			}
 
 			$filters.click( function() {
 				displayed[0] = '.' + $(this).data('view');
@@ -66,39 +99,11 @@
 				Sort($(this));
 			});
 
-			// Contact
+			// Portfolio
 
-			R = function(s) {
-				return R13(R5(s));
-			}
+			var $grid = $('#grid');
+			$grid.grid();
 
-			R5 = function(s) {
-				var b = [], c, i = s.length, a = '0'.charCodeAt(), z = a + 10;
-				while (i--) { 
-					c = s.charCodeAt(i);
-					if (c >= a && c < z) { b[i] = String.fromCharCode(((c - a + 5) % (10)) + a); }
-					else { b[i] = s.charAt(i); }
-				}
-				return b.join('');
-			}
-
-			R13 = function(s) {
-				var b = [], c, i = s.length, a = 'a'.charCodeAt(), z = a + 26, A = 'A'.charCodeAt(), Z = A + 26;
-				while (i--) {
-					c = s.charCodeAt(i);
-					if (c >= a && c < z) { b[i] = String.fromCharCode(((c - a + 13) % (26)) + a); }
-					else if (c >= A && c < Z) { b[i] = String.fromCharCode(((c - A + 13) % (26)) + A); }
-					else { b[i] = s.charAt(i); }
-				}
-				return b.join('');
-			}
-			
-			var c = $('#contact');
-			var t = 'znvygb:'
-			var m = 'ookqrfvta@tznvy.pbz';
-			c.attr('title', R(t+m));
-			c.attr('href', R(t+m));
-				
 		});
 		</script>
 	</body>

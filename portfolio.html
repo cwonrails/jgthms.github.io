@@ -6,11 +6,8 @@ nav: portfolio
 
 <div id="portfolio" class="wrap">
 	<h1 class="title">Portfolio</h1>
-	{% for project in site.projects %}
-		<a class="project" href="{{ project.url }}">
-			<img class="project-image" src="{{ project.image }}" alt="{{ project.name }}">
-			<h2 class="project-name">{{ project.name }}</h2>
-			<h3 class="project-description">{{ project.description }}</h3>
-		</a>
-	{% endfor %}
+	<p class="intro">These are mostly personal projects, considering I can't divulge the ones I worked on in my previous jobs. Also, I never know how to properly present a portfolio, so I decided to keep the interface relatively simple.</p>
+	<div id="grid">
+{% for project in site.projects %}<a class="project" href="{{ project.url }}" data-name="{{ project.name }}" data-excerpt="{{ project.excerpt }}" data-description="{{ project.description }}" data-background="{{ project.background }}" data-color1="{{ project.color1 }}" data-color2="{{ project.color2 }}"><img class="project-image" src="/p/{{ project.slug }}.png" alt="{{ project.name }}"></a>{% endfor %}
+	</div>
 </div>
