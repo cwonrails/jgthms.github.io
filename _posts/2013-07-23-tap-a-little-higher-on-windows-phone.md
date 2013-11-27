@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tap a little higher on Windows Phone
-category : Interface
+category: UX
 introduction: I was wondering why I kept failing to tap links correctly. Now I know why.
 ---
 

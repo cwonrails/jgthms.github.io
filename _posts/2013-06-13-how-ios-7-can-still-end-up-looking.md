@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How iOS 7 can still end up looking
-category : Design
+category: UI
 introduction: iOS 7's interface both stunned most designers and gave them an excuse to score some Dribbble shots.
 ---
 

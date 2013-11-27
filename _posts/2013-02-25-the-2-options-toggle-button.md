@@ -2,7 +2,7 @@
 layout: post
 title: The 2-options toggle button
 introduction: Is it on? Or does it turn it on?
-category: Interface
+category: UX
 ---
 
 I'm always confused by these kinds of switch buttons:

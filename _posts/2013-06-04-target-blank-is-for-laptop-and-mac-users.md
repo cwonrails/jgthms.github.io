@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Target blank is for laptop and Mac users
-category : Interface
+category: UX
 introduction: I've always loathed the target _blank feature. Maybe wrongly so.
 ---
 

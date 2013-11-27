@@ -1,7 +1,7 @@
 ---
 layout: post
 title: iA Writer's new document
-category: Interface
+category: UX
 introduction: A small disturbance that can turn into a major annoyance.
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CopyPasteCharacter is unusable
-category: Interface
+category: UX
 introduction: Is the only way to quickly find a character I can't type actually typing it?
 ---
 

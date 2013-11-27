@@ -1,7 +1,7 @@
 ---
 layout: post
 title: iOS 7, gradients, and usability
-category : Thoughts
+category: Thoughts
 introduction: When Apple unveiled its new iOS 7 interface, both enthuasists and skeptics had something to say. Including me...
 recommended: true
 ---

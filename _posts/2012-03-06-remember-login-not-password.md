@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Remember login, not password
-category: Interface
+category: UX
 introduction: Why not let the browser remember the information I forget the most, and prevent him from creating a security issue?
 ---
 
