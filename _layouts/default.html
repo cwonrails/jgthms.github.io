@@ -24,6 +24,12 @@
 					<li><a id="nav-colophon"{% if page.nav == 'colophon' %} class="on"{% endif %} data-page="colophon" href="/colophon.html">Colophon</a></li>
 				</ul>
 			</nav>
+			<ul id="links">
+				<li><a href="/atom.xml">RSS feed</a></li>
+				<li><a class="contact" title="Please enable JavaScript to view my email">Email</a></li>
+				<li><a href="https://github.com/jgthms">GitHub</a></li>
+				<li><a href="https://news.ycombinator.com/user?id=bbx">Hacker News</a></li>
+			</ul>
 		</header>
 		{{ content }}
 		<div style="clear: both;"></div>
@@ -61,11 +67,13 @@
 				return b.join('');
 			}
 			
-			var $c = $('#contact');
+			var $c = $('.contact');
 			var t = 'znvygb:'
 			var m = 'ookqrfvta@tznvy.pbz';
-			$c.attr('title', R(t+m));
-			$c.attr('href', R(t+m));
+			$c.each( function() {
+				$(this).attr('title', R(t+m));
+				$(this).attr('href', R(t+m));
+			})
 
 			// Filters
 

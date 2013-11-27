@@ -48,6 +48,9 @@ body.colophon #logo{ background-color: #dbc81f;}
 #nav #nav-music.on{ border-left-color: #db8d44;}
 #nav #nav-timeline.on{ border-left-color: #db44d1;}
 #nav #nav-colophon.on{ border-left-color: #dbc81f;}
+#links{ font-size: 11px; margin-top: 2em; padding-left: 20px;}
+#links a{ color: #b0b0b0;}
+#links a:hover{ color: #4a4a4a;}
 
 /* 01 Home */
 
