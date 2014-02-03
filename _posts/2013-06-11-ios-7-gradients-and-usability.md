@@ -9,7 +9,7 @@ recommended: true
 I must say, I was *very* surprised by Apple's iOS 7 unveiling. I'm a designer (though not a great one) so I'm usually first concerned about how it looks and my first thought was "It looks terrible." And apparently, [I'm not the only one](http://designerscomplaining.tumblr.com/). Of course it's hard to have a complete valid judgment without having held an iPhone with iOS 7 in your own hands. But I remember being delighted by the first iOS's screenshots back in 2007. It was a great start and a solid base to increment on, hence the light changes in a span of 6 years.
 
 <figure>
-  <img alt="iOS from 2007 to 2013" src="/i/ios-2007-2013.png"><br>
+  <img alt="iOS from 2007 to 2013" src="/images/ios-2007-2013.png"><br>
   <figcaption>iOS from 2007 to 2013 (source: <a href="http://thetechblock.com/why-ios-7-is-important/">thetechblock.com</a>)</figcaption>
 </figure>
 
@@ -21,7 +21,7 @@ I'm more concerned about the **gradients**. iOS 7 isn't exactly "flat". The icon
 
 You can obtain decent looking gradients with only **2 color stops** (one on top, one on bottom), but designers usually mix *several* gradients or create more complex ones to achieve a much better result.
 
-![iOS 7 gradients](/i/ios7-gradients.png)
+![iOS 7 gradients](/images/ios7-gradients.png)
 
 If I were to copy the Spotify icon, I'd start with a simple 2-stop gradient. But the result wouldn't be as appealing, because there's *more* involved: a light glare on top, some inner shadow, and probably other subtle elements. Even the embedded shapes have gradients and inner shadows applied to them. That's what it takes to make a good icon.
 
@@ -44,11 +44,11 @@ If you restrict yourself to only 3 simple elements (color, size, shape) to conve
 
 There's also been some concern about the use of a thin font (Helvetica Neue Light) and its readibility. I think there isn't much to discuss about right now because it will greatly depend on the screen's resolution.
 
-![iOS 7 Weather app](/i/ios7-weather-app.png)
+![iOS 7 Weather app](/images/ios7-weather-app.png)
 
 But what people are most concerned about in terms of usability is the **Control Center**.
 
-![iOS 7 Control Center](/i/ios7-control-center.png)
+![iOS 7 Control Center](/images/ios7-control-center.png)
 
 Many lines, no gradients, light shadows on the slider handles. What is interactive? What's not?
 

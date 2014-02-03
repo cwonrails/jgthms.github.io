@@ -81,7 +81,7 @@ The **Alt** key in Windows both highlights the menu bar, and underlines certain 
 
 A quick gif example (in French):
 
-![Windows Alt key sequence shortcut](/i/windows-keyboard-alt-sequence.gif)
+![Windows Alt key sequence shortcut](/images/windows-keyboard-alt-sequence.gif)
 
 The 3 states are:
 

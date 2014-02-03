@@ -39,7 +39,7 @@ td.empty{ background:none; border:none;}
 .related ul{ margin-bottom:0;}
 .related time{ display:inline; margin:0;}
 
-#h{ background:#2aa198 url(/i/jgthms.png) no-repeat 0 0; height:50px; left:15px; overflow:hidden; position:absolute; text-indent:-290486px; top:15px; width:50px;}
+#h{ background:#2aa198 url(/images/jgthms.png) no-repeat 0 0; height:50px; left:15px; overflow:hidden; position:absolute; text-indent:-290486px; top:15px; width:50px;}
 #h:hover{ background-color:#073642;}
 nav li{ display:block;}
 nav h2{ margin-top:0;}

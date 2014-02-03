@@ -11,7 +11,7 @@ A few hours later, I got a notification email telling me I had received a messag
 
 Almost instantly, I received this email:
 
-![Carpool access token](/i/carpool-access-token.png)
+![Carpool access token](/images/carpool-access-token.png)
 
 It gave me the ability to instantly connect to the website by using this single-use access token. I was both pleased and surprised to receive such an email: I just wanted to see the reply to my private message and didn't want to bother finding and copy-pasting the auto-generated password, logging in to the website, and changing my password to an easier one.
 

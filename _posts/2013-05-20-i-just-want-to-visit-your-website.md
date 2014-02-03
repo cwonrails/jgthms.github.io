@@ -12,7 +12,7 @@ For any website visited, Ghostery displays a temporary window that lists the dif
 Here's [The Verge](http://www.theverge.com/) tracking results:
 
 <figure>
-<img alt="Ghostery results for The Verge" src="/i/ghostery-the-verge.png"><br>
+<img alt="Ghostery results for The Verge" src="/images/ghostery-the-verge.png"><br>
 <figcaption>Ghostery results for The Verge</figcaption>
 </figure> 
 

@@ -90,10 +90,6 @@ sets:
     id: 6702622
     color: 956841
 versions:
-  - name: Shore
-    slug: 07-shore
-  - name: Bay
-    slug: 06-bay
   - name: Museum
     slug: 05-museum
   - name: Mono

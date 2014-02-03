@@ -28,7 +28,7 @@ div{ background:#002b36; color:#586e75; font-size:10px; height:100%; left:0; lin
 div a{ border-color:#073642; color:#586e75;}
 div a:hover{ border-bottom-color:#fdf6e3; color:#fdf6e3;}
 
-header{ background:url(/i/jt.png) no-repeat 5px 2px; border-bottom:1px solid #073642; margin:0 20px; padding:0 0 20px 40px;}
+header{ background:url(/images/jt.png) no-repeat 5px 2px; border-bottom:1px solid #073642; margin:0 20px; padding:0 0 20px 40px;}
 header strong,header em{ display:block;}
 header strong{ font-family:Georgia,serif; font-size:18px; font-weight:normal;}
 header a{ color:#fdf6e3;}

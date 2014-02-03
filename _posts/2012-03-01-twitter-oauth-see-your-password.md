@@ -13,7 +13,7 @@ OAuth not only provides access to your account, but *different* levels of access
 
 What often strikes me when I authenticate via Twitter is what the third-party application *can't* do:
 
-![Twitter OAuth 'See your Twitter password'](/i/twitter-see-your-password.png)
+![Twitter OAuth 'See your Twitter password'](/images/twitter-see-your-password.png)
 
 I read these bullet points as:
 

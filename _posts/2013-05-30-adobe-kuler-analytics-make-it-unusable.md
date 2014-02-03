@@ -7,7 +7,7 @@ introduction: I use Firefox add-ons to block various useless scripts. It never p
 
 Adobe just released a new version of their color tool [Kuler](https://kuler.adobe.com). I was surprised though to stumble upon an empty page:
 
-![Adobe Kuler's homepage](/i/adobe-kuler-unusable.png)
+![Adobe Kuler's homepage](/images/adobe-kuler-unusable.png)
 
 I tried to disable Adblock Plus, but what finally did the trick was to enable **Omniture**, which is basically Adobe's own analytics. Ghostery rightfully blocked this script because it's nothing more than yet another useless plugin.
 

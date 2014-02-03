@@ -41,5 +41,5 @@ hr{ border:none;}
 /* Hero */
 .hero-unit{ background:#75b9b8; border-bottom:1px solid #002b36; border-radius:0; color:#017081; padding:0;}
 .hero-unit h1{ color:#fff; font-size:52px; margin-bottom:10px;}
-.hero-unit .container{ background:url(/i/firefox-logo.png) no-repeat right bottom; padding:80px 420px 79px 0; width:520px;}
+.hero-unit .container{ background:url(/images/firefox-logo.png) no-repeat right bottom; padding:80px 420px 79px 0; width:520px;}
 

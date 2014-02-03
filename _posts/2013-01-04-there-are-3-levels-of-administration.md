@@ -28,7 +28,7 @@ The best example is [WordPress.com](http://wordpress.com) which hosts around 60 
 
 For a long time, WordPress.com provided the same admin as WordPress.org, but they've updated it for the general public.
 
-![WordPress.com easy admin](/i/wordpress-easy-admin.png)
+![WordPress.com easy admin](/images/wordpress-easy-admin.png)
 
 It's the most difficult administration to design, because it is used by millions of people who have to figure it out on their own. The publishing experience needs to be seamless, and you have to take into account your users' unexpected behaviour and the common mistakes they can make.
 

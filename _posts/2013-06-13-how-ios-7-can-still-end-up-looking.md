@@ -15,12 +15,12 @@ iOS 7 is still in beta, so there's still time to polish the shipped product, and
 
 After Apple unveiled the new iOS 7 design, I headed for [Dribbble](http://dribbble.com/tags/ios7) because I *knew* designers would rapidly come up with dozens of alternatives, which ultimately turn out as more than decent solutions to a real issue.
 
-[![iOS 7](/i/ios7-safari-icon.jpg)](http://dribbble.com/shots/1111319-I-know-I-know)
+[![iOS 7](/images/ios7-safari-icon.jpg)](http://dribbble.com/shots/1111319-I-know-I-know)
 
-[![iOS 7](/i/ios7-itunes-icon.jpg)](http://dribbble.com/shots/1112950-iTunes-iOS7)
+[![iOS 7](/images/ios7-itunes-icon.jpg)](http://dribbble.com/shots/1112950-iTunes-iOS7)
 
-[![iOS 7](/i/ios7-redesign.png)](http://dribbble.com/shots/1112094-iOS-7)
+[![iOS 7](/images/ios7-redesign.png)](http://dribbble.com/shots/1112094-iOS-7)
 
-[![iOS 7](/i/ios7-reimagined.png)](http://dribbble.com/shots/1111638-iOS7-Reimagined)
+[![iOS 7](/images/ios7-reimagined.png)](http://dribbble.com/shots/1111638-iOS7-Reimagined)
 
 iOS 7 is a big disruption in Apple's interface history. It can be a big leap forward as long as refinements are made. We weren't used to Apple shipping a half-baked product. Luckily there's still time to polish it and respond to the collective roar of the design community, though historically large companies seldom alter their decision based on people's discontent (Xbox One?).

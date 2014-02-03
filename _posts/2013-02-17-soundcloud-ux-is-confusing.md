@@ -18,7 +18,7 @@ SoundCloud filled a need: upload your music easily, and doing just that. The upl
 
 But their UI is confusing. Here's a simple question: what is this?
 
-![SoundCloud UI](/i/soundcloud-ui.png)
+![SoundCloud UI](/images/soundcloud-ui.png)
 
 Hard to tell isn't it? It's actually the waveform of the track currently playing in SoundCloud. And although waveforms are prominent in SoundCloud's interface, this tiny version makes little sense until it starts to fill itself up and you notice a progress in time. But it's still hard to understand it's clickable and brings you back to the currently playing track.
 
@@ -54,7 +54,7 @@ When navigating back to your SoundCloud tab, unless you clearly see a "Pause" bu
 Yes, there's a "Play" icon in the title bar, but being not interactive and not obvious either, it's quite helpless.
 
 <figure>
-  <a href="https://soundcloud.com/jgthms/see-you-at-the-lights"><img alt="SoundCloud Title UI" src="/i/soundcloud-title-ui.png"></a>
+  <a href="https://soundcloud.com/jgthms/see-you-at-the-lights"><img alt="SoundCloud Title UI" src="/images/soundcloud-title-ui.png"></a>
 </figure>
 
 ## Lack of controls

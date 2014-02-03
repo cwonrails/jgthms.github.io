@@ -10,39 +10,39 @@ Ever since Google launched its redesign, I've been wanting to point out a design
 
 ## Amazon
 
-![Amazon Color](/i/amazon-color.png)
+![Amazon Color](/images/amazon-color.png)
 
-![Amazon Grey](/i/amazon-grey.png)
+![Amazon Grey](/images/amazon-grey.png)
 
 ## GMail
 
-![GMail Color](/i/gmail-color.png)
+![GMail Color](/images/gmail-color.png)
 
-![GMail Grey](/i/gmail-grey.png)
+![GMail Grey](/images/gmail-grey.png)
 
 ## GCalendar
 
-![GCalendar Color](/i/gcalendar-color.png)
+![GCalendar Color](/images/gcalendar-color.png)
 
-![GCalendar Grey](/i/gcalendar-grey.png)
+![GCalendar Grey](/images/gcalendar-grey.png)
 
 ## GReader
 
-![GReader Color](/i/greader-color.png)
+![GReader Color](/images/greader-color.png)
 
-![GReader Grey](/i/greader-grey.png)
+![GReader Grey](/images/greader-grey.png)
 
 ## WordPress
 
-![WordPress Color](/i/wordpress-color.png)
+![WordPress Color](/images/wordpress-color.png)
 
-![WordPress Grey](/i/wordpress-grey.png)
+![WordPress Grey](/images/wordpress-grey.png)
 
 ## Digg
 
-![Digg Color](/i/digg-color.png)
+![Digg Color](/images/digg-color.png)
 
-![Digg Grey](/i/digg-grey.png)
+![Digg Grey](/images/digg-grey.png)
 
 Are the newer versions prettier? That's for you to decide. But overall, they seem to lack depth and hierarchy.
 
@@ -55,7 +55,7 @@ A lot of the websites mentioned are actually apps. Maybe avoiding colors is a de
 But even Apple seems to be heading towards that direction.
 
 <figure>
-  <img alt="Apple from color to grey" src="/i/apple-from-color-to-grey.png"><br>
+  <img alt="Apple from color to grey" src="/images/apple-from-color-to-grey.png"><br>
   <figcaption>Left: Mac OS 10.6 Snow Leopard. Right: Mac OS 10.7 Lion</figcaption>
 </figure>
 

@@ -10,7 +10,7 @@ After having discussed the [2-options toggle button](/the-2-options-toggle-butto
 One of the most famous ones is the Twitter one:
 
 <figure>
-  <img alt="Twitter follow button states" src="/i/twitter-follow-button.png"><br>
+  <img alt="Twitter follow button states" src="/images/twitter-follow-button.png"><br>
   <figcaption>From left to right: not following, following, following:hover</figcaption>
 </figure>
 
@@ -20,7 +20,7 @@ What's interesting is that, by default, when you're *not* following the person, 
 GitHub makes use of a similar button to watch repositories:
 
 <figure>
-  <img alt="GitHub follow watch states" src="/i/github-watch-button.png"><br>
+  <img alt="GitHub follow watch states" src="/images/github-watch-button.png"><br>
   <figcaption>From left to right: not watching, watching, watching:hover</figcaption>
 </figure>
 
