@@ -20,23 +20,15 @@ img{ max-width: 100%;}
 #logo{ overflow: hidden; text-indent: -290486px;}
 h1,
 .recommended .post-title,
-.post-content h2{ font-weight: 800; letter-spacing: -0.05em; line-height: 1.125;}
-
-/* Classes */
-
-.title, .subtitle, .post-title{ }
-.title span{ white-space: nowrap;}
-.subtitle{ }
+.post-content h2,
+.item h2{ font-weight: 800; letter-spacing: -0.05em; line-height: 1.125;}
 
 /* Header */
 
 #header{ margin-bottom: 4em; text-align: center;}
 #logo{ background: #db4e44 url(/jt.png) no-repeat center center; border-bottom: none; border-radius: 50px; display: none; height: 100px; margin-bottom: 30px; width: 100px;}
 body.articles #logo{ background-color: #449fdb;}
-body.portfolio #logo{ background-color: #57b037;}
-body.music #logo{ background-color: #db8d44;}
-body.timeline #logo{ background-color: #db44d1;}
-body.colophon #logo{ background-color: #dbc81f;}
+body.favorites #logo{ background-color: #57b037;}
 #nav li{ display: inline; margin: 0 0.5em;}
 #nav a{ color: #999; display: inline-block; font-weight: 800; padding: 0.5em 1em; text-transform: uppercase;}
 #nav a:hover{ background: white; color: #666;}
@@ -44,16 +36,12 @@ body.colophon #logo{ background-color: #dbc81f;}
 #nav .on:hover{ border-bottom-color: yellow; color: white; text-decoration: none;}
 #nav #nav-home.on{ background: #db4e44;}
 #nav #nav-articles.on{ background: #449fdb;}
-#nav #nav-portfolio.on{ background: #57b037;}
+#nav #nav-favorites.on{ background: #57b037;}
 #nav #nav-music.on{ background: #db8d44;}
 #nav #nav-timeline.on{ background: #db44d1;}
 #nav #nav-colophon.on{ background: #dbc81f;}
-#nav #nav-portfolio,
-#nav #nav-music,
-#nav #nav-colophon,
-#links{ display: none;}
-#links a{ }
-#links a:hover{ }
+#nav .fa{ font-size: 18px; margin-right: 10px;}
+#nav-home .fa{ font-size: 20px;}
 
 /* 01 Home */
 
@@ -67,12 +55,27 @@ body.home{ border-top-color: #db4e44;}
 #home h1 span{ color: yellow;}
 #home p{ color: #666; font-size: 1.5em; line-height: 1.25; margin-top: 2em;}
 #home p:last-child{ font-size: 1em; margin-top: 3em;}
-#home p a{ border: dotted #ccc; border-width: 1px 0;display: block; margin-bottom: -1px; padding: 1em 0;}
+/*#home p a{ border: dotted #ccc; border-width: 1px 0; display: block; margin-bottom: -1px; padding: 1em 0;}*/
 #home p span{ color: #ccc; display: none; float: right; font-size: 0.8em; line-height: 1.25;}
+
+#home .icons a{ border: none; border-radius: 50%; color: #f60; float: right; font-size: 20px; height: 30px; line-height: 30px; margin: 0; padding: 5px; text-align: center; width: 30px;}
+#home .icons a:hover{ background: #f60; color: white !important;}
+#home #contact,
+#home #icon-rss{ float: left;}
+#home #contact{ color: #db4e44;}
+#home #contact:hover{ background: #db4e44;}
+#home #icon-github{ color: #333;}
+#home #icon-github:hover{ background: #333;}
+#home #icon-hn{ font-size: 14px;}
+#home #icon-hn:hover{ background: #f60;}
+#home #icon-instagram{ color: #3f729b;}
+#home #icon-instagram:hover{ background: #3f729b;}
+#home #icon-twitter{ color: #55acee;}
+#home #icon-twitter:hover{ background: #55acee;}
 
 /* 02 Articles */
 
-#side{ display: none; min-height: 2em; padding-bottom: 2em;}
+#side{ display: none; font-size: 0.85em; min-height: 2em; padding-bottom: 2em;}
 #side section{ float: left; margin-right: 1em;}
 #side section:first-child{ margin-left: 0;}
 #side ul, #side li, #side a{ display: inline;}
@@ -124,15 +127,21 @@ body.home{ border-top-color: #db4e44;}
 .post-content code{ background: lightyellow; color: cadetblue; font-size: 0.9em;}
 .post-content pre{ padding: 0.5em;}
 
-/* 05 Colophon */
+/* 03 Favorites */
 
-#colophon a{ }
-#colophon p{ }
-#colophon p:first-of-type{ }
-.version{ }
-.version:hover{ }
-.version-name{ }
-.version-name em{ }
+body.favorites{ border-top-color: #57b037;}
+
+#favorites a{ color: #57b037;}
+
+#tabs{ font-size: 1.25em; margin-bottom: 2em; text-align: center;}
+#tabs li{ display: inline-block; margin: 0 1em;}
+#tabs .active a,
+#tabs .active a:hover{ background: none; border-bottom: none; color: #333; cursor: default; font-weight: bold;}
+
+.item{ border-bottom: 1px dotted #ccc; margin-bottom: 2em; padding-bottom: 2em; position: relative;}
+.items h2{ font-size: 3em; font-weight: 800;}
+.item em{ display: block; font-style: normal;}
+.item p{ margin-top: 1em;}
 
 /* Fancy stuff */
 
