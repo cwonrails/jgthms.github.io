@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Brandon Grotesque';
+  font-style: normal;
+  font-weight: normal;
+  src: url('brandon_reg.eot');
+  src: url('brandon_reg.eot') format('embedded-opentype'),
+     url('brandon_reg.woff') format('woff'),
+     url('brandon_reg.ttf') format('truetype'),
+     url('brandon_reg.svg#BrandonGrotesqueRegular') format('svg');
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  font-style: normal;
+  font-weight: bold;
+  src: url('brandon_bld.eot');
+  src: url('brandon_bld.eot') format('embedded-opentype'),
+     url('brandon_bld.woff') format('woff'),
+     url('brandon_bld.ttf') format('truetype'),
+     url('brandon_bld.svg#BrandonGrotesqueBold') format('svg');
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  font-style: italic;
+  font-weight: normal;
+  src: url('brandon_reg_it.eot');
+  src: url('brandon_reg_it.eot') format('embedded-opentype'),
+     url('brandon_reg_it.woff') format('woff'),
+     url('brandon_reg_it.ttf') format('truetype'),
+     url('brandon_reg_it.svg#BrandonGrotesqueRegularItalic') format('svg');
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  font-style: italic;
+  font-weight: bold;
+  src: url('brandon_bld_it.eot');
+  src: url('brandon_bld_it.eot') format('embedded-opentype'),
+     url('brandon_bld_it.woff') format('woff'),
+     url('brandon_bld_it.ttf') format('truetype'),
+     url('brandon_bld_it.svg#BrandonGrotesqueBoldItalic') format('svg');
+}
