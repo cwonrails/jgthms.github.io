@@ -6,7 +6,7 @@
     <meta name="author" content="J. Thomas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,800,700" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/icons/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/icons/jgthms.css" type="text/css">
     <link rel="stylesheet" href="/style.css" type="text/css">
     <link rel="alternate" href="/atom.xml" type="application/atom+xml" title="J. Thomas Blog">
     <link rel="icon" href="/favicon.ico">
@@ -21,11 +21,20 @@
           <li{% if page.nav == 'home' %} class="here"{% endif %}><a id="nav-home" data-page="home" href="/">J. Thomas</a></li><li{% if page.nav == 'articles' %} class="here"{% endif %}><a id="nav-articles" data-page="articles" href="/articles.html">Articles</a></li>
         </ul>
       </nav>
+      <ul class="icons">
+        <li><a href="https://twitter.com/jgthms"><i class="icon-twitter"></i></a></li>
+        <li><a href="https://github.com/jgthms"><i class="icon-github"></i></a></li>
+        <li><a href="https://soundcloud.com/jgthms"><i class="icon-soundcloud"></i></a></li>
+        <li><a class="hn" href="https://news.ycombinator.com/user?id=bbx"><i class="icon-hn"></i></a></li>
+        <li><a href="/atom.xml"><i class="icon-rss"></i></a></li>
+        <li><a class="contact"><i class="icon-gmail"></i></a></li>
+      </ul>
     </header>
     {{ content }}
     <script src="/javascript/jquery-1.10.1.min.js"></script>
     <script src="/javascript/jquery.easing.min.js"></script>
     <script src="/javascript/affix.js"></script>
+    <script src="/javascript/retina-1.1.0.min.js"></script>
     <script type="text/javascript">
       $(document).ready( function() {
 
@@ -56,7 +65,7 @@
           return b.join('');
         }
         
-        var $c = $('#contact');
+        var $c = $('.contact');
         var t = 'znvygb:'
         var m = 'ookqrfvta@tznvy.pbz';
         $c.each( function() {

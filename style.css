@@ -38,7 +38,12 @@ img{ max-width: 100%;}
 .nav a{ color: #93a1a1;}
 .nav a:hover{ color: #4a4a4a;}
 .nav .here a{ border-bottom: none; color: #4a4a4a;}
-.footer{ display: none;}
+.icons{ position: absolute; right: 0; text-align: right; top: 31px;}
+.icons li{ display: inline;}
+.icons a{ border-bottom: none; color: #93a1a1; display: inline-block; float: left; height: 24px; line-height: 26px; text-align: center; width: 24px;}
+.icons a:hover{ color: #4a4a4a;}
+.icons .icon-hn{ font-size: 12px; position: relative; top: -2px;}
+.icons .icon-gmail{ font-size: 12px; left: -1px; position: relative; top: -2px;}
 
 .hey{ font-size: 29px; line-height: 1.25; margin-top: 50px;}
 .hey strong{ color: #242424;}
@@ -56,6 +61,7 @@ img{ max-width: 100%;}
 .side a{ border: 2px solid #ededed; border-radius: 4px; color: #93a1a1; display: inline-block; font-size: 14px; height: 24px; line-height: 24px; padding: 0 7px;}
 .side a:hover{ border-color: #93a1a1; color: #7a7a7a;}
 .side .on, .side .on:hover{ border-color: #db4e44; color: #4a4a4a;}
+
 .list{ position: relative;}
 
 .year, .season{ background: white; border-top: 2px solid #93a1a1; display: block; font-size: 14px; letter-spacing: 0.07em; line-height: 26px; margin-top: 15px; padding-right: 720px; position: absolute; right: 0; text-align: right; text-transform: uppercase; width: 50px;}
@@ -69,19 +75,20 @@ img{ max-width: 100%;}
 .affix.year{ margin-left: -465px;}
 
 .post{ margin: 30px 0; position: relative;}
-.post-info{ color: #dbdbdb; float: right; font-size: 14px; margin-left: 2em; text-align: right;}
+.post-info{ color: #dbdbdb; float: right; font-size: 14px; margin: 5px 0 0 2em; text-align: right;}
 .post-date, .post-category{ display: block;}
 .post-title{ font-size: 24px; line-height: 1.125;}
 .post-title a{ border-bottom: none; color: #4a4a4a;}
+.post-title a:visited{ color: #93a1a1;}
 .post-title a:hover{ color: #db4e44;}
 .post-introduction{ color: #93a1a1; font-size: 14px; margin-top: 5px;}
 .recommended.post .post-title{ font-weight: bold;}
 
 .single{ margin-top: 50px; position: relative;}
 .single .post-title{ color: #242424; font-size: 33px; font-weight: bold; line-height: 1;}
-.single .post-introduction{ font-size: 18px; margin: 5px 0 50px;}
+.single .post-introduction{ font-size: 18px; margin: 15px 0 50px;}
 .single .post-info, .post-back{ font-size: 14px; line-height: 24px; position: absolute; right: 720px; text-align: right; width: 130px;}
-.single .post-info{ margin: 2px 0 0;}
+.single .post-info{ margin: 1px 0 0;}
 .post-back a{ color: #dbdbdb;}
 .post-back a:hover{ color: #4a4a4a;}
 .post-back span{ font-size: 11px; margin-right: 2px;}
@@ -111,3 +118,33 @@ img{ max-width: 100%;}
 .post{ z-index: 100;}
 
 a{ transition: all 250ms ease-out;}
+
+@media (max-width: 959px) {
+  body{ width: 530px;}
+  .year{ padding-right: 640px;}
+  .season{ padding-right: 560px;}
+  .single .post-info, .post-back{ right: 560px;}
+}
+
+@media (max-width: 799px) {
+  body{ padding: 0 15px; width: auto;}
+  .header{ height: auto;}
+  .logo{ left: 0;}
+  .nav{ padding-left: 116px;}
+  .icons{ margin: 50px 0; position: static; text-align: center;}
+  .icons a{ float: none; font-size: 24px; height: auto; margin: 0 5px; width: auto;}
+  .icons .icon-hn{ font-size: 20px;}
+  .icons .icon-gmail{ font-size: 20px;}
+  .gallery ul{ text-align: center;}
+  .skills li{ margin-right: 10px;}
+  .side{ height: auto;}
+  .side ul{ float: none; margin-bottom: 15px;}
+  .year, .season, .affix.year, .affix.season{ margin: 0; padding: 0; position: static; width: auto;}
+  .articles hr{ display: none;}
+  .single .post-introduction{ margin-bottom: 15px;}
+  .single .post-info, .post-back{ margin-bottom: 15px; position: static; text-align: left; width: auto;}
+  .single .post-info{ float: none;}
+  .single .post-date, .single .post-category{ display: inline;}
+  .single .post-category{ float: right;}
+  .post-content pre{ white-space: pre-wrap;}
+}
