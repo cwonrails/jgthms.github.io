@@ -23,18 +23,19 @@
         </ul>
       </nav>
       <ul class="icons">
-        <li><a href="https://twitter.com/jgthms"><i class="icon-twitter"></i></a></li>
-        <li><a href="https://github.com/jgthms"><i class="icon-github"></i></a></li>
-        <li><a href="https://soundcloud.com/jgthms"><i class="icon-soundcloud"></i></a></li>
-        <li><a class="hn" href="http://bitovod.com/hn/best-of?limit=25&username=bbx"><i class="icon-hn"></i></a></li>
-        <li><a href="/atom.xml"><i class="icon-rss"></i></a></li>
-        <li><a class="contact"><i class="icon-gmail"></i></a></li>
+        <li><a class="twitter" href="https://twitter.com/jgthms" data-toggle="tooltip" title="Twitter"><i class="icon-twitter"></i></a></li>
+        <li><a class="github" href="https://github.com/jgthms" data-toggle="tooltip" title="Github"><i class="icon-github"></i></a></li>
+        <li><a class="soundcloud" href="https://soundcloud.com/jgthms" data-toggle="tooltip" title="Soundcloud"><i class="icon-soundcloud"></i></a></li>
+        <li><a class="hn" href="http://bitovod.com/hn/best-of?limit=25&username=bbx" data-toggle="tooltip" title="Hacker News"><i class="icon-hn"></i></a></li>
+        <li><a class="rss" href="/atom.xml" data-toggle="tooltip" title="RSS"><i class="icon-rss"></i></a></li>
+        <li><a class="contact" data-toggle="tooltip" title="Email"><i class="icon-gmail"></i></a></li>
       </ul>
     </header>
     {{ content }}
-    <script src="/javascript/jquery-1.10.1.min.js"></script>
+    <script src="/javascript/jquery-1.11.0.min.js"></script>
     <script src="/javascript/jquery.easing.min.js"></script>
     <script src="/javascript/affix.js"></script>
+    <script src="/javascript/tooltip.js"></script>
     <script type="text/javascript">
       $(document).ready( function() {
 
@@ -68,7 +69,6 @@
         var $c = $('.contact');
         var t = 'znvygb:'
         var m = 'ookqrfvta@tznvy.pbz';
-        $c.attr('title', R(t+m));
         $c.attr('href', R(t+m));
 
         // Filters
@@ -123,6 +123,10 @@
             }
           });
         });
+
+        // Tooltips
+
+        $('.icons a').tooltip();
 
       });
     </script>
