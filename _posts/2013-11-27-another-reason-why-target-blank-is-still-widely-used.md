@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Another reason why target blank is still widely used
-category: UX
 introduction: Inactive users can still be present.
+category: Thoughts
 ---
 
 I've always hated the target blank feature. Whenever I click a link that unintentionally opens in a new tab, it feels like an intrusion on my liberty to interact like I wish to, and even feels like my browser is taken as a hostage. Ok, it sounds as an overkill to put it that way, but users actually *can* open links in new tabs ; target blanks just remove the **choice** to do so. The worst are links *of the same domain* that open in a new tab (luckily, it's very rare). In any case, target blank links can end up populating your browser with dozens of unnecessary tabs.

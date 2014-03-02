@@ -33,14 +33,15 @@ nav: articles
       {% if currentseason != season %}
         {% if currentyear != year %}
           <section class="year">{{ currentyear }}</section>
-          {% capture year %}{{currentyear}}{% endcapture %}
+          {% capture year %}{{ currentyear }}{% endcapture %}
         {% endif %}
         <section class="season season-{{ currentseason }}" >{{ currentseason }}</section>
         <hr>
-        {% capture season %}{{currentseason}}{% endcapture %}
+        {% capture season %}{{ currentseason }}{% endcapture %}
       {% endif %}
 
       <article class="post {{ post.category | downcase }}{% if post.recommended == true %} recommended{% endif %}">
+        {% if post.recommended == true %}<img class="post-star" src="/images/star.svg">{% endif %}
         <p class="post-info">
           <em class="post-date">{{ post.date | date_to_string }}</em>
           <strong class="post-category">{{ post.category }}</strong>

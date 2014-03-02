@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Designing with CSS animations
-category: UI
 introduction: I wasn't using the jt.ms domain I bought last year and thought it would be a good opportunity to play with CSS 3 animations.
+category: UI
 recommended: true
 ---
 

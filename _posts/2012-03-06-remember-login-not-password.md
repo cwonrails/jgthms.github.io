@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Remember login, not password
-category: UX
 introduction: Why not let the browser remember the information I forget the most, and prevent him from creating a security issue?
+category: UX
 ---
 
 I wish browsers would prompt me, not only to remember my password (which actually remember *both* login and password), but also my login *only*. The thing is, I don't mind having my login stored in my browser (and consequentially giving other users potential access to) because it can be (and sometimes is) publically known.

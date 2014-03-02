@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Quick Bootstrap Design
-category: UI
 introduction: Some tips about customizing your freshly built Bootstrap website.
-recommended: true
+category: UI
 ---
 
 <figure>

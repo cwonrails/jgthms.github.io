@@ -1,9 +1,9 @@
 ---
 layout: post
 title: The Grey Period
-category: UI
 introduction: You put colors in your interface? That's so vintage.
 recommended: true
+category: UI
 ---
 
 Ever since Google launched its redesign, I've been wanting to point out a design direction that many websites seem to take: killing colors.

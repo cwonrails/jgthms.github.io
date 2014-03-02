@@ -1,9 +1,8 @@
 ---
 layout: post
 title: SoundCloud's UX is confusing
-category: UX
 introduction: SoundCloud is great for discovering and sharing music. Less for actually listening to it.
-recommended: true
+category: UX
 ---
 
 **Update**: it looks like SoundCloud finally delivered.

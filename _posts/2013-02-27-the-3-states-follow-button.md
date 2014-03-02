@@ -2,7 +2,7 @@
 layout: post
 title: The 3-states follow button
 introduction: Make use of the hover state to hide the action and display the current state.
-category: UX
+category: UI
 ---
 
 After having discussed the [2-options toggle button](/the-2-options-toggle-button.html), I started thinking about another multiple options button: the follow button.

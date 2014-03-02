@@ -1,8 +1,8 @@
 ---
 layout: post
 title: CopyPasteCharacter is unusable
-category: UX
 introduction: Is the only way to quickly find a character I can't type actually typing it?
+category: UX
 ---
 
 I used to love [CopyPasteCharacter](http://copypastecharacter.com/) because it provided me special but useful characters that are hard to generate (especially since I mainly work on Windows).

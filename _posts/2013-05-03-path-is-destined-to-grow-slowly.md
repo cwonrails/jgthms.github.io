@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Path is destined to grow slowly
-category: Thoughts
 introduction: I quit Facebook last year. I thought Path was a viable alternative but its vision failed to delight me.
+category: Thoughts
 recommended: true
 ---
 

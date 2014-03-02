@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Why I'm still uncomfortable using my iMac
-category: UX
 introduction: The pros and cons of an Apple computer.
+category: Thoughts
 recommended: true
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Send a login token via email after failed attempts
-category: UX
 introduction: A temporary alternative to a forgotten password situation.
+category: UX
 ---
 
 Yesterday, I signed up for Covoiturage.fr, a carpool website. I had to provide my name, email, phone number, but no password, which was weird. After completeting the quick process, I was sent a verification email which also included an auto-generated password. I didn't use it because clicking the "*Validate your email*" button automatically logged me in for that one time, and I was able to send a private message like I wished to.
