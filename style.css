@@ -45,7 +45,7 @@ img{ max-width: 100%;}
 .icons .icon-hn{ font-size: 12px; position: relative; top: -2px;}
 .icons .icon-gmail{ font-size: 12px; left: -1px; position: relative; top: -2px;}
 
-.modal{ background: white; background: rgba(255, 255, 255, 0.93); display: none; height: 100%; left: 0; position: fixed; top: 0; width: 100%;}
+.modal{ background: white; background: rgba(255, 255, 255, 0.93); display: block; height: 100%; left: 0; position: fixed; top: 0; width: 100%;}
 .form{ bottom: 50px; left: 50%; margin-left: -305px; position: fixed; top: 50px; width: 690px;}
 .element{ background: none; border: none; color: #242424; display: block; font-size: 21px; height: 48px; left: 0; max-width: 100%; outline: none; padding: 0 10px; position: absolute; top: 0; width: 670px;}
 .element::-webkit-input-placeholder{ color: hsla(4, 68%, 56%, 0.48); transition: color 250ms ease-out;}

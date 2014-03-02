@@ -32,19 +32,9 @@
       </ul>
     </header>
     {{ content }}
-    <div class="modal">
-      <form class="form">
-        <p id="email" class="control"><input class="element" type="email" placeholder="Email" required></p>
-        <p id="subject" class="control"><input class="element" type="text" placeholder="Subject" required></p>
-        <p id="message" class="control"><textarea class="element" placeholder="Hi there JT," required></textarea></p>
-        <button class="button">Send</button>
-      </form>
-      <a class="close">×</a>
-    </div>
     <script src="/javascript/jquery-1.10.1.min.js"></script>
     <script src="/javascript/jquery.easing.min.js"></script>
     <script src="/javascript/affix.js"></script>
-    <script src="/javascript/retina-1.1.0.min.js"></script>
     <script type="text/javascript">
       $(document).ready( function() {
 
@@ -78,10 +68,8 @@
         var $c = $('.contact');
         var t = 'znvygb:'
         var m = 'ookqrfvta@tznvy.pbz';
-        $c.each( function() {
-          $(this).attr('title', R(t+m));
-          $(this).attr('href', R(t+m));
-        })
+        $c.attr('title', R(t+m));
+        $c.attr('href', R(t+m));
 
         // Filters
 
@@ -125,6 +113,8 @@
           displayed[1] = view;
           Sort($(this));
         });
+
+        // Periods
 
         $('.year, .season').each( function() {
           $(this).affix({
