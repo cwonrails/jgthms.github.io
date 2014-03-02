@@ -15,7 +15,7 @@
   <body class="{{ page.nav }}">
     <header class="header">
       <a class="logo" href="/">
-        <img src="/images/logo.png" alt="JT logo">
+        <img src="/images/logo.svg" alt="JT logo">
       </a>
       <nav class="nav">
         <ul>
@@ -26,12 +26,21 @@
         <li><a href="https://twitter.com/jgthms"><i class="icon-twitter"></i></a></li>
         <li><a href="https://github.com/jgthms"><i class="icon-github"></i></a></li>
         <li><a href="https://soundcloud.com/jgthms"><i class="icon-soundcloud"></i></a></li>
-        <li><a class="hn" href="https://news.ycombinator.com/user?id=bbx"><i class="icon-hn"></i></a></li>
+        <li><a class="hn" href="http://bitovod.com/hn/best-of?limit=25&username=bbx"><i class="icon-hn"></i></a></li>
         <li><a href="/atom.xml"><i class="icon-rss"></i></a></li>
         <li><a class="contact"><i class="icon-gmail"></i></a></li>
       </ul>
     </header>
     {{ content }}
+    <div class="modal">
+      <form class="form">
+        <p id="email" class="control"><input class="element" type="email" placeholder="Email" required></p>
+        <p id="subject" class="control"><input class="element" type="text" placeholder="Subject" required></p>
+        <p id="message" class="control"><textarea class="element" placeholder="Hi there JT," required></textarea></p>
+        <button class="button">Send</button>
+      </form>
+      <a class="close">×</a>
+    </div>
     <script src="/javascript/jquery-1.10.1.min.js"></script>
     <script src="/javascript/jquery.easing.min.js"></script>
     <script src="/javascript/affix.js"></script>

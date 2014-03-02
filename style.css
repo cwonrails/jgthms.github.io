@@ -20,15 +20,15 @@ abbr, acronym{ border: 0;}
 
 */
 
-html{ overflow-y: scroll;}
-body{ background: white; font: 16px/1.5 'Brandon Grotesque', 'Open Sans', Arial, sans-serif; color: #4a4a4a; margin: 50px auto 100px; padding: 0 80px 0 160px; position: relative; width: 690px;}
+html{ height: 100%; overflow-y: scroll;}
+body{ background: white; font: 16px/1.5 'Brandon Grotesque', 'Open Sans', Arial, sans-serif; color: #4a4a4a; margin: 50px auto;padding: 0 80px 0 160px; position: relative; width: 690px;}
 a{ border-bottom: 2px solid #ededed; color: #db4e44; cursor: pointer; text-decoration: none;}
 a:visited{ color: #93a1a1;}
 a:hover{ border-bottom-color: #db4e44;}
 img{ max-width: 100%;}
 
 .post-introduction, .post-content{ font-family: 'Open Sans', 'Brandon Grotesque', Arial, sans-serif;}
-.post-content h2, .post-content h3{ font-family: 'Brandon Grotesque', 'Open Sans', Arial, sans-serif;}
+.post-content h2, .post-content h3, .element, .button{ font-family: 'Brandon Grotesque', 'Open Sans', Arial, sans-serif;}
 
 .header{ height: 96px; position: relative;}
 .logo{ border-bottom: none; display: block; height: 96px; left: -126px; position: absolute; top: 0;}
@@ -45,15 +45,27 @@ img{ max-width: 100%;}
 .icons .icon-hn{ font-size: 12px; position: relative; top: -2px;}
 .icons .icon-gmail{ font-size: 12px; left: -1px; position: relative; top: -2px;}
 
+.modal{ background: white; background: rgba(255, 255, 255, 0.93); display: none; height: 100%; left: 0; position: fixed; top: 0; width: 100%;}
+.form{ bottom: 50px; left: 50%; margin-left: -305px; position: fixed; top: 50px; width: 690px;}
+.element{ background: none; border: none; color: #242424; display: block; font-size: 21px; height: 48px; left: 0; max-width: 100%; outline: none; padding: 0 10px; position: absolute; top: 0; width: 670px;}
+.element::-webkit-input-placeholder{ color: hsla(4, 68%, 56%, 0.48); transition: color 250ms ease-out;}
+.element:focus::-webkit-input-placeholder{  color: rgba(0, 0, 0, 0.14);}
+.button{ background: #db4e44; border: none; bottom: 50px; color: white; cursor: pointer; display: inline-block; font-size: 29px; line-height: 30px; padding: 15px 30px; position: fixed; text-align: center; vertical-align: middle; white-space: nowrap;}
+.button:hover{ background: #242424;}
+.close{ border-bottom: none; display: block; font-size: 86px; height: 50px; line-height: 50px; outline: none; position: fixed; right: 50px; text-align: center; top: 50px; width: 50px;}
+.close:hover{ color: #242424;}
+
 .hey{ font-size: 29px; line-height: 1.25; margin-top: 50px;}
 .hey strong{ color: #242424;}
 .hey span{ color: #db4e44;}
 
-.gallery{ color: #b5b5b5; margin-top: 50px;}
+.gallery, .footer{ color: #b5b5b5; margin-top: 50px;}
 .gallery li{ display: inline; margin-right: 30px; vertical-align: middle;}
 .gallery img{ vertical-align: middle;}
 .skills p{ margin-bottom: 15px;}
 .skills li{ margin-right: 15px;}
+.footer a{ color: #b5b5b5;}
+.footer a:hover{ color: #4a4a4a;}
 
 .side{ height: 26px; margin: 30px 0;}
 .side ul{ float: left; margin-right: 30px;}
@@ -115,9 +127,14 @@ img{ max-width: 100%;}
 .post-content code{ background: #002b36; color: #2aa198; font-size: 14px; padding: 1px 4px 2px;}
 .post-content pre{ padding: 15px;}
 
+.logo{ z-index: 1986;}
+.button{ z-index: 400;}
+.close{ z-index: 300;}
+.modal{ z-index: 200;}
 .post{ z-index: 100;}
 
 a{ transition: all 250ms ease-out;}
+.button{ transition: background 250ms ease-out;}
 
 @media (max-width: 959px) {
   body{ width: 530px;}
@@ -138,6 +155,7 @@ a{ transition: all 250ms ease-out;}
   .icons .icon-gmail{ font-size: 20px;}
   .gallery ul{ text-align: center;}
   .gallery li{ display: inline-block; margin: 5px 15px 0;}
+  .clients li{ height: 64px; line-height: 64px;}
   .skills li{ margin: 5px 5px 0;}
   .side{ height: auto; text-align: center;}
   .side ul{ display: inline-block; float: none; margin: 0 15px 15px;}
