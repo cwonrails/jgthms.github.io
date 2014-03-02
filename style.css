@@ -20,8 +20,8 @@ abbr, acronym{ border: 0;}
 
 */
 
-html{ height: 100%; overflow-y: scroll;}
-body{ background: white; font: 16px/1.5 'Brandon Grotesque', 'Open Sans', Arial, sans-serif; color: #4a4a4a; margin: 50px auto;padding: 0 80px 0 160px; position: relative; width: 690px;}
+html{ font-size: 20px; height: 100%; overflow-y: scroll;}
+body{ background: white; font: 1em/1.5 'Brandon Grotesque', 'Open Sans', Arial, sans-serif; color: #4a4a4a; margin: 3em auto 5em; padding: 0 5em 0 10em; position: relative; width: 43em;}
 a{ border-bottom: 2px solid #ededed; color: #db4e44; cursor: pointer; text-decoration: none;}
 a:visited{ color: #93a1a1;}
 a:hover{ border-bottom-color: #db4e44;}
@@ -30,17 +30,17 @@ img{ max-width: 100%;}
 .post-introduction, .post-content{ font-family: 'Open Sans', 'Brandon Grotesque', Arial, sans-serif;}
 .post-content h2, .post-content h3{ font-family: 'Brandon Grotesque', 'Open Sans', Arial, sans-serif;}
 
-.header{ height: 96px; position: relative;}
-.logo{ border-bottom: none; display: block; height: 96px; left: -126px; position: absolute; top: 0;}
-.logo img{ display: block;}
-.nav{ font-size: 21px; line-height: 26px; padding: 35px 0;}
-.nav li{ display: inline; margin-right: 30px;}
+.header{ height: 6rem; position: relative;}
+.logo{ border-bottom: none; display: block; height: 6rem; left: -8rem; position: absolute; top: 0;}
+.logo img{ display: block; height: 6rem; width: 6rem;}
+.nav{ font-size: 1.3125rem; line-height: 2rem; padding: 2rem 0;}
+.nav li{ display: inline; margin-right: 2rem;}
 .nav a{ color: #93a1a1;}
 .nav a:hover{ color: #4a4a4a;}
 .nav .here a{ border-bottom: none; color: #4a4a4a;}
-.icons{ position: absolute; right: 0; text-align: right; top: 32px;}
+.icons{ position: absolute; right: 0; text-align: right; top: 2rem;}
 .icons li{ display: inline;}
-.icons a{ border-bottom: none; color: #93a1a1; display: inline-block; float: left; font-size: 21px; height: 32px; line-height: 32px; text-align: center; width: 32px;}
+.icons a{ border-bottom: none; color: #93a1a1; display: inline-block; float: left; font-size: 1.3125rem; height: 2rem; line-height: 2rem; text-align: center; width: 2rem;}
 .icons a:hover{ color: #4a4a4a;}
 .icons .twitter:hover{ color: #55acee;}
 .icons .github:hover{ color: #333;}
@@ -48,87 +48,93 @@ img{ max-width: 100%;}
 .icons .hn:hover{ color: #f60;}
 .icons .rss:hover{ color: #ea7c31;}
 .icons .contact:hover{ color: #e75a4d;}
-.icons .icon-hn{ font-size: 16px; left: 2px; position: relative; top: -2px;}
-.icons .icon-gmail{ font-size: 17px; left: -2px; position: relative; top: -2px;}
+.icons .icon-hn{ font-size: 1rem; left: 1px; position: relative; top: -3px;}
+.icons .icon-gmail{ font-size: 1rem; left: -2px; position: relative; top: -2px;}
 
-.hey{ font-size: 29px; line-height: 1.25; margin-top: 50px;}
+.hey{ font-size: 1.8125rem; line-height: 1.25; margin-top: 3rem;}
 .hey strong{ color: #242424;}
 .hey span, .hey a{ color: #db4e44;}
 
-.gallery, .footer{ color: #b5b5b5; margin-top: 50px;}
-.gallery li{ display: inline; margin-right: 30px; vertical-align: middle;}
+.gallery, .footer{ color: #b5b5b5; margin-top: 3rem;}
+.gallery li{ display: inline-block; height: 4rem; line-height: 4rem; margin-right: 2rem; vertical-align: middle;}
 .gallery img{ vertical-align: middle;}
-.skills p{ margin-bottom: 15px;}
-.skills li{ margin-right: 15px;}
+.clients img{ height: 4rem;}
+.clients .microsoft img{ height: 2.5rem;}
+.clients .sony img{ height: 1.5rem;}
+.skills p{ margin-bottom: 1rem;}
+.skills li{ margin-right: 1rem;}
+.skills img{ height: 3rem;}
+.skills .jquery img{ height: 1.5rem;}
+.skills .wordpress img{ height: 2rem;}
 .footer a{ color: #b5b5b5;}
 .footer a:hover{ color: #4a4a4a;}
 
-.side{ height: 26px; margin: 30px 0;}
-.side ul{ float: left; margin-right: 30px;}
+.side{ height: 1.625rem; margin: 2rem 0;}
+.side ul{ float: left; margin-right: 2rem;}
 .side li{ display: inline;}
-.side a{ border: 2px solid #ededed; border-radius: 4px; color: #93a1a1; display: inline-block; font-size: 14px; height: 24px; line-height: 24px; padding: 0 7px;}
+.side a{ border: 0.125rem solid #ededed; border-radius: 0.25rem; color: #93a1a1; display: inline-block; font-size: 0.875rem; height: 1.5rem; line-height: 1.5rem; padding: 0 0.5rem;}
 .side a:hover{ border-color: #93a1a1; color: #7a7a7a;}
 .side .on, .side .on:hover{ border-color: #db4e44; color: #4a4a4a;}
 
 .list{ position: relative;}
 
-.year, .season{ background: white; border-top: 2px solid #93a1a1; display: block; font-size: 14px; letter-spacing: 0.07em; line-height: 26px; margin-top: 15px; padding-right: 720px; position: absolute; right: 0; text-align: right; text-transform: uppercase; width: 50px;}
-.year{ color: #93a1a1; padding-right: 800px;}
-.articles hr{ border: none; height: 30px;}
+.year, .season{ background: white; border-top: 0.125rem solid #93a1a1; display: block; font-size: 0.875rem; letter-spacing: 0.07em; line-height: 1.625rem; margin-top: 1rem; padding-right: 45rem; position: absolute; right: 0; text-transform: uppercase; width: 3rem;}
+.year{ color: #93a1a1; padding-right: 50rem;}
+.articles hr{ border: none; height: 2rem;}
 .season-win{ border-top-color: #a9caf1; color: #a9caf1;}
 .season-spr{ border-top-color: #c1ea95; color: #c1ea95;}
 .season-sum{ border-top-color: #fbd596; color: #fbd596;}
 .season-aut{ border-top-color: #c8af99; color: #c8af99;}
-.affix.year, .affix.season{ left: 50%; margin-left: -385px; position: fixed; top: -15px;}
-.affix.year{ margin-left: -465px;}
+.affix.year, .affix.season{ left: 50%; margin-left: -24rem; position: fixed; top: -1rem;}
+.affix.year{ margin-left: -29rem;}
 
-.post{ margin: 30px 0; position: relative;}
-.post-star{ left: -23px; position: absolute; top: 5px;}
-.post-info{ color: #dbdbdb; float: right; font-size: 14px; margin: 5px 0 0 2em; text-align: right;}
+.post{ margin: 2rem 0; position: relative;}
+.post-star{ left: -1.5rem; position: absolute; top: 0.3125rem; width: 1rem;}
+.post-info{ color: #dbdbdb; float: right; font-size: 0.875rem; margin: 0.3125rem 0 0 2em; text-align: right;}
 .post-date, .post-category{ display: block;}
-.post-title{ font-size: 24px; line-height: 1.125;}
+.post-title{ font-size: 1.5rem; line-height: 1.125;}
 .post-title a{ border-bottom: none; color: #4a4a4a;}
 .post-title a:visited{ color: #93a1a1;}
 .post-title a:hover{ color: #db4e44;}
-.post-introduction{ color: #93a1a1; font-size: 14px; margin-top: 5px;}
+.post-introduction{ color: #93a1a1; font-size: 0.875rem; margin-top: 0.5em;}
 .recommended.post .post-title{ font-weight: bold;}
 
-.single{ margin-top: 50px; position: relative;}
-.single .post-title{ color: #242424; font-size: 33px; font-weight: bold; line-height: 1;}
-.single .post-introduction{ font-size: 18px; margin: 15px 0 50px;}
-.single .post-info, .post-back{ font-size: 14px; line-height: 24px; position: absolute; right: 720px; text-align: right; width: 130px;}
+.single{ margin-top: 3rem; position: relative;}
+.single .post-title{ color: #242424; font-size: 2rem; font-weight: bold; line-height: 1;}
+.single .post-introduction{ font-size: 1.125rem; margin: 1rem 0 3rem;}
+.single .post-info, .post-back{ font-size: 0.875rem; line-height: 1.5rem; position: absolute; right: 45rem; text-align: right; width: 8rem;}
 .single .post-info{ margin: 1px 0 0;}
 .post-back a{ color: #dbdbdb;}
 .post-back a:hover{ color: #4a4a4a;}
 .post-back span{ font-size: 11px; margin-right: 2px;}
 
 .post-content{ color: #242424;}
-.post-content h2{ font-size: 29px; font-weight: bold; margin-top: 2em;}
-.post-content h3{ color: #839496; font-size: 24px; font-weight: bold; margin-top: 2em;}
+.post-content h2{ font-size: 1.8125rem; font-weight: bold; margin-top: 2em;}
+.post-content h3{ color: #839496; font-size: 1.5rem; font-weight: bold; margin-top: 2em;}
 .post-content p,
 .post-content ul,
 .post-content ol{ margin: 1em 0;}
 .post-content figure{ margin: 2em; text-align: center;}
-.post-content figcaption{ color: #93a1a1; font-size: 13px; margin-top: 1em;}
+.post-content figcaption{ color: #93a1a1; font-size: 0.8125rem; margin-top: 1em;}
 .post-content ul li{ position:relative;}
-.post-content ul li:before{ color: #93a1a1; content: '*'; left: -20px; position: absolute; top: 4px;}
-.post-content blockquote{ border-left: 4px solid #db4e44; color: #7a7a7a; font-style: italic; padding: 15px 30px;}
+.post-content ul li:before{ color: #93a1a1; content: '*'; left: -1.5rem; position: absolute; top: 4px;}
+.post-content blockquote{ border-left: 4px solid #db4e44; color: #7a7a7a; font-style: italic; padding: 1rem 2rem;}
 .post-content blockquote p{ margin: 0;}
-.post-content table{ font-size: 14px; width: 100%;}
+.post-content table{ font-size: 0.875rem; width: 100%;}
 .post-content th,
-.post-content td{ border: 1px solid #dbdbdb; padding: 5px;}
+.post-content td{ border: 1px solid #dbdbdb; padding: 0.5rem;}
 .post-content th{ background: #f5f5f5; color: #7a7a7a;}
 .post-content td{ background: #fafafa;}
 .post-content .empty{ background: none; border: none;}
 .post-content pre,
-.post-content code{ background: #002b36; color: #2aa198; font-size: 14px; padding: 1px 4px 2px;}
-.post-content pre{ padding: 15px;}
+.post-content code{ background: #002b36; color: #2aa198; font-size: 0.8125rem; padding: 1px 4px 2px;}
+.post-content pre{ padding: 1rem;}
 
-.tooltip{ display: block; font-size: 12px; opacity: 0; position: absolute; visibility: visible;}
+.tooltip{ display: block; font-size: 0.75rem; opacity: 0; position: absolute; visibility: visible;}
 .tooltip.in{ opacity: 1;}
-.tooltip.top{ margin-top: -2px; padding: 4px 0;}
+.tooltip.top{ margin-top: -2px; padding: 0.25rem 0;}
 .tooltip-inner{ background-color: #4a4a4a; border-radius: 4px; color: white; max-width: 200px; padding: 2px 7px; text-align: center; text-decoration: none;}
-.tooltip-arrow{ border: solid transparent; border-top-color: #4a4a4a; border-width: 4px 4px 0; bottom: 0; height: 0; left: 50%; margin-left: -5px; position: absolute; width: 0;}
+.tooltip-arrow{ display: none;}
 
 .logo{ z-index: 1986;}
 .tooltip{ z-index: 200;}
@@ -137,36 +143,33 @@ img{ max-width: 100%;}
 a{ transition: all 250ms ease-out;}
 .tooltip{ transition: opacity 125ms ease-out;}
 
-@media (max-width: 959px) {
-  body{ width: 530px;}
-  .year{ padding-right: 640px;}
-  .season{ padding-right: 560px;}
-  .single .post-info, .post-back{ right: 560px;}
+@media (max-width: 1159px) {
+  html{ font-size: 16px;}
 }
 
-@media (max-width: 799px) {
-  body{ padding: 0 15px; margin-top: 30px; width: auto;}
+@media (max-width: 929px) {
+  body{ padding: 0 1rem; margin-top: 2rem; width: auto;}
   .header{ height: auto; text-align: center;}
-  .logo{ display: inline-block; margin-left: -18px; position: static;}
+  .logo{ display: inline-block; margin-left: -1rem; position: static;}
   .nav{ display: inline-block; vertical-align: top;}
-  .nav li{ margin: 0 0 0 30px;}
-  .icons{ margin: 30px 0; position: static; text-align: center;}
-  .icons a{ float: none; font-size: 24px; height: auto; margin: 0 5px; width: auto;}
+  .nav li{ margin: 0 0 0 2rem;}
+  .icons{ margin: 2rem 0; position: static; text-align: center;}
+  .icons a{ float: none; font-size: 1.5rem; height: auto; margin: 0 0.5rem; width: auto;}
   .icons .icon-hn{ font-size: 20px;}
   .icons .icon-gmail{ font-size: 20px;}
   .gallery ul{ text-align: center;}
-  .gallery li{ display: inline-block; margin: 5px 15px 0;}
-  .clients li{ height: 64px; line-height: 64px;}
-  .skills li{ margin: 5px 5px 0;}
+  .gallery li{ display: inline-block; margin: 0.5rem 1rem 0;}
+  .clients li{ height: 4rem; line-height: 4rem;}
+  .skills li{ margin: 0.5rem 0.5rem 0;}
   .side{ height: auto; text-align: center;}
-  .side ul{ display: inline-block; float: none; margin: 0 15px 15px;}
+  .side ul{ display: inline-block; float: none; margin: 0 1rem 1rem;}
   .year, .season, .affix.year, .affix.season{ margin: 0; padding: 0; position: static; width: auto;}
   .articles hr{ display: none;}
   .post-star{ left: 0;}
-  .recommended .post-title{ text-indent: 24px;}
-  .single{ margin-top: 30px;}
-  .single .post-introduction{ margin-bottom: 15px;}
-  .single .post-info, .post-back{ margin-bottom: 15px; position: static; text-align: left; width: auto;}
+  .recommended .post-title{ text-indent: 1.5rem;}
+  .single{ margin-top: 2rem;}
+  .single .post-introduction{ margin-bottom: 1rem;}
+  .single .post-info, .post-back{ margin-bottom: 1rem; position: static; text-align: left; width: auto;}
   .single .post-info{ float: none;}
   .single .post-date, .single .post-category{ display: inline;}
   .single .post-category{ float: right;}
