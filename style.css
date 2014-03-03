@@ -118,7 +118,7 @@ img{ max-width: 100%;}
 .post-content figcaption{ color: #93a1a1; font-size: 0.8125rem; margin-top: 1em;}
 .post-content ul li{ position:relative;}
 .post-content ul li:before{ color: #93a1a1; content: '*'; left: -1.5rem; position: absolute; top: 4px;}
-.post-content blockquote{ border-left: 4px solid #db4e44; color: #7a7a7a; font-style: italic; padding: 1rem 2rem;}
+.post-content blockquote{ border-left: 4px solid #db4e44; color: #7a7a7a; font-style: italic; margin: 2rem 0; padding: 0 2rem;}
 .post-content blockquote p{ margin: 0;}
 .post-content table{ font-size: 0.875rem; width: 100%;}
 .post-content th,
@@ -127,7 +127,8 @@ img{ max-width: 100%;}
 .post-content td{ background: #fafafa;}
 .post-content .empty{ background: none; border: none;}
 .post-content pre,
-.post-content code{ background: #002b36; color: #2aa198; font-size: 0.8125rem; padding: 1px 4px 2px;}
+.post-content code{ background: #eee8d5; color: #586e75; font-size: 0.8125rem; padding: 1px 4px 2px;}
+.post-content code{ position: relative; top: -2px;}
 .post-content pre{ padding: 1rem;}
 
 .tooltip{ display: block; font-size: 0.75rem; opacity: 0; position: absolute; visibility: visible;}
@@ -140,7 +141,7 @@ img{ max-width: 100%;}
 .tooltip{ z-index: 200;}
 .post{ z-index: 100;}
 
-a{ transition: all 250ms ease-out;}
+a{ transition: 250ms ease-out; transition-property: border-color, color;}
 .tooltip{ transition: opacity 125ms ease-out;}
 
 @media (max-width: 1159px) {
@@ -150,9 +151,11 @@ a{ transition: all 250ms ease-out;}
 @media (max-width: 929px) {
   body{ padding: 0 1rem; margin-top: 2rem; width: auto;}
   .header{ height: auto; text-align: center;}
-  .logo{ display: inline-block; margin-left: -1rem; position: static;}
-  .nav{ display: inline-block; vertical-align: top;}
+  .logo{ display: inline-block; height: 4rem; position: static;}
+  .logo img{ height: 4rem; width: 4rem;}
+  .nav{ display: inline-block; padding: 1rem 0; vertical-align: top;}
   .nav li{ margin: 0 0 0 2rem;}
+  .nav li:first-child{ display: none;}
   .icons{ margin: 2rem 0; position: static; text-align: center;}
   .icons a{ float: none; font-size: 1.5rem; height: auto; margin: 0 0.5rem; width: auto;}
   .icons .icon-hn{ font-size: 20px;}
