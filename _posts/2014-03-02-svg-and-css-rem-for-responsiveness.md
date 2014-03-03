@@ -2,7 +2,7 @@
 layout: post
 title: SVG and CSS rem for responsiveness
 introduction: Let's use the tools browsers provide us.
-categories:  UI
+category: UI
 recommended: true
 ---
 
