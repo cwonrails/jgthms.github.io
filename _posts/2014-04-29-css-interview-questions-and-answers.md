@@ -12,7 +12,7 @@ Only once have I had to provide a CSS layout for a job application. But I also h
 
 I thought it'd be both entertaining and stimulating to try myself at a fictitious interview based upon the CSS-related questions of that repo. I'll play by the implied rules: answer directly, without putting too much thought into it, write as I'd speak, and leave the potential mix-ups or innacuracies I'd drop in such a situation.
 
-**TL;DR**: I agree, it's long.
+**TL;DR**: I agree, it's long. But it reads quickly considering I wrote it quickly.
 
 ## Describe what a "reset" CSS file does and how it's useful.
 
