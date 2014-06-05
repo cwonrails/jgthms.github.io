@@ -39,7 +39,7 @@ The natural depth depends upon a couple of things:
 * if an element is nested *within* another one, then it shows up on top of its parent
 * if a sibling comes *after* another sibling, it's on top as well
 
-Position absolute or position fixed will mess with that: they'll show up on top *regardless* of their tree position. Well, sometimes... I'm not sure. But because it's sometimes a burden to move elements in the HTML tree, or because the depth behavior can be reliable, you can use the z-index property to make sure how elements will "stack" upon each other (when they overlap obviously). By the way, you need an element to be positioned (relative, absolute, fixed) for the z-index to work.
+Position absolute or position fixed will mess with that: they'll show up on top *regardless* of their tree position. Well, sometimes... I'm not sure. But because it's sometimes a burden to move elements in the HTML tree, or because the depth behavior can be unreliable, you can use the z-index property to make sure how elements will "stack" upon each other (when they overlap obviously). By the way, you need an element to be positioned (relative, absolute, fixed) for the z-index to work.
 
 The z-index value is relative. So you can have one element with z-index: 1 and another with 2, and the latter will show up on top. Same thing would happen with values of 1000 and 4875.
 

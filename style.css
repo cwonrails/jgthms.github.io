@@ -72,9 +72,12 @@ img{ max-width: 100%;}
 .side{ height: 1.625rem; margin: 2rem 0;}
 .side ul{ float: left; margin-right: 2rem;}
 .side li{ display: inline;}
-.side a{ border: 0.125rem solid #ededed; border-radius: 0.25rem; color: #93a1a1; display: inline-block; font-size: 0.875rem; height: 1.5rem; line-height: 1.5rem; padding: 0 0.5rem;}
-.side a:hover{ border-color: #93a1a1; color: #7a7a7a;}
-.side .on, .side .on:hover{ border-color: #db4e44; color: #4a4a4a;}
+.side a{ border: 2px solid #ededed; color: #93a1a1; display: inline-block; float: left; font-size: 0.875rem; height: 1.5rem; line-height: 1.5rem; margin-right: -2px; padding: 0 0.75rem; position: relative;}
+.side a:hover{ border-color: #93a1a1; color: #7a7a7a; z-index: 1;}
+.side .on, .side .on:hover{ border-color: #db4e44; color: #4a4a4a; z-index: 2;}
+.side li:first-child a{ border-radius: 0.25rem 0 0 0.25rem;}
+.side li:last-child a{ border-radius: 0 0.25rem 0.25rem 0;}
+.side .introductions li a{ border-radius: 0.25rem;}
 
 .list{ position: relative;}
 
@@ -99,6 +102,9 @@ img{ max-width: 100%;}
 .post-introduction{ color: #93a1a1; font-size: 0.875rem; margin-top: 0.5em;}
 .recommended.post .post-title{ font-weight: bold;}
 
+.articles .post:hover .post-info,
+.single .post-info:hover{ color: #242424;}
+
 .single{ margin-top: 3rem; position: relative;}
 .single .post-title{ color: #242424; font-size: 2rem; font-weight: bold; line-height: 1.125;}
 .single .post-introduction{ font-size: 1.125rem; margin: 1rem 0 3rem;}
@@ -111,13 +117,13 @@ img{ max-width: 100%;}
 .post-content{ color: #242424;}
 .post-content h2{ font-size: 1.8125rem; font-weight: bold; line-height: 1.125; margin-top: 2em;}
 .post-content h3{ color: #839496; font-size: 1.5rem; font-weight: bold; line-height: 1.125; margin-top: 2em;}
-.post-content p,
+.post-content p{ margin: 1em 0;}
 .post-content ul,
-.post-content ol{ margin: 1em 0;}
+.post-content ol{ margin: 1em 0 1em 1.5em;}
 .post-content figure{ margin: 2em; text-align: center;}
 .post-content figcaption{ color: #93a1a1; font-size: 0.8125rem; margin-top: 1em;}
 .post-content ul li{ position:relative;}
-.post-content ul li:before{ color: #93a1a1; content: '*'; left: -1.5rem; position: absolute; top: 4px;}
+.post-content ul li:before{ color: #93a1a1; content: '*'; left: -1.25rem; position: absolute; top: 4px;}
 .post-content blockquote{ border-left: 4px solid #db4e44; color: #7a7a7a; font-style: italic; margin: 2rem 0; padding: 0 2rem;}
 .post-content blockquote p{ margin: 0;}
 .post-content table{ font-size: 0.875rem; width: 100%;}
@@ -141,7 +147,7 @@ img{ max-width: 100%;}
 .tooltip{ z-index: 200;}
 .post{ z-index: 100;}
 
-a{ transition: 250ms ease-out; transition-property: border-color, color;}
+a, .post-info{ transition: 250ms ease-out; transition-property: border-color, color;}
 .tooltip{ transition: opacity 125ms ease-out;}
 
 @media (max-width: 1159px) {

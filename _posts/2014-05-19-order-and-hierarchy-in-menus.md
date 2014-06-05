@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Order and hierarchy in menus
-introduction: Not all items carry the same weight
+introduction: Not all items carry the same weight.
 category: UX
 ---
 
