@@ -27,7 +27,7 @@ a:visited{ color: #93a1a1;}
 a:hover{ border-bottom-color: #db4e44;}
 img{ max-width: 100%;}
 
-.post-introduction, .post-content{ font-family: 'Open Sans', 'Brandon Grotesque', Arial, sans-serif;}
+.post-introduction, .post-content, .ideas p{ font-family: 'Open Sans', 'Brandon Grotesque', Arial, sans-serif;}
 .post-content h2, .post-content h3{ font-family: 'Brandon Grotesque', 'Open Sans', Arial, sans-serif;}
 
 .header{ height: 6rem; position: relative;}
@@ -51,8 +51,8 @@ img{ max-width: 100%;}
 .icons .icon-hn{ font-size: 1rem; left: 1px; position: relative; top: -3px;}
 .icons .icon-gmail{ font-size: 1rem; left: -2px; position: relative; top: -2px;}
 
-.hey{ font-size: 1.8125rem; line-height: 1.25; margin-top: 3rem;}
-.hey strong{ color: #242424;}
+.hey, .title{ font-size: 1.8125rem; line-height: 1.25; margin-top: 3rem;}
+.hey strong, .title strong{ color: #242424;}
 .hey span, .hey a{ color: #db4e44;}
 
 .gallery, .footer{ color: #b5b5b5; margin-top: 3rem;}
@@ -116,7 +116,7 @@ img{ max-width: 100%;}
 
 .post-content{ color: #242424;}
 .post-content h2{ font-size: 1.8125rem; font-weight: bold; line-height: 1.125; margin-top: 2em;}
-.post-content h3{ color: #839496; font-size: 1.5rem; font-weight: bold; line-height: 1.125; margin-top: 2em;}
+.post-content h3, .subtitle{ color: #839496; font-size: 1.5rem; font-weight: bold; line-height: 1.125; margin-top: 2em;}
 .post-content p{ margin: 1em 0;}
 .post-content ul,
 .post-content ol{ margin: 1em 0 1em 1.5em;}
@@ -133,9 +133,13 @@ img{ max-width: 100%;}
 .post-content td{ background: #fafafa;}
 .post-content .empty{ background: none; border: none;}
 .post-content pre,
-.post-content code{ background: #eee8d5; color: #586e75; font-size: 0.8125rem; padding: 1px 4px 2px;}
-.post-content code{ position: relative; top: -2px;}
+.post-content code,
+.ideas code{ background: #eee8d5; color: #586e75; font-size: 0.8125rem; padding: 1px 4px 2px;}
+.post-content code,
+.ideas code{ position: relative; top: -2px;}
 .post-content pre{ padding: 1rem;}
+
+.ideas p{ margin: 1em 0;}
 
 .tooltip{ display: block; font-size: 0.75rem; opacity: 0; position: absolute; visibility: visible;}
 .tooltip.in{ opacity: 1;}
