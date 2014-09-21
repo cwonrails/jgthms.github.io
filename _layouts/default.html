@@ -26,7 +26,7 @@
         <li><a class="twitter" href="https://twitter.com/jgthms" data-toggle="tooltip" title="Twitter"><i class="icon-twitter"></i></a></li>
         <li><a class="github" href="https://github.com/jgthms" data-toggle="tooltip" title="Github"><i class="icon-github"></i></a></li>
         <li><a class="soundcloud" href="https://soundcloud.com/jgthms" data-toggle="tooltip" title="Soundcloud"><i class="icon-soundcloud"></i></a></li>
-        <li><a class="hn" href="http://bitovod.com/hn/best-of?limit=25&username=bbx" data-toggle="tooltip" title="Hacker News"><i class="icon-hn"></i></a></li>
+        <li><a class="hn" href="https://news.ycombinator.com/user?id=bbx" data-toggle="tooltip" title="Hacker News"><i class="icon-hn"></i></a></li>
         <li><a class="rss" href="/atom.xml" data-toggle="tooltip" title="RSS"><i class="icon-rss"></i></a></li>
         <li><a class="contact" data-toggle="tooltip" title="Email"><i class="icon-gmail"></i></a></li>
       </ul>
@@ -90,11 +90,8 @@
         }
 
         $introductions.click( function() {
-          if (animating) {
-            return;
-          }
-          $posts.find('.post-introduction').slideToggle(250, 'easeOutExpo');
-          $introductions.toggleClass('on');
+          $posts.toggleClass('compact');
+          $(this).toggleClass('on');
         });
 
         $filters.click( function() {

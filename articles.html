@@ -5,7 +5,7 @@ nav: articles
 ---
 
 <div class="articles">
-  <aside class="side">
+  <aside class="controls">
     <ul class="filters">
       <li><a class="on" data-view="post">All</a></li>
       <li><a data-view="recommended">Recommended</a></li>
@@ -41,7 +41,7 @@ nav: articles
       {% endif %}
 
       <article class="post {{ post.category | downcase }}{% if post.recommended == true %} recommended{% endif %}">
-        {% if post.recommended == true %}<img class="post-star" src="/images/star.svg">{% endif %}
+        {% if post.recommended == true %}<img class="post-star" src="/images/star.png">{% endif %}
         <p class="post-info">
           <em class="post-date">{{ post.date | date_to_string }}</em>
           <strong class="post-category">{{ post.category }}</strong>
