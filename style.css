@@ -27,8 +27,13 @@ a:visited{ color: #93a1a1;}
 a:hover{ border-bottom-color: #db4e44;}
 img{ max-width: 100%;}
 
-.post-introduction, .post-content, .ideas p{ font-family: 'Open Sans', 'Brandon Grotesque', Arial, sans-serif;}
-.post-content h2, .post-content h3{ font-family: 'Brandon Grotesque', 'Open Sans', Arial, sans-serif;}
+.post-introduction,
+.post-content,
+.ideas p,
+.item h3,
+.item p{ font-family: 'Open Sans', 'Brandon Grotesque', Arial, sans-serif;}
+.post-content h2,
+.post-content h3{ font-family: 'Brandon Grotesque', 'Open Sans', Arial, sans-serif;}
 
 .header{ height: 6rem; position: relative;}
 .logo{ border-bottom: none; display: block; height: 6rem; left: -8rem; position: absolute; top: 0;}
@@ -41,21 +46,25 @@ img{ max-width: 100%;}
 .icons{ position: absolute; right: 0; text-align: right; top: 2rem;}
 .icons li{ display: inline;}
 .icons a{ border-bottom: none; color: #93a1a1; display: inline-block; float: left; font-size: 1.3125rem; height: 2rem; line-height: 2rem; text-align: center; width: 2rem;}
-.icons a:hover{ color: #4a4a4a;}
-.icons .twitter:hover{ color: #55acee;}
-.icons .github:hover{ color: #333;}
-.icons .soundcloud:hover{ color: #f50;}
-.icons .hn:hover{ color: #f60;}
-.icons .rss:hover{ color: #ea7c31;}
-.icons .contact:hover{ color: #e75a4d;}
+  .icons a:hover{ color: #4a4a4a;}
+  .icons .twitter:hover{ color: #55acee;}
+  .icons .github:hover{ color: #333;}
+  .icons .soundcloud:hover{ color: #f50;}
+  .icons .hn:hover{ color: #f60;}
+  .icons .rss:hover{ color: #ea7c31;}
+  .icons .contact:hover{ color: #e75a4d;}
 .icons .icon-hn{ font-size: 1rem; left: 1px; position: relative; top: -3px;}
 .icons .icon-gmail{ font-size: 1rem; left: -2px; position: relative; top: -2px;}
 
-.hey, .title{ font-size: 1.8125rem; line-height: 1.25; margin-top: 3rem;}
-.hey strong, .title strong{ color: #242424;}
-.hey span, .hey a{ color: #db4e44;}
+.hey,
+.title{ font-size: 1.8125rem; line-height: 1.25; margin-top: 3rem;}
+.hey strong,
+.title strong{ color: #242424;}
+.hey span,
+.hey a{ color: #db4e44;}
 
-.gallery, .footer{ color: #b5b5b5; margin-top: 3rem;}
+.gallery,
+.footer{ color: #b5b5b5; margin-top: 3rem;}
 .gallery li{ display: inline-block; height: 4rem; line-height: 4rem; margin-right: 2rem; vertical-align: middle;}
 .gallery img{ vertical-align: middle;}
 .clients img{ height: 4rem;}
@@ -82,7 +91,8 @@ img{ max-width: 100%;}
 
 .list{ position: relative;}
 
-.year, .season{ background: white; border-top: 0.125rem solid #93a1a1; display: block; font-size: 0.875rem; letter-spacing: 0.07em; line-height: 1.625rem; margin-top: 0.5rem; padding-right: 45rem; position: absolute; right: 0; text-transform: uppercase; width: 3rem;}
+.year,
+.season{ background: white; border-top: 2px solid #93a1a1; display: block; font-size: 0.875rem; letter-spacing: 0.07em; line-height: 1.625rem; margin-top: 0.5rem; padding-right: 45rem; position: absolute; right: 0; text-transform: uppercase; width: 3rem;}
 .year{ color: #93a1a1; padding-right: 50rem;}
 .articles hr{ border: none; height: 2rem;}
 .season-win{ border-top-color: #a9caf1; color: #a9caf1;}
@@ -111,7 +121,8 @@ img{ max-width: 100%;}
 .single{ margin-top: 3rem; position: relative;}
 .single .post-title{ color: #242424; font-size: 2rem; font-weight: bold; line-height: 1.125;}
 .single .post-introduction{ font-size: 1.125rem; margin: 1rem 0 3rem;}
-.single .post-info, .post-back{ font-size: 0.875rem; line-height: 1.5rem; position: absolute; right: 45rem; text-align: right; width: 8rem;}
+.single .post-info,
+.post-back{ font-size: 0.875rem; line-height: 1.5rem; position: absolute; right: 45rem; text-align: right; width: 8rem;}
 .single .post-info{ margin: 1px 0 0;}
 .post-back a{ color: #dbdbdb;}
 .post-back a:hover{ color: #4a4a4a;}
@@ -119,7 +130,8 @@ img{ max-width: 100%;}
 
 .post-content{ color: #242424;}
 .post-content h2{ font-size: 1.8125rem; font-weight: bold; line-height: 1.125; margin-top: 2em;}
-.post-content h3, .subtitle{ color: #839496; font-size: 1.5rem; font-weight: bold; line-height: 1.125; margin-top: 2em;}
+.post-content h3,
+.subtitle{ color: #839496; font-size: 1.5rem; font-weight: bold; line-height: 1.125; margin-top: 2em;}
 .post-content p{ margin: 1em 0;}
 .post-content ul,
 .post-content ol{ margin: 1em 0 1em 1.5em;}
@@ -144,6 +156,21 @@ img{ max-width: 100%;}
 
 .ideas p{ margin: 1em 0;}
 
+.tabs{ padding: 2rem 0;}
+.tabs li{ display: inline;}
+.tabs a{ display: inline-block; vertical-align: top;}
+
+.ranking{ display: none;}
+  .ranking-nintendo64{ display: block;}
+
+.item{ border-top: 2px solid #ededed; min-height: 220px; padding: 2rem 0 2rem 240px; position: relative;}
+.item:after{ clear: both; content: ''; display: block;}
+.item span{ color: #93a1a1; font-size: 1.5rem; font-weight: bold; line-height: 1.125; margin-right: 2rem; position: absolute; right: 100%; text-align: right; top: 2rem;}
+.item img{ float: left; left: 0; max-width: 220px; position: absolute; top: 2rem;}
+.item h2{ color: #242424; font-size: 1.5rem; font-weight: bold; line-height: 1.125;}
+.item h3{ color: #93a1a1; font-size: 0.875rem; margin-top: 0.25em;}
+.item p{ font-size: 0.875rem; margin-top: 1em;}
+
 .tooltip{ display: block; font-size: 0.75rem; opacity: 0; position: absolute; visibility: visible;}
 .tooltip.in{ opacity: 1;}
 .tooltip.top{ margin-top: -2px; padding: 0.25rem 0;}
@@ -154,7 +181,8 @@ img{ max-width: 100%;}
 .tooltip{ z-index: 200;}
 .post{ z-index: 100;}
 
-a, .post-info{ transition: 50ms ease-out; transition-property: border-color, color;}
+a,
+.post-info{ transition: 50ms ease-out; transition-property: border-color, color;}
 .tooltip{ transition: opacity 125ms ease-out;}
 
 @media (max-width: 1159px) {
@@ -179,7 +207,10 @@ a, .post-info{ transition: 50ms ease-out; transition-property: border-color, col
   .skills li{ margin: 0.5rem 0.5rem 0;}
   .controls{ height: auto; text-align: center;}
   .controls ul{ display: inline-block; float: none; margin: 0 1rem 1rem;}
-  .year, .season, .affix.year, .affix.season{ margin: 0; padding: 0; position: static; width: auto;}
+  .year,
+  .season,
+  .affix.year,
+  .affix.season{ margin: 0; padding: 0; position: static; width: auto;}
   .articles hr{ display: none;}
   .post-star{ left: 0;}
   .recommended .post-title{ text-indent: 1.5rem;}
