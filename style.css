@@ -31,7 +31,8 @@ img{ max-width: 100%;}
 .post-content,
 .ideas p,
 .item h3,
-.item p{ font-family: 'Open Sans', 'Brandon Grotesque', Arial, sans-serif;}
+.item p,
+.item ul{ font-family: 'Open Sans', 'Brandon Grotesque', Arial, sans-serif;}
 .post-content h2,
 .post-content h3{ font-family: 'Brandon Grotesque', 'Open Sans', Arial, sans-serif;}
 
@@ -160,9 +161,6 @@ img{ max-width: 100%;}
 .tabs li{ display: inline;}
 .tabs a{ display: inline-block; vertical-align: top;}
 
-.ranking{ display: none;}
-  .ranking-nintendo64{ display: block;}
-
 .item{ border-top: 2px solid #ededed; min-height: 220px; padding: 2rem 0 2rem 240px; position: relative;}
 .item:after{ clear: both; content: ''; display: block;}
 .item span{ color: #93a1a1; font-size: 1.5rem; font-weight: bold; line-height: 1.125; margin-right: 2rem; position: absolute; right: 100%; text-align: right; top: 2rem;}
@@ -170,6 +168,7 @@ img{ max-width: 100%;}
 .item h2{ color: #242424; font-size: 1.5rem; font-weight: bold; line-height: 1.125;}
 .item h3{ color: #93a1a1; font-size: 0.875rem; margin-top: 0.25em;}
 .item p{ font-size: 0.875rem; margin-top: 1em;}
+.item ul{ font-size: 0.875rem; list-style: outside disc; margin: 1em 2em;}
 
 .tooltip{ display: block; font-size: 0.75rem; opacity: 0; position: absolute; visibility: visible;}
 .tooltip.in{ opacity: 1;}

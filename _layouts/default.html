@@ -37,7 +37,7 @@
     <script src="/javascript/affix.js"></script>
     <script src="/javascript/tooltip.js"></script>
     <script type="text/javascript">
-      $(document).ready( function() {
+      $(document).ready(function() {
 
         // Contact
 
@@ -89,12 +89,12 @@
           setTimeout(function(){ animating = false; }, 300);
         }
 
-        $introductions.click( function() {
+        $introductions.click(function() {
           $posts.toggleClass('compact');
           $(this).toggleClass('on');
         });
 
-        $filters.click( function() {
+        $filters.click(function() {
           if (animating) {
             return;
           }
@@ -102,7 +102,7 @@
           Sort($(this));
         });
 
-        $categories.click( function() {
+        $categories.click(function() {
           if (animating) {
             return;
           }
@@ -113,12 +113,28 @@
 
         // Periods
 
-        $('.year, .season').each( function() {
+        $('.year, .season').each(function() {
           $(this).affix({
             offset: {
               top: $(this).offset().top
             }
           });
+        });
+
+        // Favorites
+
+        var $devices = $('.devices li a');
+        var $rankings = $('.ranking');
+
+        $rankings.hide();
+        $rankings.first().show();
+
+        $devices.click(function() {
+          var view = $(this).data('view');
+          $(this).parent().siblings().find('a').removeClass('on');
+          $(this).addClass('on');
+          $rankings.hide();
+          $(view).show();
         });
 
         // Tooltips
