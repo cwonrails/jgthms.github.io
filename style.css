@@ -191,13 +191,12 @@ a,
 @media (max-width: 929px) {
   body{ padding: 2rem 1rem 5rem; margin: 0; width: auto;}
   .header{ height: auto; text-align: center;}
-  .logo{ display: inline-block; height: 4rem; position: static;}
-  .logo img{ height: 4rem; width: 4rem;}
-  .nav{ display: inline-block; padding: 1rem 0; vertical-align: top;}
-  .nav li{ margin: 0 0 0 2rem;}
+  .logo{ display: inline-block; position: static;}
+  .nav{ display: block; padding: 1rem 0; text-align: center;}
+  .nav li{ margin: 0 1rem;}
   .nav li:first-child{ display: none;}
   .icons{ margin: 2rem 0; position: static; text-align: center;}
-  .icons a{ float: none; font-size: 1.5rem; height: auto; margin: 0 0.5rem; width: auto;}
+  .icons a{ float: none; font-size: 1.5rem; height: auto; margin: 0; width: auto;}
   .icons .icon-hn{ font-size: 20px;}
   .icons .icon-gmail{ font-size: 20px;}
   .gallery ul{ text-align: center;}
@@ -220,4 +219,9 @@ a,
   .single .post-date, .single .post-category{ display: inline;}
   .single .post-category{ float: right;}
   .post-content pre{ white-space: pre-wrap;}
+  .item{ padding-left: 0;}
+  .item span{ display: block; float: right; margin: 0; position: static;}
+  .item h3{ font-size: 1rem;}
+  .item img{ display: block; float: none; margin-top: 1rem; max-width: none; position: static; width: 100%;}
+  .item p{ font-size: 1rem;}
 }
