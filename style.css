@@ -86,8 +86,8 @@ img{ max-width: 100%;}
   .controls a:hover{ border-color: #93a1a1; color: #7a7a7a; z-index: 1;}
   .controls .on,
   .controls .on:hover{ background: #4a4a4a; border-color: #4a4a4a; color: white; z-index: 2;}
-.controls li:first-child a{ border-radius: 3px 0 0 3px;}
-.controls li:last-child a{ border-radius: 0 3px 3px 0;}
+.controls li:first-child a{ border-bottom-left-radius: 3px; border-top-left-radius: 3px;}
+.controls li:last-child a{ border-bottom-right-radius: 3px; border-top-right-radius: 3px;}
 .controls .introductions li a{ border-radius: 3px;}
 
 .list{ position: relative;}
