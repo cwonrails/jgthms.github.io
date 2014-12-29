@@ -223,5 +223,6 @@ a,
   .item span{ display: block; float: right; margin: 0; position: static;}
   .item h3{ font-size: 1rem;}
   .item img{ display: block; float: none; margin-top: 1rem; max-width: none; position: static; width: 100%;}
-  .item p{ font-size: 1rem;}
+  .item p,
+  .item ul{ font-size: 1rem;}
 }
