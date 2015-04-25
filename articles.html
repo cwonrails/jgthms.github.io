@@ -5,7 +5,7 @@ nav: articles
 ---
 
 <div class="articles">
-  <aside class="controls">
+  <nav id="articles-controls" class="controls">
     <ul class="filters">
       <li><a class="on" data-view="post">All</a></li>
       <li><a data-view="recommended">Recommended</a></li>
@@ -19,7 +19,7 @@ nav: articles
     <ul class="introductions">
       <li><a class="on">Introductions</a></li>
     </ul>
-  </aside>
+  </nav>
   <div class="list">
     {% for post in site.posts %}
       {% capture currentyear %}

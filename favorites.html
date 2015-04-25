@@ -9,14 +9,14 @@ nav: favorites
     A collection of my favorite <strong>games</strong>.<br>
     For no particular reason.
   </h1>
-  <aside class="controls">
-    <ul class="devices">
-      <li><a class="on" data-view="#gameboy">Game Boy</a></li>
-      <li><a data-view="#nintendo64">Nintendo 64</a></li>
-      <li><a data-view="#playstation">PlayStation</a></li>
+  <nav id="favorites-controls" class="controls">
+    <ul>
+      <li><a href="#gameboy" data-list="gameboy">Game Boy</a></li>
+      <li><a href="#nintendo64" data-list="nintendo64">Nintendo 64</a></li>
+      <li><a href="#playstation" data-list="playstation">PlayStation</a></li>
     </ul>
-  </aside>
-  <div id="gameboy" class="ranking">
+  </nav>
+  <div id="gameboy" class="favorites-list" data-name="gameboy">
     <article class="item">
       <span>10</span>
       <h2>Revenge of the Gator</h2>
@@ -180,7 +180,7 @@ nav: favorites
       </p>
     </article>
   </div>
-  <div id="nintendo64" class="ranking">
+  <div id="nintendo64" class="favorites-list" data-name="nintendo64">
     <article class="item">
       <span>10</span>
       <h2>Star Wars: Rogue Squadron</h2>
@@ -332,7 +332,7 @@ nav: favorites
       </p>
     </article>
   </div>
-  <div id="playstation" class="ranking">
+  <div id="playstation" class="favorites-list" data-name="playstation">
     <article class="item">
       <span>10</span>
       <img src="/images/favorites/playstation-red-alert.jpg">

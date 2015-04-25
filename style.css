@@ -36,7 +36,7 @@ img{ max-width: 100%;}
 .post-content h2,
 .post-content h3{ font-family: 'Brandon Grotesque', 'Open Sans', Arial, sans-serif;}
 
-.header{ height: 6rem; position: relative;}
+.header{ height: 6rem; margin-bottom: 3rem; position: relative;}
 .logo{ border-bottom: none; display: block; height: 6rem; left: -8rem; position: absolute; top: 0;}
 .logo img{ display: block; height: 6rem; width: 6rem;}
 .nav{ font-size: 1.3125rem; line-height: 2rem; padding: 2rem 0;}
@@ -58,7 +58,7 @@ img{ max-width: 100%;}
 .icons .icon-gmail{ font-size: 1rem; left: -2px; position: relative; top: -2px;}
 
 .hey,
-.title{ font-size: 1.8125rem; line-height: 1.25; margin-top: 3rem;}
+.title{ font-size: 1.8125rem; line-height: 1.25; margin: 3rem 0 2rem;}
 .hey strong,
 .title strong{ color: #242424;}
 .hey span,
@@ -132,7 +132,7 @@ img{ max-width: 100%;}
 .post-content{ color: #242424;}
 .post-content h2{ font-size: 1.8125rem; font-weight: bold; line-height: 1.125; margin-top: 2em;}
 .post-content h3,
-.subtitle{ color: #839496; font-size: 1.5rem; font-weight: bold; line-height: 1.125; margin-top: 2em;}
+.subtitle{ color: #839496; font-size: 1.5rem; font-weight: bold; line-height: 1.125; margin-top: 1em; padding-top: 1em;}
 .post-content p{ margin: 1em 0;}
 .post-content ul,
 .post-content ol{ margin: 1em 0 1em 1.5em;}
@@ -155,11 +155,7 @@ img{ max-width: 100%;}
 .ideas code{ position: relative; top: -2px;}
 .post-content pre{ padding: 1rem;}
 
-.ideas p{ margin: 1em 0;}
-
-.tabs{ padding: 2rem 0;}
-.tabs li{ display: inline;}
-.tabs a{ display: inline-block; vertical-align: top;}
+.favorites-list{ display: none;}
 
 .item{ border-top: 2px solid #ededed; min-height: 220px; padding: 2rem 0 2rem 240px; position: relative;}
 .item:after{ clear: both; content: ''; display: block;}
@@ -169,6 +165,12 @@ img{ max-width: 100%;}
 .item h3{ color: #93a1a1; font-size: 0.875rem; margin-top: 0.25em;}
 .item p{ font-size: 0.875rem; margin-top: 1em;}
 .item ul{ font-size: 0.875rem; list-style: outside disc; margin: 1em 2em;}
+
+.ideas p{ margin: 1em 0;}
+
+.tabs{ padding: 2rem 0;}
+.tabs li{ display: inline;}
+.tabs a{ display: inline-block; vertical-align: top;}
 
 .tooltip{ display: block; font-size: 0.75rem; opacity: 0; position: absolute; visibility: visible;}
 .tooltip.in{ opacity: 1;}
