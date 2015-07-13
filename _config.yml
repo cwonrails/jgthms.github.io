@@ -1,5 +1,10 @@
-markdown: redcarpet
-permalink: /:title.html
+name: J. Thomas
+highlighter: pygments
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: pygments
+permalink: :title.html
 projects:
   - name: bbxdesign
     slug: bbxdesign
@@ -73,36 +78,3 @@ projects:
     background: '6e1003'
     color1: 'efefef'
     color2: 'f83703'
-sets:
-  - name: Reach the Throne
-    slug: reach-the-throne
-    id: 2522196
-    color: cc3333
-  - name: A reminder
-    slug: a-reminder
-    id: 2842952
-    color: 35666a
-  - name: Confidential Undertones
-    slug: confidential-undertones
-    id: 6378722
-    color: '003051'
-  - name: Le coeur a ses saisons
-    slug: le-coeur-a-ses-saisons
-    id: 6702622
-    color: 956841
-versions:
-  - name: Shore
-    slug: 07-shore
-  - name: Bay
-    slug: 06-bay
-  - name: Museum
-    slug: 05-museum
-  - name: Mono
-    slug: 04-mono
-  - name: Hurricane
-    slug: 03-hurricane
-  - name: Wings
-    slug: 02-wings
-  - name: Verdana
-    slug: 01-verdana
-

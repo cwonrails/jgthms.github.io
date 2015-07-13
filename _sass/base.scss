@@ -1,0 +1,31 @@
+html{
+  background: white; font-size: 16px;
+}
+
+body{
+  color: $text; font-family: $font-family-primary; font-size: 1rem; letter-spacing: -0.05em; line-height: 1.25;
+}
+
+a{
+  color: $link; text-decoration: none;
+}
+
+img{
+  max-height: 100%; max-width: 100%;
+}
+
+strong{
+  color: $title;
+}
+
+.container{
+  margin: 0 auto; max-width: 980px; position: relative;
+}
+
+@include on($landscape) {
+  html{ font-size: 18px;}
+}
+
+@include on($laptop) {
+  html{ font-size: 20px;}
+}

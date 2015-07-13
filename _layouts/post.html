@@ -1,19 +1,35 @@
 ---
 layout: default
-nav: articles
+route: post
 ---
 
-<article class="single">
-  <p class="post-back">
-    <a href="/articles.html"><span>❮</span> Back</a>
-  </p>
-  <h1 class="post-title">{{ page.title }}</h1>
-  <h2 class="post-introduction">{{ page.introduction }}</h2>
-  <p class="post-info">
-    <em class="post-date">{{ page.date | date_to_string }}</em>
-    <strong class="post-category">{{ page.category }}</strong>
-  </p>
-  <div class="post-content">
-    {{ content }}
-  </div>
+<section class="heading">
+  <h1>
+    <em>{{ page.date | date: "%m.%-d" | remove_first: '0' }}</em>
+    {{ page.title }}
+  </h1>
+  <h2>{{ page.subtitle }}</h2>
+</section>
+
+<article class="content">
+  {{ content }}
 </article>
+
+<nav class="pagination">
+  {% if page.next %}
+    <a href="{{ page.next.url }}">
+      <em>Next &rarr;</em>
+      <strong>{{ page.next.title }}</strong>
+    </a>
+  {% endif %}
+</nav>
+
+<nav id="navigation" class="navigation">
+  {% if page.next %}
+    <a href="{{ page.next.url }}">Next article</a>
+  {% endif %}
+  {% if page.previous %}
+    <a href="{{ page.previous.url }}">Previous</a>
+  {% endif %}
+  <a id="top">Back to top</a>
+</nav>

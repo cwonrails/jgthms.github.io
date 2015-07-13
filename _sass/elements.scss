@@ -1,0 +1,71 @@
+.hello{
+  display: table; height: 100vh; overflow: hidden; position: relative; vertical-align: middle; width: 100%;
+  .previous,
+  .next{
+    display: none; height: 60px; left: 0; line-height: 60px; position: absolute; text-align: center; width: 100%;
+    a{ display: block;}
+  }
+  .previous{ top: 0;}
+  .next{ bottom: 0;}
+  .hello-content{
+    display: table-cell; padding: 0 40px; position: relative; vertical-align: middle;
+    .title{ margin-bottom: 2rem;}
+    .subtitle{ margin-top: 1rem;}
+    .clients,
+    .topics,
+    .tools{
+      li{
+        display: inline-block; height: 40px; margin: 7px 10px 0 0; vertical-align: top;
+        &.microsoft{ padding: 10px 0;}
+        &.sony{ padding: 12px 0;}
+        &.wordpress{ padding: 2px 0;}
+        &.jquery{ padding: 10px 0 6px;}
+        &.bootstrap{ padding: 4px;}
+        img{ vertical-align: top;}
+      }
+    }
+    .follow{
+      text-align: center;
+      a{
+        display: inline-block; margin: 1rem 0.5rem 0; vertical-align: top;
+        .fa{ font-size: 42px;}
+      }
+    }
+  }
+  &:first-child{
+    .hello-content{ padding-top: 60px;}
+  }
+}
+
+.fa{
+  &.fa-github{ color: $github;}
+  &.fa-instagram{ color: $instagram;}
+  &.fa-rss{ color: $rss;}
+  &.fa-soundcloud{ color: $soundcloud;}
+  &.fa-twitter{ color: $twitter;}
+}
+
+.line-drawing{
+  display: none; @include transition(opacity 0.5s);
+
+  @include on($laptop) {
+    display: block; margin-top: -300px; position: absolute; right: -25%; top: 50%;
+  }
+}
+
+.line-drawing path {
+  fill: none; stroke: $border; stroke-width: 1;
+  &.line-round {
+    stroke-linecap: round;
+  }
+}
+
+.subtitle{
+  color: $subtitle;
+  a{ color: $subtitle;}
+}
+
+.title{
+  font-size: 1.5rem;
+  strong{ color: $title;}
+}
