@@ -4,11 +4,35 @@ title: "Articles written by Jeremy Thomas"
 route: articles
 ---
 
+<<<<<<< HEAD
 <div class="container">
   <hgroup class="heading">
     <h1>Articles</h1>
     <h2>Random thoughts about the Web</h2>
   </hgroup>
+=======
+<div class="articles">
+  <nav id="articles-controls" class="controls">
+    <ul class="filters">
+      <li><a class="on" data-view="post">All</a></li>
+      <li><a data-view="recommended">Recommended</a></li>
+    </ul>
+    <ul class="categories">
+      <li><a class="on">All</a></li>
+      <li><a data-view="ui">UI</a></li>
+      <li><a data-view="ux">UX</a></li>
+      <li><a data-view="thoughts">Thoughts</a></li>
+    </ul>
+    <ul class="introductions">
+      <li><a class="on">Introductions</a></li>
+    </ul>
+  </nav>
+  <div class="list">
+    {% for post in site.posts %}
+      {% capture currentyear %}
+        {{ post.date | date: "%Y" }}
+      {% endcapture %}
+>>>>>>> 5d1b8ae466fd508f33757f6516357d1cdabcb99f
 
   {% for post in site.posts %}
     {% capture currentyear %}
