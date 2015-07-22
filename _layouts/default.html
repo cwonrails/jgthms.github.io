@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="route-{{ page.route }}">
+<html>
   {% include head.html %}
   <body>
     {% include header.html %}
-    <main class="main {{ page.route }}">
+    <main id="{{ page.route }}" class="main {{ page.route }}">
       {{ content }}
     </main>
     {% include footer.html %}

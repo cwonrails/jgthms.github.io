@@ -1,5 +1,5 @@
 html{
-  background: white; font-size: 16px; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  background: white; font-size: 16px; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; min-width: 300px; text-rendering: optimizeLegibility;
 }
 
 body{
@@ -31,12 +31,4 @@ section{
 
 @include selection{
   background: $link; color: white;
-}
-
-@include on($landscape) {
-  // html{ font-size: 18px;}
-}
-
-@include on($laptop) {
-  // html{ font-size: 20px;}
 }

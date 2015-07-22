@@ -1,3 +1,4 @@
+$offset: 60px;
 $offset-mobile: 80px;
 $offset-desktop: 120px;
 
@@ -12,7 +13,10 @@ $offset-desktop: 120px;
       a{
         color: $title; @include transition-duration($speed / 2);
         &:hover{ background: $link; color: white; padding: 2px 5px;}
-        &:visited{ color: $border;}
+        &:visited{
+          color: $visited;
+          &:hover{ color: white;}
+        }
       }
     }
     .introduction{ margin-top: 10px;}
@@ -38,22 +42,24 @@ $offset-desktop: 120px;
   a:hover{ text-decoration: underline;}
 
   @include on($laptop) {
-    margin-top: 60px;
+    margin-top: $offset;
   }
 }
 
 .console{
   .item{
-    margin-bottom: 40px; padding-left: 60px; position: relative;
+    border-top: 1px solid $border; padding: 20px; position: relative;
     &:last-child{ margin-bottom: 0;}
-    .rank{ left: 0; position: absolute; top: 2px;}
+    .rank{ float: right;}
     .name{ @extend .title; font-weight: bold;}
     .developer{ @extend .subtitle; margin-bottom: 20px;}
   }
 
   @include on($laptop) {
     .item{
-      margin-bottom: 60px; padding-left: 80px;
+      min-height: 421px; padding: $offset $offset $offset 400px;
+      .rank{ left: 0; position: absolute; top: $offset;}
+      .cover{ left: 80px; max-width: 300px; position: absolute; top: $offset;}
       .name{ font-size: 2rem !important;} // @extend priority BS
       .developer{ font-size: 1.5rem;}
     }
@@ -63,12 +69,15 @@ $offset-desktop: 120px;
 .content{
   color: #4a4a4a; font-size: 1.25rem; line-height: 1.5;
   a{
-    border-bottom: 1px solid $link;
+    border-bottom: 1px solid $link; word-break: break-all;
     &:hover{ background: $link; color: white;}
     &:visited{ color: $visited;}
   }
-  h2{ color: $title; font-size: 1.5rem; font-weight: bold; margin-top: 40px;}
-  p{ margin: 20px 0;}
+  h2{ color: $title; font-size: 1.5rem; font-weight: bold; line-height: 1.125; margin-top: 40px;}
+  p{
+    margin: 20px 0;
+    &:last-child{ margin-bottom: 0;}
+  }
   ul{ list-style: disc outside; margin: 20px;}
   figure{ margin: 40px; text-align: center;}
   figcaption{ color: $subtitle; font-size: $small; margin-top: 1em;}
@@ -95,15 +104,15 @@ $offset-desktop: 120px;
 }
 
 .heading{
-  font-family: $font-family-serif; line-height: 1.125; margin: 60px 20px; text-align: center;
+  margin: $offset; text-align: center;
   h1,
-  h2{ display: inline-block; position: relative; vertical-align: top;}
-  h1:after,
-  h2:before{ @include animation(expand 1000ms both); background: $black; bottom: 0; content: " "; display: block; height: 1px; left: -10%; position: absolute; width: 120%;}
-  h1{ color: $title; font-size: 2.5rem; font-weight: bold; font-weight: 800; padding-bottom: 10px;}
-  h2{
-    color: $subtitle; font-size: 2rem; font-style: italic; padding-top: 10px;
-    &:before{ bottom: auto; top: -1px;}
+  h2{ font-family: $font-family-serif; line-height: 1.125;}
+  h1{ color: $title; font-size: 2rem; font-weight: bold; font-weight: 900;}
+  h2{ color: $subtitle; font-size: 1.5rem; font-weight: 400; font-style: italic;}
+
+  @include on($laptop) {
+    h1{ font-size: 2.5rem;}
+    h2{ font-size: 2rem;}
   }
 }
 
@@ -111,22 +120,6 @@ $offset-desktop: 120px;
   height: 100vh; overflow: hidden; position: relative; width: 100%;
   .hello-background,
   .hello-screenshot{ @include overlay(); bottom: auto; display: none; height: 600px; left: auto; margin-top: -300px; position: absolute; right: -25%; top: 50%; width: 100%;}
-    // background: url(http://i.imgur.com/q5RN3qb.gif) repeat;
-    // background-image: url(http://i.imgur.com/X8ieYCn.gif);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // position: fixed;
-    // width: 100%;
-    // @include radial-gradient(ellipse farthest-side at 48% 48%, saturate($red, 100%), saturate($orange, 100%));
-    // mix-blend-mode: overlay;
-  // .hello-content{
-    // @include radial-gradient(ellipse farthest-side at 0 0, $black, $dark);
-    // mix-blend-mode: lighten;
-    // @include radial-gradient(ellipse farthest-corner at 40px 40px, white, $white);
-    // background: white;
-    // background: white;
-  // }
-  // .hello-screenshot{ transform: perspective(500px) rotateZ(35deg) skew(-24deg,-1deg) rotate3d(1,0,0,8deg) scale(1,0.86);}
   .hello-content{ display: table; height: 100vh; position: relative; vertical-align: middle; width: 100%; z-index: 1;}
   .hello-screenshot{
     img{ left: 50%; opacity: 0; position: absolute; top: 50%;}
@@ -137,10 +130,14 @@ $offset-desktop: 120px;
     .title{
       color: $text; margin-bottom: 2rem;
       a{
-        background: $link; color: white; padding: 0 0.25em 0.05em;
-        &:hover{ background: $black !important;}
+        @include pop($red); color: white; padding: 0 0.25em 0.05em; white-space: nowrap;
+        &:before{ border-radius: 0; opacity: 1;}
+        span{ position: relative;}
+        &:hover{
+          &:before{ bottom: -10px; left: -10px; right: -10px; top: -10px;}
+        }
       }
-      strong{ font-family: $font-family-serif; font-weight: 700; font-weight: 800;}
+      strong{ font-family: $font-family-serif; font-weight: bold; font-weight: 900;}
 
       @media screen and (min-height: 400px) and (min-width: 600px) {
         font-size: 2rem;
@@ -175,17 +172,22 @@ $offset-desktop: 120px;
   &.hello-streethub{
     .hello-background{ @include radial-gradient(ellipse farthest-side at 29% 29%, saturate($red, 100%), saturate($orange, 100%));}
     .hello-screenshot img{ height: 275px; margin: -153px 0 0 -219px;}
-    .title a{ background: $red;}
   }
   &.hello-marksheet{
     .hello-background{ @include radial-gradient(ellipse farthest-side at 29% 29%, saturate($web, 100%), saturate($css3, 100%));}
     .hello-screenshot img{ height: 322px; margin: -172px 0 0 -334px;}
-    .title a{ background: $css3;}
+    .title a{
+      @include pop($css3);
+      &:before{ border-radius: 0; opacity: 1;}
+    }
   }
   &.hello-ivan-ballini{
     .hello-background{ @include radial-gradient(ellipse farthest-side at 29% 29%, saturate($brique, 100%), saturate($beige, 100%));}
     .hello-screenshot img{ height: 408px; margin: -261px 0 0 -270px;}
-    .title a{ background: $brique;}
+    .title a{
+      @include pop($brique);
+      &:before{ border-radius: 0; opacity: 1;}
+    }
   }
 
   @include on($laptop) {
@@ -201,11 +203,11 @@ $offset-desktop: 120px;
 }
 
 .favorites{
-  padding: $offset-mobile 20px 0;
+  padding-top: $offset-mobile;
   .container > .title{ font-size: 2rem; margin-bottom: 20px;}
 
   @include on($laptop) {
-    padding: $offset-desktop 0 0;
+    padding-top: $offset-desktop;
   }
 }
 
@@ -215,12 +217,12 @@ $offset-desktop: 120px;
     border-radius: 290486px; color: $border; display: inline-block; height: 80px; margin-top: 1rem; vertical-align: top; width: 80px;
     .fa{ font-size: 42px; line-height: 80px;}
     &.twitter{
-      color: $twitter;
-      &:hover{ background: $twitter; color: white;}
+      @include pop($twitter); color: $twitter;
+      &:hover{ color: white;}
     }
     &.github{
-      color: $github;
-      &:hover{ background: $github; color: white;}
+      @include pop($github); color: $github;
+      &:hover{ color: white;}
     }
   }
 }
@@ -247,12 +249,7 @@ $offset-desktop: 120px;
 .pagination{
   margin-top: 20px;
   a{
-    border: 1px solid $link; border-radius: 3px; display: block; padding: 20px;
-    strong{ display: block;}
-    &:hover{
-      background: $link; color: rgba(white, 0.48);
-      strong{ color: white;}
-    }
+    @include button();
     & + a{ margin-top: 20px;}
     &[rel="previous"]{ display: none;}
   }
@@ -267,7 +264,7 @@ $offset-desktop: 120px;
   }
 
   @include on($laptop) {
-    margin-top: 40px;
+    margin-top: $offset;
   }
 }
 
@@ -300,7 +297,7 @@ $offset-desktop: 120px;
   .introduction{ font-size: 1.5rem; margin-bottom: 20px;}
 
   @include on($laptop) {
-    padding: $offset-desktop 0 20px;
+    padding: $offset-desktop 0;
     .container{ padding: 0 80px;}
     .info{ margin: 0 -60px 0 0;}
   }
@@ -331,6 +328,15 @@ $offset-desktop: 120px;
 .subtitle{
   color: $subtitle; line-height: 1.125;
   a{ color: $subtitle;}
+}
+
+.tabs{
+  padding-top: 10px;
+  a{
+    @include button(); display: inline-block; margin: 10px 5px 0; padding: 10px 15px; text-align: center; vertical-align: top;
+    &:hover{ background: none; border-color: $black; color: $black;}
+    &.active{ background: $link; border-color: $link; color: white;}
+  }
 }
 
 .title{

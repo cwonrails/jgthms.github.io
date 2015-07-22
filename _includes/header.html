@@ -1,7 +1,22 @@
 <header class="header">
   <div class="container">
-    <a class="jt" href="/">
-      JT
+    <a class="jt{% if page.route == 'index' %} active{% endif %}" href="/">
+      <span class="a">J</span>
+      <span class="b">e</span>
+      <span class="c">r</span>
+      <span class="d">e</span>
+      <span class="e">m</span>
+      <span class="f">y</span>
+      <span class="g"></span>
+      <span class="h">G</span>
+      <span class="i">.</span>
+      <span class="j"></span>
+      <span class="k">T</span>
+      <span class="l">h</span>
+      <span class="m">o</span>
+      <span class="n">m</span>
+      <span class="o">a</span>
+      <span class="p">s</span>
     </a>
 
     <a id="toggle-menu" class="toggle toggle-menu" href="#" data-target="menu">
@@ -17,10 +32,10 @@
     <div id="overlay" class="overlay"></div>
 
     <ul id="menu" class="dropdown dropdown-menu">
-      <li><a href="/">J. Thomas</a></li>
-      <li><a href="/articles.html">Articles</a></li>
-      <li><a href="/projects.html">Projects</a></li>
-      <li><a href="/favorites.html">Favorites</a></li>
+      <li><a{% if page.route == 'index' %} class="active"{% endif %} href="/">J. Thomas</a></li>
+      <li><a{% if page.route == 'articles' or page.route == 'post' %} class="active"{% endif %} href="/articles.html">Articles</a></li>
+      <!-- <li><a href="/projects.html">Projects</a></li> -->
+      <li><a{% if page.route == 'favorites' %} class="active"{% endif %} href="/favorites-game-boy.html">Favorites</a></li>
     </ul>
 
     <ul id="elsewhere" class="dropdown dropdown-elsewhere">
