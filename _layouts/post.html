@@ -3,15 +3,16 @@ layout: default
 route: post
 ---
 
-<div class="article">
+<div class="post">
   <div class="container">
-    <section class="heading">
-      <h1 class="title">
-        <em>{{ page.date | date: "%m.%-d" | remove_first: '0' }}</em>
-        {{ page.title }}
-      </h1>
-      <h2>{{ page.subtitle }}</h2>
-    </section>
+    <hgroup class="heading">
+      <p class="info">
+        <em class="date">{{ page.date | date_to_string }}</em>
+        <strong class="category">{{ page.category }}</strong>
+      </p>
+      <h1 class="title">{{ page.title }}</h1>
+      <h2 class="introduction">{{ page.introduction }}</h2>
+    </hgroup>
 
     <article class="content">
       {{ content }}
@@ -26,7 +27,7 @@ route: post
       {% endif %}
     </nav>
 
-    <nav id="navigation" class="navigation">
+    <!-- <nav id="navigation" class="navigation">
       {% if page.next %}
         <a href="{{ page.next.url }}">Next article</a>
       {% endif %}
@@ -34,6 +35,6 @@ route: post
         <a href="{{ page.previous.url }}">Previous</a>
       {% endif %}
       <a id="top">Back to top</a>
-    </nav>
+    </nav> -->
   </div>
 </div>

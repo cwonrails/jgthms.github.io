@@ -1,10 +1,64 @@
+.post{
+  padding: 100px 0; position: relative;
+  .info{ margin-bottom: 20px;}
+  .title{ color: $title; font-size: 2rem; font-weight: bold; line-height: 1.125;}
+  .introduction{ color: $title; font-size: 1.5rem;}
+
+  @include on($laptop) {
+    padding: 140px 0;
+  }
+}
+
+.heading{
+  padding: 0 20px;
+}
+
+.content{
+  color: #4a4a4a; font-size: 1.25rem; padding: 0 20px;
+  p{ margin: 20px 0;}
+}
+
+.pagination{
+  padding: 0 20px;
+  a{
+    border: 1px solid $link; border-radius: 3px; display: block; padding: 20px;
+    em{ display: block; font-style: normal;}
+  }
+}
+
 .articles{
   padding: 100px 0; position: relative;
   hr{ border-top: 1px solid $border; display: none; margin: 0 0 0 160px;}
+  .article{
+    padding: 20px; padding-left: 40px; position: relative;
+    .fa-star{ color: $yellow; font-size: 21px; left: 12px; position: absolute; top: 22px;}
+    .info{
+      float: right; padding-top: 4px; text-align: right;
+      .category{ display: block;}
+    }
+    .title{
+      line-height: 1.125;
+      a{
+        color: $title;
+        &:hover{ background: $title; color: white; padding: 2px 5px;}
+        &:visited{ color: $border;}
+      }
+    }
+    .introduction{ margin-top: 10px;}
+    &.recommended{
+      .title{ font-weight: bold;}
+    }
+    & + .article{ border-top: 1px solid $border;}
+  }
 
   @include on($laptop) {
     padding: 140px 0;
     hr{ display: block;}
+    .article{
+      padding-left: 200px;
+      .fa-star{ left: 172px;}
+      & + .article{ border-top: none;}
+    }
   }
 }
 
@@ -150,34 +204,6 @@
       left: 50%; margin-left: -24rem; position: fixed; top: -1rem;
       &.year{ margin-left: -29rem;}
     }
-  }
-}
-
-.post{
-  padding: 20px; padding-left: 40px; position: relative;
-  .fa-star{ color: $yellow; font-size: 21px; left: 12px; position: absolute; top: 22px;}
-  .info{
-    float: right; padding-top: 4px; text-align: right;
-    .category{ display: block;}
-  }
-  .title{
-    line-height: 1.125;
-    a{
-      color: $title;
-      &:hover{ background: $title; color: white; padding: 2px 5px;}
-      &:visited{ color: $border;}
-    }
-  }
-  .introduction{ margin-top: 10px;}
-  &.recommended{
-    .title{ font-weight: bold;}
-  }
-  & + .post{ border-top: 1px solid $border;}
-
-  @include on($laptop) {
-    padding-left: 200px;
-    .fa-star{ left: 172px;}
-    & + .post{ border-top: none;}
   }
 }
 

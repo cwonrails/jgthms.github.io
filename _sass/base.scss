@@ -18,6 +18,13 @@ strong{
   color: $title;
 }
 
+article,
+aside,
+hgroup,
+section{
+  display: block;
+}
+
 .container{
   margin: 0 auto; max-width: 980px; position: relative;
 }

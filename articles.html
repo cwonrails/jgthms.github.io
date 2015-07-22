@@ -25,7 +25,7 @@ route: articles
         {% capture season %}{{ currentseason }}{% endcapture %}
       {% endif %}
 
-      <article class="post {{ post.category | downcase }}{% if post.recommended == true %} recommended{% endif %}">
+      <article class="article {{ post.category | downcase }}{% if post.recommended == true %} recommended{% endif %}">
         {% if post.recommended == true %}
           <i class="fa fa-star"></i>
         {% endif %}
