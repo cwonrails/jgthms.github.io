@@ -3,33 +3,37 @@ layout: default
 route: post
 ---
 
-<section class="heading">
-  <h1>
-    <em>{{ page.date | date: "%m.%-d" | remove_first: '0' }}</em>
-    {{ page.title }}
-  </h1>
-  <h2>{{ page.subtitle }}</h2>
-</section>
+<div class="article">
+  <div class="container">
+    <section class="heading">
+      <h1 class="title">
+        <em>{{ page.date | date: "%m.%-d" | remove_first: '0' }}</em>
+        {{ page.title }}
+      </h1>
+      <h2>{{ page.subtitle }}</h2>
+    </section>
 
-<article class="content">
-  {{ content }}
-</article>
+    <article class="content">
+      {{ content }}
+    </article>
 
-<nav class="pagination">
-  {% if page.next %}
-    <a href="{{ page.next.url }}">
-      <em>Next &rarr;</em>
-      <strong>{{ page.next.title }}</strong>
-    </a>
-  {% endif %}
-</nav>
+    <nav class="pagination">
+      {% if page.next %}
+        <a href="{{ page.next.url }}">
+          <em>Next &rarr;</em>
+          <strong>{{ page.next.title }}</strong>
+        </a>
+      {% endif %}
+    </nav>
 
-<nav id="navigation" class="navigation">
-  {% if page.next %}
-    <a href="{{ page.next.url }}">Next article</a>
-  {% endif %}
-  {% if page.previous %}
-    <a href="{{ page.previous.url }}">Previous</a>
-  {% endif %}
-  <a id="top">Back to top</a>
-</nav>
+    <nav id="navigation" class="navigation">
+      {% if page.next %}
+        <a href="{{ page.next.url }}">Next article</a>
+      {% endif %}
+      {% if page.previous %}
+        <a href="{{ page.previous.url }}">Previous</a>
+      {% endif %}
+      <a id="top">Back to top</a>
+    </nav>
+  </div>
+</div>

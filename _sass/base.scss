@@ -22,6 +22,10 @@ strong{
   margin: 0 auto; max-width: 980px; position: relative;
 }
 
+@include selection{
+  background: $link; color: white;
+}
+
 @include on($landscape) {
   // html{ font-size: 18px;}
 }

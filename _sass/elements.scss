@@ -1,3 +1,13 @@
+.articles{
+  padding: 100px 0; position: relative;
+  hr{ border-top: 1px solid $border; display: none; margin: 0 0 0 160px;}
+
+  @include on($laptop) {
+    padding: 140px 0;
+    hr{ display: block;}
+  }
+}
+
 .hello{
   height: 100vh; overflow: hidden; position: relative; width: 100%;
   .hello-background,
@@ -20,12 +30,30 @@
   // .hello-screenshot{ transform: perspective(500px) rotateZ(35deg) skew(-24deg,-1deg) rotate3d(1,0,0,8deg) scale(1,0.86);}
   .hello-content{ display: table; height: 100vh; position: relative; vertical-align: middle; width: 100%; z-index: 1;}
   .hello-screenshot{
-    img{ opacity: 0; position: absolute;}
+    img{ left: 50%; opacity: 0; position: absolute; top: 50%;}
     &.animate img{ @include animation(jelly 1000ms 1000ms linear both);}
   }
   .hello-text{
     display: table-cell; padding: 0 40px; position: relative; vertical-align: middle;
-    .title{ margin-bottom: 2rem;}
+    .title{
+      margin-bottom: 2rem;
+      a{
+        background: $link; color: white; padding: 0 0.25em 0.125em;
+        &:hover{ background: $black !important;}
+      }
+
+      @media screen and (min-height: 400px) and (min-width: 600px) {
+        font-size: 2rem;
+      }
+
+      @media screen and (min-height: 600px) and (min-width: 800px) {
+        font-size: 2.5rem;
+      }
+
+      @media screen and (min-height: 800px) and (min-width: 1000px) {
+        font-size: 3rem;
+      }
+    }
     .subtitle{ margin-top: 1rem;}
     .clients,
     .topics,
@@ -46,17 +74,17 @@
   }
   &.hello-streethub{
     .hello-background{ @include radial-gradient(ellipse farthest-side at 29% 29%, saturate($red, 100%), saturate($orange, 100%));}
-    .hello-screenshot img{ height: 275px; left: 575px; top: 147px;}
+    .hello-screenshot img{ height: 275px; margin: -153px 0 0 -219px;}
     .title a{ background: $red;}
   }
   &.hello-marksheet{
-    .hello-background{ @include radial-gradient(ellipse farthest-side at 29% 29%, saturate($blue, 100%), saturate($green, 100%));}
-    .hello-screenshot img{ height: 322px; left: 459px; top: 128px;}
+    .hello-background{ @include radial-gradient(ellipse farthest-side at 29% 29%, saturate($web, 100%), saturate($css3, 100%));}
+    .hello-screenshot img{ height: 322px; margin: -172px 0 0 -334px;}
     .title a{ background: $css3;}
   }
   &.hello-ivan-ballini{
     .hello-background{ @include radial-gradient(ellipse farthest-side at 29% 29%, saturate($brique, 100%), saturate($beige, 100%));}
-    .hello-screenshot img{ height: 408px; left: 523px; top: 39px;}
+    .hello-screenshot img{ height: 408px; margin: -261px 0 0 -270px;}
     .title a{ background: $brique;}
   }
 
@@ -72,48 +100,19 @@
   }
 }
 
-@include keyframes(moving-background) {
-  from{ background-position: 0% 0%;}
-  to{ background-position: 99% 99%;}
-}
-
-.fa{
-  &.fa-github{ color: $github;}
-  &.fa-instagram{ color: $instagram;}
-  &.fa-rss{ color: $rss;}
-  &.fa-soundcloud{ color: $soundcloud;}
-  &.fa-twitter{ color: $twitter;}
-
-  @include on($laptop) {
-    .fa{ color: $border;}
-    &.fa-github{
-      color: $border;
-      &:hover{ color: $github;}
-   }
-    &.fa-instagram{
-      color: $border;
-      &:hover{ color: $instagram;}
-   }
-    &.fa-rss{
-      color: $border;
-      &:hover{ color: $rss;}
-   }
-    &.fa-soundcloud{
-      color: $border;
-      &:hover{ color: $soundcloud;}
-   }
-    &.fa-twitter{
-      color: $border;
-      &:hover{ color: $twitter;}
-   }
-  }
-}
-
 .follow{
   text-align: center;
   a{
-    display: inline-block; margin: 1rem 0.5rem 0; vertical-align: top;
-    .fa{ font-size: 42px;}
+    border-radius: 290486px; color: $border; display: inline-block; height: 80px; margin-top: 1rem; vertical-align: top; width: 80px;
+    .fa{ font-size: 42px; line-height: 80px;}
+    &.twitter{
+      color: $twitter;
+      &:hover{ background: $twitter; color: white;}
+    }
+    &.github{
+      color: $github;
+      &:hover{ background: $github; color: white;}
+    }
   }
 }
 
@@ -129,6 +128,56 @@
   fill: none; stroke: $black; stroke-width: 1;
   &.line-round {
     stroke-linecap: round;
+  }
+}
+
+.period{
+  background: $link; color: white; display: block; letter-spacing: 0.1em; padding: 10px; right: 0; text-transform: uppercase; @include transition(all $speed $easing);
+  &.year{ padding-top: 20px;}
+  &.season-win{ background: #a9caf1;}
+  &.season-spr{ background: #c1ea95;}
+  &.season-sum{ background: #fbd596;}
+  &.season-aut{ background: #c8af99;}
+
+  @include on($laptop) {
+    background: none; border-top: 1px solid $link; color: $link; left: 80px; position: absolute; width: 80px;
+    &.year{ left: 0; padding-top: 10px; z-index: 1;}
+    &.season-win{ background: none; border-top-color: #a9caf1; color: #a9caf1;}
+    &.season-spr{ background: none; border-top-color: #c1ea95; color: #c1ea95;}
+    &.season-sum{ background: none; border-top-color: #fbd596; color: #fbd596;}
+    &.season-aut{ background: none; border-top-color: #c8af99; color: #c8af99;}
+    &.affix{
+      left: 50%; margin-left: -24rem; position: fixed; top: -1rem;
+      &.year{ margin-left: -29rem;}
+    }
+  }
+}
+
+.post{
+  padding: 20px; padding-left: 40px; position: relative;
+  .fa-star{ color: $yellow; font-size: 21px; left: 12px; position: absolute; top: 22px;}
+  .info{
+    float: right; padding-top: 4px; text-align: right;
+    .category{ display: block;}
+  }
+  .title{
+    line-height: 1.125;
+    a{
+      color: $title;
+      &:hover{ background: $title; color: white; padding: 2px 5px;}
+      &:visited{ color: $border;}
+    }
+  }
+  .introduction{ margin-top: 10px;}
+  &.recommended{
+    .title{ font-weight: bold;}
+  }
+  & + .post{ border-top: 1px solid $border;}
+
+  @include on($laptop) {
+    padding-left: 200px;
+    .fa-star{ left: 172px;}
+    & + .post{ border-top: none;}
   }
 }
 
@@ -149,23 +198,4 @@
 .title{
   font-size: 1.5rem; @include transition(font-size $speed $easing);
   strong{ color: $title;}
-  a{
-    background: $link; color: white; padding: 0 10px 5px;
-    &:hover{ background: $black !important;}
-  }
-
-  // @include on($laptop) {
-  // }
-
-  @media screen and (min-height: 400px) {
-    font-size: 2rem;
-  }
-
-  @media screen and (min-height: 600px) {
-    font-size: 2.5rem;
-  }
-
-  @media screen and (min-height: 800px) {
-    font-size: 3rem;
-  }
 }

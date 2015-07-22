@@ -32,7 +32,7 @@
 }
 
 .dropdown{
-  background: white; border-radius: 5px; box-shadow: 0 5px 10px rgba(black, 0.2); display: none; position: absolute; top: 50px;
+  background: white; border-radius: 5px; box-shadow: 0 5px 10px rgba(black, 0.2); display: none; overflow: hidden; position: absolute; top: 50px;
   li{
     display: inline;
     a{ border-bottom: 1px solid $border; display: block; padding: 10px;}
@@ -45,7 +45,18 @@
     li a{ color: $text; padding-right: 40px;}
   }
   &.dropdown-elsewhere{
-    font-size: 21px; right: 17px;
+    font-size: 21px; right: 20px;
+    a{
+      color: $border; height: 41px; padding: 0; text-align: center; width: 40px;
+      .fa{ line-height: 40px;}
+      &:hover{ color: white;}
+      &.github:hover{ background: $github;}
+      &.instagram:hover{ background: $instagram;}
+      &.rss:hover{ background: $rss;}
+      &.hacker-news:hover{ background: $hacker-news;}
+      &.soundcloud:hover{ background: $soundcloud;}
+      &.twitter:hover{ background: $twitter;}
+    }
   }
 
   @include on($laptop) {
@@ -57,8 +68,8 @@
       li a{ margin-right: 20px; padding: 0;}
     }
     &.dropdown-elsewhere{
-      float: right;
-      li a{ margin-left: 20px;}
+      float: right; padding-top: 10px;
+      li a{ border-radius: 20px; height: 40px;}
     }
   }
 }
