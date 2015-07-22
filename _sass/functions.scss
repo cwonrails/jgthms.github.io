@@ -89,6 +89,11 @@ $widescreen:  1401px;
   &::-webkit-scrollbar-thumb{ background: $link;}
 }
 
+@include keyframes(expand) {
+  from{ left: 50%; width: 0%;}
+  to  { left: -10%; width: 120%;}
+}
+
 @include keyframes(drop-in) {
   from{ opacity: 0; @include transform(scale(0));}
   to  { opacity: 1; @include transform(scale(1));}

@@ -3,38 +3,50 @@ layout: default
 route: post
 ---
 
-<div class="post">
-  <div class="container">
-    <hgroup class="heading">
-      <p class="info">
-        <em class="date">{{ page.date | date_to_string }}</em>
-        <strong class="category">{{ page.category }}</strong>
-      </p>
-      <h1 class="title">{{ page.title }}</h1>
-      <h2 class="introduction">{{ page.introduction }}</h2>
-    </hgroup>
+<div class="container">
+  <p class="back">
+    <a href="/articles.html">Back</a>
+  </p>
 
-    <article class="content">
-      {{ content }}
-    </article>
+  <p class="info">
+    <em class="date">{{ page.date | date_to_string }}</em>
+    <strong class="category">{{ page.category }}</strong>
+  </p>
 
-    <nav class="pagination">
-      {% if page.next %}
-        <a href="{{ page.next.url }}">
-          <em>Next &rarr;</em>
-          <strong>{{ page.next.title }}</strong>
-        </a>
-      {% endif %}
-    </nav>
+  <h1 class="title">{{ page.title }}</h1>
 
-    <!-- <nav id="navigation" class="navigation">
-      {% if page.next %}
-        <a href="{{ page.next.url }}">Next article</a>
-      {% endif %}
-      {% if page.previous %}
-        <a href="{{ page.previous.url }}">Previous</a>
-      {% endif %}
-      <a id="top">Back to top</a>
-    </nav> -->
-  </div>
+  <h2 class="introduction">{{ page.introduction }}</h2>
+
+  <article class="content">
+    {{ content }}
+  </article>
+
+  <nav class="pagination">
+    {% if page.previous %}
+      <a href="{{ page.previous.url }}" rel="previous">
+        &larr; Previous
+      </a>
+    {% endif %}
+
+    {% if page.next %}
+      <a href="{{ page.next.url }}" rel="next">
+        Next &rarr;
+        <strong>{{ page.next.title }}</strong>
+      </a>
+    {% endif %}
+
+    <a id="top">
+      Back to top &uarr;
+    </a>
+  </nav>
+
+  <!-- <nav id="navigation" class="navigation">
+    {% if page.next %}
+      <a href="{{ page.next.url }}">Next article</a>
+    {% endif %}
+    {% if page.previous %}
+      <a href="{{ page.previous.url }}">Previous</a>
+    {% endif %}
+    <a id="top">Back to top</a>
+  </nav> -->
 </div>

@@ -2,7 +2,7 @@
   height: 60px; left: 0; position: absolute; text-align: center; top: 20px; width: 100%; z-index: 1;
 
   @include on($laptop) {
-    top: 40px;
+    top: 60px;
   }
 }
 

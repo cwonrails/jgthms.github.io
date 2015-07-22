@@ -7,7 +7,7 @@ body{
 }
 
 a{
-  color: $link; text-decoration: none; @include transition(all $speed $easing);
+  color: $link; cursor: pointer; text-decoration: none; @include transition(all $speed $easing);
 }
 
 img{

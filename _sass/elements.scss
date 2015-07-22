@@ -1,46 +1,17 @@
-.post{
-  padding: 100px 0; position: relative;
-  .info{ margin-bottom: 20px;}
-  .title{ color: $title; font-size: 2rem; font-weight: bold; line-height: 1.125;}
-  .introduction{ color: $title; font-size: 1.5rem;}
-
-  @include on($laptop) {
-    padding: 140px 0;
-  }
-}
-
-.heading{
-  padding: 0 20px;
-}
-
-.content{
-  color: #4a4a4a; font-size: 1.25rem; padding: 0 20px;
-  p{ margin: 20px 0;}
-}
-
-.pagination{
-  padding: 0 20px;
-  a{
-    border: 1px solid $link; border-radius: 3px; display: block; padding: 20px;
-    em{ display: block; font-style: normal;}
-  }
-}
+$offset-mobile: 80px;
+$offset-desktop: 120px;
 
 .articles{
-  padding: 100px 0; position: relative;
+  padding-top: $offset-mobile; position: relative;
   hr{ border-top: 1px solid $border; display: none; margin: 0 0 0 160px;}
   .article{
     padding: 20px; padding-left: 40px; position: relative;
-    .fa-star{ color: $yellow; font-size: 21px; left: 12px; position: absolute; top: 22px;}
-    .info{
-      float: right; padding-top: 4px; text-align: right;
-      .category{ display: block;}
-    }
+    .fa-star{ color: $yellow; font-size: 21px; left: 12px; position: absolute; top: 23px;}
+    .info{ float: right; padding-top: 4px; text-align: right;}
     .title{
-      line-height: 1.125;
       a{
-        color: $title;
-        &:hover{ background: $title; color: white; padding: 2px 5px;}
+        color: $title; @include transition-duration($speed / 2);
+        &:hover{ background: $link; color: white; padding: 2px 5px;}
         &:visited{ color: $border;}
       }
     }
@@ -52,13 +23,87 @@
   }
 
   @include on($laptop) {
-    padding: 140px 0;
+    padding-top: $offset-desktop;
     hr{ display: block;}
     .article{
       padding-left: 200px;
       .fa-star{ left: 172px;}
       & + .article{ border-top: none;}
     }
+  }
+}
+
+.back{
+  margin: 20px 0;
+  a:hover{ text-decoration: underline;}
+
+  @include on($laptop) {
+    margin-top: 60px;
+  }
+}
+
+.console{
+  .item{
+    margin-bottom: 40px; padding-left: 60px; position: relative;
+    &:last-child{ margin-bottom: 0;}
+    .rank{ left: 0; position: absolute; top: 2px;}
+    .name{ @extend .title; font-weight: bold;}
+    .developer{ @extend .subtitle; margin-bottom: 20px;}
+  }
+
+  @include on($laptop) {
+    .item{
+      margin-bottom: 60px; padding-left: 80px;
+      .name{ font-size: 2rem !important;} // @extend priority BS
+      .developer{ font-size: 1.5rem;}
+    }
+  }
+}
+
+.content{
+  color: #4a4a4a; font-size: 1.25rem; line-height: 1.5;
+  a{
+    border-bottom: 1px solid $link;
+    &:hover{ background: $link; color: white;}
+    &:visited{ color: $visited;}
+  }
+  h2{ color: $title; font-size: 1.5rem; font-weight: bold; margin-top: 40px;}
+  p{ margin: 20px 0;}
+  ul{ list-style: disc outside; margin: 20px;}
+  figure{ margin: 40px; text-align: center;}
+  figcaption{ color: $subtitle; font-size: $small; margin-top: 1em;}
+  blockquote{
+    border-left: 4px solid #db4e44; color: #7a7a7a; font-style: italic; margin: 2rem 0; padding: 0 2rem;
+    p{ margin: 0;}
+  }
+  table{
+    font-size: $small; width: 100%;
+    th,
+    td{ border: 1px solid #dbdbdb; padding: 0.5rem;}
+    th{ background: #f5f5f5; color: #7a7a7a;}
+    td{ background: #fafafa;}
+    .empty{ background: none; border: none;}
+  }
+  code,
+  pre{ background: $link; color: white; font-size: $small; padding: 1px 4px 2px;}
+  code{ position: relative; top: -2px;}
+  pre{ padding: 1rem;}
+}
+
+.info{
+  .category{ display: block;}
+}
+
+.heading{
+  font-family: $font-family-serif; line-height: 1.125; margin: 60px 20px; text-align: center;
+  h1,
+  h2{ display: inline-block; position: relative; vertical-align: top;}
+  h1:after,
+  h2:before{ @include animation(expand 1000ms both); background: $black; bottom: 0; content: " "; display: block; height: 1px; left: -10%; position: absolute; width: 120%;}
+  h1{ color: $title; font-size: 2.5rem; font-weight: bold; font-weight: 800; padding-bottom: 10px;}
+  h2{
+    color: $subtitle; font-size: 2rem; font-style: italic; padding-top: 10px;
+    &:before{ bottom: auto; top: -1px;}
   }
 }
 
@@ -90,11 +135,12 @@
   .hello-text{
     display: table-cell; padding: 0 40px; position: relative; vertical-align: middle;
     .title{
-      margin-bottom: 2rem;
+      color: $text; margin-bottom: 2rem;
       a{
-        background: $link; color: white; padding: 0 0.25em 0.125em;
+        background: $link; color: white; padding: 0 0.25em 0.05em;
         &:hover{ background: $black !important;}
       }
+      strong{ font-family: $font-family-serif; font-weight: 700; font-weight: 800;}
 
       @media screen and (min-height: 400px) and (min-width: 600px) {
         font-size: 2rem;
@@ -154,6 +200,15 @@
   }
 }
 
+.favorites{
+  padding: $offset-mobile 20px 0;
+  .container > .title{ font-size: 2rem; margin-bottom: 20px;}
+
+  @include on($laptop) {
+    padding: $offset-desktop 0 0;
+  }
+}
+
 .follow{
   text-align: center;
   a{
@@ -170,6 +225,10 @@
   }
 }
 
+.introduction{
+  @extend .subtitle;
+}
+
 .line-drawing{
   display: none; @include transition(opacity 0.5s);
 
@@ -182,6 +241,33 @@
   fill: none; stroke: $black; stroke-width: 1;
   &.line-round {
     stroke-linecap: round;
+  }
+}
+
+.pagination{
+  margin-top: 20px;
+  a{
+    border: 1px solid $link; border-radius: 3px; display: block; padding: 20px;
+    strong{ display: block;}
+    &:hover{
+      background: $link; color: rgba(white, 0.48);
+      strong{ color: white;}
+    }
+    & + a{ margin-top: 20px;}
+    &[rel="previous"]{ display: none;}
+  }
+
+  @include on($laptop) {
+    @include display(flex); @include justify-content(space-between);
+    a{
+      & + a{ margin-top: 0;}
+      &[rel="previous"]{ display: block;}
+      &[rel="next"]{ @include flex(1); margin: 0 20px;}
+    }
+  }
+
+  @include on($laptop) {
+    margin-top: 40px;
   }
 }
 
@@ -207,21 +293,47 @@
   }
 }
 
+.post{
+  padding: $offset-mobile 20px 20px; position: relative;
+  .info{ float: right; margin: 0 0 20px 20px; text-align: right;}
+  .title{ font-size: 2rem; font-weight: bold;}
+  .introduction{ font-size: 1.5rem; margin-bottom: 20px;}
+
+  @include on($laptop) {
+    padding: $offset-desktop 0 20px;
+    .container{ padding: 0 80px;}
+    .info{ margin: 0 -60px 0 0;}
+  }
+}
+
 .previous,
 .next{
   display: none; height: 60px; left: 0; line-height: 60px; position: absolute; text-align: center; width: 100%;
   a{ display: block;}
 }
 
-.previous{ top: 0;}
-.next{ bottom: 0;}
+.previous{
+  top: 0;
+}
+
+.next{
+  bottom: 0;
+}
+
+.rank{
+  background: $link; border-radius: 290486px; color: white; display: inline-block; height: 40px; line-height: 40px; text-align: center; vertical-align: top; width: 40px;
+
+  @include on($laptop) {
+    font-size: 1.5rem; height: 60px; line-height: 60px; width: 60px;
+  }
+}
 
 .subtitle{
-  color: $subtitle;
+  color: $subtitle; line-height: 1.125;
   a{ color: $subtitle;}
 }
 
 .title{
-  font-size: 1.5rem; @include transition(font-size $speed $easing);
+  color: $title; font-size: 1.5rem; line-height: 1.125; @include transition(font-size $speed $easing);
   strong{ color: $title;}
 }
