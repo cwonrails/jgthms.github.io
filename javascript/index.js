@@ -84,7 +84,7 @@ jQuery(document).ready(function ($) {
         };
     })();
 
-    $('#index').centerify();
+    // $('#index').centerify();
 
     (function() {
         function Drawify() {
@@ -142,6 +142,7 @@ jQuery(document).ready(function ($) {
                 if( this.rendered ) return;
                 this.rendered = true;
                 this.draw();
+                $(this.el).next().addClass('animate');
             };
 
             SVGEl.prototype.draw = function() {
@@ -206,7 +207,7 @@ jQuery(document).ready(function ($) {
                     // if 0, the element is considered in the viewport as soon as it enters.
                     // if 1, the element is considered in the viewport only when it's fully inside
                     // value in percentage (1 >= h >= 0)
-                    h = h || 0;
+                    h = h || 0.1;
          
                 return (elTop + elH * h) <= viewed && (elBottom) >= scrolled;
             }

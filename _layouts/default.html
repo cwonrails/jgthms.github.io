@@ -2,11 +2,13 @@
 <html class="route-{{ page.route }}">
   {% include head.html %}
   <body>
-    {% include header.html %}
-    <main id="{{ page.route }}"class="main">
-      {{ content }}
-    </main>
-    {% include footer.html %}
+    <div class="site">
+      {% include header.html %}
+      <main id="{{ page.route }}"class="main">
+        {{ content }}
+      </main>
+      {% include footer.html %}
+    </div>
     {% include scripts.html %}
   </body>
 </html>

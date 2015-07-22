@@ -1,5 +1,5 @@
 html{
-  background: white; font-size: 16px;
+  background: white; font-size: 16px; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
 }
 
 body{
@@ -7,7 +7,7 @@ body{
 }
 
 a{
-  color: $link; text-decoration: none;
+  color: $link; text-decoration: none; @include transition(all $speed $easing);
 }
 
 img{
@@ -23,9 +23,9 @@ strong{
 }
 
 @include on($landscape) {
-  html{ font-size: 18px;}
+  // html{ font-size: 18px;}
 }
 
 @include on($laptop) {
-  html{ font-size: 20px;}
+  // html{ font-size: 20px;}
 }
