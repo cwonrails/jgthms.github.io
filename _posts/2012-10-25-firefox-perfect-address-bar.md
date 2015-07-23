@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Firefox and the perfect address bar
-introduction: It's the main reason why it's still my favorite browser.
+introduction: It's the main reason why it's still my favourite browser.
 category: UX
 recommended: true
 ---

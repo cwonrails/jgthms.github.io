@@ -12,7 +12,7 @@ While using Chrome on Android, it occured to me its menu carried a behavior that
   <figcaption>Chrome Android's first menu screen</figcaption>
 </figure>
 
-Apart from the `Back`, `Forward`, and `Favorite` buttons, all the other items appear identical. But apart from their visual similarity, their respective **position** determines their importance ; a higher position denotes a more significant role (especially when using the useful one-swipe-only interaction).
+Apart from the `Back`, `Forward`, and `Favourite` buttons, all the other items appear identical. But apart from their visual similarity, their respective **position** determines their importance ; a higher position denotes a more significant role (especially when using the useful one-swipe-only interaction).
 
 It's therefore natural to find the 'New tab' button in 1st position. But the others buttons' relative position?
 

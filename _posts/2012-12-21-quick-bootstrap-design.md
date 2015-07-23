@@ -29,7 +29,7 @@ Probably the hardest part for programmers in designing a website is to choose co
 
 You could browse the thousands of palettes on [ColourLovers](http://www.colourlovers.com/) or [Adobe's Kuler](https://kuler.adobe.com/) but even I get overwhelmed by the quantity available. So I often stick to one of them: [Solarized](http://ethanschoonover.com/solarized). This blog uses its colors, and I've really learned to like it because it prevents me from looking to long for decent colors. Solarized is like a designer's Bootstrap: it's a solid base you can use as start, and modify along the way if you want (I rarely do).
 
-If you don't like Solarized, try to use your favorite IDE color scheme. Or steal a color palette from a website or app you like. For example, 53's app [Paper](http://www.fiftythree.com/paper) has 4 default palettes to play around with. I particularly like the first one:
+If you don't like Solarized, try to use your favourite IDE color scheme. Or steal a color palette from a website or app you like. For example, 53's app [Paper](http://www.fiftythree.com/paper) has 4 default palettes to play around with. I particularly like the first one:
 
 ![Paper colors](/images/paper-colors.png)
 

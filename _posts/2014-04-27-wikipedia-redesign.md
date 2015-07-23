@@ -16,7 +16,7 @@ As you would have figured, it's just a screenshot. I didn't change anything beca
 
 ## "It's about content, stupid!"
 
-Wikipedia is probably my favorite website. I like to imagine it as the epitome of Sir Tim Berners-Lee's vision when he created the Web: a collaborative tool to gather and share knowledge freely.
+Wikipedia is probably my favourite website. I like to imagine it as the epitome of Sir Tim Berners-Lee's vision when he created the Web: a collaborative tool to gather and share knowledge freely.
 
 An open encyclopedia? Accessible online for free? But most importantly, editable by anyone? *"That's crazy, it's never gonna work."* The ability to easily insert false information embodies the usual criticism you would encounter, but actually acts like a fraudulent proof-of-concept of Wikipedia's doomed premise. The thing is, there is in the long run no incentive to alter Wikipedia's content and degrade its integrity. The collaborative authority will prevent it anyway.
 
