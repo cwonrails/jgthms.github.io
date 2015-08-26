@@ -12,4 +12,8 @@ jQuery(document).ready(function ($) {
         $('html').removeClass('menu-open elsewhere-open');
     });
 
+    $('img.lazy').lazy();
+
+    console.log('fesfes');
+
 });

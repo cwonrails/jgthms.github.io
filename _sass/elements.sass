@@ -1,0 +1,536 @@
+$offset: 60px
+$offset-mobile: 80px
+$offset-desktop: 120px
+
+.articles
+  padding-top: $offset-mobile
+  position: relative
+  hr
+    border-top: 1px solid $border
+    display: none
+    margin: 0 0 0 160px
+  .article
+    padding: 20px
+    padding-left: 40px
+    position: relative
+    .fa-star
+      color: $yellow
+      font-size: 21px
+      left: 12px
+      position: absolute
+      top: 23px
+    .info
+      float: right
+      padding-top: 4px
+      text-align: right
+    .title
+      a
+        color: $title
+        +transition-duration($speed / 2)
+        &:hover
+          background: $link
+          color: white
+          padding: 2px 5px
+        &:visited
+          color: $visited
+          &:hover
+            color: white
+    .introduction
+      margin-top: 10px
+    &.recommended
+      .title
+        font-weight: bold
+    & + .article
+      border-top: 1px solid $border
+  +on($laptop)
+    padding-top: $offset-desktop
+    hr
+      display: block
+    .article
+      padding-left: 200px
+      .fa-star
+        left: 172px
+      & + .article
+        border-top: none
+
+.back
+  margin: 20px 0
+  a:hover
+    text-decoration: underline
+  +on($laptop)
+    margin-top: $offset
+
+.console
+  .item
+    border-top: 1px solid $border
+    padding: 20px
+    position: relative
+    &:last-child
+      margin-bottom: 0
+    .rank
+      float: right
+    .name
+      @extend .title
+      font-weight: bold
+    .developer
+      @extend .subtitle
+      margin-bottom: 20px
+  +on($laptop)
+    .item
+      min-height: 421px
+      padding: $offset $offset $offset 400px
+      .rank
+        left: 0
+        position: absolute
+        top: $offset
+      .cover
+        left: 80px
+        max-width: 300px
+        position: absolute
+        top: $offset
+      .name
+        font-size: 2rem !important
+      // @extend priority BS
+      .developer
+        font-size: 1.5rem
+
+.content
+  color: #4a4a4a
+  font-size: 1.25rem
+  line-height: 1.5
+  a
+    border-bottom: 1px solid $link
+    word-break: break-all
+    &:hover
+      background: $link
+      color: white
+    &:visited
+      color: $visited
+  h2
+    color: $title
+    font-size: 1.5rem
+    font-weight: bold
+    line-height: 1.125
+    margin-top: 40px
+  p
+    margin: 20px 0
+    &:last-child
+      margin-bottom: 0
+  ul
+    list-style: disc outside
+    margin: 20px
+  figure
+    margin: 40px
+    text-align: center
+  figcaption
+    color: $subtitle
+    font-size: $small
+    margin-top: 1em
+  blockquote
+    border-left: 4px solid #db4e44
+    color: #7a7a7a
+    font-style: italic
+    margin: 2rem 0
+    padding: 0 2rem
+    p
+      margin: 0
+  table
+    font-size: $small
+    width: 100%
+    th,
+    td
+      border: 1px solid #dbdbdb
+      padding: 0.5rem
+    th
+      background: #f5f5f5
+      color: #7a7a7a
+    td
+      background: #fafafa
+    .empty
+      background: none
+      border: none
+  code,
+  pre
+    background: $link
+    color: white
+    font-size: $small
+    padding: 1px 4px 2px
+  code
+    position: relative
+    top: -2px
+  pre
+    padding: 1rem
+
+.info
+  .category
+    display: block
+
+.heading
+  margin: $offset
+  text-align: center
+  h1,
+  h2
+    font-family: $font-family-serif
+    line-height: 1.125
+  h1
+    color: $title
+    font-size: 2rem
+    font-weight: bold
+    font-weight: 900
+  h2
+    color: $subtitle
+    font-size: 1.5rem
+    font-weight: 400
+    font-style: italic
+  +on($laptop)
+    h1
+      font-size: 2.5rem
+    h2
+      font-size: 2rem
+
+.hello
+  height: 100vh
+  overflow: hidden
+  position: relative
+  width: 100%
+  .hello-background,
+  .hello-screenshot
+    +overlay
+    bottom: auto
+    display: none
+    height: 600px
+    left: auto
+    margin-top: -300px
+    position: absolute
+    right: -25%
+    top: 50%
+    width: 100%
+  .hello-content
+    display: table
+    height: 100vh
+    position: relative
+    vertical-align: middle
+    width: 100%
+    z-index: 1
+  .hello-screenshot
+    img
+      left: 50%
+      opacity: 0
+      position: absolute
+      top: 50%
+    &.animate img
+      +animation(jelly 1000ms 1000ms linear both)
+  .hello-text
+    display: table-cell
+    padding: 0 40px
+    position: relative
+    vertical-align: middle
+    .title
+      color: $text
+      margin-bottom: 2rem
+      a
+        +pop($red)
+        color: white
+        padding: 0 0.25em 0.05em
+        white-space: nowrap
+        &:before
+          border-radius: 0
+          opacity: 1
+        span
+          position: relative
+        &:hover
+          &:before
+            bottom: -10px
+            left: -10px
+            right: -10px
+            top: -10px
+      strong
+        font-family: $font-family-serif
+        font-weight: bold
+        font-weight: 900
+      @media screen and (min-height: 400px) and (min-width: 600px)
+        font-size: 2rem
+      @media screen and (min-height: 600px) and (min-width: 800px)
+        font-size: 2.5rem
+      @media screen and (min-height: 800px) and (min-width: 1000px)
+        font-size: 3rem
+    .subtitle
+      margin-top: 1rem
+    .clients,
+    .topics,
+    .tools
+      li
+        display: inline-block
+        height: 40px
+        margin: 7px 10px 0 0
+        vertical-align: top
+        &.microsoft
+          padding: 10px 0
+        &.sony
+          padding: 12px 0
+        &.wordpress
+          padding: 2px 0
+        &.jquery
+          padding: 10px 0 6px
+        &.bootstrap
+          padding: 4px
+        img
+          vertical-align: top
+  &:first-child
+    .hello-text
+      padding-top: 60px
+  &.hello-streethub
+    .hello-background
+      +radial-gradient(ellipse farthest-side at 29% 29%, saturate($red, 100%), saturate($orange, 100%))
+    .hello-screenshot img
+      height: 275px
+      margin: -153px 0 0 -219px
+  &.hello-marksheet
+    .hello-background
+      +radial-gradient(ellipse farthest-side at 29% 29%, saturate($web, 100%), saturate($css3, 100%))
+    .hello-screenshot img
+      height: 322px
+      margin: -172px 0 0 -334px
+    .title a
+      +pop($css3)
+      &:before
+        border-radius: 0
+        opacity: 1
+  &.hello-ivan-ballini
+    .hello-background
+      +radial-gradient(ellipse farthest-side at 29% 29%, saturate($brique, 100%), saturate($beige, 100%))
+    .hello-screenshot img
+      height: 408px
+      margin: -261px 0 0 -270px
+    .title a
+      +pop($brique)
+      &:before
+        border-radius: 0
+        opacity: 1
+  +on($laptop)
+    .hello-background,
+    .hello-screenshot
+      display: block
+    .hello-text
+      .title
+        padding-right: 50%
+      .follow
+        .title
+          padding-right: 0
+
+.favourites
+  padding-top: $offset-mobile
+  .container > .title
+    font-size: 2rem
+    margin-bottom: 20px
+  +on($laptop)
+    padding-top: $offset-desktop
+
+.follow
+  text-align: center
+  a
+    border-radius: 290486px
+    color: $border
+    display: inline-block
+    height: 80px
+    margin-top: 1rem
+    vertical-align: top
+    width: 80px
+    .fa
+      font-size: 42px
+      line-height: 80px
+    &.twitter
+      +pop($twitter)
+      color: $twitter
+      &:hover
+        color: white
+    &.github
+      +pop($github)
+      color: $github
+      &:hover
+        color: white
+
+.introduction
+  @extend .subtitle
+
+.line-drawing
+  display: none
+  +transition(opacity 0.5s)
+  +on($laptop)
+    background: white
+    display: block
+    margin-top: -300px
+    mix-blend-mode: screen
+    position: absolute
+    right: -25%
+    top: 50%
+
+.line-drawing path
+  fill: none
+  stroke: $black
+  stroke-width: 1
+  &.line-round
+    stroke-linecap: round
+
+.pagination
+  margin-top: 20px
+  a
+    +button
+    & + a
+      margin-top: 20px
+    &[rel="previous"]
+      display: none
+  +on($laptop)
+    +display(flex)
+    +justify-content(space-between)
+    a
+      & + a
+        margin-top: 0
+      &[rel="previous"]
+        display: block
+      &[rel="next"]
+        +flex(1)
+        margin: 0 20px
+
+  +on($laptop)
+    margin-top: $offset
+
+.period
+  background: $link
+  color: white
+  display: block
+  letter-spacing: 0.1em
+  padding: 10px
+  right: 0
+  text-transform: uppercase
+  +transition(all $speed $easing)
+  &.year
+    padding-top: 20px
+  &.season-win
+    background: #a9caf1
+  &.season-spr
+    background: #c1ea95
+  &.season-sum
+    background: #fbd596
+  &.season-aut
+    background: #c8af99
+  +on($laptop)
+    background: none
+    border-top: 1px solid $link
+    color: $link
+    left: 80px
+    position: absolute
+    width: 80px
+    &.year
+      left: 0
+      padding-top: 10px
+      z-index: 1
+    &.season-win
+      background: none
+      border-top-color: #a9caf1
+      color: #a9caf1
+    &.season-spr
+      background: none
+      border-top-color: #c1ea95
+      color: #c1ea95
+    &.season-sum
+      background: none
+      border-top-color: #fbd596
+      color: #fbd596
+    &.season-aut
+      background: none
+      border-top-color: #c8af99
+      color: #c8af99
+    &.affix
+      left: 50%
+      margin-left: -24rem
+      position: fixed
+      top: -1rem
+      &.year
+        margin-left: -29rem
+
+.post
+  padding: $offset-mobile 20px 20px
+  position: relative
+  .info
+    float: right
+    margin: 0 0 20px 20px
+    text-align: right
+  .title
+    font-size: 2rem
+    font-weight: bold
+  .introduction
+    font-size: 1.5rem
+    margin-bottom: 20px
+  +on($laptop)
+    padding: $offset-desktop 0
+    .container
+      padding: 0 80px
+    .info
+      margin: 0 -60px 0 0
+
+.previous,
+.next
+  display: none
+  height: 60px
+  left: 0
+  line-height: 60px
+  position: absolute
+  text-align: center
+  width: 100%
+  a
+    display: block
+
+.previous
+  top: 0
+
+.next
+  bottom: 0
+
+.rank
+  background: $link
+  border-radius: 290486px
+  color: white
+  display: inline-block
+  height: 40px
+  line-height: 40px
+  text-align: center
+  vertical-align: top
+  width: 40px
+  +on($laptop)
+    font-size: 1.5rem
+    height: 60px
+    line-height: 60px
+    width: 60px
+
+.subtitle
+  color: $subtitle
+  line-height: 1.125
+  a
+    color: $subtitle
+
+.tabs
+  padding-top: 10px
+  a
+    +button
+    display: inline-block
+    margin: 10px 5px 0
+    padding: 10px 15px
+    text-align: center
+    vertical-align: top
+    &:hover
+      background: none
+      border-color: $black
+      color: $black
+    &.active
+      background: $link
+      border-color: $link
+      color: white
+
+.title
+  color: $title
+  font-size: 1.5rem
+  line-height: 1.125
+  +transition(font-size $speed $easing)
+  strong
+    color: $title

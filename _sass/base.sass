@@ -1,0 +1,42 @@
+html
+  background: white
+  font-size: 16px
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  min-width: 300px
+  text-rendering: optimizeLegibility
+
+body
+  color: $text
+  font-family: $font-family-primary
+  font-size: 1rem
+  letter-spacing: -0.05em
+  line-height: 1.25
+
+a
+  color: $link
+  cursor: pointer
+  text-decoration: none
+  +transition(all $speed $easing)
+
+img
+  max-height: 100%
+  max-width: 100%
+
+strong
+  color: $title
+
+article,
+aside,
+hgroup,
+section
+  display: block
+
+.container
+  margin: 0 auto
+  max-width: 980px
+  position: relative
+
++selection
+  background: $link
+  color: white
