@@ -240,7 +240,7 @@ $offset-desktop: 120px
       position: absolute
       top: 50%
     &.animate img
-      +animation(jelly 1000ms 1000ms linear both)
+      +animation(jelly-pop 1000ms 1000ms linear both)
   .hello-text
     display: table-cell
     padding: 0 40px
@@ -250,7 +250,7 @@ $offset-desktop: 120px
       color: $text
       margin-bottom: 2rem
       a
-        +pop($red)
+        +grow($red)
         color: white
         padding: 0 0.25em 0.05em
         white-space: nowrap
@@ -294,7 +294,7 @@ $offset-desktop: 120px
       height: 322px
       margin: -172px 0 0 -334px
     .title a
-      +pop($css3)
+      +grow($css3)
       &:before
         border-radius: 0
         opacity: 1
@@ -305,7 +305,7 @@ $offset-desktop: 120px
       height: 408px
       margin: -261px 0 0 -270px
     .title a
-      +pop($brique)
+      +grow($brique)
       &:before
         border-radius: 0
         opacity: 1
@@ -351,6 +351,13 @@ $offset-desktop: 120px
       color: $github
       &:hover
         color: white
+
+.icons
+  li
+    display: inline-block
+    font-size: 28px
+    margin-right: 10px
+    vertical-align: top
 
 .introduction
   @extend .subtitle
@@ -477,81 +484,174 @@ $offset-desktop: 120px
 
 .projects
   padding-top: $offset-mobile
-  position: relative
-  .container > .title
-    font-size: 2rem
-    margin-bottom: 20px
   .project
-    border-top: 1px solid $border
-    padding: 20px
+    padding: 20px 10px
     position: relative
-    text-align: center
-    +transition(border-color ($speed / 2) $easing)
-    .project-image
+    .date
+      margin-bottom: 10px
+    .logo
       height: 200px
-      margin: 0 auto 20px
-      overflow: hidden
+      margin-bottom: 20px
       width: 300px
       img
         display: block
-        &.desktop
-          display: none
-    .project-content
+    .title
+      color: $title
+      font-weight: bold
+    .url
+      margin: 5px 0 20px
+    .content
+      color: inherit
+      font-size: 1rem
+      p
+        margin: 0
+        & + p
+          margin-top: 10px
+    .icons
+      margin-top: 20px
+      opacity: 0.48
+    .permalink
+      // display: none
+    &.barn-dor
+      background: #121212
+      color: #69707a
+      .date,
+      .url
+        color: #ebb550
       .title
-        font-weight: bold
-        +transition(color ($speed / 2) $easing)
-      .introduction
-        margin-top: 0.5em
-        +transition(color ($speed / 2) $easing)
-      .tools
-        margin-top: 10px
-    &:hover
-      border-top-color: $link
-      .project-content
-        .title
-          color: $link
-        .introduction
-          color: $link
-  +on($landscape)
-    .project
-      +clearfix
-      display: table
-      height: 201px
-      padding: 0 320px 0 20px
-      text-align: left
-      width: 100%
-      .project-image
-        position: absolute
-        margin-bottom: 0
-        right: 0
-        top: 0
-      .project-content
-        display: table-cell
-        vertical-align: middle
+        color: white
+    &.marksheet
+      background: hsl(217, 4%, 96%)
+      color: hsl(217, 4%, 48%)
+      .date,
+      .url
+        color: $css3
+    &.ivan-ballini
+      background: $ivan-background
+      color: $ivan-text
+      .date,
+      .url
+        color: $ivan-link
+      .title
+        color: $ivan-title
+    &.css-off-2013
+      background: #cdc9dd
+      color: #6e6c77
+      .date,
+      .url
+        color: white
+      .title
+        color: black
+    &.juketube
+      background: #eee
+      color: #888
+      .date,
+      .url
+        color: #df1f1f
+      .title
+        color: #22242a
+    &.bbxdesign
+      background: #f5574c
+      color: rgba(white, 0.71)
+      .date,
+      .title,
+      .url
+        color: white
   +on($laptop)
     padding-top: $offset-desktop
     .project
-      margin-left: 80px
-      padding-left: 0
-      width: 860px
-      .project-image
-        img
-          &.mobile
-            display: none !important
-          &.desktop
-            display: block
-      .project-content
-      &.important
-        height: 421px
-        padding-right: 640px
-        .project-image
-          height: 420px
-          width: 620px
+      height: 100vh
+      min-height: 470px
+      padding: 0
+      width: 100%
+      .title
+        font-size: 2rem
+      .container
+        display: table
+        height: 100vh
+        min-height: 470px
         .project-content
-          .title
-            font-size: 1.75rem
-          .introduction
-            font-size: 1.25rem
+          display: table-cell
+          padding-right: 50%
+          vertical-align: middle
+
+// .things
+//   padding-top: $offset-mobile
+//   position: relative
+//   .container > .title
+//     font-size: 2rem
+//     margin-bottom: 20px
+//   .thing
+//     border-top: 1px solid $border
+//     padding: 20px
+//     position: relative
+//     text-align: center
+//     +transition(border-color ($speed / 2) $easing)
+//     .thing-image
+//       height: 200px
+//       margin: 0 auto 20px
+//       overflow: hidden
+//       width: 300px
+//       img
+//         display: block
+//         &.desktop
+//           display: none
+//     .thing-content
+//       .title
+//         font-weight: bold
+//         +transition(color ($speed / 2) $easing)
+//       .introduction
+//         margin-top: 0.5em
+//         +transition(color ($speed / 2) $easing)
+//       .tools
+//         margin-top: 10px
+//     &:hover
+//       border-top-color: $link
+//       .thing-content
+//         .title
+//           color: $link
+//         .introduction
+//           color: $link
+//   +on($landscape)
+//     .thing
+//       +clearfix
+//       display: table
+//       height: 201px
+//       padding: 0 320px 0 20px
+//       text-align: left
+//       width: 100%
+//       .thing-image
+//         position: absolute
+//         margin-bottom: 0
+//         right: 0
+//         top: 0
+//       .thing-content
+//         display: table-cell
+//         vertical-align: middle
+//   +on($laptop)
+//     padding-top: $offset-desktop
+//     .thing
+//       margin-left: 80px
+//       padding-left: 0
+//       width: 860px
+//       .thing-image
+//         img
+//           &.mobile
+//             display: none !important
+//           &.desktop
+//             display: block
+//       .thing-content
+//       &.important
+//         height: 421px
+//         padding-right: 640px
+//         .thing-image
+//           height: 420px
+//           width: 620px
+//         .thing-content
+//           .title
+//             font-size: 1.75rem
+//           .introduction
+//             font-size: 1.25rem
 
 .next
   bottom: 0
