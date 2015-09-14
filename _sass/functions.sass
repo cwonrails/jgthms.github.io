@@ -68,6 +68,9 @@
   text-align: center
   width: $size
 
+=hello-gradient($a, $b)
+  +radial-gradient(ellipse farthest-side at 29% 29%, saturate($a, 100%), saturate($b, 100%))
+
 =pop($color)
   position: relative
   &:before
@@ -125,7 +128,6 @@ $widescreen: 1401px
     left: 0%
     width: 100%
 
-
 +keyframes(drop-in)
   from
     opacity: 0
@@ -133,7 +135,6 @@ $widescreen: 1401px
   to
     opacity: 1
     +transform(scale(1))
-
 
 +keyframes(jelly)
   0%

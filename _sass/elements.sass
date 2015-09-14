@@ -26,11 +26,9 @@ $offset-desktop: 120px
     .title
       a
         color: $title
-        +transition-duration($speed / 2)
         &:hover
           background: $link
           color: white
-          padding: 2px 5px
         &:visited
           color: $visited
           &:hover
@@ -47,9 +45,9 @@ $offset-desktop: 120px
     hr
       display: block
     .article
-      padding-left: 200px
+      padding: 20px 0 20px 160px
       .fa-star
-        left: 172px
+        left: 132px
       & + .article
         border-top: none
 
@@ -59,6 +57,28 @@ $offset-desktop: 120px
     text-decoration: underline
   +on($laptop)
     margin-top: $offset
+
+.clients
+  li
+    display: inline-block
+    height: 40px
+    margin: 7px 10px 0 0
+    vertical-align: top
+    img
+      vertical-align: top
+    &.microsoft
+      padding: 10px 0
+    &.sass
+      img
+        width: 53px
+    &.sony
+      padding: 12px 0
+    &.wordpress
+      padding: 2px 0
+    &.jquery
+      padding: 10px 0 6px
+    &.bootstrap
+      padding: 4px
 
 .console
   .item
@@ -89,8 +109,7 @@ $offset-desktop: 120px
         position: absolute
         top: $offset
       .name
-        font-size: 2rem !important
-      // @extend priority BS
+        font-size: 2rem !important // @extend priority BS
       .developer
         font-size: 1.5rem
 
@@ -141,14 +160,14 @@ $offset-desktop: 120px
     td
       border: 1px solid #dbdbdb
       padding: 0.5rem
+      &.empty
+        background: none
+        border: none
     th
       background: #f5f5f5
       color: #7a7a7a
     td
       background: #fafafa
-    .empty
-      background: none
-      border: none
   code,
   pre
     background: $link
@@ -171,7 +190,7 @@ $offset-desktop: 120px
   h1,
   h2
     font-family: $font-family-serif
-    line-height: 1.125
+    line-height: 1
   h1
     color: $title
     font-size: 2rem
@@ -182,11 +201,13 @@ $offset-desktop: 120px
     font-size: 1.5rem
     font-weight: 400
     font-style: italic
+    margin-top: 1rem
   +on($laptop)
     h1
       font-size: 2.5rem
     h2
       font-size: 2rem
+      margin-top: 0.5rem
 
 .hello
   height: 100vh
@@ -256,38 +277,19 @@ $offset-desktop: 120px
         font-size: 3rem
     .subtitle
       margin-top: 1rem
-    .clients,
-    .topics,
-    .tools
-      li
-        display: inline-block
-        height: 40px
-        margin: 7px 10px 0 0
-        vertical-align: top
-        &.microsoft
-          padding: 10px 0
-        &.sony
-          padding: 12px 0
-        &.wordpress
-          padding: 2px 0
-        &.jquery
-          padding: 10px 0 6px
-        &.bootstrap
-          padding: 4px
-        img
-          vertical-align: top
   &:first-child
     .hello-text
       padding-top: 60px
   &.hello-streethub
     .hello-background
       +radial-gradient(ellipse farthest-side at 29% 29%, saturate($red, 100%), saturate($orange, 100%))
+      +hello-gradient($red, $orange)
     .hello-screenshot img
       height: 275px
       margin: -153px 0 0 -219px
   &.hello-marksheet
     .hello-background
-      +radial-gradient(ellipse farthest-side at 29% 29%, saturate($web, 100%), saturate($css3, 100%))
+      +hello-gradient($web, $css3)
     .hello-screenshot img
       height: 322px
       margin: -172px 0 0 -334px
@@ -298,7 +300,7 @@ $offset-desktop: 120px
         opacity: 1
   &.hello-ivan-ballini
     .hello-background
-      +radial-gradient(ellipse farthest-side at 29% 29%, saturate($brique, 100%), saturate($beige, 100%))
+      +hello-gradient($brique, $beige)
     .hello-screenshot img
       height: 408px
       margin: -261px 0 0 -270px
@@ -356,6 +358,12 @@ $offset-desktop: 120px
 .line-drawing
   display: none
   +transition(opacity 0.5s)
+  path
+    fill: none
+    stroke: $black
+    stroke-width: 1
+    &.line-round
+      stroke-linecap: round
   +on($laptop)
     background: white
     display: block
@@ -364,13 +372,6 @@ $offset-desktop: 120px
     position: absolute
     right: -25%
     top: 50%
-
-.line-drawing path
-  fill: none
-  stroke: $black
-  stroke-width: 1
-  &.line-round
-    stroke-linecap: round
 
 .pagination
   margin-top: 20px
@@ -396,26 +397,29 @@ $offset-desktop: 120px
     margin-top: $offset
 
 .period
-  background: $link
-  color: white
+  background: white
+  border-top: 1px solid $link
+  color: $link
   display: block
-  letter-spacing: 0.1em
+  letter-spacing: 0.14em
   padding: 10px
   right: 0
   text-transform: uppercase
-  +transition(all $speed $easing)
   &.year
     padding-top: 20px
   &.season-win
-    background: #a9caf1
+    border-top-color: #a9caf1
+    color: #a9caf1
   &.season-spr
-    background: #c1ea95
+    border-top-color: #c1ea95
+    color: #c1ea95
   &.season-sum
-    background: #fbd596
+    border-top-color: #fbd596
+    color: #fbd596
   &.season-aut
-    background: #c8af99
+    border-top-color: #c8af99
+    color: #c8af99
   +on($laptop)
-    background: none
     border-top: 1px solid $link
     color: $link
     left: 80px
@@ -425,29 +429,16 @@ $offset-desktop: 120px
       left: 0
       padding-top: 10px
       z-index: 1
-    &.season-win
-      background: none
-      border-top-color: #a9caf1
-      color: #a9caf1
-    &.season-spr
-      background: none
-      border-top-color: #c1ea95
-      color: #c1ea95
-    &.season-sum
-      background: none
-      border-top-color: #fbd596
-      color: #fbd596
-    &.season-aut
-      background: none
-      border-top-color: #c8af99
-      color: #c8af99
     &.affix
       left: 50%
-      margin-left: -24rem
+      margin-left: -390px
       position: fixed
-      top: -1rem
+      top: 0
       &.year
-        margin-left: -29rem
+        margin-left: -470px
+
+.permalink
+  +overlay
 
 .post
   padding: $offset-mobile 20px 20px
@@ -483,6 +474,84 @@ $offset-desktop: 120px
 
 .previous
   top: 0
+
+.projects
+  padding-top: $offset-mobile
+  position: relative
+  .container > .title
+    font-size: 2rem
+    margin-bottom: 20px
+  .project
+    border-top: 1px solid $border
+    padding: 20px
+    position: relative
+    text-align: center
+    +transition(border-color ($speed / 2) $easing)
+    .project-image
+      height: 200px
+      margin: 0 auto 20px
+      overflow: hidden
+      width: 300px
+      img
+        display: block
+        &.desktop
+          display: none
+    .project-content
+      .title
+        font-weight: bold
+        +transition(color ($speed / 2) $easing)
+      .introduction
+        margin-top: 0.5em
+        +transition(color ($speed / 2) $easing)
+      .tools
+        margin-top: 10px
+    &:hover
+      border-top-color: $link
+      .project-content
+        .title
+          color: $link
+        .introduction
+          color: $link
+  +on($landscape)
+    .project
+      +clearfix
+      display: table
+      height: 201px
+      padding: 0 320px 0 20px
+      text-align: left
+      width: 100%
+      .project-image
+        position: absolute
+        margin-bottom: 0
+        right: 0
+        top: 0
+      .project-content
+        display: table-cell
+        vertical-align: middle
+  +on($laptop)
+    padding-top: $offset-desktop
+    .project
+      margin-left: 80px
+      padding-left: 0
+      width: 860px
+      .project-image
+        img
+          &.mobile
+            display: none !important
+          &.desktop
+            display: block
+      .project-content
+      &.important
+        height: 421px
+        padding-right: 640px
+        .project-image
+          height: 420px
+          width: 620px
+        .project-content
+          .title
+            font-size: 1.75rem
+          .introduction
+            font-size: 1.25rem
 
 .next
   bottom: 0
@@ -530,7 +599,17 @@ $offset-desktop: 120px
 .title
   color: $title
   font-size: 1.5rem
-  line-height: 1.125
+  line-height: 1
   +transition(font-size $speed $easing)
   strong
     color: $title
+  a
+    +transition-duration($speed / 2)
+    &:hover
+      padding: 2px 5px
+
+.topics
+  @extend .clients
+
+.tools
+  @extend .clients

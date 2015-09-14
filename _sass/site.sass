@@ -168,7 +168,7 @@
         border-bottom: none
   &.dropdown-menu
     left: 20px
-    letter-spacing: 0.05em
+    letter-spacing: 0.02em
     text-align: left
     li a
       color: $text
@@ -219,13 +219,19 @@
       li a
         margin-right: 20px
         padding: 0
+        &:hover,
         &.active
           +border
           &:before
             bottom: -5px
+        &.active,
+        &.active:hover
+          &:before
+            +animation(none)
     &.dropdown-elsewhere
       float: right
       padding-top: 10px
+      right: 0
       li a
         border-radius: 20px
         height: 40px
