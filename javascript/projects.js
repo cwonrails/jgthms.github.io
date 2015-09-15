@@ -21,6 +21,7 @@ jQuery(document).ready(function ($) {
 
             function onResize() {
                 self.windowHeight = $(window).height();
+                self.offsetPercentage = self.offset / self.windowHeight;
                 self.windowWidth = $(window).width();
             }
 
@@ -72,7 +73,7 @@ jQuery(document).ready(function ($) {
 
                 self.onScrollTimer = setTimeout(function () {
                     var currentScroll =  self.bodyAndHeadEl.scrollTop();
-                    var currentPercentage = (currentScroll / self.windowHeight).toFixed(2);
+                    var currentPercentage = ((currentScroll / self.windowHeight) - self.offsetPercentage).toFixed(2);
                     centerOnSegment(currentPercentage);
                 }, self.wait);
             });

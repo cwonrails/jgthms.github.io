@@ -180,6 +180,40 @@ $offset-desktop: 120px
   pre
     padding: 1rem
 
+.device
+  background: 0 0 no-repeat
+  position: relative
+  img
+    position: absolute
+  &.imac
+    background-image: url("/images/devices/imac.png")
+    height: 1685px
+    width: 2100px
+    img
+      left: 90px
+      top: 90px
+  &.ipad-h
+    background-image: url("/images/devices/ipad-h.png")
+    height: 891px
+    width: 1260px
+    img
+      left: 118px
+      top: 61px
+  &.ipad-v
+    background-image: url("/images/devices/ipad-v.png")
+    height: 1260px
+    width: 891px
+    img
+      left: 62px
+      top: 118px
+  &.macbook-air
+    background-image: url("/images/devices/macbook-air.png")
+    height: 1132px
+    width: 1970px
+    img
+      left: 266px
+      top: 83px
+
 .info
   .category
     display: block
@@ -485,14 +519,16 @@ $offset-desktop: 120px
 .projects
   padding-top: $offset-mobile
   .project
-    padding: 20px 10px
+    overflow: hidden
+    padding: 30px
     position: relative
+    .device
+      display: none
     .date
-      margin-bottom: 10px
+      margin-bottom: 20px
     .logo
       height: 200px
       margin-bottom: 20px
-      width: 300px
       img
         display: block
     .title
@@ -510,8 +546,6 @@ $offset-desktop: 120px
     .icons
       margin-top: 20px
       opacity: 0.48
-    .permalink
-      // display: none
     &.barn-dor
       background: #121212
       color: #69707a
@@ -522,6 +556,7 @@ $offset-desktop: 120px
         color: white
     &.marksheet
       background: hsl(217, 4%, 96%)
+      background: white
       color: hsl(217, 4%, 48%)
       .date,
       .url
@@ -564,94 +599,28 @@ $offset-desktop: 120px
       min-height: 470px
       padding: 0
       width: 100%
+      .device
+        display: block
+        left: 50%
+        position: absolute
+        top: 50%
+        +transform(scale(0.5) translate3d(80px, -100%, 0))
+        +transform-origin(left center)
+        &.ipad-h,
+        &.ipad-v
+          +transform(scale(0.75) translate3d(80px, -62.5%, 0))
       .title
         font-size: 2rem
       .container
         display: table
         height: 100vh
         min-height: 470px
+        width: 100%
         .project-content
           display: table-cell
           padding-right: 50%
           vertical-align: middle
-
-// .things
-//   padding-top: $offset-mobile
-//   position: relative
-//   .container > .title
-//     font-size: 2rem
-//     margin-bottom: 20px
-//   .thing
-//     border-top: 1px solid $border
-//     padding: 20px
-//     position: relative
-//     text-align: center
-//     +transition(border-color ($speed / 2) $easing)
-//     .thing-image
-//       height: 200px
-//       margin: 0 auto 20px
-//       overflow: hidden
-//       width: 300px
-//       img
-//         display: block
-//         &.desktop
-//           display: none
-//     .thing-content
-//       .title
-//         font-weight: bold
-//         +transition(color ($speed / 2) $easing)
-//       .introduction
-//         margin-top: 0.5em
-//         +transition(color ($speed / 2) $easing)
-//       .tools
-//         margin-top: 10px
-//     &:hover
-//       border-top-color: $link
-//       .thing-content
-//         .title
-//           color: $link
-//         .introduction
-//           color: $link
-//   +on($landscape)
-//     .thing
-//       +clearfix
-//       display: table
-//       height: 201px
-//       padding: 0 320px 0 20px
-//       text-align: left
-//       width: 100%
-//       .thing-image
-//         position: absolute
-//         margin-bottom: 0
-//         right: 0
-//         top: 0
-//       .thing-content
-//         display: table-cell
-//         vertical-align: middle
-//   +on($laptop)
-//     padding-top: $offset-desktop
-//     .thing
-//       margin-left: 80px
-//       padding-left: 0
-//       width: 860px
-//       .thing-image
-//         img
-//           &.mobile
-//             display: none !important
-//           &.desktop
-//             display: block
-//       .thing-content
-//       &.important
-//         height: 421px
-//         padding-right: 640px
-//         .thing-image
-//           height: 420px
-//           width: 620px
-//         .thing-content
-//           .title
-//             font-size: 1.75rem
-//           .introduction
-//             font-size: 1.25rem
+          width: 100%
 
 .next
   bottom: 0
