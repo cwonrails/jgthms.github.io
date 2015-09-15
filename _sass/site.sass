@@ -6,7 +6,7 @@
   top: 20px
   width: 100%
   z-index: 1
-  +on($laptop)
+  +on($desktop)
     top: 60px
 
 .jt
@@ -124,7 +124,7 @@
       box-shadow: inset 0 0 0 30px $link
     &.active
       box-shadow: none
-  +on($laptop)
+  +on($desktop)
     float: left
 
 .toggle
@@ -146,7 +146,7 @@
     right: 20px
     .fa
       font-size: 28px
-  +on($laptop)
+  +on($desktop)
     display: none
 
 .dropdown
@@ -201,7 +201,7 @@
         +pop($soundcloud)
       &.twitter
         +pop($twitter)
-  +on($laptop)
+  +on($desktop)
     background: none
     box-shadow: none
     display: block
@@ -261,7 +261,7 @@ html.elsewhere-open
   .dropdown-elsewhere
     display: block
 
-+on($laptop)
++on($desktop)
   html.menu-open,
   html.elsewhere-open
     height: auto

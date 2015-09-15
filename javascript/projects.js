@@ -63,8 +63,9 @@ jQuery(document).ready(function ($) {
                 self.onScrollTimer = setTimeout(function () {
                     var currentScroll =  self.bodyAndHeadEl.scrollTop();
                     var currentPercentage = ((currentScroll / self.windowHeight) - self.offsetPercentage).toFixed(2);
+                    var currentModulo = currentPercentage % 1;
 
-                    if (currentPercentage > 0) {
+                    if (currentPercentage > 0 && (currentModulo < 0.1 || currentModulo > 0.9)) {
                         centerOnSegment(currentPercentage);
                     }
                 }, self.wait);

@@ -108,11 +108,8 @@
   text-indent: -290486px
   width: $w
 
-$portrait: 501px
-$landscape: 769px
-$laptop: 993px
-$desktop: 1201px
-$widescreen: 1401px
+$tablet: 769px
+$desktop: 993px
 
 =on($device)
   @media screen and (min-width: $device)
@@ -129,7 +126,7 @@ $widescreen: 1401px
   &::-webkit-scrollbar
     background: $c
     width: $a
-    +on($laptop)
+    +on($desktop)
       width: $b
   &::-webkit-scrollbar-thumb
     background: $link
