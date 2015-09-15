@@ -3,13 +3,11 @@ jQuery(document).ready(function ($) {
     (function() {
         function Centerify(elem, options) {
             var self = this;
-
             self.$elem = $(elem);
             self.$sections = self.$elem.children('.project');
             self.isAnimating = false;
             self.bodyAndHeadEl = $('body');
-            self.count = self.$sections.length;
-            self.speed = 100;
+            self.speed = 200;
             self.wait = 500;
             self.offset = 320;
 
@@ -21,21 +19,18 @@ jQuery(document).ready(function ($) {
 
             function onResize() {
                 self.windowHeight = $(window).height();
-                self.offsetPercentage = self.offset / self.windowHeight;
                 self.windowWidth = $(window).width();
+                self.offsetPercentage = self.offset / self.windowHeight;
             }
 
             function centerOnSegment(percentage) {
-                if (!percentage) {
+                if (!percentage || self.isAnimating || (self.windowWidth < 1000)) {
                     return;
                 }
 
-                if (self.isAnimating) {
-                    return;
-                }
-
-                var done = function done() {
+                var scrollDone = function() {
                     self.isAnimating = false;
+
                     $(window).off('scroll', scrollEvent);
                     $(window).unbind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', scrollEvent);
 
@@ -44,27 +39,21 @@ jQuery(document).ready(function ($) {
                     }
                 };
 
-                var scrollEvent = function scrollEvent(e) {
+                var scrollEvent = function(e) {
                     if (e.which > 0 || e.type == 'mousedown' || e.type == 'mousewheel') {
                         self.bodyAndHeadEl.stop();
-                        done();
+                        scrollDone();
                     }
                 };
 
                 $(window).bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', scrollEvent);
-
                 clearTimeout(self.onScrollTimer);
 
                 self.isAnimating = true;
-
-                if (self.windowWidth < 1000) {
-                    return;
-                }
-
                 self.bodyAndHeadEl.stop().animate({
                     scrollTop: (Math.round(percentage) * self.windowHeight + self.offset)
                 }, self.speed, function () {
-                    return done();
+                    return scrollDone();
                 });
             }
 
@@ -74,7 +63,10 @@ jQuery(document).ready(function ($) {
                 self.onScrollTimer = setTimeout(function () {
                     var currentScroll =  self.bodyAndHeadEl.scrollTop();
                     var currentPercentage = ((currentScroll / self.windowHeight) - self.offsetPercentage).toFixed(2);
-                    centerOnSegment(currentPercentage);
+
+                    if (currentPercentage > 0) {
+                        centerOnSegment(currentPercentage);
+                    }
                 }, self.wait);
             });
 
