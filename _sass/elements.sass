@@ -526,6 +526,16 @@ $offset-desktop: 120px
       display: none
     .date
       margin-bottom: 20px
+      position: relative
+      &:after
+        background: white
+        bottom: -10px
+        content: ""
+        display: block
+        height: 1px
+        left: 0
+        position: absolute
+        width: 60px
     .logo
       height: 200px
       margin-bottom: 20px
@@ -547,65 +557,30 @@ $offset-desktop: 120px
       margin-top: 20px
       opacity: 0.48
     &.barn-dor
-      background: #121212
-      color: #69707a
-      .date,
-      .url
-        color: #ebb550
-      .title
-        color: white
+      +project(#121212, #69707a, #ebb550, white)
     &.marksheet
-      background: hsl(217, 4%, 96%)
-      background: white
-      color: hsl(217, 4%, 48%)
-      .date,
-      .url
-        color: $css3
+      +project(white, hsl(217, 4%, 48%), $css3, $title)
     &.ivan-ballini
-      background: $ivan-background
-      color: $ivan-text
-      .date,
-      .url
-        color: $ivan-link
-      .title
-        color: $ivan-title
+      +project($ivan-background, $ivan-text, $ivan-link, $ivan-title)
     &.css-off-2013
-      background: #cdc9dd
-      color: #6e6c77
-      .date,
-      .url
-        color: white
-      .title
-        color: black
+      +project(#cdc9dd, #6e6c77, white, black)
     &.juketube
-      background: #eee
-      color: #888
-      .date,
-      .url
-        color: #df1f1f
-      .title
-        color: #22242a
+      +project(#eee, #888, #df1f1f, #22242a)
     &.bbxdesign
-      background: #f5574c
-      color: rgba(white, 0.71)
-      .date,
-      .title,
-      .url
-        color: white
+      +project(#f5574c, rgba(white, 0.71), white)
     &.cambodia-vietnam-2010
-      background: #dacfb1
-      color: #6b6450
-      .date
-        color: #914839
-      .title
-        color: #485c39
-      .url
-        color: #3b5757
+      +project(#dacfb1, #6b6450, #914839, #485c39, #3b5757)
+    &.yeek
+      +project(#eeeff2, #4c566c, #0589f5, #040404)
+    &.editions-magellan
+      +project(#332003, rgba(white, 0.29), #c78312, white)
+    &.bbxworld
+      +project(#362f2d, rgba(white, 0.48), #8dc63f, white)
   +on($desktop)
     padding-top: $offset-desktop
     .project
       height: 100vh
-      min-height: 470px
+      min-height: 620px
       padding: 0
       width: 100%
       .device
@@ -623,7 +598,7 @@ $offset-desktop: 120px
       .container
         display: table
         height: 100vh
-        min-height: 470px
+        min-height: 620px
         width: 100%
         .project-content
           display: table-cell

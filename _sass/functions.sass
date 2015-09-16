@@ -98,15 +98,27 @@
     &:before
       +animation(jelly-pop 1000ms linear both)
 
-=replace($bg: transparent, $w: 0, $h: 0)
-  background: $bg center center no-repeat
-  background-size: $w $h
+=project($background, $text, $date, $title: $date, $url: $date)
+  background: $background
+  color: $text
+  .date
+    color: $date
+    &:after
+      background: $text
+  .title
+    color: $title
+  .url
+    color: $url
+
+=replace($background: transparent, $width: 0, $height: 0)
+  background: $background center center no-repeat
+  background-size: $width $height
   display: block
-  height: $h
+  height: $height
   outline: none
   overflow: hidden
   text-indent: -290486px
-  width: $w
+  width: $width
 
 $tablet: 769px
 $desktop: 993px

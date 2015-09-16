@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
             }
 
             function centerOnSegment(percentage) {
-                if (!percentage || self.isAnimating || (self.windowWidth < 1000)) {
+                if (!percentage || self.isAnimating || (self.windowHeight < 700) || (self.windowWidth < 1000)) {
                     return;
                 }
 
@@ -63,9 +63,10 @@ jQuery(document).ready(function ($) {
                 self.onScrollTimer = setTimeout(function () {
                     var currentScroll =  self.bodyAndHeadEl.scrollTop();
                     var currentPercentage = ((currentScroll / self.windowHeight) - self.offsetPercentage).toFixed(2);
-                    var currentModulo = currentPercentage % 1;
+                    var currentModulo = Math.abs(currentPercentage % 1);
+                    console.log(currentModulo);
 
-                    if (currentPercentage > 0 && (currentModulo < 0.1 || currentModulo > 0.9)) {
+                    if (currentPercentage > -0.14 && (currentModulo < 0.14 || currentModulo > 0.86)) {
                         centerOnSegment(currentPercentage);
                     }
                 }, self.wait);
@@ -85,5 +86,9 @@ jQuery(document).ready(function ($) {
     })();
 
     $('#projects').centerify();
+
+    var todayDate = new Date();
+    var todayYear = todayDate.getFullYear();
+    $('.css-years').text(todayYear - 2007);
 
 });
