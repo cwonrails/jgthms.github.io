@@ -115,7 +115,6 @@ $offset-desktop: 120px
 
 .content
   color: #4a4a4a
-  font-size: 1.25rem
   line-height: 1.5
   a
     border-bottom: 1px solid $link
@@ -179,6 +178,8 @@ $offset-desktop: 120px
     top: -2px
   pre
     padding: 1rem
+  +on($desktop)
+    font-size: 1.25rem
 
 .device
   background: 0 0 no-repeat
