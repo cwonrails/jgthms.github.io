@@ -51,6 +51,8 @@ $offset-desktop: 120px
       .fa-star
         left: -28px
   &.only-recommended
+    // .heading h1:before
+    //   content: "Recommended "
     .article:not(.recommended)
       background: $background
       padding-top: 5px
@@ -676,6 +678,7 @@ a.cover
   +switch
   border: 1px solid $border
   border-radius: 3px
+  color: $text
   cursor: pointer
   display: block
   margin: 20px auto 0
@@ -687,6 +690,7 @@ a.cover
     font-style: normal
     position: relative
     &:after
+      color: $title
       content: "?"
       left: 104%
       position: absolute
@@ -729,12 +733,17 @@ a.cover
       .switch-no
         padding-left: 10px
         text-align: left
-  &.is-active
+  &:hover
+    border-color: $title
+    color: $title
+  &.is-active,
+  &.is-active:hover
     border-color: $green
+    color: $title
     .switch-label
       &:after
         +animation(jelly-pop 1000ms linear both)
-        color: $title
+        color: $green
         content: "!"
     .switch-gear
       background: $green
