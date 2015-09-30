@@ -1,14 +1,15 @@
 ---
 layout: default
-title: "Articles written by Jeremy Thomas"
+title: "Recommended articles from Jeremy Thomas"
 route: articles
+state: only-recommended
 ---
 
 <div class="container">
   <hgroup class="heading">
     <h1>Articles</h1>
     <h2>Random thoughts about the Web</h2>
-    <p id="switch" class="switch">
+    <p id="switch" class="switch is-active">
       <em class="switch-label">Only the best ones</em>
       <strong class="switch-gear">
         <span class="switch-rail">
@@ -19,6 +20,6 @@ route: articles
       </strong>
     </p>
   </hgroup>
-
+  
   {% include posts.html %}
 </div>

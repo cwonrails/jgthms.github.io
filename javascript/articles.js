@@ -3,21 +3,20 @@ jQuery(document).ready(function ($) {
   var $articles = $('#articles');
   var $switch = $('#switch');
   var recommended = false;
-  var hash = location.hash.replace('#', '');
 
   function setRecommended() {
     if (recommended) {
-      history.replaceState('', document.title, window.location.pathname + '#recommended');
+      history.replaceState('', document.title, 'recommended-articles.html');
       $switch.addClass('is-active');
       $articles.addClass('only-recommended');
     } else {
-      history.replaceState('', document.title, window.location.pathname);
+      history.replaceState('', document.title, 'articles.html');
       $switch.removeClass('is-active');
       $articles.removeClass('only-recommended');
     }
   }
 
-  if (hash == 'recommended') {
+  if (window.location.pathname == '/recommended-articles.html') {
     recommended = true;
   }
 
