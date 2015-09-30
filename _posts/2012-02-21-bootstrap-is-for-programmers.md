@@ -3,7 +3,6 @@ layout: post
 title: Bootstrap is for programmers
 introduction: Though it's not exactly aimed designers like me, Bootstrap has still much appeal.
 category: UI
-recommended: true
 ---
 
 I am no programmer.

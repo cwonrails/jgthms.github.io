@@ -3,7 +3,6 @@ layout: post
 title: Tumblr and the source problem
 introduction: Who still cares where something on the web comes from?
 category: Thoughts
-recommended: true
 ---
 
 Tumblr is more a community than a blogging engine.

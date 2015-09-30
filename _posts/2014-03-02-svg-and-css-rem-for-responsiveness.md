@@ -3,7 +3,6 @@ layout: post
 title: SVG and CSS rem for responsiveness
 introduction: Let's use the tools browsers provide us.
 category: UI
-recommended: true
 ---
 
 I've redesigned this blog 9 times since I launched it in 2012. The latest version is focused on **simplicity**, both visually and content-wise. I've dropped the portfolio, the music section, the colophon, the "small talk", and the filter labels. And I've divided my posts by season (I'll explain why in another post).

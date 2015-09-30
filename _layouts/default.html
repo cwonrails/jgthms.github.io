@@ -3,7 +3,7 @@
   {% include head.html %}
   <body>
     {% include header.html %}
-    <main id="{{ page.route }}" class="main {{ page.route }}">
+    <main id="{{ page.route }}" class="main {{ page.route }}{% if page.state %} {{ page.state}}{% endif %}">
       {{ content }}
     </main>
     {% include scripts.html %}
