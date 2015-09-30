@@ -87,8 +87,4 @@ jQuery(document).ready(function ($) {
 
     $('#projects').centerify();
 
-    var todayDate = new Date();
-    var todayYear = todayDate.getFullYear();
-    $('.css-years').text(todayYear - 2007);
-
 });

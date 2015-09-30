@@ -95,6 +95,8 @@ $offset-desktop: 120px
     .developer
       @extend .subtitle
       margin-bottom: 20px
+    .link
+      margin-bottom: 20px
   +on($desktop)
     .item
       min-height: 421px
@@ -180,6 +182,26 @@ $offset-desktop: 120px
     padding: 1rem
   +on($desktop)
     font-size: 1.25rem
+
+.cover
+  +on($desktop)
+    display: block
+    position: relative
+    img
+      display: block !important
+
+a.cover
+  +on($desktop)
+    &:after
+      +overlay
+      background: black
+      content: ""
+      display: block
+      opacity: 0
+      +transition(opacity $speed $easing)
+    &:hover
+      &:after
+        opacity: 0.29
 
 .device
   background: 0 0 no-repeat
@@ -414,6 +436,10 @@ $offset-desktop: 120px
     position: absolute
     right: -25%
     top: 50%
+
+.link
+  a:hover
+    text-decoration: underline
 
 .pagination
   margin-top: 20px

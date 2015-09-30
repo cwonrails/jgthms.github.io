@@ -36,6 +36,13 @@ jQuery(document).ready(function ($) {
 
   $('.icons a').tooltip();
 
+  // Dates
+
+  var todayDate = new Date();
+  var todayYear = todayDate.getFullYear();
+  $('.today-year').text(todayYear);
+  $('.css-years').text(todayYear - 2007);
+
   // Filters
 
   var $posts = $('.list article');
