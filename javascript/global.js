@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
     return b.join('');
   }
   
-  var $c = $('.contact');
+  var $c = $('#contact a');
   var t = 'znvygb:'
   var m = 'ookqrfvta@tznvy.pbz';
   $c.attr('href', R(t+m));
