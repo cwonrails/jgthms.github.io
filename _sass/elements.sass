@@ -137,12 +137,23 @@ $offset-desktop: 120px
       color: white
     &:visited
       color: $visited
-  h2
+  h2,
+  h3
     color: $title
     font-size: 1.5rem
     font-weight: bold
     line-height: 1.125
     margin-top: 40px
+    position: relative
+    a
+      border-bottom: none
+      margin-right: 0.25em
+      +on($desktop)
+        position: absolute
+        right: 100%
+  h3
+    font-size: 1.25rem
+    margin-top: 20px
   p
     margin: 20px 0
     &:last-child

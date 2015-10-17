@@ -3,7 +3,6 @@ layout: post
 title: Strategy guide for the game Twenty
 introduction: Like 2048, but different
 category: Thoughts
-published: false
 ---
 
 <figure>
@@ -39,9 +38,9 @@ For a game to remain interesting, it needs to provide a similar _experience_ but
 
 Instead of simply speeding up the timer gradually, the difficulty comes from random **connections** that appear between two tiles. It means that they can only move as one, which drastically reduces their movability. You need to merge one of the connected tiles to remove all its adjacent connections.
 
-After reaching tile "10", only two tiles can be connected.  
-After reaching tile "15", up to three tiles can be connected.  
-After reaching tile "20", up to four tiles can be connected.
+* After reaching tile "10", only two tiles can be connected.  
+* After reaching tile "15", up to three tiles can be connected.  
+* After reaching tile "20", up to four tiles can be connected.
 
 ## Basic strategy
 
@@ -52,6 +51,14 @@ Because Twenty is a time-based game, the obivous aim is to merge tiles _as fast 
 Any move that doesn't result in a possible merge is wasted time. Make each move count.
 
 The key aspect of the game's strategy is that **not all merges are equal**. In other words, the quickest merge is not always the best option.
+
+### Build towers
+
+The main problem you'll face is not being able to **access** tile, rather than having no merge available left.
+
+Keep all tiles accessible by keeping some **columns empty**, and avoid making lines (which is the opposite of Tetris basically.)
+
+![Twenty towers](/images/twenty-towers.png)
 
 ### Focus on the lower numbers
 
@@ -67,7 +74,7 @@ Each tile value should be lower than the one it's sitting on.
 
 In the best case scenario, you can make towers of adjacent values:
 
-![](/twenty-)
+![Ordered tiles](/images/twenty-ordered-tiles.png)
 
 My merging the "10" on top, it will trigger a chain reaction and get rid of five tiles in a row.
 
@@ -86,8 +93,6 @@ It also allows to keep one "free" tile in case a better merge is possible _after
 
 (Quick tip: when the timer is about to run out, hold a tile in the "air" to prevent it from connecting with another one.)
 
-Cycle
-
 ### Make merge sequences
 
 Try to merge the tile you've just "created". For example, if merging two "7" to create a "8", look for another "8". Merge them and look for a "9".
@@ -98,9 +103,9 @@ Doing so means you have at least one "n" tile, and you only need to find a secon
 
 If it wasn't for the existence of connected tiles, the game would be very easy: because merging tiles removes one tile from the screen, merging tiles would be a virtuous cycle where keeping an empty (and thus playable) game area allows to easily merge tiles, which empties the area, etc.
 
-So, if multiple merges possible: focus on targetting connected tiles. You'll allow them to be moved freely, and prevent blocking the ones below.
+So, if multiple merges possible: focus on targetting **connected** tiles. You'll allow them to be moved freely, and prevent blocking the ones below.
 
-![](jfoesi)
+![Merging conflict](/images/twenty-merge.png)
 
 ### Use gravity
 
@@ -108,7 +113,7 @@ If two tiles of same value are only separated vertically by another tile, move t
 
 If you're lucky and the middle tile was of value "n+1", you can merge it back with the newly created tile.
 
-![](jfoesi)
+![Gravity](/images/twenty-gravity.png)
 
 ## Prioritize
 
