@@ -1,4 +1,6 @@
-name: J. Thomas
+name: Jeremy Thomas
+description: Personal blog of Jeremy Thomas
+url: http://jgthms.com
 highlighter: pygments
 markdown: kramdown
 kramdown:

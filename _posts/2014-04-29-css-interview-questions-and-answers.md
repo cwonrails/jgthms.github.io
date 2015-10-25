@@ -2,7 +2,7 @@
 layout: post
 title: CSS interview questions and answers
 introduction: A personal take at a fictitious interview.
-category: Thoughts
+category: Code
 recommended: true
 ---
 

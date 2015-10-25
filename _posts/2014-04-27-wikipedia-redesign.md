@@ -2,7 +2,7 @@
 layout: post
 title: Wikipedia redesign
 introduction: Probably on every designer's bucket list.
-category: UI
+category: Thoughts
 recommended: true
 ---
 

@@ -22,16 +22,16 @@ route: post
   </article>
 
   <nav class="pagination">
-    {% if page.previous %}
-      <a href="{{ page.previous.url }}" rel="previous">
+    {% if page.next %}
+      <a href="{{ page.next.url }}" rel="next">
         &larr; Previous
       </a>
     {% endif %}
 
-    {% if page.next %}
-      <a href="{{ page.next.url }}" rel="next">
+    {% if page.previous %}
+      <a href="{{ page.previous.url }}" rel="previous">
         Next &rarr;
-        <strong>{{ page.next.title }}</strong>
+        <strong>{{ page.previous.title }}</strong>
       </a>
     {% endif %}
 

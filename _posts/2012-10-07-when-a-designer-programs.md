@@ -2,7 +2,7 @@
 layout: post
 title: When a designer programs
 introduction: I guess only a few people can really become both a jack of all trades and a master of all.
-category: Thoughts
+category: Code
 ---
 
 Launching a website requires mainly 3 parts:
