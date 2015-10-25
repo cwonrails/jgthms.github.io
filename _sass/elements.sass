@@ -35,7 +35,6 @@
   line-height: 1.5
   a
     border-bottom: 1px solid $link
-    word-break: break-all
     &:hover
       background: $link
       color: white
@@ -58,11 +57,21 @@
         right: 100%
   h3
     font-size: $size-h3
-    margin-top: 20px
+    a
+      font-size: $size-h3
   p
     margin: 20px 0
     &:last-child
       margin-bottom: 0
+    &.note
+      background: hsl(217, 86%, 96%)
+      color: $text
+      font-size: $size-default
+      padding: 20px
+      code
+        background: $text
+        font-size: 14px
+        padding-bottom: 2px
   ul
     list-style: disc outside
     margin: 20px
@@ -71,7 +80,7 @@
     text-align: center
   figcaption
     color: $subtitle
-    font-size: $small
+    font-size: $size-small
     margin-top: 20px
   blockquote
     background: $white
@@ -83,26 +92,30 @@
     p
       margin: 0
   table
-    font-size: $small
+    background: hsl(0, 0%, 99%)
+    box-shadow: 0 1px 2px rgba(black, 0.05)
+    font-size: $size-small
     width: 100%
     th,
     td
-      border: 1px solid #dbdbdb
+      border: 1px solid hsl(0, 0%, 90%)
       padding: 5px
+      text-align: left
       &.empty
         background: none
         border: none
-    th
-      background: #f5f5f5
-      color: #7a7a7a
-    td
-      background: #fafafa
+      code
+        font-size: 14px
+        padding-bottom: 2px
+    thead
+      tr
+        background: hsl(0, 0%, 100%)
   code,
   pre
     background: #222222
     color: white
-    font-size: $small
-    padding: 1px 4px 2px
+    font-size: $size-small
+    padding: 0 4px 1px
   code
     position: relative
     top: -2px
@@ -254,6 +267,8 @@ a.cover
       margin-top: 20px
     &[rel="next"]
       display: none
+    strong
+      +transition(all $speed $easing)
   +on($desktop)
     +display(flex)
     +justify-content(space-between)
