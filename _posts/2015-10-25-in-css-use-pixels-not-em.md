@@ -6,15 +6,29 @@ category: Code
 recommended: true
 ---
 
-CSS provides several [size units](http://marksheet.io/css-size-units.html): `px`, `%`, `em`, `rem` and even unitless values (for `line-height`).
+CSS provides several [size units](http://marksheet.io/css-size-units.html):
 
-The most natural unit to use is **pixels**, especially for defining `height` and `width`, as it's an **absolute** unit. But **relative** units, like `em`, have their benefits as well.
+* `px` pixels
+* `%` percentages
+* `em` relative to the font size
+* `rem` relative to the _root_ font size
+* even unitless values (for `line-height`)
+
+The most natural unit to use is **pixels**, especially for defining `height` and `width`, as it's an **absolute** unit.
+
+But **relative** units, like `em`, have their benefits as well.
 
 ## How em works
 
 `em` is relative to the _current_ `font-size` value. So if your element has `font-size: 12px`, `1em` equals `12px`.
 
-By defining your `font-size`, you can use `em` to define _relative_ values for _other_ properties: `margin`, `padding`, `height`, `width`...
+By defining your `font-size`, you can use `em` to define _relative_ values for _other_ properties:
+
+* `margin`
+* `padding`
+* `height`
+* `width`
+* etc.
 
 `rem` acts exactly like `em`. The only difference is that while `em` refers to the _element_'s `font-size` value, `rem` refers to the _root_'s `font-size`, which is the `<html>` element.
 {: .note}
@@ -94,7 +108,7 @@ An image's **dimensions** are set in pixels. If you want to _vertically_ align i
 
 ### Borders need pixels
 
-Let's say you want your buttons and inputs to be `32px` high. Having both equally sized allows to put them next to each other, like in [Bootstrap 4](http://v4-alpha.getbootstrap.com/components/input-group/):
+Let's say you want your buttons and inputs to be `38px` high. Having both equally sized allows to put them next to each other, like in [Bootstrap 4](http://v4-alpha.getbootstrap.com/components/input-group/):
 
 <figure>
   <img alt="em input button" src="/images/em-input-button.png">
