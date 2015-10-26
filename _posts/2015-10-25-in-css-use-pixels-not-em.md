@@ -62,7 +62,7 @@ So you can simply define different button sizes by only altering the `font-size`
 
 ## Why you should use px, not em
 
-Using `em` is a very **elegant** way to define both your text size and your layout. It keeps every element balanced and easily sizable. But `em` has its problems.
+Using `em` is a very **elegant** way to define both your text size and your layout. It keeps every element balanced and easily sizable. I've [used it before](/svg-and-css-rem-for-responsiveness.html). It's a pain.
 
 ### Fonts need precision to look sharp
 
