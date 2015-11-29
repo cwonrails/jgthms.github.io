@@ -154,7 +154,7 @@
       color: $text
       margin-bottom: $size-h1
       a
-        +grow($red)
+        +grow($improbable)
         color: white
         padding: 0 0.25em 0.05em
         white-space: nowrap
@@ -184,21 +184,21 @@
   &:first-child
     .hello-text
       padding-top: 60px
-  &.hello-streethub
+  &.hello-improbable
     .hello-background
-      +radial-gradient(ellipse farthest-side at 29% 29%, saturate($red, 100%), saturate($orange, 100%))
-      +hello-gradient($red, $orange)
+      +radial-gradient(ellipse farthest-side at 29% 29%, saturate($improbable, 100%), saturate(lighten($improbable, 10%), 100%))
+      +hello-gradient($improbable, lighten($improbable, 10%))
     .hello-screenshot img
       height: 275px
       margin: -153px 0 0 -219px
   &.hello-marksheet
     .hello-background
-      +hello-gradient($web, $css3)
+      +hello-gradient($marksheet, $marksheet-dark)
     .hello-screenshot img
       height: 322px
       margin: -172px 0 0 -334px
     .title a
-      +grow($css3)
+      +grow($marksheet)
       &:before
         border-radius: 0
         opacity: 1
@@ -287,7 +287,10 @@
     &.barn-dor
       +project(#121212, #69707a, #ebb550, white)
     &.marksheet
-      +project(white, hsl(217, 4%, 48%), $css3, $title)
+      +project($marksheet, #f4f1ce, white)
+      background-color: $marksheet
+      +linear-gradient(142deg, $marksheet-1, $marksheet-2 31%, $marksheet-3 65%, $marksheet-4)
+      text-shadow: 0 1px 2px rgba(black, .2)
     &.ivan-ballini
       +project($ivan-background, $ivan-text, $ivan-link, $ivan-title)
     &.css-off-2013
