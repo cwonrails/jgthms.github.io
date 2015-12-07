@@ -21,6 +21,15 @@ route: post
     {{ content }}
   </article>
 
+  <div class="yolo">
+    <i class="fa fa-twitter"></i>
+    <span>If you've read this far, does it mean you like this article? If so:</span>
+    <br>
+    <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via=jgthms" target="_blank">
+      Tweet it!
+    </a>
+  </div>
+
   <nav class="pagination">
     {% if page.next %}
       <a href="{{ page.next.url }}" rel="next">
