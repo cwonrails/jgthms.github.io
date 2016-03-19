@@ -40,8 +40,6 @@
       color: white
     &:visited
       color: $visited
-  li + li
-    margin-top: 0.5em
   h2,
   h3
     color: $title
@@ -61,6 +59,12 @@
     font-size: $size-h3
     a
       font-size: $size-h3
+  aside
+    color: $light
+    font-size: $size-small
+    margin: 20px 0
+    padding: 10px
+    text-align: center
   p
     margin: 20px 0
     &:last-child
@@ -105,6 +109,7 @@
     background: hsl(0, 0%, 99%)
     box-shadow: 0 1px 2px rgba(black, 0.05)
     font-size: $size-small
+    margin: 20px 0
     width: 100%
     th,
     td
@@ -122,8 +127,8 @@
         background: hsl(0, 0%, 100%)
   code,
   pre
-    background: #222222
-    color: white
+    background: $background
+    color: $red
     font-size: $size-small
     padding: 0 4px 1px
   code
@@ -131,8 +136,16 @@
     top: -2px
   pre
     padding: 10px
+  .highlight
+    code,
+    pre
+      background: #222
   +on($desktop)
     font-size: $size-content-desktop
+    table
+      margin-left: -80px
+      margin-right: -80px
+      width: 940px
 
 #non-visited a
   color: $link
@@ -190,6 +203,18 @@ a.cover
     img
       left: 266px
       top: 83px
+
+.demo
+  text-align: center
+  a
+    &,
+    &:visited
+      +button
+      background: $link
+      color: white
+      display: inline-block
+      padding: 20px 32px
+      vertical-align: top
 
 .heading
   margin: $offset
