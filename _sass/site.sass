@@ -16,7 +16,7 @@
   height: 60px
   margin: 0 auto
   position: relative
-  +transition(all $speed ease)
+  transition: all $speed ease
   width: 60px
   &:before
     +overlay
@@ -31,7 +31,7 @@
     display: block
     height: 4px
     position: absolute
-    +transition(all $speed ease)
+    transition: all $speed ease
     width: 4px
     &.a
       left: 18px
@@ -84,42 +84,42 @@
   &:hover,
   &.active
     &:before
-      +animation(jelly-pop 1000ms linear both)
+      animation: jelly-pop 1000ms linear both
     span
-      +animation(jelly-pop 1000ms linear both)
+      animation: jelly-pop 1000ms linear both
       background: white
       &.a
-        +animation-delay(850ms)
+        animation-delay: 850ms
       &.e
-        +animation-delay(100ms)
+        animation-delay: 100ms
       &.i
-        +animation-delay(150ms)
+        animation-delay: 150ms
       &.m
-        +animation-delay(200ms)
+        animation-delay: 200ms
       &.b
-        +animation-delay(250ms)
+        animation-delay: 250ms
       &.f
-        +animation-delay(300ms)
+        animation-delay: 300ms
       &.j
-        +animation-delay(350ms)
+        animation-delay: 350ms
       &.n
-        +animation-delay(400ms)
+        animation-delay: 400ms
       &.c
-        +animation-delay(450ms)
+        animation-delay: 450ms
       &.g
-        +animation-delay(500ms)
+        animation-delay: 500ms
       &.k
-        +animation-delay(550ms)
+        animation-delay: 550ms
       &.o
-        +animation-delay(600ms)
+        animation-delay: 600ms
       &.d
-        +animation-delay(650ms)
+        animation-delay: 650ms
       &.h
-        +animation-delay(700ms)
+        animation-delay: 700ms
       &.l
-        +animation-delay(750ms)
+        animation-delay: 750ms
       &.p
-        +animation-delay(800ms)
+        animation-delay: 800ms
     &:hover
       box-shadow: inset 0 0 0 30px $link
     &.active
@@ -234,7 +234,7 @@
         &.active,
         &.active:hover
           &:before
-            +animation(none)
+            animation: none
     &.dropdown-elsewhere
       float: right
       padding: 10px 0 0
