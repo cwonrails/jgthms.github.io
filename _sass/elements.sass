@@ -34,7 +34,7 @@
   color: #4a4a4a
   line-height: 1.4
   a
-    border-bottom: 1px solid $link
+    border-bottom: 1px solid
     &:hover
       background: $link
       color: white
@@ -133,6 +133,9 @@
     padding: 10px
   +on($desktop)
     font-size: $size-content-desktop
+
+#non-visited a
+  color: $link
 
 .cover
   +on($desktop)
