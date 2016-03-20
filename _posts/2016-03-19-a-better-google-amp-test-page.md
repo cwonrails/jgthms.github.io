@@ -19,9 +19,8 @@ HN user inian [commented](https://news.ycombinator.com/item?id=11287694):
 Hey! My blog is hosted on Github! And I tested out AMP 2 weeks ago.
 
 Why not try to optimize my homepage: [jgthms.com](http://jgthms.com/)?
-Here's the result: [jgthms.com/amp](http://jgthms.com/amp/)
 
-<p class="demo"><a href="http://jgthms.com/amp/">View demo</a></p>
+<p class="demo"><a href="http://jgthms.com/amp/">View result</a></p>
 
 ## AMP in a nutshell
 
@@ -82,11 +81,6 @@ AMP pages require a few alterations:
 <aside>I had to remove the percentage signs, otherwise Liquid would throw an error.</aside>
 
 ## Results
-
-You can see both optimizations live:
-
-* [jgthms.com](http://jgthms.com/)
-* [jgthms.com/amp](http://jgthms.com/amp/)
 
 <figure>
   <a href="http://www.webpagetest.org/result/160319_80_PZ9/"><img alt="Chrome console screenshot" src="/images/test-jgthms.png"></a>
@@ -172,7 +166,7 @@ I'm not sure if AMP is designed to optimize simple pages like mine but it's wort
 If you're trying to optimize your website for **mobile** users:
 
 * focus on **page weight**: nothing beats a page that only weighs a couple of hundreds of KB
-* avoid **animations**: ever tried pull-to-refresh on mobile.twitter.com? Slowest interaction I've ever seen in a mobile browser.
+* avoid **animations**: ever tried [pull-to-refresh](http://i.imgur.com/Oq0MjFs.png) on twitter? Slowest interaction I've ever seen in a mobile browser.
 * **lazy load** your images: it's so easy to set up, and the initial load above the fold will be greatly improved
 
 Obviously, most websites are not as simple as a static blog with only a few articles and only updated once in a while. Different platforms that serve different purposes require different strategies.
