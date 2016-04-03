@@ -2,8 +2,5 @@ name: Jeremy Thomas
 description: Personal blog of Jeremy Thomas
 url: http://jgthms.com
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: pygments
 permalink: :title.html
 exclude: ['_backup']
