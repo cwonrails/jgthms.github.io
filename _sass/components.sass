@@ -296,6 +296,8 @@
     overflow: hidden
     padding: 30px
     position: relative
+    a:hover
+      text-decoration: underline
     .device
       display: none
     .date
@@ -311,13 +313,19 @@
         position: absolute
         width: 60px
     .logo
+      display: inline-block
       height: 200px
       margin-bottom: 20px
+      vertical-align: top
       img
         display: block
     .title
       color: $title
       font-weight: bold
+      margin-top: 20px
+      a
+        &:hover
+          padding: 0
     .url
       margin: 5px 0 20px
     .content
@@ -352,13 +360,13 @@
       +project(#eeeff2, #4c566c, #0589f5, #040404)
     &.editions-magellan
       +project(#332003, rgba(white, 0.29), #c78312, white)
+    &.golf-de-margaux
+      +project(#96c909, rgba(black, 0.48), #fff, #1a397f)
     &.bbxworld
       +project(#362f2d, rgba(white, 0.48), #8dc63f, white)
   +on($desktop)
     padding-top: $offset-desktop
     .project
-      height: 100vh
-      min-height: 620px
       padding: 0
       width: 100%
       .device
@@ -368,21 +376,20 @@
         top: 50%
         transform: scale(0.5) translate3d(80px, -100%, 0)
         transform-origin: left center
+        z-index: 1
         &.ipad-h,
         &.ipad-v
           transform: scale(0.75) translate3d(80px, -62.5%, 0)
       .title
         font-size: $size-h1
       .container
-        display: table
-        height: 100vh
-        min-height: 620px
+        align-items: center
+        display: flex
+        min-height: 100vh
+        padding: 200px 0
         width: 100%
         .project-content
-          display: table-cell
-          padding-right: 50%
-          vertical-align: middle
-          width: 100%
+          width: 50%
 
 =switch
   display: inline-block
