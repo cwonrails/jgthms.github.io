@@ -2,6 +2,7 @@
 <html>
   {% include head.html %}
   <body>
+    <div class="the"><div class="monolith"></div></div>
     {% include header.html %}
     <main id="{{ page.route }}" class="main {{ page.route }}{% if page.layout %} {{ page.layout}}{% endif %}{% if page.state %} {{ page.state}}{% endif %}">
       {{ content }}

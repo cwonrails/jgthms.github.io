@@ -100,7 +100,7 @@
     &:before
       animation: jelly-pop 1000ms linear both
 
-=project($background, $text, $date, $title: $date, $url: $date)
+=project($background, $text, $date, $text-strong: $date, $url: $date)
   background: $background
   color: $text
   .date
@@ -108,7 +108,7 @@
     &:after
       background: $text
   .title a
-    color: $title
+    color: $text-strong
   .url a
     color: $url
 

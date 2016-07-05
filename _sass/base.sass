@@ -1,6 +1,9 @@
 html
-  background: white
-  font-size: $size-default
+  background-attachment: fixed
+  background-color: $black
+  background-image: linear-gradient($black, $black-light)
+  background-repeat: no-repeat
+  font-size: $size-normal
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
   min-width: 300px
@@ -8,8 +11,9 @@ html
 
 body
   color: $text
-  font-family: $font-family-primary
+  font-family: $family-primary
   font-size: 1rem
+  font-weight: $weight-normal
   letter-spacing: -0.04em
   line-height: 1.25
 
@@ -17,23 +21,16 @@ a
   color: $link
   cursor: pointer
   text-decoration: none
-  transition: all $speed $easing
+  transition: none $speed $easing
+  transition-property: background color
 
 img
   max-height: 100%
   max-width: 100%
 
 strong
-  color: $title
-
-article,
-aside,
-figure,
-footer,
-header,
-hgroup,
-section
-  display: block
+  color: $text-strong
+  font-weight: $weight-bold
 
 pre
   white-space: pre
@@ -41,8 +38,8 @@ pre
 
 .container
   margin: 0 auto
-  max-width: 940px
   position: relative
+  width: 940px
 
 +selection
   background: $link
