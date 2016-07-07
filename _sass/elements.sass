@@ -23,7 +23,6 @@
     transform: scale(1)
 
 .header
-  display: none
   font-size: 12px
   letter-spacing: 0.4em
   text-transform: uppercase
@@ -34,3 +33,16 @@
 .jt
   display: none
 
+.toggle
+  display: none
+
++desktop
+  .header
+    left: 0
+    position: absolute
+    right: 0
+    top: 100px
+  .dropdown
+    display: flex
+    li
+      width: 200px

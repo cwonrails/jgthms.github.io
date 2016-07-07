@@ -125,8 +125,12 @@
 $tablet: 769px
 $desktop: 993px
 
-=on($device)
+=from($device)
   @media screen and (min-width: $device)
+    @content
+
+=desktop
+  @media screen and (min-width: $desktop)
     @content
 
 =overlay
@@ -140,7 +144,7 @@ $desktop: 993px
   &::-webkit-scrollbar
     background: $c
     width: $a
-    +on($desktop)
+    +from($desktop)
       width: $b
   &::-webkit-scrollbar-thumb
     background: $link
