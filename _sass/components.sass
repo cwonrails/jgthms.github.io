@@ -473,3 +473,63 @@
       color: white
       .switch-rail
         transform: translate3d(0, 0, 0)
+
+.links
+  padding-top: $offset-mobile
+  position: relative
+  +on($desktop)
+    padding-top: $offset-desktop
+
+.link
+  border-top: 1px solid $border
+  padding: 20px
+  position: relative
+  .category
+    margin-bottom: 10px
+    span
+      background: #8e8e93
+      border-radius: 3px
+      color: white
+      display: inline-block
+      font-size: 14px
+      height: 24px
+      line-height: 24px
+      padding: 0 8px
+      vertical-align: top
+  .category-design
+    span
+      background: #147efb
+  .category-gaming
+    span
+      background: #fc3d39
+  .category-life
+    span
+      background: #53d769
+  .category-programming
+    span
+      background: #fd9426
+  .category-science
+    span
+      background: #5fc9f8
+  .title
+    a
+      &:hover
+        background: $link
+        color: white
+        text-decoration: none
+      &:visited
+        color: $visited
+        &:hover
+          background: $visited
+          color: white
+  .subtitle
+    margin-top: 5px
+  +on($desktop)
+    padding-left: 160px
+    .category
+      left: 0
+      margin-bottom: 0
+      position: absolute
+      text-align: right
+      top: 20px
+      width: 120px

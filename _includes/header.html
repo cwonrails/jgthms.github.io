@@ -36,7 +36,7 @@
       <li><a{% if page.route == 'articles' or page.layout == 'post' %} class="active"{% endif %} href="/articles.html">Articles</a></li>
       <li><a{% if page.route == 'favourites' %} class="active"{% endif %} href="/favourite-websites.html">Favourites</a></li>
       <li><a{% if page.route == 'projects' %} class="active"{% endif %} href="/projects.html">Projects</a></li>
-      <li id="contact"><a>Email me</a></li>
+      <li><a{% if page.route == 'links' %} class="active"{% endif %} href="/links.html">Links</a></li>
     </ul>
 
     <ul id="elsewhere" class="dropdown dropdown-elsewhere">
@@ -46,6 +46,7 @@
       <li><a class="hacker-news" href="https://news.ycombinator.com/user?id=bbx"><i class="fa fa-hacker-news"></i></a></li>
       <li><a class="soundcloud" href="https://soundcloud.com/jgthms"><i class="fa fa-soundcloud"></i></a></li>
       <li><a class="rss" href="/atom.xml"><i class="fa fa-rss"></i></a></li>
+      <li id="contact"><a class="email"><i class="fa fa-envelope"></i></a></li>
     </ul>
   </div>
 </header>
