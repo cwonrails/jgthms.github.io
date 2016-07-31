@@ -31,4 +31,12 @@ jQuery(document).ready(function ($) {
     setRecommended();
   })
 
+  $('.period').each( function() {
+    $(this).affix({
+      offset: {
+        top: $(this).offset().top
+      }
+    });
+  });
+
 });

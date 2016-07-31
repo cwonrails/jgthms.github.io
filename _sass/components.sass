@@ -70,8 +70,6 @@
     .developer
       @extend .subtitle
       margin: 5px 0 20px
-    .link
-      margin-bottom: 20px
   +on($desktop)
     .item
       min-height: 421px
@@ -185,13 +183,16 @@
     vertical-align: middle
     width: 100%
     z-index: 1
+  .hello-screenshot-image
+    background-position: center center
+    background-size: 100%
+    background-repeat: no-repeat
+    left: 50%
+    opacity: 0
+    position: absolute
+    top: 50%
   .hello-screenshot
-    img
-      left: 50%
-      opacity: 0
-      position: absolute
-      top: 50%
-    &.animate img
+    &.animate .hello-screenshot-image
       animation: jelly-pop 1000ms 1000ms linear both
   .hello-text
     display: table-cell
@@ -234,15 +235,19 @@
     .hello-background
       background-image: radial-gradient(ellipse farthest-side at 29% 29%, saturate($improbable, 100%), saturate(lighten($improbable, 10%), 100%))
       +hello-gradient($improbable, lighten($improbable, 10%))
-    .hello-screenshot img
+    .hello-screenshot-image
+      background-image: url("/images/index/hello-improbable.png")
       height: 275px
       margin: -153px 0 0 -219px
+      width: 444px
   &.hello-marksheet
     .hello-background
       +hello-gradient($marksheet, $marksheet-dark)
-    .hello-screenshot img
+    .hello-screenshot-image
+      background-image: url("/images/index/hello-marksheet.png")
       height: 322px
       margin: -172px 0 0 -334px
+      width: 671px
     .title a
       +grow($marksheet)
       &:before
@@ -251,9 +256,11 @@
   &.hello-ivan-ballini
     .hello-background
       +hello-gradient($brique, $beige)
-    .hello-screenshot img
+    .hello-screenshot-image
+      background-image: url("/images/index/hello-ivan-ballini.png")
       height: 408px
       margin: -261px 0 0 -270px
+      width: 522px
     .title a
       +grow($brique)
       &:before

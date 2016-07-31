@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
 
   function R5(s) {
     var b = [], c, i = s.length, a = '0'.charCodeAt(), z = a + 10;
-    while (i--) { 
+    while (i--) {
       c = s.charCodeAt(i);
       if (c >= a && c < z) { b[i] = String.fromCharCode(((c - a + 5) % (10)) + a); }
       else { b[i] = s.charAt(i); }
@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
     }
     return b.join('');
   }
-  
+
   var $c = $('#contact a');
   var t = 'znvygb:'
   var m = 'ookqrfvta@tznvy.pbz';
@@ -43,13 +43,4 @@ jQuery(document).ready(function ($) {
   });
 
   $('img.lazy').lazy();
-
-  $('.period').each( function() {
-    $(this).affix({
-      offset: {
-        top: $(this).offset().top
-      }
-    });
-  });
-
 });
