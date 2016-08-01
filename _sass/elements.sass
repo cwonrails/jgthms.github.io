@@ -75,7 +75,7 @@
       font-size: $size-default
       padding: 20px
       code
-        background: $text
+        background: $white
         font-size: 14px
         padding-bottom: 2px
   ol
@@ -86,7 +86,7 @@
     margin: 20px
   figure:not(.highlight)
     background: $white
-    margin: 40px
+    margin: 40px 0
     padding: 20px
     text-align: center
     img
@@ -140,8 +140,17 @@
     code,
     pre
       background: #222
+  .top-highlight
+    background: rgba($green, 0.2)
+    color: $title
+    padding: 2px 0 3px
+    &:hover
+      background: $green
+      color: white
   +on($desktop)
     font-size: $size-content-desktop
+    figure:not(.highlight)
+      margin: 40px
     table
       margin-left: -80px
       margin-right: -80px
