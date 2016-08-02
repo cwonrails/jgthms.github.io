@@ -43,14 +43,14 @@
   h2,
   h3
     color: $title
-    font-size: $size-h2
+    font-size: $size-h3
     font-weight: bold
     line-height: 1.125
     margin-top: 60px
     position: relative
     a
       border-bottom: none
-      font-size: $size-h2-link
+      font-size: $size-h3-link
       margin-right: 10px
       +on($desktop)
         position: absolute
@@ -141,20 +141,41 @@
     pre
       background: #222
   .top-highlight
-    background: rgba($green, 0.2)
+    background: lighten($green, 30%)
+    box-shadow: 0 0 0 5px lighten($green, 30%)
     color: $title
     padding: 2px 0 3px
+    position: relative
+    &:before
+      color: $light
+      content: "top highlight"
+      display: block
+      font-size: $size-small
+      margin-bottom: 10px
     &:hover
       background: $green
+      box-shadow: 0 0 0 5px $green
       color: white
   +on($desktop)
     font-size: $size-content-desktop
+    h2,
+    h3
+      font-size: $size-h3-desktop
+      a
+        font-size: $size-h3-link-desktop
     figure:not(.highlight)
       margin: 40px
     table
       margin-left: -80px
       margin-right: -80px
       width: 940px
+    .top-highlight
+      &:before
+        display: inline
+        left: -110px
+        margin-bottom: 0
+        position: absolute
+        top: 5px
 
 #non-visited a
   color: $link
