@@ -2,8 +2,11 @@
 <html>
   {% include head.html %}
   <body>
+    <div class="brand">
+      {% include svg/jt.html %}
+    </div>
     {% include header.html %}
-    <main id="{{ page.route }}" class="main {{ page.route }}{% if page.layout %} {{ page.layout}}{% endif %}{% if page.state %} {{ page.state}}{% endif %}">
+    <main id="{{ page.route }}" class="main {{ page.route }}{% if page.state %} {{ page.state}}{% endif %}">
       {{ content }}
     </main>
     {% include scripts.html %}

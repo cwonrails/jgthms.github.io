@@ -7,10 +7,30 @@
 @import "variables"
 @import "functions"
 @import "base"
-@import "site"
-@import "elements"
-@import "components"
-@import "pygments-monokai-extended"
+@import "header"
+
+.brand
+  +overlay
+  align-items: center
+  display: flex
+  justify-content: center
+  position: fixed
+  svg
+    path
+      fill: hsl(0, 0%, 94%)
+
+.nav
+  z-index: 50
+
+.overlay
+  z-index: 40
 
 .header
-  z-index: 1000
+  z-index: 30
+
+.main
+  position: relative
+  z-index: 20
+
+.brand
+  z-index: 10

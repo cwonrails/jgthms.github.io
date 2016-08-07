@@ -1,0 +1,86 @@
+---
+---
+
+@charset "utf-8"
+
+@import "variables"
+@import "functions"
+
+.index
+  padding-top: 86px
+  text-align: center
+  &-section
+    align-items: center
+    display: flex
+    padding-top: 86px
+  &-content
+    font-size: 20px
+    margin: 0 40px
+    a
+      border-bottom: 2px solid $link
+  &-more
+    margin: 40px 40px 0
+    opacity: $opacity-light
+    &-subtitle
+      color: black
+      font-size: $size-small
+      margin-bottom: -10px
+    &-content
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      li
+        align-items: center
+        display: flex
+        justify-content: center
+        margin: 20px 10px 0
+      svg
+        max-height: 40px
+        max-width: 100px
+        path
+          fill: black
+  &-follow
+    text-align: center
+    &-title
+      color: $text-light
+      font-size: 24px
+      margin-bottom: 10px
+      strong
+        color: $text-strong
+        font-weight: 400
+    &-icon
+      display: inline-block
+      font-size: 28px
+      padding: 16px 20px
+      vertical-align: top
+      &.is-twitter
+        color: $twitter
+      &.is-github
+        color: $github
+  &-dots
+    display: none
+
+.index-section
+  &.is-improbable
+    .index-content
+      a
+        border-bottom-color: $improbable
+        color: $improbable
+  &.is-marksheet
+    .index-content
+      a
+        border-bottom-color: $marksheet
+        color: $marksheet
+  &.is-bulma
+    .index-content
+      a
+        border-bottom-color: $bulma
+        color: $bulma
+  &.is-ivanballini
+    .index-content
+      a
+        border-bottom-color: $ivanballini
+        color: $ivanballini
+  &.is-follow
+    justify-content: center
+    padding-bottom: 86px
