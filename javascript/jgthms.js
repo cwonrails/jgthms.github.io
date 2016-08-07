@@ -39,7 +39,11 @@ $(document).ready(function() {
 
   $('.overlay, .nav').click( function(e) {
     if (e.target == this) {
+      console.log('this');
       $('html').removeClass('menu-open elsewhere-open');
+    } else {
+      console.log('else');
+      return true;
     }
   });
 

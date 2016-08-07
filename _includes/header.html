@@ -1,4 +1,4 @@
-<header class="header">
+<header id="top" class="header">
   <div class="container">
     <a class="jt{% if page.route == 'index' %} is-active{% endif %}" href="/">
       {% include svg/jt.html %}
@@ -17,22 +17,22 @@
 <nav id="menu" class="nav is-menu">
   <ul>
     <li>
-      <a class="nav-link{% if page.route == 'articles' or page.layout == 'post' %} is-active"{% endif %} href="/articles.html">
+      <a class="nav-link{% if page.route == 'articles' or page.layout == 'post' %} is-active{% endif %}" href="/articles.html">
         Articles
       </a>
     </li>
     <li>
-      <a class="nav-link{% if page.route == 'favourites' %} is-active"{% endif %} href="/favourite-websites.html">
+      <a class="nav-link{% if page.route == 'favourites' %} is-active{% endif %}" href="/favourite-websites.html">
         Favourites
       </a>
     </li>
     <li>
-      <a class="nav-link{% if page.route == 'projects' %} is-active"{% endif %} href="/projects.html">
+      <a class="nav-link{% if page.route == 'projects' %} is-active{% endif %}" href="/projects.html">
         Projects
       </a>
     </li>
     <li>
-      <a class="nav-link{% if page.route == 'links' %} is-active"{% endif %} href="/links.html">
+      <a class="nav-link{% if page.route == 'links' %} is-active{% endif %}" href="/links.html">
         Links
       </a>
     </li>

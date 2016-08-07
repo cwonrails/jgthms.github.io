@@ -1,0 +1,64 @@
+---
+---
+
+@charset "utf-8"
+
+@import "variables"
+@import "functions"
+
+.articles
+  margin: 0 20px
+  &-year,
+  &-season
+    display: none
+    font-size: $size-small
+  &-year
+    color: $link
+  &-season
+    &.is-win
+      color: $cyan
+    &.is-spr
+      color: $green
+    &.is-sum
+      color: $yellow
+    &.is-aut
+      color: $orange
+  &-border
+    display: none
+  &-article
+    margin-bottom: 40px
+    padding-left: 20px
+    position: relative
+    &.is-recommended
+      .articles-title
+        font-weight: 700
+  &-star
+    color: $orange
+    left: -8px
+    position: absolute
+    text-align: center
+    top: 2px
+    width: 20px
+  &-info
+    float: right
+    font-size: $size-small
+    line-height: 20px
+    margin-left: 10px
+    padding-top: 4px
+    text-align: right
+  &-date
+    display: block
+  &-title
+    font-size: 20px
+    line-height: 1.2
+    a
+      display: block
+      &:visited
+        color: $visited
+  &-introduction
+    color: $text-light
+    line-height: 1.2
+    margin-top: 5px
+  &.only-recommended
+    .articles-article:not(.is-recommended)
+      display: none

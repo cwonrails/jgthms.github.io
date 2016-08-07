@@ -4,47 +4,64 @@ route: post
 ---
 
 <div class="container">
-  <p class="back">
+  <p class="post-back">
     <a href="/articles.html">Back</a>
   </p>
 
-  <p class="info">
-    <em class="date">{{ page.date | date_to_string }}</em>
-    <strong class="category">{{ page.category }}</strong>
-  </p>
+  <header class="post-header">
+    <p class="post-info">
+      <em class="post-date">{{ page.date | date_to_string }}</em>
+      in
+      <strong class="post-category">{{ page.category }}</strong>
+    </p>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <h2 class="post-introduction">{{ page.introduction }}</h2>
+  </header>
 
-  <h1 class="title">{{ page.title }}</h1>
-
-  <h2 class="introduction">{{ page.introduction }}</h2>
-
-  <article id="content" class="content">
+  <article id="content" class="post-content">
     {{ content }}
   </article>
 
-  <div class="yolo">
-    <i class="fa fa-twitter"></i>
-    <span>If you've read this far, does it mean you like this article? If so:</span>
-    <br>
-    <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via=jgthms" target="_blank">
-      Tweet it!
+  <div class="post-share">
+    <p class="post-share-title">Liked this article?</p>
+    <a
+      class="post-share-button is-facebook"
+      href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}"
+      rel="nofollow"
+      target="_blank"
+      >
+      <i class="fa fa-facebook"></i>
+      <span>Share on</span> <strong>Facebook</strong>
+    </a>
+    <a
+      class="post-share-button is-twitter"
+      data-social-network="Twitter"
+      data-social-action="tweet"
+      data-social-target="{{ site.url }}{{ page.url }}"
+      href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via=jgthms"
+      rel="nofollow"
+      target="_blank"
+      >
+      <i class="fa fa-twitter"></i>
+      <span>Share on</span> <strong>Twitter</strong>
     </a>
   </div>
 
-  <nav class="pagination">
-    {% if page.next %}
-      <a href="{{ page.next.url }}" rel="next">
-        &larr; Previous
-      </a>
-    {% endif %}
-
+  <nav class="post-pagination">
     {% if page.previous %}
-      <a href="{{ page.previous.url }}" rel="previous">
+      <a class="post-pagination-previous" href="{{ page.previous.url }}" rel="previous">
         Next &rarr;
         <strong>{{ page.previous.title }}</strong>
       </a>
     {% endif %}
 
-    <a id="top">
+    {% if page.next %}
+      <a class="post-pagination-next" href="{{ page.next.url }}" rel="next">
+        &larr; Previous
+      </a>
+    {% endif %}
+
+    <a id="top" class="post-pagination-top">
       Back to top &uarr;
     </a>
   </nav>

@@ -1,0 +1,216 @@
+---
+---
+
+@charset "utf-8"
+
+@import "variables"
+@import "functions"
+
+.post
+  margin: 0 20px
+  &-back
+    padding-top: 40px
+    text-align: center
+  &-header
+    margin: 20px 20px 40px
+    text-align: center
+  &-info
+    font-size: $size-small
+    margin-bottom: 10px
+  &-date,
+  &-category
+    color: $text-light
+    font-style: normal
+    font-weight: normal
+  &-title
+    color: $text-strong
+    font-size: 28px
+    font-weight: 700
+    line-height: 1.2
+    margin-bottom: 10px
+  &-introduction
+    font-size: 20px
+    line-height: 1.2
+  &-share
+    background: white
+    border-radius: 3px
+    margin: 20px 0
+    padding: 16px 20px
+    text-align: center
+    &-title
+      margin-bottom: 10px
+    &-button
+      border: 1px solid
+      border-radius: 3px
+      display: block
+      height: 40px
+      line-height: 40px
+      margin-top: 10px
+      position: relative
+      .fa
+        +fa(14px, 20px)
+        left: 10px
+        margin-top: -10px
+        position: absolute
+        top: 50%
+      strong
+        color: inherit
+      &.is-facebook
+        border-color: $facebook
+        color: $facebook
+      &.is-twitter
+        border-color: $twitter
+        color: $twitter
+  &-pagination
+    padding-bottom: 20px
+    a
+      border: 1px solid $link
+      border-radius: 3px
+      display: block
+      margin-top: 20px
+      padding: 16px 20px
+      strong
+        display: block
+  &-content
+    a
+      border-bottom: 1px solid
+      &:hover
+        background: $link
+        color: white
+      &:visited
+        color: $visited
+    h2,
+    h3
+      color: $text-strong
+      font-size: $size-h3
+      font-weight: bold
+      line-height: 1.2
+      margin-top: 40px
+      position: relative
+      a
+        border-bottom: none
+        margin-right: 10px
+        +on($desktop)
+          position: absolute
+          right: 100%
+    h3
+      font-size: $size-h3
+      a
+        font-size: $size-h3
+    aside
+      color: $text-light
+      font-size: $size-small
+      margin: 20px 0
+      padding: 10px
+      text-align: center
+    p
+      margin: 20px 0
+      &:last-child
+        margin-bottom: 0
+      &.note
+        background: hsl(217, 86%, 96%)
+        color: $text
+        font-size: $size-default
+        padding: 20px
+        code
+          background: white
+          font-size: 14px
+          padding-bottom: 2px
+    ol
+      list-style: decimal outside
+      margin: 20px
+    ul
+      list-style: disc outside
+      margin: 20px
+    figure:not(.highlight)
+      background: white
+      margin: 20px 0
+      padding: 20px
+      text-align: center
+      img
+        display: inline-block
+        vertical-align: top
+    figcaption
+      color: $text
+      font-size: $size-small
+      margin-top: 20px
+    blockquote
+      background: white
+      border-left: 4px solid #db4e44
+      color: #7a7a7a
+      font-style: italic
+      margin: 20px 0
+      padding: 20px 40px
+      p
+        margin: 0
+    table
+      background: hsl(0, 0%, 99%)
+      box-shadow: 0 1px 2px rgba(black, 0.05)
+      font-size: $size-small
+      margin: 20px 0
+      width: 100%
+      th,
+      td
+        border: 1px solid hsl(0, 0%, 90%)
+        padding: 5px
+        text-align: left
+        &.empty
+          background: none
+          border: none
+        code
+          font-size: 14px
+          padding-bottom: 2px
+      thead
+        tr
+          background: hsl(0, 0%, 100%)
+    code,
+    pre
+      background: $background
+      color: $red
+      font-size: $size-small
+      padding: 0 4px 1px
+    code
+      position: relative
+      top: -2px
+    pre
+      padding: 10px
+    .highlight
+      code,
+      pre
+        background: #222
+    .top-highlight
+      background: lighten($green, 30%)
+      box-shadow: 0 0 0 5px lighten($green, 30%)
+      color: $text-strong
+      padding: 2px 0 3px
+      position: relative
+      &:before
+        color: $text-light
+        content: "top highlight"
+        display: block
+        font-size: $size-small
+        margin-bottom: 10px
+      &:hover
+        background: $green
+        box-shadow: 0 0 0 5px $green
+        color: white
+    // +on($desktop)
+    //   font-size: $size-content-desktop
+    //   h2,
+    //   h3
+    //     font-size: $size-h3-desktop
+    //     a
+    //       font-size: $size-h3-link-desktop
+    //   figure:not(.highlight)
+    //     margin: 40px
+    //   table
+    //     margin-left: -80px
+    //     margin-right: -80px
+    //     width: 940px
+    //   .top-highlight
+    //     &:before
+    //       display: inline
+    //       left: -110px
+    //       margin-bottom: 0
+    //       position: absolute
+    //       top: 5px

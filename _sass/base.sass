@@ -19,19 +19,22 @@ body
   color: $text
   font-family: $font-family-primary
   font-size: 1rem
-  // letter-spacing: -0.04em
-  line-height: 1.4
+  line-height: 1.6
 
 a
   color: $link
   cursor: pointer
   text-decoration: none
   transition: none $speed $easing
-  transition-property: background color
+  transition-property: background, color
 
 img
   max-height: 100%
   max-width: 100%
+
+hr
+  border-top: 1px solid $link
+  margin: 0
 
 strong
   color: $text-strong
@@ -46,8 +49,10 @@ pre
 
 .container
   margin: 0 auto
-  max-width: 940px
+  max-width: 400px
   position: relative
+  +desktop
+    max-width: 940px
 
 +selection
   background: $link

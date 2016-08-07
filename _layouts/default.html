@@ -6,7 +6,7 @@
       {% include svg/jt.html %}
     </div>
     {% include header.html %}
-    <main id="{{ page.route }}" class="main {{ page.route }}{% if page.state %} {{ page.state}}{% endif %}">
+    <main{% if page.route %} id="{{ page.route }}"{% endif %} class="main{% if page.route %} {{ page.route}}{% endif %}{% if page.layout %} {{ page.layout}}{% endif %}{% if page.state %} {{ page.state}}{% endif %}">
       {{ content }}
     </main>
     {% include scripts.html %}

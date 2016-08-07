@@ -9,6 +9,32 @@
 @import "base"
 @import "header"
 
++mobile
+  .main
+    padding-top: 86px
+
+.heading
+  margin: 40px 20px
+  text-align: center
+  &-title
+    color: $text-strong
+    font-size: 20px
+    line-height: 1.2
+
+.tabs
+  margin-top: 10px
+  text-align: center
+  a
+    display: inline-block
+    font-size: $size-small
+    height: 32px
+    line-height: 32px
+    padding: 0 16px
+    vertical-align: top
+    &.is-active
+      background: $text-strong
+      color: white
+
 .brand
   +overlay
   align-items: center

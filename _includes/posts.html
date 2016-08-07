@@ -9,27 +9,27 @@
 
   {% if currentseason != season %}
     {% if currentyear != year %}
-      <section class="period year">{{ currentyear }}</section>
+      <section class="articles-year">{{ currentyear }}</section>
       {% capture year %}{{ currentyear }}{% endcapture %}
     {% endif %}
-    <section class="period season season-{{ currentseason }}">{{ currentseason }}</section>
-    <hr>
+    <section class="articles-season is-{{ currentseason }}">{{ currentseason }}</section>
+    <hr class="articles-border">
     {% capture season %}{{ currentseason }}{% endcapture %}
   {% endif %}
 
-  <article class="article {{ post.category | downcase }}{% if post.recommended == true %} recommended{% endif %}">
+  <article class="articles-article is-{{ post.category | downcase }}{% if post.recommended == true %} is-recommended{% endif %}">
     {% if post.recommended == true %}
-      <i class="fa fa-star"></i>
+      <i class="articles-star fa fa-star"></i>
     {% endif %}
-    <p class="info">
-      <em class="date">{{ post.date | date_to_string }}</em>
-      <strong class="category">{{ post.category }}</strong>
+    <p class="articles-info">
+      <em class="articles-date">{{ post.date | date_to_string }}</em>
+      <strong class="articles-category">{{ post.category }}</strong>
     </p>
-    <h2 class="title">
+    <h2 class="articles-title">
       <a href="{{ post.url }}">{{ post.title }}</a>
     </h2>
     {% if post.introduction %}
-      <p class="introduction">{{ post.introduction }}</p>
+      <p class="articles-introduction">{{ post.introduction }}</p>
     {% endif %}
   </article>
 {% endfor %}

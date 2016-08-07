@@ -61,12 +61,12 @@
   position: absolute
   top: 50%
 
-=fa($size)
+=fa($size, $dimensions)
   font-size: $size
-  height: $size
-  line-height: $size
+  height: $dimensions
+  line-height: $dimensions
   text-align: center
-  width: $size
+  width: $dimensions
 
 =grow($color)
   position: relative
@@ -131,6 +131,14 @@ $desktop: 993px
 
 =mobile
   @media screen and (max-width: $tablet - 1px)
+    @content
+
+=tablet
+  @media screen and (min-width: $tablet)
+    @content
+
+=desktop
+  @media screen and (min-width: $desktop)
     @content
 
 =overlay
