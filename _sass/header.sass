@@ -1,5 +1,7 @@
+$magic: 36px
+
 .header
-  height: 36px
+  height: $magic
   left: 0
   position: absolute
   right: 0
@@ -7,30 +9,35 @@
 
 .jt
   display: block
-  height: 36px
+  height: $magic
   left: 50%
-  margin-left: -18px
+  margin-left: -($magic / 2)
   opacity: $opacity-strong
   position: absolute
-  width: 36px
+  top: 0
+  width: $magic
   svg
     display: block
-    height: 36px
-    width: 36px
+    height: $magic
+    width: $magic
     path
       fill: black
 
-+mobile
-  .toggle
-    line-height: 36px
-    position: absolute
-    text-align: center
-    top: 0
-    width: calc(50% - 36px)
-    &.is-menu
-      left: 0
-    &.is-elsewhere
-      right: 0
+.toggle
+  font-size: 16px
+  line-height: $magic
+  position: absolute
+  text-align: center
+  top: 0
+  width: calc(50% - 36px)
+  &.is-menu
+    left: 0
+  &.is-elsewhere
+    right: 0
+  +desktop
+    display: none
+
++until($desktop)
   .nav
     +overlay
     align-items: center
@@ -68,3 +75,37 @@
         opacity: 1
         transform: scale(1)
         visibility: visible
+
++desktop
+  .header
+    top: 150px
+  .jt
+    left: 0
+    margin-left: 0
+    opacity: 0.14
+    transition: opacity $speed $easing
+    svg
+      path
+        fill: black
+    &:hover,
+    &.is-active
+      opacity: $opacity-strong
+  .nav
+    left: 50%
+    margin-left: -330px
+    position: absolute
+    top: 150px
+    width: 940px - $column-width
+    li
+      float: left
+      font-size: 16px
+      line-height: $magic
+      margin-left: $column-gap
+      width: $column-width
+    &-link
+      color: black
+      opacity: $opacity-light
+      transition: opacity $speed $easing
+      &:hover,
+      &.is-active
+        opacity: $opacity-strong

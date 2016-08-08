@@ -13,7 +13,7 @@
     display: flex
     padding-top: 86px
   &-content
-    font-size: 20px
+    font-size: $size-medium
     margin: 0 40px
     a
       border-bottom: 2px solid $link
@@ -42,7 +42,7 @@
     text-align: center
     &-title
       color: $text-light
-      font-size: 24px
+      font-size: $size-large
       margin-bottom: 10px
       strong
         color: $text-strong
@@ -58,6 +58,13 @@
         color: $github
   &-dots
     display: none
+  +tablet
+    &-content
+      font-size: $size-medium-tablet
+      margin: 0 100px
+    &-follow
+      &-title
+        font-size: $size-large-tablet
 
 .index-section
   &.is-improbable

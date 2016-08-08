@@ -1,10 +1,12 @@
 html
   background: $background
-  font-size: $size-default
+  font-size: $size-normal
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
   min-width: 300px
   text-rendering: optimizeLegibility
+  +tablet
+    font-size: 20px
 
 article,
 aside,
@@ -51,6 +53,8 @@ pre
   margin: 0 auto
   max-width: 400px
   position: relative
+  +tablet
+    max-width: 640px
   +desktop
     max-width: 940px
 

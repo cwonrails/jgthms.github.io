@@ -122,19 +122,32 @@
   text-indent: -290486px
   width: $width
 
-$tablet: 769px
+$tablet: 601px
+$laptop: 769px
 $desktop: 993px
 
 =on($device)
   @media screen and (min-width: $device)
     @content
 
+=until($device)
+  @media screen and (max-width: $device - 1px)
+    @content
+
 =mobile
   @media screen and (max-width: $tablet - 1px)
     @content
 
+=touch
+  @media screen and (max-width: $laptop - 1px)
+    @content
+
 =tablet
   @media screen and (min-width: $tablet)
+    @content
+
+=laptop
+  @media screen and (min-width: $laptop)
     @content
 
 =desktop

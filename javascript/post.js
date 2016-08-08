@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+$(document).ready(function() {
 
   var $headings = $('#content h2, #content h3');
 

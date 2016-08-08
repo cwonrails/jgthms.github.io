@@ -9,31 +9,62 @@
 @import "base"
 @import "header"
 
-+mobile
-  .main
-    padding-top: 86px
+.main
+  padding-top: 86px
+  +desktop
+    padding-top: 186px
 
 .heading
   margin: 40px 20px
   text-align: center
   &-title
     color: $text-strong
-    font-size: 20px
+    font-size: $size-medium
     line-height: 1.2
+  +tablet
+    margin: 80px 20px
+    &-title
+      font-size: $size-medium-tablet
+  +desktop
+    margin: 20px 0
+    position: relative
+    text-align: left
+    &:before,
+    &:after
+      background: $text-strong
+      content: ""
+      display: inline-block
+      height: 100px
+      margin: 0 1px
+      vertical-align: top
+      width: 1px
+    &:before
+      margin-bottom: 10px
+    &:after
+      margin-top: 20px
 
 .tabs
+  font-size: $size-small
   margin-top: 10px
   text-align: center
-  a
+  a,
+  strong
     display: inline-block
-    font-size: $size-small
-    height: 32px
-    line-height: 32px
-    padding: 0 16px
+    height: 2.5em
+    line-height: 2.5em
+    padding: 0 1.5em
+    transition: background $speed $easing
     vertical-align: top
     &.is-active
       background: $text-strong
       color: white
+  a:not(.is-active):hover
+    background: white
+  +tablet
+    font-size: $size-small-tablet
+    margin-top: 20px
+  +desktop
+    text-align: left
 
 .brand
   +overlay
@@ -44,6 +75,36 @@
   svg
     path
       fill: hsl(0, 0%, 94%)
+
+.the
+  // animation: winterSpring 294ms ease-out
+  bottom: 10px
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 4px 100%, 4px 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 100%, 100% 100%, 100% 0%)
+  clip-path: polygon(0% 0%, 0% 100%, 4px 100%, 4px 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 100%, 100% 100%, 100% 0%)
+  display: none
+  left: 10px
+  position: fixed
+  right: 10px
+  top: 10px
+  +tablet
+    display: block
+
+.monolith
+  background: linear-gradient(-217deg, $green, $blue, $red)
+  bottom: 0
+  left: 0
+  position: absolute
+  right: 0
+  top: 0
+
+@keyframes winterSpring
+  from
+    transform: scale(1.04)
+  to
+    transform: scale(1)
+
+.the
+  z-index: 60
 
 .nav
   z-index: 50

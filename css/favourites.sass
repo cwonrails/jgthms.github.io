@@ -1,0 +1,58 @@
+---
+---
+
+@charset "utf-8"
+
+@import "variables"
+@import "functions"
+
+.favourites
+  margin: 0 20px
+  &-item
+    margin-bottom: 40px
+    position: relative
+  &-rank
+    box-shadow: inset 0 0 0 1px $link
+    border-radius: 290486px
+    color: $link
+    display: block
+    height: $size-medium * 2
+    left: 0
+    line-height: $size-medium * 2
+    position: absolute
+    text-align: center
+    top: 0
+    width: $size-medium * 2
+  &-name
+    color: $text-strong
+    font-size: $size-medium
+    line-height: 1.2
+    padding-left: 50px
+  &-domain,
+  &-developer
+    font-size: $size-small
+    line-height: 1.2
+    padding-left: 50px
+  &-developer
+    color: $text-light
+  &-cover
+    display: block
+    margin: 20px 0
+  &-content
+    p:not(:last-child)
+      margin-bottom: 1em
+  +tablet
+    &-rank
+      height: $size-medium-tablet * 2
+      line-height: $size-medium-tablet * 2
+      width: $size-medium-tablet * 2
+    &-name
+      font-size: $size-medium-tablet
+      padding-left: 70px
+    &-domain,
+    &-developer
+      font-size: $size-small-tablet
+      padding-left: 70px
+  +desktop
+    .heading
+      margin-left: ($column-width + $column-gap) * 2
