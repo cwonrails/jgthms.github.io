@@ -1,0 +1,57 @@
+=fa($size, $dimensions)
+  font-size: $size
+  height: $dimensions
+  line-height: $dimensions
+  text-align: center
+  width: $dimensions
+
+=overlay
+  bottom: 0
+  left: 0
+  position: absolute
+  right: 0
+  top: 0
+
+=selection($current-selector: false)
+  @if $current-selector
+    &::-moz-selection
+      @content
+    &::selection
+      @content
+  @else
+    \::-moz-selection
+      @content
+    \::selection
+      @content
+
+$tablet: 601px
+$laptop: 769px
+$desktop: 993px
+
+=from($device)
+  @media screen and (min-width: $device)
+    @content
+
+=until($device)
+  @media screen and (max-width: $device - 1px)
+    @content
+
+=mobile
+  @media screen and (max-width: $tablet - 1px)
+    @content
+
+=touch
+  @media screen and (max-width: $laptop - 1px)
+    @content
+
+=tablet
+  @media screen and (min-width: $tablet)
+    @content
+
+=laptop
+  @media screen and (min-width: $laptop)
+    @content
+
+=desktop
+  @media screen and (min-width: $desktop)
+    @content

@@ -4,7 +4,7 @@
 @charset "utf-8"
 
 @import "variables"
-@import "functions"
+@import "mixins"
 
 .post
   margin: 0 20px
@@ -41,6 +41,7 @@
   &-share
     background: white
     border-radius: 3px
+    font-size: $size-normal
     margin: 20px 0
     padding: 16px 20px
     text-align: center
@@ -69,6 +70,7 @@
         border-color: $twitter
         color: $twitter
   &-pagination
+    font-size: $size-normal
     padding-bottom: 20px
     a
       border: 1px solid $link
@@ -76,8 +78,13 @@
       display: block
       margin-top: 20px
       padding: 16px 20px
+      transition: none $speed $easing
+      transition-property: background, border, color
       strong
         display: block
+      &:hover
+        background: $link
+        color: $link-invert
   &-content
     margin-left: auto
     margin-right: auto
@@ -103,9 +110,6 @@
       a
         border-bottom: none
         margin-right: 10px
-        +on($desktop)
-          position: absolute
-          right: 100%
     aside
       color: $text-light
       font-size: $size-small
@@ -154,15 +158,14 @@
       p
         margin: 0
     table
-      background: hsl(0, 0%, 99%)
-      box-shadow: 0 1px 2px rgba(black, 0.05)
+      background: white
       font-size: $size-small
       margin: 20px 0
       width: 100%
       th,
       td
-        border: 1px solid hsl(0, 0%, 90%)
-        padding: 5px
+        border: 1px solid $border
+        padding: 1em
         text-align: left
         &.empty
           background: none
@@ -230,27 +233,18 @@
     &-introduction
       font-size: $size-medium-tablet
     &-content
+      h2,
+      h3
+        a
+          position: absolute
+          right: 100%
       aside
         font-size: $size-small-tablet
-      p
-        &.note
-          code
-            font-size: $size-small-tablet
       figure:not(.highlight)
-        margin: 40px
+        margin: 40px 0
       figcaption
         font-size: $size-small-tablet
       table
-        font-size: $size-small-tablet
-        margin-left: -80px
-        margin-right: -80px
-        width: 940px
-        th,
-        td
-          code
-            font-size: $size-small-tablet
-      code,
-      pre
         font-size: $size-small-tablet
       .top-highlight
         &:before
@@ -261,6 +255,21 @@
           position: absolute
           top: 5px
   +desktop
+    &-pagination
+      display: flex
+      &-previous
+        margin-right: 20px
+        order: 1
+      &-next
+        flex-grow: 1
+        order: 2
+      &-top
+        margin-left: 20px
+        order: 3
     &-content
+      table
+        margin-left: -160px
+        margin-right: -160px
+        width: 940px
       figure:not(.highlight)
         margin: 40px -160px

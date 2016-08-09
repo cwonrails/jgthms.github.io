@@ -4,7 +4,7 @@
 @charset "utf-8"
 
 @import "variables"
-@import "functions"
+@import "mixins"
 
 .favourites
   margin: 0 20px
@@ -33,11 +33,16 @@
     font-size: $size-small
     line-height: 1.2
     padding-left: 50px
+    a:hover
+      text-decoration: underline
   &-developer
     color: $text-light
   &-cover
     display: block
     margin: 20px 0
+    position: relative
+    img
+      display: block !important
   &-content
     p:not(:last-child)
       margin-bottom: 1em
@@ -56,3 +61,34 @@
   +desktop
     .heading
       margin-left: ($column-width + $column-gap) * 2
+    &-item
+      margin-bottom: 80px
+      padding-left: 400px
+    &-rank
+      height: 60px
+      line-height: 60px
+      width: 60px
+    &-name,
+    &-domain,
+    &-developer
+      padding-left: 0
+    &-cover
+      left: 80px
+      margin: 0
+      position: absolute
+      top: 0
+      width: 300px
+    &-content
+      margin-top: 20px
+
+a.favourites-cover
+  &:after
+    +overlay
+    background: black
+    content: ""
+    display: block
+    opacity: 0
+    transition: opacity $speed $easing
+  &:hover
+    &:after
+      opacity: $opacity-light
