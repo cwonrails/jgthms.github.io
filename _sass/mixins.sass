@@ -1,3 +1,15 @@
+=cover
+  &:after
+    +overlay
+    background: black
+    content: ""
+    display: block
+    opacity: 0
+    transition: opacity $speed $easing
+  &:hover
+    &:after
+      opacity: $opacity-light
+
 =fa($size, $dimensions)
   font-size: $size
   height: $dimensions

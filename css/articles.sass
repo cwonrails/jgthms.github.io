@@ -26,9 +26,11 @@
   &-border
     display: none
   &-article
-    margin-bottom: 40px
+    margin-bottom: $space-mobile
     padding-left: 20px
     position: relative
+    &:last-child
+      margin-bottom: 0
     &.is-recommended
       .articles-title
         font-weight: 700
@@ -82,14 +84,18 @@
       margin-left: $column-width + $column-gap
     &-year,
     &-season
+      background: $background
       display: block
       color: $link
       left: 0
       position: absolute
-      width: $column-width + $column-gap
+      width: $column-width
     &-year
       z-index: 1
     &-season
       left: $column-width + $column-gap
     &-article
+      margin-bottom: $space-desktop
       padding-left: ($column-width + $column-gap) * 2
+      &:last-child
+        margin-bottom: 0

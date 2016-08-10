@@ -9,9 +9,9 @@
 .links
   margin: 0 20px
   &-item
-    border-top: 1px solid $border
-    padding: 20px 0
     position: relative
+    & + &
+      margin-top: $space-mobile
   &-category
     margin-bottom: 10px
     span
@@ -57,13 +57,13 @@
     margin-top: 5px
   +tablet
     &-item
-      padding: 30px 0 30px 160px
+      padding-left: $column-width + $column-gap
     &-category
       left: 0
       margin-bottom: 0
       position: absolute
       text-align: right
-      top: 35px
+      top: 5px
       width: 120px
       span
         font-size: $size-small-tablet
@@ -81,3 +81,6 @@
       &:after
         margin-left: -1px
         margin-right: -1px
+    &-item
+      & + &
+        margin-top: $space-desktop
