@@ -6,15 +6,90 @@
 @import "variables"
 @import "mixins"
 
+$behind: -100px
+$medium: -50px
+$front: 50px
+
 .index
   text-align: center
   &-section
     align-items: center
     display: flex
     padding-top: 86px
+  &-image
+    position: absolute
+    &.is-improbable-icon
+      height: 496px
+      left: 75%
+      top: 50%
+      transform: translate3d(-50%, -75%, $behind)
+      width: 486px
+      z-index: 2
+      .index-image-background
+        background-image: url("/images/index/improbable-icon.png")
+    &.is-worlds-adrift
+      height: 622px
+      left: 0
+      top: 50%
+      transform: translate3d(-14%, -50%, $medium)
+      width: 1024px
+      z-index: 4
+      .index-image-background
+        background-image: url("/images/index/worlds-adrift.png")
+    &.is-improbable
+      height: 360px
+      left: 53%
+      top: 50%
+      transform: translate3d(0, 0, $front)
+      width: 720px
+      z-index: 6
+      .index-image-background
+        background-image: url("/images/index/improbable.jpg")
+    &.is-marksheet-m
+      height: 392px
+      right: 75%
+      top: 50%
+      transform: scale(2) translate3d(0, -50%, $behind)
+      width: 377px
+      z-index: 2
+      .index-image-background
+        background-image: url("/images/index/marksheet-m.png")
+    &.is-marksheet-frame
+      height: 800px
+      left: 75%
+      top: 50%
+      transform: translate3d(-25%, -50%, $medium)
+      width: 600px
+      z-index: 4
+      .index-image-background
+        background-image: url("/images/index/marksheet-frame.png")
+    &.is-marksheet
+      height: 240px
+      left: 75%
+      top: 50%
+      transform: translate3d(-50%, -50%, $front)
+      width: 240px
+      z-index: 6
+      .index-image-background
+        background-image: url("/images/index/marksheet.png")
+    &.is-bulma
+      height: 320px
+      left: 75%
+      top: 50%
+      transform: translate3d(-50%, -50%, 0)
+      width: 220px
+      .index-image-background
+        background-image: url("/images/index/bulma.png")
+    &-background
+      +overlay
+      background-position: 0 0
+      background-repeat: no-repeat
+      background-size: 100% 100%
   &-content
     font-size: $size-medium
     margin: 0 40px
+    position: relative
+    z-index: 8
     a
       border-bottom: 2px solid $link
   &-more
@@ -65,6 +140,40 @@
     &-follow
       &-title
         font-size: $size-large-tablet
+  +desktop
+    height: 100vh
+    overflow: auto
+    overflow-x: hidden
+    padding-top: 0
+    perspective: 348px
+    text-align: left
+    &-section
+      height: 100vh
+      min-height: 640px
+      position: relative
+      .container
+        width: 940px
+    &-content
+      font-size: 32px
+      margin: 0 50% 0 0
+    &-more
+      margin-left: 0
+      margin-right: 50%
+      position: relative
+      &-subtitle
+        margin-bottom: 0
+        margin-right: 20px
+        margin-top: -11px
+        position: absolute
+        right: 100%
+        top: 50%
+        white-space: nowrap
+      &-content
+        justify-content: flex-start
+        li
+          margin-left: 0
+          margin-right: 20px
+          margin-top: 0
 
 .index-section
   &.is-improbable

@@ -520,15 +520,7 @@
       background: $cyan
   .title
     a
-      &:hover
-        background: $link
-        color: white
-        text-decoration: none
-      &:visited
-        color: $visited
-        &:hover
-          background: $visited
-          color: white
+      +visited
   .subtitle
     margin-top: 5px
   +on($desktop)

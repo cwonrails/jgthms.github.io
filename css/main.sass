@@ -12,7 +12,7 @@
 .main
   padding: 86px 0
   +desktop
-    padding: 186px 0
+    padding: calc(21vh + 36px) 0
 
 .heading
   margin: 40px 20px
@@ -34,7 +34,7 @@
       background: $text-strong
       content: ""
       display: inline-block
-      height: 100px
+      height: 14vh
       margin-left: 1px
       margin-right: 1px
       vertical-align: top
@@ -78,10 +78,8 @@
       fill: hsl(0, 0%, 94%)
 
 .the
-  // animation: winterSpring 294ms ease-out
+  +clippath(4px)
   bottom: 10px
-  -webkit-clip-path: polygon(0% 0%, 0% 100%, 4px 100%, 4px 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 100%, 100% 100%, 100% 0%)
-  clip-path: polygon(0% 0%, 0% 100%, 4px 100%, 4px 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 100%, 100% 100%, 100% 0%)
   display: none
   left: 10px
   position: fixed

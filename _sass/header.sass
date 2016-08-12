@@ -78,7 +78,7 @@ $magic: 36px
 
 +desktop
   .header
-    top: 150px
+    top: 21vh
   .jt
     left: 0
     margin-left: 0
@@ -91,21 +91,47 @@ $magic: 36px
     &.is-active
       opacity: $opacity-strong
   .nav
-    left: 50%
-    margin-left: -330px
-    position: absolute
-    top: 150px
-    width: 940px - $column-width
-    li
-      float: left
-      font-size: 16px
-      line-height: $magic
-      margin-left: $column-gap
-      width: $column-width
     &-link
       color: black
       opacity: $opacity-light
-      transition: opacity $speed $easing
+      transition: none $speed $easing
+      transition-property: background, opacity
       &:hover,
       &.is-active
         opacity: $opacity-strong
+    &.is-menu
+      left: 50%
+      margin-left: -330px
+      position: absolute
+      top: 21vh
+      width: 940px - $column-width
+      li
+        float: left
+        font-size: 16px
+        line-height: $magic
+        margin-left: $column-gap
+        width: $column-width
+    &.is-elsewhere
+      font-size: 14px
+      margin-top: -180px
+      opacity: $opacity-light
+      padding: 40px 0
+      position: fixed
+      right: 29px
+      text-align: center
+      top: 50%
+      transform: scale(0.86)
+      transform-origin: right center
+      transition: none $speed $easing
+      transition-property: opacity, transform
+      a
+        border-radius: 290486px
+        display: block
+        height: 40px
+        line-height: 40px
+        width: 40px
+        &:hover
+          background: white
+      &:hover
+        opacity: $opacity-strong
+        transform: scale(1)

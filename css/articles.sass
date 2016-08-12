@@ -55,15 +55,7 @@
     line-height: 1.2
     a
       display: block
-      &:hover
-        background: $link
-        color: $link-invert
-        text-decoration: none
-      &:visited
-        color: $visited
-        &:hover
-          background: $visited
-          color: $link-invert
+      +visited
   &-introduction
     color: $text-light
     font-size: $size-normal

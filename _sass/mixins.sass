@@ -1,3 +1,7 @@
+=clippath($edge)
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, $edge 100%, $edge $edge, calc(100% - #{$edge}) $edge, calc(100% - #{$edge}) calc(100% - #{$edge}), $edge calc(100% - #{$edge}), $edge 100%, 100% 100%, 100% 0%)
+  clip-path: polygon(0% 0%, 0% 100%, $edge 100%, $edge $edge, calc(100% - #{$edge}) $edge, calc(100% - #{$edge}) calc(100% - #{$edge}), $edge calc(100% - #{$edge}), $edge 100%, 100% 100%, 100% 0%)
+
 =cover
   &:after
     +overlay
@@ -35,6 +39,17 @@
       @content
     \::selection
       @content
+
+=visited
+  &:hover
+    background: $link
+    color: $link-invert
+    text-decoration: none
+  &:visited
+    color: $visited
+    &:hover
+      background: $visited
+      color: $link-invert
 
 $tablet: 601px
 $laptop: 769px
