@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body>
+  <body class="{% if page.route %}is-{{page.route}}{% elsif page.layout %}is-{{page.layout}}{% endif %}">
     <div class="brand">
       {% include svg/jt.html %}
     </div>

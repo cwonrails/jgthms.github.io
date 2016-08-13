@@ -37,6 +37,7 @@ projects:
 - name: CSS Off 2013
   device: ipad-h
   url: http://jgthms.com/css-off-2013
+  domain: jgthms.com/css-off-2013
   slug: css-off-2013
   date: November 2013
   content: >
@@ -47,6 +48,7 @@ projects:
 - name: JukeTube
   device: macbook-air
   url: http://jgthms.com/juketube
+  domain: jgthms.com/juketube
   slug: juketube
   date: October 2013
   content: >
@@ -97,6 +99,7 @@ projects:
 - name: Golf de Margaux
   device: macbook-air
   url: http://jgthms.com/golf-de-margaux
+  domain: jgthms.com/golf-de-margaux
   slug: golf-de-margaux
   date: July 2007
   content: >
@@ -107,6 +110,7 @@ projects:
 - name: bbxworld
   device: macbook-air
   url: http://jgthms.com/bbxworld
+  domain: jgthms.com/bbxworld
   slug: bbxworld
   date: June 2007
   content: >
@@ -150,7 +154,11 @@ projects:
 
         <p class="projects-url">
           <a href="{{project.url}}">
-            {{project.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first}}
+            {% if project.domain == nil or project.domain == "" %}
+              {{project.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first}}
+            {% else %}
+              {{project.domain}}
+            {% endif %}
           </a>
         </p>
 

@@ -158,10 +158,12 @@ games:
       <span class="favourites-rank">{{11 | minus:forloop.index}}</span>
       <h2 class="favourites-name">{{game.name}}</h2>
       <h3 class="favourites-developer">{{game.developer}}</h3>
-      <img class="favourites-cover lazy" data-src="/images/favourites/{{game.slug}}.jpg" src="/images/favourites/gameboy-loading.png">
-      <noscript>
-        <img class="favourites-cover" src="/images/favourites/{{game.slug}}.jpg">
-      </noscript>
+      <figure class="favourites-cover">
+        <img class="lazy" data-src="/images/favourites/{{game.slug}}.jpg" src="/images/favourites/gameboy-loading.png">
+        <noscript>
+          <img src="/images/favourites/{{game.slug}}.jpg">
+        </noscript>
+      </figure>
       <div class="favourites-content">
         {{game.content}}
       </div>
