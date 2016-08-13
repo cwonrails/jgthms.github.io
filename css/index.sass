@@ -24,7 +24,7 @@ $front: 100px
       height: 496px
       left: 75%
       top: 50%
-      transform: translate3d(-50%, -75%, $behind)
+      transform: translate3d(0, -75%, $behind)
       width: 486px
       z-index: 2
       .index-image-background
@@ -33,16 +33,16 @@ $front: 100px
       height: 622px
       left: 0
       top: 50%
-      transform: translate3d(-14%, -50%, $front)
+      transform: translate3d(-15%, -50%, $front)
       width: 1024px
       z-index: 4
       .index-image-background
         background-image: url("/images/index/worlds-adrift.png")
     &.is-improbable
+      bottom: 0
       height: 360px
-      left: 53%
-      top: 50%
-      transform: translate3d(0, 0, $middle)
+      left: 50%
+      transform: translate3d(10%, 10%, $middle)
       width: 720px
       z-index: 70
       .index-image-background
@@ -79,18 +79,18 @@ $front: 100px
     // Bulma
     &.is-bulma-type
       height: 200px
-      right: 75%
+      left: 50%
       top: 50%
-      transform: translate3d(-50%, -50%, $behind)
+      transform: translate3d(100%, -50%, $behind)
       width: 537px
       z-index: 2
       .index-image-background
         background-image: url("/images/index/bulma-type.png")
     &.is-bulma
       height: 320px
-      left: 75%
+      left: 50%
       top: 50%
-      transform: translate3d(-50%, -50%, $front)
+      transform: translate3d(0, -50%, $front)
       width: 220px
       z-index: 70
       .index-image-background
@@ -109,16 +109,16 @@ $front: 100px
       height: 576px
       left: 0
       top: 50%
-      transform: translate3d(-14%, -50%, -100px)
+      transform: translate3d(-15%, -50%, -100px)
       width: 1024px
       z-index: 4
       .index-image-background
         background-image: url("/images/index/ivanballini-frame.png")
     &.is-ivanballini
       height: 576px
-      left: 60%
+      left: 50%
       top: 50%
-      transform: translate3d(0, -30%, 25px)
+      transform: translate3d(10%, -30%, 25px)
       width: 1024px
       z-index: 70
       .index-image-background
@@ -135,6 +135,8 @@ $front: 100px
     z-index: 8
     a
       border-bottom: 2px solid $link
+    br
+      display: none
   &-more
     margin: 40px 40px 0
     opacity: $opacity-light
@@ -210,6 +212,8 @@ $front: 100px
     &-content
       font-size: 32px
       margin: 0 50% 0 0
+      br
+        display: block
     &-more
       margin-left: 0
       margin-right: 50%

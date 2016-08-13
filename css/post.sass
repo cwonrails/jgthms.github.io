@@ -40,9 +40,18 @@
     line-height: 1.2
   &-share
     font-size: $size-normal
-    margin: 20px 0
+    margin-bottom: 20px
     text-align: center
+    &:before
+      background: $text-strong
+      content: ""
+      display: block
+      height: 1px
+      margin: 7vh auto
+      vertical-align: top
+      width: 14vw
     &-title
+      color: $text-light
       font-style: italic
       margin-bottom: 10px
     &-button
@@ -76,7 +85,8 @@
   &-pagination
     font-size: $size-normal
     padding-bottom: 20px
-    a
+    a,
+    span
       border: 1px solid $link
       border-radius: 3px
       display: block
@@ -89,6 +99,11 @@
       &:hover
         background: $link
         color: $link-invert
+      &.is-disabled
+        border-color: $text-light
+        color: $text-light
+        opacity: $opacity-light
+        pointer-events: none
   &-content
     margin-left: auto
     margin-right: auto
@@ -221,9 +236,9 @@
         content: ""
         display: block
         height: 1px
-        margin: 50px auto
+        margin: 7vh auto
         vertical-align: top
-        width: 100px
+        width: 14vw
     &-info
       font-size: $size-small-tablet
     &-title
@@ -253,11 +268,11 @@
           position: absolute
           top: 5px
     &-share
-      align-items: center
-      display: flex
-      margin-left: auto
-      margin-right: auto
+      margin: 7vh auto
       max-width: 620px
+      &-nav
+        align-items: center
+        display: flex
       &-title
         margin-bottom: 0
       &-button
@@ -268,12 +283,15 @@
   +desktop
     &-pagination
       display: flex
+      a,
+      span
+        margin-top: 0
       &-previous
         margin-right: 20px
         order: 1
       &-next
-        flex-grow: 1
         order: 2
+        width: 620px
       &-top
         margin-left: 20px
         order: 3

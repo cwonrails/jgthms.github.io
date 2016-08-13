@@ -22,30 +22,32 @@ route: post
     {{content}}
   </article>
 
-  <div class="post-share">
-    <p class="post-share-title">Liked this article?</p>
-    <a
-      class="post-share-button is-facebook"
-      href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}"
-      rel="nofollow"
-      target="_blank"
-      >
-      <i class="fa fa-facebook"></i>
-      <span>Share on</span> <strong>Facebook</strong>
-    </a>
-    <a
-      class="post-share-button is-twitter"
-      data-social-network="Twitter"
-      data-social-action="tweet"
-      data-social-target="{{site.url}}{{page.url}}"
-      href="https://twitter.com/intent/tweet?url={{site.url}}{{page.url}}&text={{page.title}}&via=jgthms"
-      rel="nofollow"
-      target="_blank"
-      >
-      <i class="fa fa-twitter"></i>
-      <span>Share on</span> <strong>Twitter</strong>
-    </a>
-  </div>
+  <aside class="post-share">
+    <nav class="post-share-nav">
+      <p class="post-share-title">Liked this article?</p>
+      <a
+        class="post-share-button is-facebook"
+        href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}"
+        rel="nofollow"
+        target="_blank"
+        >
+        <i class="fa fa-facebook"></i>
+        <span>Share on</span> <strong>Facebook</strong>
+      </a>
+      <a
+        class="post-share-button is-twitter"
+        data-social-network="Twitter"
+        data-social-action="tweet"
+        data-social-target="{{site.url}}{{page.url}}"
+        href="https://twitter.com/intent/tweet?url={{site.url}}{{page.url}}&text={{page.title}}&via=jgthms"
+        rel="nofollow"
+        target="_blank"
+        >
+        <i class="fa fa-twitter"></i>
+        <span>Share on</span> <strong>Twitter</strong>
+      </a>
+    </nav>
+  </aside>
 
   <nav class="post-pagination">
     {% if page.previous %}
@@ -59,6 +61,10 @@ route: post
       <a class="post-pagination-previous" href="{{page.next.url}}" rel="next">
         &larr; Previous
       </a>
+    {% else %}
+      <span class="post-pagination-previous is-disabled">
+        &larr; Previous
+      </span>
     {% endif %}
 
     <a id="top" class="post-pagination-top">
