@@ -6,9 +6,9 @@
 @import "variables"
 @import "mixins"
 
-$behind: -100px
-$medium: -50px
-$front: 50px
+$behind: -200px
+$middle: -50px
+$front: 100px
 
 .index
   text-align: center
@@ -17,7 +17,9 @@ $front: 50px
     display: flex
     padding-top: 86px
   &-image
+    display: none
     position: absolute
+    // Improbable
     &.is-improbable-icon
       height: 496px
       left: 75%
@@ -31,7 +33,7 @@ $front: 50px
       height: 622px
       left: 0
       top: 50%
-      transform: translate3d(-14%, -50%, $medium)
+      transform: translate3d(-14%, -50%, $front)
       width: 1024px
       z-index: 4
       .index-image-background
@@ -40,16 +42,18 @@ $front: 50px
       height: 360px
       left: 53%
       top: 50%
-      transform: translate3d(0, 0, $front)
+      transform: translate3d(0, 0, $middle)
       width: 720px
-      z-index: 6
+      z-index: 70
       .index-image-background
         background-image: url("/images/index/improbable.jpg")
+    // MarkSheet
     &.is-marksheet-m
       height: 392px
-      right: 75%
+      right: 100%
       top: 50%
       transform: scale(2) translate3d(0, -50%, $behind)
+      transform-origin: right center
       width: 377px
       z-index: 2
       .index-image-background
@@ -58,28 +62,67 @@ $front: 50px
       height: 800px
       left: 75%
       top: 50%
-      transform: translate3d(-25%, -50%, $medium)
+      transform: translate3d(-25%, -50%, $middle)
       width: 600px
       z-index: 4
       .index-image-background
         background-image: url("/images/index/marksheet-frame.png")
     &.is-marksheet
       height: 240px
-      left: 75%
+      left: 60%
       top: 50%
       transform: translate3d(-50%, -50%, $front)
       width: 240px
-      z-index: 6
+      z-index: 70
       .index-image-background
         background-image: url("/images/index/marksheet.png")
+    // Bulma
+    &.is-bulma-type
+      height: 200px
+      right: 75%
+      top: 50%
+      transform: translate3d(-50%, -50%, $behind)
+      width: 537px
+      z-index: 2
+      .index-image-background
+        background-image: url("/images/index/bulma-type.png")
     &.is-bulma
       height: 320px
       left: 75%
       top: 50%
-      transform: translate3d(-50%, -50%, 0)
+      transform: translate3d(-50%, -50%, $front)
       width: 220px
+      z-index: 70
       .index-image-background
         background-image: url("/images/index/bulma.png")
+    // Ivan Ballini
+    &.is-ivanballini-logo
+      height: 178px
+      left: 50%
+      top: 50%
+      transform: translate3d(-50%, -50%, $behind)
+      width: 804px
+      z-index: 2
+      .index-image-background
+        background-image: url("/images/index/ivanballini-logo.png")
+    &.is-ivanballini-frame
+      height: 576px
+      left: 0
+      top: 50%
+      transform: translate3d(-14%, -50%, -100px)
+      width: 1024px
+      z-index: 4
+      .index-image-background
+        background-image: url("/images/index/ivanballini-frame.png")
+    &.is-ivanballini
+      height: 576px
+      left: 60%
+      top: 50%
+      transform: translate3d(0, -30%, 25px)
+      width: 1024px
+      z-index: 70
+      .index-image-background
+        background-image: url("/images/index/ivanballini.jpg")
     &-background
       +overlay
       background-position: 0 0
@@ -118,19 +161,28 @@ $front: 50px
     &-title
       color: $text-light
       font-size: $size-large
-      margin-bottom: 10px
+      margin-bottom: 20px
       strong
         color: $text-strong
         font-weight: 400
     &-icon
       display: inline-block
       font-size: 28px
-      padding: 16px 20px
+      height: 60px
+      line-height: 60px
       vertical-align: top
+      text-align: center
+      width: 60px
       &.is-twitter
+        +pop($twitter)
         color: $twitter
+        &:hover
+          color: white
       &.is-github
+        +pop($github)
         color: $github
+        &:hover
+          color: white
   &-dots
     display: none
   +tablet
@@ -144,7 +196,7 @@ $front: 50px
     height: 100vh
     overflow: auto
     overflow-x: hidden
-    padding-top: 0
+    padding: 0
     perspective: 348px
     text-align: left
     &-section
@@ -153,6 +205,8 @@ $front: 50px
       position: relative
       .container
         width: 940px
+    &-image
+      display: block
     &-content
       font-size: 32px
       margin: 0 50% 0 0
@@ -174,6 +228,9 @@ $front: 50px
           margin-left: 0
           margin-right: 20px
           margin-top: 0
+    &-follow
+      align-items: center
+      min-height: 0
 
 .index-section
   &.is-improbable
@@ -181,21 +238,33 @@ $front: 50px
       a
         border-bottom-color: $improbable
         color: $improbable
+        &:hover
+          background-color: $improbable
+          color: white
   &.is-marksheet
     .index-content
       a
         border-bottom-color: $marksheet
         color: $marksheet
+        &:hover
+          background-color: $marksheet
+          color: white
   &.is-bulma
     .index-content
       a
         border-bottom-color: $bulma
         color: $bulma
+        &:hover
+          background-color: $bulma
+          color: white
   &.is-ivanballini
     .index-content
       a
         border-bottom-color: $ivanballini
         color: $ivanballini
+        &:hover
+          background-color: $ivanballini
+          color: white
   &.is-follow
     justify-content: center
     padding-bottom: 86px

@@ -99,6 +99,20 @@ $magic: 36px
       &:hover,
       &.is-active
         opacity: $opacity-strong
+      &.is-github
+        +pop($github)
+      &.is-instagram
+        +pop($instagram)
+      &.is-rss
+        +pop($rss)
+      &.is-hacker-news
+        +pop($hacker-news)
+      &.is-soundcloud
+        +pop($soundcloud)
+      &.is-twitter
+        +pop($twitter)
+      &.is-email
+        +pop($jt)
     &.is-menu
       left: 50%
       margin-left: -330px
@@ -131,7 +145,7 @@ $magic: 36px
         line-height: 40px
         width: 40px
         &:hover
-          background: white
+          color: white
       &:hover
         opacity: $opacity-strong
         transform: scale(1)

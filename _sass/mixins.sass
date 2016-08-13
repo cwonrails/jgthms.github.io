@@ -28,6 +28,21 @@
   right: 0
   top: 0
 
+=pop($color)
+  position: relative
+  .fa
+    position: relative
+  &:before
+    +overlay
+    background: $color
+    border-radius: 290486px
+    content: " "
+    display: block
+    opacity: 0
+  &:hover
+    &:before
+      animation: jelly-pop 1000ms linear both
+
 =selection($current-selector: false)
   @if $current-selector
     &::-moz-selection
