@@ -1,30 +1,12 @@
 html
-  background: white
-  font-size: $size-default
+  background: $background
+  font-size: $size-normal
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
   min-width: 300px
   text-rendering: optimizeLegibility
-
-body
-  color: $text
-  font-family: $font-family-primary
-  font-size: 1rem
-  letter-spacing: -0.04em
-  line-height: 1.25
-
-a
-  color: $link
-  cursor: pointer
-  text-decoration: none
-  transition: all $speed $easing
-
-img
-  max-height: 100%
-  max-width: 100%
-
-strong
-  color: $title
+  +tablet
+    font-size: 20px
 
 article,
 aside,
@@ -35,14 +17,49 @@ hgroup,
 section
   display: block
 
+body
+  color: $text
+  font-family: $font-family-primary
+  font-size: 1rem
+  line-height: 1.6
+
+a
+  color: $link
+  cursor: pointer
+  text-decoration: none
+  transition: none $speed $easing
+  transition-property: background, color
+
+img
+  max-height: 100%
+  max-width: 100%
+
+hr
+  border-top: 1px solid $link
+  margin: 0
+
+strong
+  color: $text-strong
+
+svg
+  height: auto
+  width: auto
+
 pre
   white-space: pre
   word-wrap: normal
 
 .container
   margin: 0 auto
-  max-width: 940px
+  max-width: 400px
   position: relative
+  +tablet
+    max-width: 640px
+  +desktop
+    max-width: 940px
+
+.fa
+  line-height: inherit
 
 +selection
   background: $link

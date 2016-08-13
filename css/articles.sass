@@ -1,0 +1,100 @@
+---
+---
+
+@charset "utf-8"
+
+@import "variables"
+@import "mixins"
+
+.articles
+  margin: 0 20px
+  &-year,
+  &-season
+    display: none
+    font-size: $size-normal
+  &-year
+    color: $link
+  &-season
+    &.is-win
+      color: $cyan
+    &.is-spr
+      color: $green
+    &.is-sum
+      color: $yellow
+    &.is-aut
+      color: $orange
+  &-border
+    display: none
+  &-article
+    margin-bottom: $space-mobile
+    padding-left: 20px
+    position: relative
+    &:last-child
+      margin-bottom: 0
+    &.is-recommended
+      .articles-title
+        font-weight: 700
+  &-star
+    color: $yellow
+    left: -8px
+    position: absolute
+    text-align: center
+    top: 2px
+    width: 20px
+  &-info
+    float: right
+    font-size: $size-small
+    line-height: 20px
+    margin-left: 10px
+    padding-top: 4px
+    text-align: right
+  &-date
+    display: block
+  &-title
+    font-size: $size-medium
+    line-height: 1.2
+    a
+      display: block
+      +visited
+  &-introduction
+    color: $text-light
+    font-size: $size-normal
+    line-height: 1.2
+    margin-top: 5px
+  &.only-recommended
+    .articles-article:not(.is-recommended)
+      display: none
+  +tablet
+    &-info
+      font-size: $size-small-tablet
+    &-title
+      font-size: $size-medium-tablet
+      a
+        display: inline
+  +desktop
+    .heading
+      margin-left: $column-width + $column-gap
+    &-year,
+    &-season
+      background: $background
+      display: block
+      color: $link
+      left: 0
+      position: absolute
+      width: $column-width
+    &-year
+      z-index: 1
+    &-season
+      left: $column-width + $column-gap
+    &-article
+      margin-bottom: $space-desktop
+      padding-left: ($column-width + $column-gap) * 2
+      &:last-child
+        margin-bottom: 0
+    &-star
+      left: 280px
+      line-height: 33px
+      position: absolute
+      text-align: center
+      top: 0
+      width: 30px

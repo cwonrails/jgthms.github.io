@@ -1,0 +1,86 @@
+.main
+  padding: 86px 0
+  +desktop
+    padding: calc(21vh + 36px) 0
+
+.heading
+  margin: 40px 20px
+  text-align: center
+  &-title
+    color: $text-strong
+    font-size: $size-medium
+    line-height: 1.2
+  +tablet
+    margin: 80px 20px
+    &-title
+      font-size: $size-medium-tablet
+  +desktop
+    margin: 20px 0
+    position: relative
+    text-align: left
+    &:before,
+    &:after
+      background: $text-strong
+      content: ""
+      display: inline-block
+      height: 14vh
+      margin-left: 1px
+      margin-right: 1px
+      vertical-align: top
+      width: 1px
+    &:before
+      margin-bottom: 10px
+    &:after
+      margin-top: 20px
+
+.tabs
+  font-size: $size-small
+  margin-top: 10px
+  text-align: center
+  a,
+  strong
+    display: inline-block
+    height: 2.5em
+    line-height: 2.5em
+    padding: 0 1.5em
+    transition: background $speed $easing
+    vertical-align: top
+    &.is-active
+      background: $text-strong
+      color: white
+  a:not(.is-active):hover
+    background: white
+  +tablet
+    font-size: $size-small-tablet
+    margin-top: 20px
+  +desktop
+    text-align: left
+
+.brand
+  +overlay
+  align-items: center
+  display: flex
+  justify-content: center
+  position: fixed
+  svg
+    path
+      fill: hsl(0, 0%, 94%)
+
+.the
+  +clippath(4px)
+  bottom: 10px
+  display: none
+  left: 10px
+  position: fixed
+  right: 10px
+  top: 10px
+  +tablet
+    display: block
+
+.monolith
+  background: linear-gradient(-217deg, $green, $blue, $red)
+  bottom: 0
+  left: 0
+  position: absolute
+  right: 0
+  top: 0

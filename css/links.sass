@@ -1,0 +1,78 @@
+---
+---
+
+@charset "utf-8"
+
+@import "variables"
+@import "mixins"
+
+.links
+  margin: 0 20px
+  &-item
+    position: relative
+    & + &
+      margin-top: $space-mobile
+  &-category
+    margin-bottom: 10px
+    span
+      background: #8e8e93
+      border-radius: 3px
+      color: white
+      display: inline-block
+      font-size: $size-small
+      height: 24px
+      line-height: 24px
+      padding: 0 8px
+      vertical-align: top
+    &.is-design
+      span
+        background: $blue
+    &.is-gaming
+      span
+        background: $red
+    &.is-life
+      span
+        background: $green
+    &.is-programming
+      span
+        background: $orange
+    &.is-science
+      span
+        background: $cyan
+  &-title
+    font-size: $size-medium
+    line-height: 1.2
+    a
+      +visited
+  &-domain
+    font-size: $size-small
+    margin-top: 5px
+  +tablet
+    &-item
+      padding-left: $column-width + $column-gap
+    &-category
+      left: 0
+      margin-bottom: 0
+      position: absolute
+      text-align: right
+      top: 5px
+      width: 120px
+      span
+        font-size: $size-small-tablet
+    &-title
+      font-size: $size-medium-tablet
+    &-domain
+      font-size: $size-small-tablet
+  +desktop
+    .heading,
+    .tabs
+      text-align: right
+    .heading
+      margin-right: ($column-width + $column-gap) * 2 - $column-gap
+      &:before,
+      &:after
+        margin-left: -1px
+        margin-right: -1px
+    &-item
+      & + &
+        margin-top: $space-desktop

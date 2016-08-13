@@ -1,5 +1,4 @@
-jQuery(document).ready(function ($) {
-
+$(document).ready(function() {
   function R(s) {
     return R13(R5(s));
   }
@@ -38,9 +37,15 @@ jQuery(document).ready(function ($) {
     $('html').addClass(target + '-open');
   });
 
-  $overlay.click( function() {
-    $('html').removeClass('menu-open elsewhere-open');
+  $('.overlay, .nav').click( function(e) {
+    if (e.target == this) {
+      console.log('this');
+      $('html').removeClass('menu-open elsewhere-open');
+    } else {
+      console.log('else');
+      return true;
+    }
   });
 
-  $('img.lazy').lazy();
+  $('img.lazy').unveil();
 });

@@ -1,6 +1,8 @@
 name: Jeremy Thomas
-description: Personal blog of Jeremy Thomas
+description: Frontend Designer from Bordeaux
 url: http://jgthms.com
 markdown: kramdown
 permalink: :title.html
 exclude: ['_backup']
+sass:
+  style: compressed

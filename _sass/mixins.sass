@@ -1,0 +1,99 @@
+=clippath($edge)
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, $edge 100%, $edge $edge, calc(100% - #{$edge}) $edge, calc(100% - #{$edge}) calc(100% - #{$edge}), $edge calc(100% - #{$edge}), $edge 100%, 100% 100%, 100% 0%)
+  clip-path: polygon(0% 0%, 0% 100%, $edge 100%, $edge $edge, calc(100% - #{$edge}) $edge, calc(100% - #{$edge}) calc(100% - #{$edge}), $edge calc(100% - #{$edge}), $edge 100%, 100% 100%, 100% 0%)
+
+=cover
+  &:after
+    +overlay
+    background: black
+    content: ""
+    display: block
+    opacity: 0
+    transition: opacity $speed $easing
+  &:hover
+    &:after
+      opacity: $opacity-light
+
+=fa($size, $dimensions)
+  font-size: $size
+  height: $dimensions
+  line-height: $dimensions
+  text-align: center
+  width: $dimensions
+
+=overlay
+  bottom: 0
+  left: 0
+  position: absolute
+  right: 0
+  top: 0
+
+=pop($color)
+  position: relative
+  .fa
+    position: relative
+  &:before
+    +overlay
+    background: $color
+    border-radius: 290486px
+    content: " "
+    display: block
+    opacity: 0
+  &:hover
+    &:before
+      animation: jelly-pop 1000ms linear both
+
+=selection($current-selector: false)
+  @if $current-selector
+    &::-moz-selection
+      @content
+    &::selection
+      @content
+  @else
+    \::-moz-selection
+      @content
+    \::selection
+      @content
+
+=visited
+  &:hover
+    background: $link
+    color: $link-invert
+    text-decoration: none
+  &:visited
+    color: $visited
+    &:hover
+      background: $visited
+      color: $link-invert
+
+$tablet: 601px
+$laptop: 769px
+$desktop: 993px
+
+=from($device)
+  @media screen and (min-width: $device)
+    @content
+
+=until($device)
+  @media screen and (max-width: $device - 1px)
+    @content
+
+=mobile
+  @media screen and (max-width: $tablet - 1px)
+    @content
+
+=touch
+  @media screen and (max-width: $laptop - 1px)
+    @content
+
+=tablet
+  @media screen and (min-width: $tablet)
+    @content
+
+=laptop
+  @media screen and (min-width: $laptop)
+    @content
+
+=desktop
+  @media screen and (min-width: $desktop)
+    @content
