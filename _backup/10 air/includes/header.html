@@ -1,0 +1,52 @@
+<header class="header">
+  <div class="container">
+    <a class="jt{% if page.route == 'index' %} active{% endif %}" href="/">
+      <span class="a">J</span>
+      <span class="b">e</span>
+      <span class="c">r</span>
+      <span class="d">e</span>
+      <span class="e">m</span>
+      <span class="f">y</span>
+      <span class="g"></span>
+      <span class="h">G</span>
+      <span class="i">.</span>
+      <span class="j"></span>
+      <span class="k">T</span>
+      <span class="l">h</span>
+      <span class="m">o</span>
+      <span class="n">m</span>
+      <span class="o">a</span>
+      <span class="p">s</span>
+    </a>
+
+    <a id="toggle-menu" class="toggle toggle-menu" data-target="menu">
+      <span>Menu</span>
+      <i class="fa fa-bars"></i>
+    </a>
+
+    <a id="toggle-elsewhere" class="toggle toggle-elsewhere" data-target="elsewhere">
+      <span>Elsewhere</span>
+      <i class="fa fa-angle-down"></i>
+    </a>
+
+    <div id="overlay" class="overlay"></div>
+
+    <ul id="menu" class="dropdown dropdown-menu">
+      <li><a{% if page.route == 'index' %} class="active"{% endif %} href="/">J. Thomas</a></li>
+      <li><a{% if page.route == 'articles' or page.layout == 'post' %} class="active"{% endif %} href="/articles.html">Articles</a></li>
+      <li><a{% if page.route == 'favourites' %} class="active"{% endif %} href="/favourite-websites.html">Favourites</a></li>
+      <li><a{% if page.route == 'projects' %} class="active"{% endif %} href="/projects.html">Projects</a></li>
+      <li><a{% if page.route == 'links' %} class="active"{% endif %} href="/links.html">Links</a></li>
+    </ul>
+
+    <ul id="elsewhere" class="dropdown dropdown-elsewhere">
+      <li><a class="twitter" href="https://twitter.com/jgthms"><i class="fa fa-twitter"></i></a></li>
+      <li><a class="github" href="https://github.com/jgthms"><i class="fa fa-github"></i></a></li>
+      <li><a class="instagram" href="https://instagram.com/jgthms"><i class="fa fa-instagram"></i></a></li>
+      <li><a class="hacker-news" href="https://news.ycombinator.com/user?id=bbx"><i class="fa fa-hacker-news"></i></a></li>
+      <li><a class="soundcloud" href="https://soundcloud.com/jgthms"><i class="fa fa-soundcloud"></i></a></li>
+      <li><a class="rss" href="/atom.xml"><i class="fa fa-rss"></i></a></li>
+      <li id="contact"><a class="email"><i class="fa fa-envelope"></i></a></li>
+    </ul>
+  </div>
+</header>

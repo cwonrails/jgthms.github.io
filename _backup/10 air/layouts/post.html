@@ -1,0 +1,51 @@
+---
+layout: default
+route: post
+---
+
+<div class="container">
+  <p class="back">
+    <a href="/articles.html">Back</a>
+  </p>
+
+  <p class="info">
+    <em class="date">{{ page.date | date_to_string }}</em>
+    <strong class="category">{{ page.category }}</strong>
+  </p>
+
+  <h1 class="title">{{ page.title }}</h1>
+
+  <h2 class="introduction">{{ page.introduction }}</h2>
+
+  <article id="content" class="content">
+    {{ content }}
+  </article>
+
+  <div class="yolo">
+    <i class="fa fa-twitter"></i>
+    <span>If you've read this far, does it mean you like this article? If so:</span>
+    <br>
+    <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via=jgthms" target="_blank">
+      Tweet it!
+    </a>
+  </div>
+
+  <nav class="pagination">
+    {% if page.next %}
+      <a href="{{ page.next.url }}" rel="next">
+        &larr; Previous
+      </a>
+    {% endif %}
+
+    {% if page.previous %}
+      <a href="{{ page.previous.url }}" rel="previous">
+        Next &rarr;
+        <strong>{{ page.previous.title }}</strong>
+      </a>
+    {% endif %}
+
+    <a id="top">
+      Back to top &uarr;
+    </a>
+  </nav>
+</div>
