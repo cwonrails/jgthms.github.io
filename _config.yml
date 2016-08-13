@@ -4,3 +4,5 @@ url: http://jgthms.com
 markdown: kramdown
 permalink: :title.html
 exclude: ['_backup']
+sass:
+  style: compressed
