@@ -63,26 +63,39 @@
       line-height: 40px
       margin-top: 10px
       position: relative
-      .fa
-        +fa(14px, 20px)
+      svg
+        height: 16px
         left: 10px
         margin-top: -10px
         position: absolute
         top: 50%
+        width: 16px
       strong
         color: inherit
       &.is-facebook
         border-color: $facebook
         color: $facebook
+        svg
+          path
+            fill: $facebook
         &:hover
           background: $facebook
           color: white
+          svg
+            path
+              fill: white
       &.is-twitter
         border-color: $twitter
         color: $twitter
+        svg
+          path
+            fill: $twitter
         &:hover
           background: $twitter
           color: white
+          svg
+            path
+              fill: white
   &-pagination
     font-size: $size-normal
     padding-bottom: 20px

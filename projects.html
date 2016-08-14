@@ -12,7 +12,7 @@ projects:
   content: >
     <p>Creating a typeface from scratch is a designer's <em>rite of passage</em>. I was too lazy so I wrote a CSS framework instead.</p>
     <p>Inspired by Bootstrap, Bulma aims at offering everyone the joy of website design, through the simplicity of flebox, the elegance of Sass, and the experience of a CSS Guru.</p>
-  icons: ['creative-commons', 'github-alt', 'css3']
+  icons: ['creative-commons-icon', 'github-alt', 'css3']
 
 - name: MarkSheet v2
   device: ipad-v
@@ -22,7 +22,7 @@ projects:
   content: >
     <p>Throughout a decade of frontend design, I have acquired both a reasonable set of CSS skills and an unwavering desire to share my knowledge.</p>
     <p>This free tutorial is my humble attempt to contribute to the community-driven information platform that the Web is and always will be.</p>
-  icons: ['creative-commons', 'github-alt', 'html5', 'css3']
+  icons: ['creative-commons-icon', 'github-alt', 'html5', 'css3']
 
 - name: Ivan Ballini Estates
   device: imac
@@ -32,7 +32,7 @@ projects:
   content: >
     <p>When Ivan asked me to design and code his real estate website, his sole and primary focus was to emphasize the main asset that drives users: pictures.</p>
     <p>Rarely have I had the privilege to work with such high quality content, which ultimately what design is all about.</p>
-  icons: ['wordpress']
+  icons: ['wordpress-icon']
 
 - name: CSS Off 2013
   device: ipad-h
@@ -64,7 +64,7 @@ projects:
   content: >
     <p>My oldest and still (relatively) active website.</p>
     <p>What started off as a simple WordPress blog has throughout the years <del>suffered from</del> enjoyed cyclical changes and drastic code rewrites, until I switched to writing in English and publishing with GitHub.</p>
-  icons: ['wordpress']
+  icons: ['wordpress-icon']
 
 - name: Cambodia Vietnam 2010
   device: macbook-air
@@ -74,7 +74,7 @@ projects:
   content: >
     <p>Even before going on this trip in South East Asia, I had in mind a single page website where each city would be granted its own unique design.</p>
     <p>After a lot of delays, the website was finalised almost 2 years after its inception and embodies my first decently sized jQuery project.</p>
-  icons: ['html5, css3']
+  icons: ['html5', 'css3']
 
 - name: Yeek
   device: imac
@@ -84,7 +84,7 @@ projects:
   content: >
     <p>My first attempt at a passive income website: a simple collection of affiliated links.</p>
     <p>This project has shown that in e-commerce especially, marketing sometimes overshadows content.</p>
-  icons: ['wordpress', 'amazon']
+  icons: ['wordpress-icon', 'amazon']
 
 - name: Editions Magellan
   device: ipad-v
@@ -105,7 +105,7 @@ projects:
   content: >
     <p>My end of year project, and the first website built as a team.</p>
     <p>I was in charge of the design, the CSS, and even the Flash widget.</p>
-  icons: ['bolt', 'tree']
+  icons: ['bolt']
 
 - name: bbxworld
   device: macbook-air
@@ -169,7 +169,7 @@ projects:
         <ul class="projects-icons">
           {% for icon in project.icons %}
             {% assign svgpath = icon | prepend: "svg/" | append: ".html" %}
-            <li>{{svgpath}}</li>
+            <li>{% include {{svgpath}} %}</li>
           {% endfor %}
         </ul>
       </div>

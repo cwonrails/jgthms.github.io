@@ -86,7 +86,7 @@ websites:
   </hgroup>
 
   {% for website in page.websites %}
-    <article class="favourites-item">
+    <article class="favourites-item is-website">
       <span class="favourites-rank">{{11 | minus:forloop.index}}</span>
       <h2 class="favourites-name">{{website.name}}</h2>
       <h3 class="favourites-domain">

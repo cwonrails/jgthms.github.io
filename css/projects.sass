@@ -102,6 +102,9 @@
       text-align: center
       vertical-align: top
       width: 30px
+      svg
+        height: 30px
+        width: 30px
   +desktop
     padding-bottom: 0
     .heading
@@ -134,6 +137,9 @@
 =project($background, $text, $date, $title: $date, $url: $date)
   background: $background
   color: $text
+  svg
+    path
+      fill: $text
   .projects-date
     color: $date
     &:after
