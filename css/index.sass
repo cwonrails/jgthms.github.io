@@ -176,22 +176,34 @@ $front: 100px
         font-weight: 400
     &-icon
       display: inline-block
-      font-size: 28px
       height: 60px
       line-height: 60px
       vertical-align: top
       text-align: center
       width: 60px
+      svg
+        height: 32px
+        margin: 14px
+        position: relative
+        width: 32px
       &.is-twitter
         +pop($twitter)
-        color: $twitter
+        svg
+          path
+            fill: $twitter
         &:hover
-          color: white
+          svg
+            path
+              fill: white
       &.is-github
         +pop($github)
-        color: $github
+        svg
+          path
+            fill: $github
         &:hover
-          color: white
+          svg
+            path
+              fill: white
   &-dots
     display: none
   +tablet

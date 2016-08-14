@@ -168,7 +168,8 @@ projects:
 
         <ul class="projects-icons">
           {% for icon in project.icons %}
-            <li><i class="fa fa-{{icon}}"></i></li>
+            {% assign svgpath = icon | prepend: "svg/" | append: ".html" %}
+            <li>{{svgpath}}</li>
           {% endfor %}
         </ul>
       </div>

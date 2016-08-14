@@ -29,7 +29,7 @@ $(document).ready(function() {
   var m = 'ookqrfvta@tznvy.pbz';
   $c.attr('href', R(t+m));
 
-  var $toggle = $('.toggle');
+  var $toggle = $('.toggle a');
   var $overlay = $('#overlay');
 
   $toggle.click( function() {
@@ -39,10 +39,8 @@ $(document).ready(function() {
 
   $('.overlay, .nav').click( function(e) {
     if (e.target == this) {
-      console.log('this');
       $('html').removeClass('menu-open elsewhere-open');
     } else {
-      console.log('else');
       return true;
     }
   });

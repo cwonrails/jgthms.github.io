@@ -57,7 +57,13 @@
       min-width: 40px
       vertical-align: top
     &.is-elsewhere
-      font-size: 21px
+      svg
+        display: inline-block
+        height: 20px
+        vertical-align: top
+        width: 20px
+        path
+          fill: white
       & > ul
         align-items: center
         display: flex
@@ -96,6 +102,9 @@
       opacity: $opacity-light
       transition: none $speed $easing
       transition-property: background, opacity
+      .svg
+        height: 20px
+        width: 20px
       &:hover,
       &.is-active
         opacity: $opacity-strong
@@ -138,6 +147,15 @@
       transform-origin: right center
       transition: none $speed $easing
       transition-property: opacity, transform
+      svg
+        display: inline-block
+        height: 16px
+        margin: 12px
+        position: relative
+        vertical-align: top
+        width: 16px
+        path
+          fill: black
       a
         border-radius: 290486px
         display: block
@@ -146,6 +164,9 @@
         width: 40px
         &:hover
           color: white
+          svg
+            path
+              fill: white
       &:hover
         opacity: $opacity-strong
         transform: scale(1)
