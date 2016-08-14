@@ -29,21 +29,16 @@ $(document).ready(function() {
   var m = 'ookqrfvta@tznvy.pbz';
   $c.attr('href', R(t+m));
 
-  var $toggle = $('.toggle a');
-  var $overlay = $('#overlay');
-
-  $toggle.click( function() {
+  $('.toggle a').click( function() {
     var target = $(this).data('target');
     $('html').addClass(target + '-open');
   });
 
-  $('.overlay, .nav').click( function(e) {
+  $('.nav').click( function(e) {
     if (e.target == this) {
       $('html').removeClass('menu-open elsewhere-open');
     } else {
       return true;
     }
   });
-
-  $('img.lazy').unveil();
 });
