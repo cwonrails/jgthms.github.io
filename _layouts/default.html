@@ -9,10 +9,14 @@
     {% if page.route == "index" %}
       <main id="index" class="main index">
         {% include header.html %}
+        {% include menu.html %}
         {{content}}
       </main>
+      {% include elsewhere.html %}
     {% else %}
       {% include header.html %}
+      {% include menu.html %}
+      {% include elsewhere.html %}
       <main{% if page.route %} id="{{page.route}}"{% endif %} class="main{% if page.route %} {{page.route}}{% endif %}{% if page.layout %} {{page.layout}}{% endif %}{% if page.state %} {{page.state}}{% endif %}">
         {{content}}
       </main>

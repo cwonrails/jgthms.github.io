@@ -1,0 +1,29 @@
+<nav id="menu" class="nav is-menu">
+  <ul>
+    <li>
+      <a class="nav-link{% if page.route == 'articles' or page.layout == 'post' %} is-active{% endif %}" href="/articles.html">
+        Articles
+      </a>
+    </li>
+    <li>
+      <a class="nav-link{% if page.route == 'favourites' %} is-active{% endif %}" href="/favourite-websites.html">
+        Favourites
+      </a>
+    </li>
+    <li>
+      <a class="nav-link{% if page.route == 'projects' %} is-active{% endif %}" href="/projects.html">
+        Projects
+      </a>
+    </li>
+    <li>
+      <a class="nav-link{% if page.route == 'links' %} is-active{% endif %}" href="/links.html">
+        Links
+      </a>
+    </li>
+    <li>
+      <a class="nav-link{% if page.route == 'about' %} is-active{% endif %}" href="/about.html">
+        About
+      </a>
+    </li>
+  </ul>
+</nav>
