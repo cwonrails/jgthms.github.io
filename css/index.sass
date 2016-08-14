@@ -19,6 +19,11 @@ $front: 100px
   &-image
     display: none
     position: absolute
+    &-background
+      animation-duration: ($speed * 4)
+      animation-fill-mode: both
+      animation-name: hello-world
+      animation-timing-function: $easing
     // Improbable
     &.is-improbable-icon
       height: 496px
@@ -37,6 +42,7 @@ $front: 100px
       width: 1020px
       z-index: 4
       .index-image-background
+        animation-delay: $speed
         background-image: url("/images/index/worlds-adrift.png")
     &.is-improbable
       bottom: 0
@@ -46,6 +52,7 @@ $front: 100px
       width: 720px
       z-index: 70
       .index-image-background
+        animation-delay: $speed * 2
         background-image: url("/images/index/improbable.jpg")
     // MarkSheet
     &.is-marksheet-m

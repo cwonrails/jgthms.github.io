@@ -24,7 +24,7 @@ $magic: 36px
       fill: black
 
 .toggle
-  font-size: 16px
+  font-size: $size-small
   line-height: $magic
   position: absolute
   text-align: center
@@ -51,19 +51,21 @@ $magic: 36px
     transition: none $speed $easing
     transition-property: opacity, transform
     visibility: hidden
+    li
+      padding: 20px
     &-link
       color: white
-      display: block
-      padding: 20px 40px
+      display: inline-block
+      min-width: 40px
+      vertical-align: top
     &.is-elsewhere
-      font-size: 28px
+      font-size: 21px
       & > ul
         align-items: center
         display: flex
         flex-wrap: wrap
         justify-content: center
-        & > li
-          width: 40%
+        margin: 0 10%
   html
     &.menu-open
       .nav.is-menu
