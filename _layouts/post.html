@@ -27,7 +27,7 @@ route: post
       <p class="post-share-title">Liked this article?</p>
       <a
         class="post-share-button is-facebook"
-        href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}"
+        href="http://www.facebook.com/sharer.php?u={{site.url | url_encode}}{{page.url | url_encode}}"
         rel="nofollow"
         target="_blank"
         >
@@ -39,7 +39,7 @@ route: post
         data-social-network="Twitter"
         data-social-action="tweet"
         data-social-target="{{site.url}}{{page.url}}"
-        href="https://twitter.com/intent/tweet?url={{site.url}}{{page.url}}&text={{page.title}}&via=jgthms"
+        href="https://twitter.com/intent/tweet?url={{site.url | url_encode}}{{page.url | url_encode}}&text={{page.title}}&via=jgthms"
         rel="nofollow"
         target="_blank"
         >

@@ -18,4 +18,26 @@
   <link rel="shortcut icon" href="/favicons/favicon.ico?v=2016-08-13">
   <meta name="msapplication-config" content="/favicons/browserconfig.xml?v=2016-08-13">
   <meta name="theme-color" content="#f0224b">
+
+  <meta property="og:url" content="{{site.url}}{{page.url}}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{page.title}}">
+  <meta property="og:image" content="{{site.url}}/images/share/jgthms-facebook.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@jgthms">
+  <meta name="twitter:creator" content="@jgthms">
+  <meta name="twitter:title" content="{{page.title}}">
+  <meta name="twitter:image" content="{{site.url}}/images/share/jgthms-twitter.png">
+
+  {%if page.introduction %}
+    <meta property="og:description" content="{{page.introduction}}">
+    <meta name="twitter:description" content="{{page.introduction}}">
+  {% else %}
+    <meta property="og:description" content="Blog of Jeremy Thomas, Frontend Designer from Bordeaux, currently working for Improbable in sunny London.">
+    <meta name="twitter:description" content="Blog of Jeremy Thomas, Frontend Designer from Bordeaux, currently working for Improbable in sunny London.">
+  {% endif %}
 </head>
