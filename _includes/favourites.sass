@@ -10,13 +10,14 @@
     & + &
       margin-top: $space-mobile
   &-rank
-    box-shadow: inset 0 0 0 1px $link
+    border: 1px solid $jt
+    border-image: specialGradient($black, $jt) 1
     border-radius: 290486px
     color: $link
     display: block
     height: $size-medium * 2
     left: 0
-    line-height: $size-medium * 2
+    line-height: ($size-medium * 2) - 2px
     position: absolute
     text-align: center
     top: 0

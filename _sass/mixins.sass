@@ -46,6 +46,9 @@
     \::selection
       @content
 
+@function specialGradient($first, $second)
+  @return linear-gradient(141deg, $first 29%, $second)
+
 =visited
   &:hover
     background: $link
