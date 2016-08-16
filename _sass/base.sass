@@ -7,6 +7,18 @@ html
   text-rendering: optimizeLegibility
   +tablet
     font-size: 20px
+  +desktop
+    overflow: auto
+    overflow-x: hidden
+    overflow-y: scroll
+    &.is-index
+      overflow: hidden
+      body
+        overflow: auto
+        overflow-x: hidden
+        overflow-y: scroll
+      .the
+        animation: winter-spring ($speed * 2) $easing
 
 article,
 aside,
