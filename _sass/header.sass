@@ -19,7 +19,7 @@
     height: $magic
     width: $magic
     path
-      fill: $black
+      fill: $jt
 
 .toggle
   font-size: $size-small
@@ -96,6 +96,9 @@
     &:hover,
     &.is-active
       opacity: $opacity-strong
+      svg
+        path
+          fill: $jt
   .nav
     &-link
       color: $black
@@ -107,6 +110,7 @@
         width: 20px
       &:hover,
       &.is-active
+        color: $jt
         opacity: $opacity-strong
       &.is-github
         +pop($github)
@@ -121,7 +125,7 @@
       &.is-twitter
         +pop($twitter)
       &.is-email
-        +pop($pink)
+        +pop($jt)
     &.is-menu
       left: 50%
       margin-left: -330px

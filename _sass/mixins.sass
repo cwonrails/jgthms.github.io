@@ -14,12 +14,12 @@
     &:after
       opacity: $opacity-light
 
-=overlay
-  bottom: 0
-  left: 0
+=overlay($offset: 0)
+  bottom: $offset
+  left: $offset
   position: absolute
-  right: 0
-  top: 0
+  right: $offset
+  top: $offset
 
 =pop($color)
   position: relative

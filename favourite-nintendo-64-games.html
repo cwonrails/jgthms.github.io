@@ -155,7 +155,9 @@ games:
 
   {% for game in page.games %}
     <article class="favourites-item is-nintendo64">
-      <span class="favourites-rank">{{11 | minus:forloop.index}}</span>
+      <p class="favourites-rank">
+        <span>{{11 | minus:forloop.index}}</span>
+      </p>
       <h2 class="favourites-name">{{game.name}}</h2>
       <h3 class="favourites-developer">{{game.developer}}</h3>
       <figure class="favourites-cover">
