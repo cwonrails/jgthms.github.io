@@ -47,8 +47,8 @@
     transition: background $speed $easing
     vertical-align: top
     &.is-active
-      background-color: $black
-      background-image: specialGradient($black, $jt)
+      background-color: $jt
+      background-image: specialGradient($jt, $pink)
       color: white
   a:not(.is-active):hover
     background: white
@@ -83,7 +83,7 @@
     display: block
 
 .monolith
-  background-image: specialGradient($jt, $black)
+  background-image: specialGradient($pink, $jt)
   bottom: 0
   left: 0
   pointer-events: none
