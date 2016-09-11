@@ -1,5 +1,9 @@
-# A Jekyll blog about the web
+# A Jekyll blog about the Web
 
-jgthms.com
+[jgthms.com](http://jgthms.com)
 
-Front-end developer and graphic designer from Bordeaux, France.
+Frontend developer and graphic designer from Bordeaux, France.
+
+<a href="http://jgthms.com">
+  <img src="JT.png" alt="JT" height="160" width="160">
+</a>

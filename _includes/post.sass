@@ -2,7 +2,7 @@
 
 @import "variables"
 @import "mixins"
-@import "pygments-monokai-extended.sass"
+@import "pygments-oceanic-next"
 
 .post
   margin: 0 20px
@@ -147,7 +147,7 @@
       &:last-child
         margin-bottom: 0
       &.note
-        background: hsl(217, 86%, 96%)
+        background: rgba(black, 0.04)
         color: $text
         padding: 20px
         code
@@ -161,7 +161,7 @@
       list-style: disc outside
       margin: 20px
     figure:not(.highlight)
-      background: white
+      background: rgba(black, 0.04)
       margin: 20px 0
       padding: 20px
       text-align: center
@@ -182,14 +182,14 @@
       p
         margin: 0
     table
-      background: white
+      background: rgba(white, 0.71)
       font-size: $size-small
       margin: 20px 0
       width: 100%
       th,
       td
-        border: 1px solid $border
-        padding: 1em
+        border: 1px solid rgba(black, 0.04)
+        padding: 0.8em 1em
         text-align: left
         &.empty
           background: none
@@ -212,10 +212,9 @@
     pre
       padding: 10px
     .highlight
-      background: #222
       code,
       pre
-        background: #222
+        background: transparent
     .top-highlight
       background: lighten($green, 30%)
       box-shadow: 0 0 0 5px lighten($green, 30%)
@@ -250,7 +249,7 @@
         height: 1px
         margin: 7vh auto
         vertical-align: top
-        width: 14vw
+        width: 7vw
     &-info
       font-size: $size-small-tablet
     &-title

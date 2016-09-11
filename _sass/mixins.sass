@@ -34,6 +34,18 @@
     &:before
       animation: jelly-pop 1000ms linear both
 
+=scrollbar
+  -webkit-overflow-scrolling: touch
+  overflow: hidden
+  overflow-y: scroll
+  &::-webkit-scrollbar
+    background: $border
+    cursor: pointer
+    width: 10px
+  &::-webkit-scrollbar-thumb
+    background: $visited
+    cursor: pointer
+
 =selection($current-selector: false)
   @if $current-selector
     &::-moz-selection

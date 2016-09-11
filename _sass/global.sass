@@ -15,24 +15,7 @@
     &-title
       font-size: $size-medium-tablet
   +desktop
-    margin: 20px 0
-    position: relative
-    text-align: left
-    &:before,
-    &:after
-      background: $text-strong
-      content: ""
-      display: inline-block
-      height: 14vh
-      margin-left: 1px
-      margin-right: 1px
-      max-height: 140px
-      vertical-align: top
-      width: 1px
-    &:before
-      margin-bottom: 10px
-    &:after
-      margin-top: 20px
+    margin: 120px 20px
 
 .tabs
   font-size: $size-small
@@ -55,8 +38,6 @@
   +tablet
     font-size: $size-small-tablet
     margin-top: 20px
-  +desktop
-    text-align: left
 
 .brand
   +overlay
@@ -71,7 +52,7 @@
       fill: hsl(0, 0%, 94%)
 
 .the
-  +clippath(2px)
+  border: 2px solid $pink
   bottom: 10px
   display: none
   left: 10px
@@ -79,14 +60,24 @@
   position: fixed
   right: 10px
   top: 10px
-  +tablet
-    display: block
 
 .monolith
   background-image: specialGradient($pink, $jt)
   bottom: 0
+  display: none
   left: 0
   pointer-events: none
   position: absolute
   right: 0
   top: 0
+
++tablet
+  .the
+    display: block
+
+@media screen and (min-width: $tablet) and (-webkit-min-device-pixel-ratio: 0)
+  .the
+    +clippath(2px)
+    border: none
+  .monolith
+    display: block
