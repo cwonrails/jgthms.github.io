@@ -9,7 +9,7 @@ category: Thoughts
 
 Anyway, it was the opportunity to try out Mega's cloud storage system. So I decided to sign up:
 
-![Mega's sign up page](/images/mega-sign-up.png)
+![Mega's sign up page](/images/post/mega-sign-up.png)
 
 I filled the fields quickly, but then realized 2 things:
 

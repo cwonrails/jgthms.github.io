@@ -6,7 +6,7 @@ category: UI
 ---
 
 <figure>
-  <a href="/html/solarized.html"><img alt="Bootstrap Solarized" src="/images/bootstrap-solarized.png"></a>
+  <a href="/html/solarized.html"><img alt="Bootstrap Solarized" src="/images/post/bootstrap-solarized.png"></a>
 </figure>
 
 There was a recent post on 24ways.org that explained [How to Make Your Site Look Half-Decent in Half an Hour](http://24ways.org/2012/how-to-make-your-site-look-half-decent/). It was made by a programmer and aimed towards programmers. The final result wasn't universally well received because it probably didn't meet most programmer's expectations. I'm a designer, and the final result didn't appeal much to me. But still: the article wasn't about the end result, it was about the **process**.
@@ -21,7 +21,7 @@ It's not a surprise that Anna Powell-Smith used Bootstrap as a foundation for he
 
 So let's use [this example](http://twitter.github.com/bootstrap/examples/hero.html) as a start and tweak it.
 
-![Boostrap Hero](/images/bootstrap-hero.png)
+![Boostrap Hero](/images/post/bootstrap-hero.png)
 
 ## Colors: be consistent
 
@@ -31,7 +31,7 @@ You could browse the thousands of palettes on [ColourLovers](http://www.colourlo
 
 If you don't like Solarized, try to use your favourite IDE color scheme. Or steal a color palette from a website or app you like. For example, 53's app [Paper](http://www.fiftythree.com/paper) has 4 default palettes to play around with. I particularly like the first one:
 
-![Paper colors](/images/paper-colors.png)
+![Paper colors](/images/post/paper-colors.png)
 
 2 dark colors, 2 light colors, 2 'fresh' colors, and black. Add white to it and you have 8 colors to use for different purposes.
 
@@ -94,28 +94,28 @@ Even a designer won't come up with a perfect design the first time. I've readjus
 I played with [Bootstrap's Hero example](http://twitter.github.com/bootstrap/examples/hero.html) and added my custom CSS. The only image used is the Firefox logo. All colors were taken from Solarized's color palette. You can click the image to see the live demo.
 
 <figure>
-<a href="/html/solarized.html"><img alt="Bootstrap Solarized" src="/images/bootstrap-solarized.png"></a><br>
+<a href="/html/solarized.html"><img alt="Bootstrap Solarized" src="/images/post/bootstrap-solarized.png"></a><br>
 <figcaption>Bootstrap Solarized</figcaption>
 </figure>
 
 The same Solarized colors can be used to design a dark layout. Programmers are mostly familiar with this kind of color use in their IDE. It's also a nice way to make your website stand out.
 
 <figure>
-<a href="/html/solarized-dark.html"><img alt="Bootstrap Solarized Dark" src="/images/bootstrap-solarized-dark.png"></a><br>
+<a href="/html/solarized-dark.html"><img alt="Bootstrap Solarized Dark" src="/images/post/bootstrap-solarized-dark.png"></a><br>
 <figcaption>Bootstrap Solarized Dark</figcaption>
 </figure>
 
 I talked about the app Paper and how it provided lovely color palettes too. The app is meant to draw sketches so the colors aren't exactly supposed to fit together in terms of contrast and text readibility but still, it's fun to play around with. I used the red color as the main background. It's a bold decision, especially for a programmer, to use such a saturated color as the dominant color, but I like [websites with a well-defined identity](/the-grey-period.html).
 
 <figure>
-<a href="/html/paper.html"><img alt="Bootstrap Paper" src="/images/bootstrap-paper.png"></a><br>
+<a href="/html/paper.html"><img alt="Bootstrap Paper" src="/images/post/bootstrap-paper.png"></a><br>
 <figcaption>Bootstrap Paper</figcaption>
 </figure>
 
-As I said earlier, if there's a color palette you like, try to use it. There was this [Nike ad](/images/nike-ad.jpg) that I really liked. It's full of different colors and gradients, but I just picked a few of them and created a 8-color palette out of it.
+As I said earlier, if there's a color palette you like, try to use it. There was this [Nike ad](/images/post/nike-ad.jpg) that I really liked. It's full of different colors and gradients, but I just picked a few of them and created a 8-color palette out of it.
 
 <figure>
-<a href="/html/nike.html"><img alt="Bootstrap Nike" src="/images/bootstrap-nike.png"></a><br>
+<a href="/html/nike.html"><img alt="Bootstrap Nike" src="/images/post/bootstrap-nike.png"></a><br>
 <figcaption>Bootstrap Nike</figcaption>
 </figure>
 

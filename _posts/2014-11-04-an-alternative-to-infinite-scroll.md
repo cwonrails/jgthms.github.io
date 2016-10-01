@@ -8,7 +8,7 @@ recommended: true
 
 <figure>
   <a href="http://jgthms.com/lavalamp.js/lavalamp.html">
-    <img alt="Infinite scroll alternative" src="/images/infinite-scroll-alternative.gif">
+    <img alt="Infinite scroll alternative" src="/images/post/infinite-scroll-alternative.gif">
   </a>
   <figcaption><a href="https://github.com/jgthms/lavalamp.js">Lavalamp.js</a> demo</figcaption>
 </figure>

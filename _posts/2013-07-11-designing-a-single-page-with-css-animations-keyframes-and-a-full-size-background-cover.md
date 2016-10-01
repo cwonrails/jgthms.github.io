@@ -5,7 +5,7 @@ introduction: I wasn't using the jt.ms domain I bought last year and thought it 
 category: Code
 ---
 
-[![JT.ms](/images/jtms.jpg)](http://jt.ms)
+[![JT.ms](/images/post/jtms.jpg)](http://jt.ms)
 
 For almost a year now, I've had this 4-letter domain: [jt.ms](http://jt.ms)
 
@@ -23,8 +23,8 @@ So I semi-randomly placed my gear, opened Ableton Live and launched a fake recor
 
 The `background-size` property is incredibly easy to implement:
 
-    html { 
-      background: #0c031e url(jt.jpg) no-repeat center center fixed; 
+    html {
+      background: #0c031e url(jt.jpg) no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -45,7 +45,7 @@ I only had 4 links to insert on my page:
 The 3 websites' main color turned out surprisingly complementary.
 
 <figure>
-  <img alt="JT.ms links" src="/images/jtms-links.jpg">
+  <img alt="JT.ms links" src="/images/post/jtms-links.jpg">
 </figure>
 
 I quickly settled for simple circles. For the hover event, I recalled [Svbtle's Kudos button](http://svbtle.com/) and its animation when submitting a vote. I discovered a [GitHub repo](https://github.com/masukomi/kudos) that implemented this functionality. I took only some part of the client-side code, especially the [CSS transitions](https://github.com/masukomi/kudos/blob/master/kudos.css). The jQuery code came down to a adding/removing a class.

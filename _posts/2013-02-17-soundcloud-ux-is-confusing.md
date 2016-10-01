@@ -7,7 +7,7 @@ category: UX
 
 **Update**: it looks like SoundCloud finally delivered.
 
-I'm going to copy/paste what I've said about SoundCloud in a [previous comment](http://news.ycombinator.com/item?id=4871076):  
+I'm going to copy/paste what I've said about SoundCloud in a [previous comment](http://news.ycombinator.com/item?id=4871076):
 I love SoundCloud.
 
 I remember how it was difficult for people like me to upload their music on the web in order to share it. The only viable option was the MySpace music section (which required a different MySpace account). Even renowned artists used it. But the music player was just a single feature among the whole MySpace package, and the resulting experience for both the uploader and the viewer was unconvincing.
@@ -17,7 +17,7 @@ SoundCloud filled a need: upload your music easily, and doing just that. The upl
 
 But their UI is confusing. Here's a simple question: what is this?
 
-![SoundCloud UI](/images/soundcloud-ui.png)
+![SoundCloud UI](/images/post/soundcloud-ui.png)
 
 Hard to tell isn't it? It's actually the waveform of the track currently playing in SoundCloud. And although waveforms are prominent in SoundCloud's interface, this tiny version makes little sense until it starts to fill itself up and you notice a progress in time. But it's still hard to understand it's clickable and brings you back to the currently playing track.
 
@@ -53,7 +53,7 @@ When navigating back to your SoundCloud tab, unless you clearly see a "Pause" bu
 Yes, there's a "Play" icon in the title bar, but being not interactive and not obvious either, it's quite helpless.
 
 <figure>
-  <a href="https://soundcloud.com/jgthms/see-you-at-the-lights"><img alt="SoundCloud Title UI" src="/images/soundcloud-title-ui.png"></a>
+  <a href="https://soundcloud.com/jgthms/see-you-at-the-lights"><img alt="SoundCloud Title UI" src="/images/post/soundcloud-title-ui.png"></a>
 </figure>
 
 ## Lack of controls
@@ -62,8 +62,8 @@ Because SoundCloud acts like a radio (or a media player), it should display the 
 
 The Play/Pause is visually only available by navigating to a page where you can *see* the track playing. Of course, the little waveform in the header is the quickest way to reach such a page, but as I said, it's not an obvious control. You can also use the spacebar, but playing/pausing a track is not a spacebar's expected behavior in the context of a browser.
 
-Forward/Backward controls are the ones I miss the most.  
-The Backward button can be useful to navigate back to a track you want to play again, or to know which one you've just listened to. There is currently no way to know this.  
+Forward/Backward controls are the ones I miss the most.
+The Backward button can be useful to navigate back to a track you want to play again, or to know which one you've just listened to. There is currently no way to know this.
 If you're listening to a track, the only way to skip it is to manually choose another one. Sometimes, I just want to hear the following track but it requires navigating back to the context and launching the next track. It's not much of a trouble, but could be easily avoided by displaying a forward button in the header. As a matter of fact, a playlist exists *somewhere* in memory. Why not displaying it and/or making it interactive by implementing Forward/Backward buttons?
 
 SoundCloud acts like a media player but doesn't provide the interface that should come with it, and this gap leaves me, and probably many visitors, confused.

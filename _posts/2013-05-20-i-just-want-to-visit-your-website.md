@@ -12,9 +12,9 @@ For any website visited, Ghostery displays a temporary window that lists the dif
 Here's [The Verge](http://www.theverge.com/) tracking results:
 
 <figure>
-<img alt="Ghostery results for The Verge" src="/images/ghostery-the-verge.png"><br>
+<img alt="Ghostery results for The Verge" src="/images/post/ghostery-the-verge.png"><br>
 <figcaption>Ghostery results for The Verge</figcaption>
-</figure> 
+</figure>
 
 Apart from SoundCloud and Typekit, I block all external sites. I've always considered the web to be about **content**: read articles, look at images, watch videos, etc. Nothing else.
 

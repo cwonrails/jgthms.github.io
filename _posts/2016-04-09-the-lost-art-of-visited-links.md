@@ -29,14 +29,14 @@ Depending on what you're looking for, the sight of visited links can trigger two
 **Link aggregators** like [Reddit](https://www.reddit.com) or [Hacker News](https://news.ycombinator.com) are one of the few websites to still distinguish visited links from "new" ones.
 
 <figure>
-  <img alt="Hacker News homepage" src="/images/hacker-news-homepage.png">
+  <img alt="Hacker News homepage" src="/images/post/hacker-news-homepage.png">
   <figcaption>"Ah, lots of new content!"</figcaption>
 </figure>
 
 Google **search results** are usually processed the same way. Let's say you're learning JavaScript and want to know how to check if an Array is empty.
 
 <figure>
-  <img alt="Google search results for checking if an Array in JavaScript is empty" src="/images/google-visited-links.png">
+  <img alt="Google search results for checking if an Array in JavaScript is empty" src="/images/post/google-visited-links.png">
   <figcaption>The first two results weren't convincing, so let's check the third one now</figcaption>
 </figure>
 
@@ -82,7 +82,7 @@ _(Emphasis mine)_
 As a result, styling visited links is very limited:
 
 <figure>
-  <img alt="Visited links privacy" src="/images/visited-links-privacy.png">
+  <img alt="Visited links privacy" src="/images/post/visited-links-privacy.png">
   <figcaption>You can only affect a visited link's colour</figcaption>
 </figure>
 
@@ -94,7 +94,7 @@ Most links do _not_ require a visited colour:
 * **interface** links that alter the state of the page
 
 <figure>
-  <img alt="Hacker News nav" src="/images/hacker-news-nav.png">
+  <img alt="Hacker News nav" src="/images/post/hacker-news-nav.png">
   <figcaption>These links should stay black</figcaption>
 </figure>
 
@@ -148,5 +148,5 @@ So knowing before clicking on article if you've already seen it will define your
   </tbody>
 </table>
 
-Next time you design a website, think about `:visited`!  
+Next time you design a website, think about `:visited`!
 The Web and its users will appreciate it.

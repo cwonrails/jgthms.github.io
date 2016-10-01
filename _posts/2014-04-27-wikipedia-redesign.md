@@ -9,7 +9,7 @@ recommended: true
 It's a common thing among designers to provide a so-called "unsolicited redesign" of a well-known website and write about it. Here's my humble attempt.
 
 <figure>
-  <a href="/images/wikipedia-redesign-full.png"><img alt="Wikipedia Redesign" src="/images/wikipedia-redesign.png"></a>
+  <a href="/images/post/wikipedia-redesign-full.png"><img alt="Wikipedia Redesign" src="/images/post/wikipedia-redesign.png"></a>
 </figure>
 
 As you would have figured, it's just a screenshot. I didn't change anything because *there is nothing to change*. Or at least, not enough to prompt a complete graphical overhaul.
@@ -41,7 +41,7 @@ You've seen it in all redesigns already:
 * the image-heavy "2560x1440 optimized" airline website
 
 <figure>
-  <a href="http://cdn.gkvasnikov.com/img/design-1.jpg"><img alt="Funky Wikipedia" src="/images/funky-hp.jpg"></a>
+  <a href="http://cdn.gkvasnikov.com/img/design-1.jpg"><img alt="Funky Wikipedia" src="/images/post/funky-hp.jpg"></a>
 </figure>
 
 In the latest Wikipedia redesign concept, the [homepage](http://cdn.gkvasnikov.com/img/design-1.jpg) uses a grid of high-quality images as its primary content. Why high-quality? Well, they're mostly **pictures**, either aesthethically pleasing *or* immediately identifiable. It's easy to dismiss the text when choosing pictures/paintings of Steve Jobs, Virgina Woolf, Horatio Nelson, Nelson Mandela, Henri VIII...
@@ -49,8 +49,8 @@ In the latest Wikipedia redesign concept, the [homepage](http://cdn.gkvasnikov.c
 I guess Wikipedia mention them every month, right? What about the content that's on [Wikipedia right now](http://en.wikipedia.org/wiki/Main_Page)?
 
 <figure>
-  <img alt="Nichiren" src="/images/national-road.jpg">
-  <img alt="Sundial solstice" src="/images/sundial-solstice.gif"><br>
+  <img alt="National Road" src="/images/post/national-road.jpg">
+  <img alt="Sundial solstice" src="/images/post/sundial-solstice.gif"><br>
   <figcaption>The Alt US 40, and the sundial solstice declination lines for different latitudes. Not "good enough" for mockups, but probably more interesting.</figcaption>
 </figure>
 

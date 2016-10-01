@@ -11,7 +11,7 @@ While browsing Hacker News, I came across [this article](https://zapier.com/blog
 I couldn't help but notice a problem with the **menu**.
 
 <figure>
-  <img alt="Zapier blog menu" src="/images/zapier-blog-menu.png" height="530" width="368"><br>
+  <img alt="Zapier blog menu" src="/images/post/zapier-blog-menu.png" height="530" width="368"><br>
   <figcaption>
     <a href="https://zapier.com/blog/productive-remote-work/" title="Zapier blog">
       Menu from the Zapier blog
@@ -24,7 +24,7 @@ I couldn't help but notice a problem with the **menu**.
 The problem? The **"Click Dead Zone"**.
 
 <figure>
-  <img alt="Zapier blog menu" src="/images/zapier-click.gif" height="80" width="300"><br>
+  <img alt="Zapier blog menu" src="/images/post/zapier-click.gif" height="80" width="300"><br>
   <figcaption>
     The famous "Click Dead Zone"
   </figcaption>
@@ -43,7 +43,7 @@ It happens because the `line-height` is set to **space out** the list items, alt
 }
 {% endhighlight %}
 
-It's that `line-height: 2em`!  
+It's that `line-height: 2em`!
 Works well for a _single_ line, but quite unreadable (and unclickable) for _multiple_ lines.
 
 ## How do you fix that?
@@ -63,7 +63,7 @@ First set the **line-height** to `1.2em` which is readable for list items.
 }
 {% endhighlight %}
 
-This amounts to a `1.2em` **height** for a _single_ line.  
+This amounts to a `1.2em` **height** for a _single_ line.
 We're missing `0.8em`.
 
 Let's split this amount equally among the **padding** to keep the content vertically centered.
@@ -77,7 +77,7 @@ Let's split this amount equally among the **padding** to keep the content vertic
 And _voilà_ !
 
 <figure>
-  <img alt="Zapier fixed menu" src="/images/zapier-fixed-menu.png" height="471" width="330"><br>
+  <img alt="Zapier fixed menu" src="/images/post/zapier-fixed-menu.png" height="471" width="330"><br>
   <figcaption>
     Same height for 1 line<br>Improved readibility for multiple lines<br>No "Click Dead Zone"
   </figcaption>

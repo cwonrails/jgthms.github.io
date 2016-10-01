@@ -7,20 +7,20 @@ recommended: true
 ---
 
 <figure>
-  <img alt="M. C. Escher − Drawing Hands, 1948" src="/images/drawing-hands.jpg"><br>
+  <img alt="M. C. Escher − Drawing Hands, 1948" src="/images/post/drawing-hands.jpg"><br>
   <figcaption>
     <a href="//en.wikipedia.org/wiki/File:DrawingHands.jpg" title="Fair use">M. C. Escher − Drawing Hands, 1948</a>
   </figcaption>
 </figure>
 
-For a while I had in mind a self-referential tutorial that would teach a few concepts of web design and CSS while applying those concepts upon the content that explained them in the first place.  
+For a while I had in mind a self-referential tutorial that would teach a few concepts of web design and CSS while applying those concepts upon the content that explained them in the first place.
 So basically **a tutorial that is the output of the input it teaches**.
 
 I called this tutorial [Web Design in 4 minutes](http://jgthms.com/web-design-in-4-minutes/).
 
 <figure>
   <a href="http://jgthms.com/web-design-in-4-minutes/">
-    <img alt="Web Design in 4 minutes" src="/images/web-design-in-4-minutes.png">
+    <img alt="Web Design in 4 minutes" src="/images/post/web-design-in-4-minutes.png">
   </a>
 </figure>
 
@@ -30,8 +30,8 @@ The most important idea I am trying to convey is actually one that is easy to ov
 
 > "The purpose of design is to enhance the presentation of the content it's applied to."
 
-In my experience, the web projects I have seen fail had a common flaw: **no content**.  
-Or content as an afterthought.  
+In my experience, the web projects I have seen fail had a common flaw: **no content**.
+Or content as an afterthought.
 Or content written while the design process already started.
 
 Why is content so important? Because the _raison d'être_ of a website is to satisfy the user:
@@ -57,7 +57,7 @@ If I can show you how much you can achieve in 4 min, imagine what you could achi
 Funnily enough, I initially had in mind a 4 min limit simply to keep it under 5. After finishing the content, I ran the whole page through [Read-o-meter](http://niram.org/read/) which announced an estimated reading time of `3min 59sec`, just shy of 800 words (which would have been the exact limit).
 
 <figure>
-  <img alt="Web Design in 3min 59sec" src="/images/web-design-reading-time.png"><br>
+  <img alt="Web Design in 3min 59sec" src="/images/post/web-design-reading-time.png"><br>
   <figcaption>Phew, that was close</figcaption>
 </figure>
 
@@ -69,8 +69,8 @@ CSS does not even scratch the surface of what computers can achieve, or the comp
 
 By enforcing the rule to keep an arbitrary limit of 4 minutes to teach something, it's easy to misread my intent. The product of my tutorial is not a "Holy Grail" design that will work in _any_ context for _any_ content. **It's a kick starter for learning how to design a webpage**.
 
-For example, the optimal number of characters per line is between 40 and 70.  
-I chose `50em`.  
+For example, the optimal number of characters per line is between 40 and 70.
+I chose `50em`.
 [I don't even recommended using `em` as a unit](/in-css-use-pixels-not-em.html). But I'd rather limit myself to a single CSS rule than spend more lines explaining the subtlety of using `px` over `em`.
 
 I also went from `#000` to `#555`, which spawned a few critics, including [this one](https://github.com/jgthms/web-design-in-4-minutes/issues/1):
@@ -87,7 +87,7 @@ I picked `#555` half-randomly. I set it, thought it looked good enough, and move
 **The quick pace that the tutorial sets needs distinct enough values to convey my point.**
 
 <figure>
-  <img alt="French highway signs" src="/images/highway-signs.png"><br>
+  <img alt="French highway signs" src="/images/post/highway-signs.png"><br>
   <figcaption>When time is scarce, make it bold</figcaption>
 </figure>
 

@@ -8,7 +8,7 @@ category: UX
 While using Chrome on Android, it occured to me its menu carried a behavior that's recurrent in many interfaces.
 
 <figure>
-  <img alt="Chrome Android first screen" src="/images/chrome-android-first-screen.png"><br>
+  <img alt="Chrome Android first screen" src="/images/post/chrome-android-first-screen.png"><br>
   <figcaption>Chrome Android's first menu screen</figcaption>
 </figure>
 
@@ -26,6 +26,6 @@ Re-arranging the **order** of these buttons is a good step towards a more usable
 
 Going further in providing a quicker and better experience, I wonder why all buttons provide the **same interactive area** while they don't carry the same importance. I assume it's due to the less error-prone touch interface. But it makes sense on desktop, especially for people not well acquainted with keyboard shortcuts:
 
-![Chrome Desktop menu buttons](/images/chrome-desktop-menu-buttons.png)
+![Chrome Desktop menu buttons](/images/post/chrome-desktop-menu-buttons.png)
 
 On a side note, hiding the menu *while* interacting with `Back` and `Forward` is bad UX, considering they're often used repeatedly in a row.

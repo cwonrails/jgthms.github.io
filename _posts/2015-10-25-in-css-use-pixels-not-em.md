@@ -43,7 +43,7 @@ By updating a _single_ `font-size` value, you can **update** other properties:
 {% endhighlight %}
 
 <figure>
-  <img alt="CSS em size button" src="/images/em-size-button.gif">
+  <img alt="CSS em size button" src="/images/post/em-size-button.gif">
   <br>
   <figcaption>Changing font-size resizes the button proportionally</figcaption>
 </figure>
@@ -71,7 +71,7 @@ Let's say your default font-size is set to `16px`. You have **titles** at `2rem`
 But **not all font sizes are equal**... Considering the text of this website:
 
 <figure>
-  <img alt="CSS fuzzy text" src="/images/em-fuzzy-text.png">
+  <img alt="CSS fuzzy text" src="/images/post/em-fuzzy-text.png">
   <br>
   <figcaption>1.25rem is easy to set but imperfect</figcaption>
 </figure>
@@ -79,7 +79,7 @@ But **not all font sizes are equal**... Considering the text of this website:
 Even with bigger text, the problem is present:
 
 <figure>
-  <img alt="CSS fuzzy title" src="/images/em-fuzzy-title.png">
+  <img alt="CSS fuzzy title" src="/images/post/em-fuzzy-title.png">
   <br>
   <figcaption>Even a 1px difference is noticeable</figcaption>
 </figure>
@@ -89,7 +89,7 @@ Even with bigger text, the problem is present:
 Another problem with `em` arises when you want to change the **font family**, because every font renders differently at each size:
 
 <figure>
-  <img alt="CSS Cabin font" src="/images/em-cabin-font.png">
+  <img alt="CSS Cabin font" src="/images/post/em-cabin-font.png">
   <br>
   <figcaption>12px is easy to calculate but 13px looks better</figcaption>
 </figure>
@@ -99,7 +99,7 @@ Another problem with `em` arises when you want to change the **font family**, be
 An image's **dimensions** are set in pixels. If you want to _vertically_ align its surrounding text precisely, you need to use a `padding-top` and a `line-height` in pixels:
 
 <figure>
-  <img alt="CSS image alignment" src="/images/em-image-alignment.png">
+  <img alt="CSS image alignment" src="/images/post/em-image-alignment.png">
   <br>
   <figcaption>This would require tricky calculations with em or rem</figcaption>
 </figure>
@@ -111,7 +111,7 @@ An image's **dimensions** are set in pixels. If you want to _vertically_ align i
 Let's say you want your buttons and inputs to be `38px` high. Having both equally sized allows to put them next to each other, like in [Bootstrap 4](http://v4-alpha.getbootstrap.com/components/input-group/):
 
 <figure>
-  <img alt="em input button" src="/images/em-input-button.png">
+  <img alt="em input button" src="/images/post/em-input-button.png">
   <br>
   <figcaption>Nicely grouped and aligned</figcaption>
 </figure>
@@ -130,7 +130,7 @@ How do you that with `rem`?
 All these calculations are based upon a font size of `16px`. Now let's say you have to change that value, like `15px`, what happens?
 
 <figure>
-  <img alt="em input button border gone" src="/images/em-input-button-border-gone.png">
+  <img alt="em input button border gone" src="/images/post/em-input-button-border-gone.png">
   <br>
   <figcaption>Where's my border??</figcaption>
 </figure>
@@ -151,7 +151,7 @@ Vector elements, like **icon fonts** need precise pixel values to render correct
 The default font size for [Font Awesome](http://fortawesome.github.io/Font-Awesome/) is `28px`. If you need smaller icons, stick to `14px`. Any other value would look terrible:
 
 <figure>
-  <img alt="em Font Awesome" src="/images/em-font-awesome.png">
+  <img alt="em Font Awesome" src="/images/post/em-font-awesome.png">
   <br>
   <figcaption>Only multiples of 7 please</figcaption>
 </figure>

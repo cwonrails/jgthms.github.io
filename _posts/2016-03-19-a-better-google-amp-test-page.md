@@ -6,7 +6,7 @@ category : Thoughts
 ---
 
 <figure>
-  <a href="https://www.ampproject.org/"><img alt="Google AMP logo" src="/images/google-amp-logo.png"></a>
+  <a href="https://www.ampproject.org/"><img alt="Google AMP logo" src="/images/post/google-amp-logo.png"></a>
   <figcaption>Google AMP project</figcaption>
 </figure>
 
@@ -49,7 +49,7 @@ My page used to weigh **2.2 MB**. The three main images weighed 1.8 MB. That's *
 I used the powerful [TinyPNG](https://tinypng.com) to compress these images:
 
 <figure>
-  <img alt="TinyPNG optimization" src="/images/tinypng-optimization.png">
+  <img alt="TinyPNG optimization" src="/images/post/tinypng-optimization.png">
 </figure>
 
 My page went from 2.2 MB to 858 KB.
@@ -83,12 +83,12 @@ AMP pages require a few alterations:
 ## Results
 
 <figure>
-  <a href="http://www.webpagetest.org/result/160319_80_PZ9/"><img alt="Chrome console screenshot" src="/images/test-jgthms.png"></a>
+  <a href="http://www.webpagetest.org/result/160319_80_PZ9/"><img alt="Chrome console screenshot" src="/images/post/test-jgthms.png"></a>
   <figcaption>Classic optimization (lazy loading)</figcaption>
 </figure>
 
 <figure>
-  <a href="http://www.webpagetest.org/result/160319_FD_PZH/"><img alt="Chrome console screenshot" src="/images/test-amp.png"></a>
+  <a href="http://www.webpagetest.org/result/160319_FD_PZH/"><img alt="Chrome console screenshot" src="/images/post/test-amp.png"></a>
   <figcaption>AMP optimization</figcaption>
 </figure>
 

@@ -24,7 +24,7 @@ The website's new disposition has killed this workflow because the characters ar
 Anyway, I've got 3 options now:
 
 * **browse** for a character, but the "Alphabetical order" is *full* of noise.
-![CopyPasteCharacter noise](/images/copypastecharacter-noise.png)
+![CopyPasteCharacter noise](/images/post/copypastecharacter-noise.png)
 * **search** for a character, but it's a slow process and usually results in the same amount of noise.
 * **create a set**. *Oh dear...* [Another login](/remember-login-not-password.html)... And I often need those special characters when I'm *not* at home.
 

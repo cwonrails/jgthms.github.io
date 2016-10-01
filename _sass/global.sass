@@ -23,18 +23,19 @@
   text-align: center
   a,
   strong
+    border-radius: 3px
     display: inline-block
+    font-weight: 400
     line-height: 1em
     min-height: 2.5em
     padding: 0.75em 1.5em
-    transition: background $speed $easing
+    transition: color $speed $easing
     vertical-align: top
     &.is-active
-      background-color: $jt
-      background-image: specialGradient($jt, $pink)
-      color: white
+      background-color: $pink
+      color: $jt
   a:not(.is-active):hover
-    background: white
+    color: $jt
   +tablet
     font-size: $size-small-tablet
     margin-top: 20px
@@ -52,7 +53,7 @@
       fill: hsl(0, 0%, 94%)
 
 .the
-  border: 2px solid $pink
+  border: 1px solid $pink
   bottom: 10px
   display: none
   left: 10px
@@ -77,7 +78,7 @@
 
 @media screen and (min-width: $tablet) and (-webkit-min-device-pixel-ratio: 0)
   .the
-    +clippath(2px)
+    +clippath(1px)
     border: none
   .monolith
     display: block

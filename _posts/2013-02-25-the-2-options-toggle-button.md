@@ -8,7 +8,7 @@ recommended: true
 
 I'm always confused by these kinds of switch buttons:
 
-![2-options toggle button](/images/toggle-button.png)
+![2-options toggle button](/images/post/toggle-button.png)
 
 It takes me a couple of seconds to figure out if the button is displaying the **current state** ('On') or the **possible action** (*switching to* 'On'). In this case, it's meant to show the current state.
 
@@ -19,7 +19,7 @@ The use of such a toggle button requires:
 
 The best known implementation of this button is actually the Play/Pause button:
 
-![Play/Pause button](/images/play-pause-button.png)
+![Play/Pause button](/images/post/play-pause-button.png)
 
 It actually works in the exact opposite way: the button displays the **possible action**. Because we're so well acquainted with this play/pause action, we're always aware of its implied current state.
 

@@ -6,7 +6,7 @@ category: Thoughts
 ---
 
 <figure>
-  <a href="http://twenty.frenchguys.net/"><img alt="Twenty game logo" src="/images/twenty-puzzle-game.png"></a>
+  <a href="http://twenty.frenchguys.net/"><img alt="Twenty game logo" src="/images/post/twenty-puzzle-game.png"></a>
 </figure>
 
 [Twenty](http://twenty.frenchguys.net/) is a puzzle game with numbers.
@@ -38,8 +38,8 @@ For a game to remain interesting, it needs to provide a similar _experience_ but
 
 Instead of simply speeding up the timer gradually, the difficulty comes from random **connections** that appear between two tiles. It means that they can only move as one, which drastically reduces their movability. You need to merge one of the connected tiles to remove all its adjacent connections.
 
-* After reaching tile "10", only two tiles can be connected.  
-* After reaching tile "15", up to three tiles can be connected.  
+* After reaching tile "10", only two tiles can be connected.
+* After reaching tile "15", up to three tiles can be connected.
 * After reaching tile "20", up to four tiles can be connected.
 
 ## Basic strategy
@@ -58,7 +58,7 @@ The main problem you'll face is not being able to **access** tile, rather than h
 
 Keep all tiles accessible by keeping some **columns empty**, and avoid making lines (which is the opposite of Tetris basically.)
 
-![Twenty towers](/images/twenty-towers.png)
+![Twenty towers](/images/post/twenty-towers.png)
 
 ### Focus on the lower numbers
 
@@ -74,7 +74,7 @@ Each tile value should be lower than the one it's sitting on.
 
 In the best case scenario, you can make towers of adjacent values:
 
-![Ordered tiles](/images/twenty-ordered-tiles.png)
+![Ordered tiles](/images/post/twenty-ordered-tiles.png)
 
 My merging the "10" on top, it will trigger a chain reaction and get rid of five tiles in a row.
 
@@ -105,7 +105,7 @@ If it wasn't for the existence of connected tiles, the game would be very easy: 
 
 So, if multiple merges possible: focus on targetting **connected** tiles. You'll allow them to be moved freely, and prevent blocking the ones below.
 
-![Merging conflict](/images/twenty-merge.png)
+![Merging conflict](/images/post/twenty-merge.png)
 
 ### Use gravity
 
@@ -113,7 +113,7 @@ If two tiles of same value are only separated vertically by another tile, move t
 
 If you're lucky and the middle tile was of value "n+1", you can merge it back with the newly created tile.
 
-![Gravity](/images/twenty-gravity.png)
+![Gravity](/images/post/twenty-gravity.png)
 
 ## Prioritize
 

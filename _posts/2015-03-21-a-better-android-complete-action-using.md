@@ -9,13 +9,13 @@ When opening a specific type of **link**, Android prompts you to choose between 
 
 For example, when tapping on a Airbnb link, this modal appears:
 
-![Android "Complete action with"](/images/android-complete-action-using-default.png)
+![Android "Complete action with"](/images/post/android-complete-action-using-default.png)
 
 The key part of this modal is the bottom part, where 2 options appear:
 
-* **Always**: subsequent taps on similar types of links will always open the selected app.  
+* **Always**: subsequent taps on similar types of links will always open the selected app.
 The modal won't appear again.
-* **Just once**: the link will only open in the selected app this time.  
+* **Just once**: the link will only open in the selected app this time.
 The modal will reappear next time a similar link is opened.
 
 The **problem** with this approach is that _any_ action requires **2 taps**: selecting _which_ app to use and _how_ subsequent taps will behave.
@@ -26,7 +26,7 @@ As a result, choosing the **permanent** behavior is _as easy as_ choosing a **on
 
 To simplify the opening of a link **and** to prevent any permanent decision, the modal should look like this:
 
-![Better Android "Complete action with"](/images/android-complete-action-using-better.png)
+![Better Android "Complete action with"](/images/post/android-complete-action-using-better.png)
 
 How it works:
 

@@ -27,7 +27,7 @@ SVGs are:
 For example, my logo is really simple: a circle with some overlapping rectangles.
 
 <figure>
-  <img alt="JT logo" src="/images/logo.svg" style="height: 150px;"><br>
+  <img alt="JT logo" src="/images/post/logo.svg" style="height: 150px;"><br>
   <figcaption>Scaled at 150*150px</figcaption>
 </figure>
 
@@ -44,7 +44,7 @@ Considering that fonts are made of **Bézier curves**, they are infinitally scal
 Being concerned about loading efficiency, I built my own icon font with the very useful [Fontello](http://fontello.com/).
 
 <figure>
-  <img alt="Custom icon font with Fontello" src="/images/custom-icon-font.png"><br>
+  <img alt="Custom icon font with Fontello" src="/images/post/custom-icon-font.png"><br>
   <figcaption>Custom icon font built with Fontello</figcaption>
 </figure>
 
@@ -56,7 +56,7 @@ CSS 3 has introduced a new unit: **rem** (which stands for `root em`). Jonathan 
 
 I've used `em` for a long time, especially for margins and paddings. Spacing elements *relatively* to their font-size helps readibility and maintenance. I also use unit-less `line-height` values (like "1.5") which are relative as well.
 
-As Snook's article explains, the problem with `em` is that it's **cascading**. Having for example `1.5em` on both `<ul>` and `<li>` will cause the latter to be 36px instead of 24px. 
+As Snook's article explains, the problem with `em` is that it's **cascading**. Having for example `1.5em` on both `<ul>` and `<li>` will cause the latter to be 36px instead of 24px.
 
 In the end, it's hard to keep track of what the rendered font-size actually is.
 

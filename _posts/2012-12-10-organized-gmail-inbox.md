@@ -16,7 +16,7 @@ The first part of this rule states that *each* mail should hold one label, and o
 
 The second part enforces a *fixed* number of labels in order to avoid creating ones on the fly for each new mail. You can still create new ones, but not without making sure it'll be heavily used in the future. Here's my list:
 
-![GMail labels organization](/images/gmail-labels-organization.png)
+![GMail labels organization](/images/post/gmail-labels-organization.png)
 
 Apart from the *Notes* label (which synchronizes with iOS' Notes app), the 7 other labels, along with sub-labels, should be able to organize **every** incoming email.
 
@@ -28,13 +28,13 @@ Using keyboard shortcuts, it only takes a few strokes to make a mail show up in 
 
 ## Admin
 
-![Admin label](/images/label-admin.png)
+![Admin label](/images/post/label-admin.png)
 
 This one is for administration stuff: bank, health insurance, taxes, (un)employment processes, various subscriptions... Actually, there is a sub-label called *Inscription* (Subscription) with which I tag every new membership mail, the ones where they send you a welcome message along with your login information (and sometimes even with your password in plain text...). Anyway, it helps me keeping track of any service, real or online, to which I've subscribed. Sometimes, I wonder *"What was that website I've subscribed to again?"* or *"What's my login again?"*, and this sub-label helps me answering these questions.
 
 ## E-commerce
 
-![E-commerce label](/images/label-e-commerce.png)
+![E-commerce label](/images/post/label-e-commerce.png)
 
 This label is for anything **shopping**-related. The 3 most important sub-labels here are:
 
@@ -70,7 +70,7 @@ These labels are used for mails sent from **companies**.
 
 Newsletters are just what they are: informations mails to which I have subscribed and are sent to many people.
 
-![Notifications label](/images/label-notifications.png)
+![Notifications label](/images/post/label-notifications.png)
 
 Notifications are *everything else* sent by a company. It's usually just a small mail telling me that I have received a private message, or that a credit card or domain is about to expire, or that someone responded to one of my comments.
 
@@ -78,7 +78,7 @@ I keep seperate sub-labels for notifications from Dribbble, Facebook, Twitter...
 
 ## Reminder
 
-![Reminder label](/images/label-reminder.png)
+![Reminder label](/images/post/label-reminder.png)
 
 I have 2 kinds of reminders:
 
@@ -89,6 +89,6 @@ I have 2 kinds of reminders:
 
 With this setup, and with the use of GMail filters, every email in my inbox holds a single label (except when I also add the *2do* label but it's just temporary).
 
-![GMail Organized Inbox](/images/gmail-organized-inbox.png)
+![GMail Organized Inbox](/images/post/gmail-organized-inbox.png)
 
 For the several months during which I have used this organization, I haven't felt the need to create new labels, nor to think too long about which one to apply. And I don't know how it would scale up with much more mails to deal with, but I don't think it'd be too difficult to handle.

@@ -131,7 +131,7 @@ projects:
 {% for project in page.projects %}
   <article class="projects-item is-{{project.slug}}">
     <a class="projects-device is-{{project.device}}" href="{{project.url}}">
-      <img class="lazy" data-src="/images/screenshots/{{project.slug}}.jpg" src="/images/empty.png">
+      <img class="lazy" data-src="/images/screenshots/{{project.slug}}.jpg" src="/images/projects/empty.png">
       <noscript>
         <img src="/images/screenshots/{{project.slug}}.jpg">
       </noscript>
@@ -142,7 +142,7 @@ projects:
         <p class="projects-date">{{project.date}}</p>
 
         <a class="projects-logo" href="{{project.url}}">
-          <img class="lazy" data-src="/images/projects/{{project.slug}}.png" src="/images/empty.png">
+          <img class="lazy" data-src="/images/projects/{{project.slug}}.png" src="/images/projects/empty.png">
           <noscript>
             <img src="/images/projects/{{project.slug}}.png">
           </noscript>

@@ -7,7 +7,7 @@ category: UI
 
 Have you ever encountered a black scrollbar like the one below?
 
-![Chrome black scrollbar](/images/chrome-black-scrollbar.png)
+![Chrome black scrollbar](/images/post/chrome-black-scrollbar.png)
 
 If so, you might wonder *where* it comes from. For the last couple of months, I've been experiencing this issue on a regular basis, without actually understanding *why* it occured, so it was difficult to find a workaround.
 
@@ -18,7 +18,7 @@ And then it occured to me.
 I've been using a Logitech mouse since February. At times, when working with a colleague, I would unplug my mouse, grab my laptop, and sit at his desk. That's when the black scrollbar would appear.
 
 <figure>
-  <img alt="Scrollbar with mouse or trackpad" src="/images/scrollbar-with-mouse-or-trackpad.gif"><br>
+  <img alt="Scrollbar with mouse or trackpad" src="/images/post/scrollbar-with-mouse-or-trackpad.gif"><br>
   <figcaption>The viewport will be 15px less wide with the mouse plugged in</figcaption>
 </figure>
 
