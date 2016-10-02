@@ -3,7 +3,7 @@
   left: 0
   position: absolute
   right: 0
-  top: 50px
+  top: $offset
 
 .jt
   display: block
@@ -84,7 +84,7 @@
 
 +desktop
   .header
-    top: 21vh
+    left: $offset
   .jt
     left: 0
     margin-left: 0
@@ -123,28 +123,23 @@
       &.is-email
         +pop($jt)
     &.is-menu
-      left: 50%
-      margin-left: -330px
       position: absolute
-      top: 21vh
-      width: 940px - $column-width
+      right: $offset
+      top: $offset
       li
         float: left
         font-size: 16px
         line-height: $magic
-        margin-left: $column-gap
-        width: $column-width
+        margin-left: 50px
     &.is-elsewhere
+      bottom: $offset - 10px
       font-size: 14px
-      margin-top: -180px
       opacity: $opacity-light
-      padding: 40px 0
       position: fixed
-      right: 29px
+      right: $offset - 10px
       text-align: center
-      top: 50%
       transform: scale(0.86)
-      transform-origin: right center
+      transform-origin: right bottom
       transition: none $speed $easing
       transition-property: opacity, transform
       svg

@@ -7,19 +7,25 @@
   margin: 0 20px
   &-year,
   &-season
+    background: $border
+    border-radius: 3px
+    color: $jt
     display: none
-    font-size: $size-normal
-  &-year
-    color: $link
+    font-size: $size-small
+    height: 24px
+    line-height: 24px
+    padding: 0 8px
+    vertical-align: top
   &-season
     &.is-win
-      color: $cyan
+      background: $cyan
     &.is-spr
-      color: $green
+      background: $green
     &.is-sum
-      color: $yellow
+      background: $yellow
     &.is-aut
-      color: $orange
+      background: $orange
+      color: white
   &-border
     display: none
   &-article
@@ -74,12 +80,10 @@
   +desktop
     &-year,
     &-season
-      background: $background
-      display: block
-      color: $link
+      display: inline-block
       left: 0
       position: absolute
-      width: $column-width
+      transform: translateY(5px)
     &-year
       z-index: 1
     &-season

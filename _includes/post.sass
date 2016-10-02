@@ -15,7 +15,7 @@
       background: $link
       color: $link-invert
   &-header
-    margin: 20px 20px 40px
+    padding: 40px 20px
     text-align: center
   &-info
     color: $black
@@ -38,16 +38,16 @@
     line-height: 1.2
   &-share
     font-size: $size-normal
-    margin-bottom: 20px
+    margin-bottom: $column-gap
     text-align: center
     &:before
       background: $text-strong
       content: ""
       display: block
       height: 1px
-      margin: 7vh auto
+      margin: 0 auto 50px
       vertical-align: top
-      width: 14vw
+      width: $column-width
     &-title
       color: $text-light
       font-style: italic
@@ -123,6 +123,11 @@
       border-bottom: 1px solid
       word-break: break-word
       +visited
+      &:hover
+        border-bottom-color: $link
+      &:visited
+        &:hover
+          border-bottom-color: $visited
     h2,
     h3
       color: $text-strong
@@ -165,6 +170,8 @@
       margin: 20px 0
       padding: 20px
       text-align: center
+      &:first-child
+        margin-top: 0 !important
       img
         display: inline-block
         vertical-align: top
@@ -218,7 +225,7 @@
     .top-highlight
       background: lighten($green, 30%)
       box-shadow: 0 0 0 5px lighten($green, 30%)
-      color: $text-strong
+      color: $jt
       padding: 2px 0 3px
       position: relative
       transition: none $speed $easing
@@ -232,7 +239,6 @@
       &:hover
         background: $green
         box-shadow: 0 0 0 5px $green
-        color: white
   +tablet
     &-back
       left: 0
@@ -240,16 +246,16 @@
       position: absolute
       top: 100px
     &-header
-      margin: 100px
-      &:before,
+      padding: 100px
+      padding-bottom: 50px
       &:after
         background: $text-strong
         content: ""
         display: block
         height: 1px
-        margin: 7vh auto
+        margin: 50px auto 0
         vertical-align: top
-        width: 7vw
+        width: $column-width
     &-info
       font-size: $size-small-tablet
     &-title
@@ -281,7 +287,7 @@
           position: absolute
           top: 5px
     &-share
-      margin: 7vh auto
+      margin: 50px auto
       max-width: 620px
       &-nav
         align-items: center
