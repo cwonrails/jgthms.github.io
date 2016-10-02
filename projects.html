@@ -119,14 +119,14 @@ projects:
   icons: ['internet-explorer']
 ---
 
-<div class="container">
-  <hgroup class="heading">
+<hgroup class="heading">
+  <div class="container">
     <h1 class="heading-title">Open source and side projects</h1>
     <nav class="tabs">
       <strong class="is-active">For fun and knowledge</strong>
     </nav>
-  </hgroup>
-</div>
+  </div>
+</hgroup>
 
 {% for project in page.projects %}
   <article class="projects-item is-{{project.slug}}">

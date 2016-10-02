@@ -36,39 +36,35 @@
     color: $text-light
     font-size: $size-medium
     line-height: 1.2
-  &-share
+  &-pagination
     font-size: $size-normal
-    margin-bottom: $column-gap
-    text-align: center
-    &:before
-      background: $text-strong
-      content: ""
-      display: block
-      height: 1px
-      margin: 0 auto 50px
-      vertical-align: top
-      width: $column-width
-    &-title
-      color: $text-light
-      font-style: italic
-      margin-bottom: 10px
+    padding-bottom: 20px
     &-button
-      border: 1px solid
+      border: 1px solid $link
       border-radius: 3px
       display: block
-      height: 40px
-      line-height: 40px
-      margin-top: 10px
+      margin-top: 20px
+      padding: 16px 20px
       position: relative
+      transition: none $speed $easing
+      transition-property: background, border, color
+      strong
+        display: block
       svg
-        height: 16px
-        left: 10px
+        height: 20px
         margin-top: -10px
         position: absolute
+        right: 20px
         top: 50%
-        width: 16px
-      strong
-        color: inherit
+        width: 20px
+      &:hover
+        background: $link
+        color: $link-invert
+      &.is-disabled
+        border-color: $text-light
+        color: $text-light
+        opacity: $opacity-light
+        pointer-events: none
       &.is-facebook
         border-color: $facebook
         color: $facebook
@@ -93,28 +89,6 @@
           svg
             path
               fill: white
-  &-pagination
-    font-size: $size-normal
-    padding-bottom: 20px
-    a,
-    span
-      border: 1px solid $link
-      border-radius: 3px
-      display: block
-      margin-top: 20px
-      padding: 16px 20px
-      transition: none $speed $easing
-      transition-property: background, border, color
-      strong
-        display: block
-      &:hover
-        background: $link
-        color: $link-invert
-      &.is-disabled
-        border-color: $text-light
-        color: $text-light
-        opacity: $opacity-light
-        pointer-events: none
   &-content
     margin-left: auto
     margin-right: auto
@@ -166,7 +140,7 @@
       list-style: disc outside
       margin: 20px
     figure:not(.highlight)
-      background: rgba(black, 0.04)
+      background: hsl(0, 0%, 98%)
       margin: 20px 0
       padding: 20px
       text-align: center
@@ -248,14 +222,6 @@
     &-header
       padding: 100px
       padding-bottom: 50px
-      &:after
-        background: $text-strong
-        content: ""
-        display: block
-        height: 1px
-        margin: 50px auto 0
-        vertical-align: top
-        width: $column-width
     &-info
       font-size: $size-small-tablet
     &-title
@@ -286,36 +252,52 @@
           margin-bottom: 0
           position: absolute
           top: 5px
-    &-share
-      margin: 50px auto
-      max-width: 620px
-      &-nav
-        align-items: center
-        display: flex
-      &-title
-        margin-bottom: 0
-      &-button
-        flex: 1
-        margin-left: 20px
-        margin-top: 0
-        padding-left: 20px
   +desktop
+    margin: 0
+    padding: 0
+    padding-bottom: 50vh
+    &-header
+      padding: (120px + $magic) 0 120px
     &-pagination
+      align-items: center
+      bottom: 0
       display: flex
-      a,
-      span
+      height: 50vh
+      justify-content: center
+      left: 0
+      padding: 0
+      position: fixed
+      right: 0
+      .container
+        align-items: stretch
+        display: flex
+        flex-grow: 1
+      &-button
         margin-top: 0
-      &-previous
-        margin-right: 20px
-        order: 1
-        width: 140px
-      &-next
-        order: 2
-        width: 620px
-      &-top
-        margin-left: 20px
+        strong
+          display: inline
+        &.is-facebook
+          margin-top: 10px
+        &.is-next
+          flex-grow: 1
+          order: 2
+          strong
+            display: block
+        &.is-top
+          margin-top: 10px
+      &-share,
+      &-before
+        align-items: stretch
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        width: 210px
+      &-share
+        margin-left: $column-gap
         order: 3
-        width: 140px
+      &-before
+        margin-right: $column-gap
+        order: 1
     &-content
       table
         margin-left: -160px

@@ -3,12 +3,12 @@ layout: default
 route: post
 ---
 
-<div class="container">
-  <p class="post-back">
-    <a href="/articles.html">Back</a>
-  </p>
+<p class="post-back">
+  <a href="/articles.html">Back</a>
+</p>
 
-  <header class="post-header">
+<header class="post-header">
+  <div class="container">
     <p class="post-info">
       <em class="post-date">{{page.date | date_to_string}}</em>
       in
@@ -16,26 +16,27 @@ route: post
     </p>
     <h1 class="post-title">{{page.title}}</h1>
     <h2 class="post-introduction">{{page.introduction}}</h2>
-  </header>
+  </div>
+</header>
 
-  <article id="content" class="post-content">
-    {{content}}
-  </article>
+<section class="page">
+  <div class="container">
+    <article id="content" class="post-content">
+      {{content}}
+    </article>
+  </div>
+</section>
 
-  <aside class="post-share">
-    <nav class="post-share-nav">
-      <p class="post-share-title">Liked this article?</p>
+<aside class="post-share">
+  <div class="container">
+  </div>
+</aside>
+
+<nav class="post-pagination">
+  <div class="container">
+    <nav class="post-pagination-share">
       <a
-        class="post-share-button is-facebook"
-        href="http://www.facebook.com/sharer.php?u={{site.url | url_encode}}{{page.url | url_encode}}"
-        rel="nofollow"
-        target="_blank"
-        >
-        {% include svg/facebook.html %}
-        <span>Share on</span> <strong>Facebook</strong>
-      </a>
-      <a
-        class="post-share-button is-twitter"
+        class="post-pagination-button is-twitter"
         data-social-network="Twitter"
         data-social-action="tweet"
         data-social-target="{{site.url}}{{page.url}}"
@@ -46,29 +47,43 @@ route: post
         {% include svg/twitter.html %}
         <span>Share on</span> <strong>Twitter</strong>
       </a>
+      <a
+        class="post-pagination-button is-facebook"
+        href="http://www.facebook.com/sharer.php?u={{site.url | url_encode}}{{page.url | url_encode}}"
+        rel="nofollow"
+        target="_blank"
+        >
+        {% include svg/facebook.html %}
+        <span>Share on</span> <strong>Facebook</strong>
+      </a>
     </nav>
-  </aside>
 
-  <nav class="post-pagination">
     {% if page.previous %}
-      <a class="post-pagination-next" href="{{page.previous.url}}" rel="previous">
+      <a class="post-pagination-button is-next" href="{{page.previous.url}}" rel="previous">
         Next &rarr;
         <strong>{{page.previous.title}}</strong>
       </a>
-    {% endif %}
-
-    {% if page.next %}
-      <a class="post-pagination-previous" href="{{page.next.url}}" rel="next">
-        &larr; Previous
-      </a>
     {% else %}
-      <span class="post-pagination-previous is-disabled">
-        &larr; Previous
-      </span>
+      <a class="post-pagination-button is-next" href="/articles.html" rel="previous">
+        Back to articles! &uarr;
+        <strong>You've reached the end</strong>
+      </a>
     {% endif %}
 
-    <a id="top" class="post-pagination-top">
-      Back to top &uarr;
-    </a>
-  </nav>
-</div>
+    <nav class="post-pagination-before">
+      {% if page.next %}
+        <a class="post-pagination-button is-previous" href="{{page.next.url}}" rel="next">
+          &larr; Previous
+        </a>
+      {% else %}
+        <span class="post-pagination-button is-previous is-disabled">
+          &larr; Previous
+        </span>
+      {% endif %}
+
+      <a id="top" class="post-pagination-button is-top">
+        Back to top &uarr;
+      </a>
+    </nav>
+  </div>
+</nav>

@@ -77,34 +77,38 @@ websites:
     <p>By transcending the futile technological fluffs and tasteless graphical trends, Wikipedia simply embodies what every website is meant for, when you stop looking at the page and start using it for what you initially came for: the content.</p>
 ---
 
-<div class="container">
-  <hgroup class="heading">
+<hgroup class="heading">
+  <div class="container">
     <h1 class="heading-title">Favourite things</h1>
     <nav class="tabs">
       <a class="is-active" href="/favourite-websites.html">Websites</a><a href="/favourite-game-boy-games.html">Game Boy</a><a href="/favourite-nintendo-64-games.html">Nintendo 64</a>
     </nav>
-  </hgroup>
+  </div>
+</hgroup>
 
-  {% for website in page.websites %}
-    <article class="favourites-item is-website">
-      <p class="favourites-rank">
-        <span>{{11 | minus:forloop.index}}</span>
-      </p>
-      <h2 class="favourites-name">{{website.name}}</h2>
-      <h3 class="favourites-domain">
-        <a class="favourites-link" href="{{website.url}}">
-          {{ website.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first }}
+<section class="page">
+  <div class="container">
+    {% for website in page.websites %}
+      <article class="favourites-item is-website">
+        <p class="favourites-rank">
+          <span>{{11 | minus:forloop.index}}</span>
+        </p>
+        <h2 class="favourites-name">{{website.name}}</h2>
+        <h3 class="favourites-domain">
+          <a class="favourites-link" href="{{website.url}}">
+            {{ website.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first }}
+          </a>
+        </h3>
+        <a class="favourites-cover" href="{{website.url}}">
+          <img class="lazy" data-src="/images/favourites/{{website.slug}}.jpg" src="/images/favourites/website-loading.png">
+          <noscript>
+            <img src="/images/favourites/{{website.slug}}.jpg">
+          </noscript>
         </a>
-      </h3>
-      <a class="favourites-cover" href="{{website.url}}">
-        <img class="lazy" data-src="/images/favourites/{{website.slug}}.jpg" src="/images/favourites/website-loading.png">
-        <noscript>
-          <img src="/images/favourites/{{website.slug}}.jpg">
-        </noscript>
-      </a>
-      <div class="favourites-content">
-        {{website.content}}
-      </div>
-    </article>
-  {% endfor %}
-</div>
+        <div class="favourites-content">
+          {{website.content}}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

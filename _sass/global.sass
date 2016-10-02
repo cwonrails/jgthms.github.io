@@ -1,5 +1,9 @@
 .main
   padding: ($offset + $magic) 0
+  position: relative
+  +desktop
+    padding-bottom: 0
+    padding-top: 50vh
 
 .heading
   padding: 40px 20px
@@ -13,7 +17,17 @@
     &-title
       font-size: $size-medium-tablet
   +desktop
-    padding: 120px 20px
+    align-items: center
+    display: flex
+    height: 50vh
+    justify-content: center
+    left: 0
+    padding: 0
+    position: fixed
+    right: 0
+    top: 0
+    &-title
+      padding-top: 40px
 
 .tabs
   font-size: $size-small
@@ -31,12 +45,18 @@
     vertical-align: top
     &.is-active
       background-color: $pink
-      color: $jt
+      color: $pink-invert
   a:not(.is-active):hover
     color: $jt
   +tablet
     font-size: $size-small-tablet
     margin-top: 20px
+
+.page
+  +desktop
+    background: white
+    padding: 120px 20px
+    position: relative
 
 .brand
   +overlay

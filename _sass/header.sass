@@ -83,12 +83,11 @@
         visibility: visible
 
 +desktop
-  .header
-    left: $offset
   .jt
-    left: 0
-    margin-left: 0
+    left: $offset + 10px
     opacity: 0.14
+    position: fixed
+    top: $offset
     transition: opacity $speed $easing
     svg
       path
@@ -131,6 +130,23 @@
         font-size: 16px
         line-height: $magic
         margin-left: 50px
+      .nav-link
+        position: relative
+        &:after
+          background: $black
+          bottom: -4px
+          opacity: $opacity-strong
+          content: ""
+          display: block
+          left: 0
+          height: 1px
+          position: absolute
+          transition: width $speed $easing
+          width: 0
+        &:hover,
+        &.is-active
+          &:after
+            width: 100%
     &.is-elsewhere
       bottom: $offset - 10px
       font-size: 14px

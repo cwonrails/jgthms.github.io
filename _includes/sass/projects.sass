@@ -149,13 +149,9 @@ $ivan-link: #de7f2b
 $ivan-text: #4d4d4d
 $ivan-title: #1b1e21
 
-$bulma-grey-darker: hsl(0, 0%, 21%)
-$bulma-grey-lighter: hsl(0, 0%, 86%)
-$bulma-white: hsl(0, 0%, 100%)
-
 .projects-item
   &.is-bulma
-    +project($bulma, $bulma-grey-lighter, $bulma-white)
+    +project($bulma, rgba(white, 0.71), white)
   &.is-marksheet
     +project($marksheet, #f4f1ce, white)
     background-color: $marksheet

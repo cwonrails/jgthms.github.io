@@ -157,30 +157,34 @@ games:
     </p>
 ---
 
-<div class="container">
-  <hgroup class="heading">
+<hgroup class="heading">
+  <div class="container">
     <h1 class="heading-title">Favourite things</h1>
     <nav class="tabs">
       <a href="/favourite-websites.html">Websites</a><a class="is-active" href="/favourite-game-boy-games.html">Game Boy</a><a href="/favourite-nintendo-64-games.html">Nintendo 64</a>
     </nav>
-  </hgroup>
+  </div>
+</hgroup>
 
-  {% for game in page.games %}
-    <article class="favourites-item is-gameboy">
-      <p class="favourites-rank">
-        <span>{{11 | minus:forloop.index}}</span>
-      </p>
-      <h2 class="favourites-name">{{game.name}}</h2>
-      <h3 class="favourites-developer">{{game.developer}}</h3>
-      <figure class="favourites-cover">
-        <img class="lazy" data-src="/images/favourites/{{game.slug}}.jpg" src="/images/favourites/gameboy-loading.png">
-        <noscript>
-          <img src="/images/favourites/{{game.slug}}.jpg">
-        </noscript>
-      </figure>
-      <div class="favourites-content">
-        {{game.content}}
-      </div>
-    </article>
-  {% endfor %}
-</div>
+<section class="page">
+  <div class="container">
+    {% for game in page.games %}
+      <article class="favourites-item is-gameboy">
+        <p class="favourites-rank">
+          <span>{{11 | minus:forloop.index}}</span>
+        </p>
+        <h2 class="favourites-name">{{game.name}}</h2>
+        <h3 class="favourites-developer">{{game.developer}}</h3>
+        <figure class="favourites-cover">
+          <img class="lazy" data-src="/images/favourites/{{game.slug}}.jpg" src="/images/favourites/gameboy-loading.png">
+          <noscript>
+            <img src="/images/favourites/{{game.slug}}.jpg">
+          </noscript>
+        </figure>
+        <div class="favourites-content">
+          {{game.content}}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

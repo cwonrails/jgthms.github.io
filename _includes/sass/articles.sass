@@ -19,13 +19,16 @@
   &-season
     &.is-win
       background: $cyan
+      color: $cyan-invert
     &.is-spr
       background: $green
+      color: $green-invert
     &.is-sum
       background: $yellow
+      color: $yellow-invert
     &.is-aut
       background: $orange
-      color: white
+      color: $orange-invert
   &-border
     display: none
   &-article
@@ -78,6 +81,7 @@
     &-title
       font-size: $size-medium-tablet
   +desktop
+    margin: 0
     &-year,
     &-season
       display: inline-block

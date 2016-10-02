@@ -5,13 +5,17 @@ route: articles
 state: only-recommended
 ---
 
-<div class="container">
-  <hgroup class="heading">
+<hgroup class="heading">
+  <div class="container">
     <h1 class="heading-title">Random thoughts about the Web</h1>
     <nav class="tabs">
       <a href="articles.html">All articles</a><a class="is-active" href="recommended-articles.html">Only recommended</a>
     </nav>
-  </hgroup>
+  </div>
+</hgroup>
 
-  {% include posts.html %}
-</div>
+<section class="page">
+  <div class="container">
+    {% include posts.html %}
+  </div>
+</section>
