@@ -1,23 +1,16 @@
-.header
-  height: $magic
-  left: 0
-  position: absolute
-  right: 0
-  top: $offset
-
 .jt
   display: block
   height: $magic
   left: 50%
-  margin-left: -($magic / 2)
   opacity: $opacity-strong
+  padding: 4px
   position: absolute
-  top: 0
+  top: $offset
   width: $magic
   svg
     display: block
-    height: $magic
-    width: $magic
+    height: 32px
+    width: 32px
     path
       fill: $jt
 
@@ -26,7 +19,7 @@
   line-height: $magic
   position: absolute
   text-align: center
-  top: 0
+  top: $offset
   width: calc(50% - 36px)
   &.is-menu
     left: 0
@@ -36,6 +29,8 @@
     display: none
 
 +until($desktop)
+  .jt
+    margin-left: -($magic / 2)
   .nav
     +overlay
     align-items: center
@@ -84,7 +79,7 @@
 
 +desktop
   .jt
-    left: $offset + 10px
+    left: $offset
     opacity: 0.14
     position: fixed
     top: $offset
@@ -96,6 +91,7 @@
     &.is-active
       opacity: $opacity-strong
   .nav
+    position: fixed
     &-link
       color: $black
       opacity: $opacity-light
@@ -122,14 +118,15 @@
       &.is-email
         +pop($jt)
     &.is-menu
-      position: absolute
-      right: $offset
-      top: $offset
+      bottom: $offset - ($magic / 2)
+      left: $offset
+      transform: rotate(-90deg)
+      transform-origin: top left
       li
         float: left
         font-size: 16px
         line-height: $magic
-        margin-left: 50px
+        margin-right: $magic
       .nav-link
         position: relative
         &:after
@@ -148,13 +145,12 @@
           &:after
             width: 100%
     &.is-elsewhere
-      bottom: $offset - 10px
+      bottom: $offset
       font-size: 14px
       opacity: $opacity-light
-      position: fixed
-      right: $offset - 10px
+      right: $offset
       text-align: center
-      transform: scale(0.86)
+      // transform: scale(0.86)
       transform-origin: right bottom
       transition: none $speed $easing
       transition-property: opacity, transform
