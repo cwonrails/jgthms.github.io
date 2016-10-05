@@ -16,6 +16,11 @@
   <script type="text/javascript" src="/javascript/post.js"></script>
 {% endif %}
 
+{% if page.route == 'articles' %}
+  <script type="text/javascript" src="/javascript/affix.js"></script>
+  <script type="text/javascript" src="/javascript/articles.js"></script>
+{% endif %}
+
 {% if page.route == 'favourites' %}
   <script type="text/javascript" src="/javascript/jquery.unveil.js"></script>
   <script type="text/javascript" src="/javascript/favourites.js"></script>
@@ -23,6 +28,7 @@
 
 {% if page.route == 'projects' %}
   <script type="text/javascript" src="/javascript/jquery.unveil.js"></script>
+  <script type="text/javascript" src="/javascript/affix.js"></script>
   <script type="text/javascript" src="/javascript/projects.js"></script>
 {% endif %}
 

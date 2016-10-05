@@ -105,6 +105,7 @@
   +desktop
     padding-bottom: 0
     &-item
+      height: 200vh
       padding: 0
       width: 100%
       .container
@@ -113,6 +114,18 @@
         min-height: 100vh
         padding: 200px 0
         width: 100%
+    &-body
+      left: 0
+      position: absolute
+      top: 0
+      &.affix
+        left: 50%
+        margin-left: -470px
+        position: fixed
+        width: 940px
+    &-date
+      line-height: 40px
+      padding-top: 50px
     &-device
       display: block
       left: 50%

@@ -14,9 +14,11 @@
     font-size: $size-small
     height: 24px
     line-height: 24px
-    padding: 0 8px
+    text-align: center
     vertical-align: top
+    width: 48px
   &-season
+    width: 44px
     &.is-win
       background: $cyan
       color: $cyan-invert
@@ -85,13 +87,17 @@
     &-year,
     &-season
       display: inline-block
-      left: 0
+      left: 50%
       position: absolute
       transform: translateY(5px)
+      &.affix
+        position: fixed
+        top: 53px
     &-year
+      margin-left: -470px
       z-index: 1
     &-season
-      left: $column-width + $column-gap
+      margin-left: -310px
     &-article
       margin-bottom: $space-desktop
       padding-left: ($column-width + $column-gap) * 2
