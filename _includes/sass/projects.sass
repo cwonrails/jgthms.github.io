@@ -59,15 +59,20 @@
       position: absolute
       width: 60px
   &-logo
-    +cover
     display: inline-block
     height: 200px
     margin-bottom: 20px
     position: relative
+    transition: opacity $speed $easing
     vertical-align: top
     img
       display: block
       max-height: 200px
+    &:hover
+      opacity: 0.5
+    &:active,
+    &:focus
+      opacity: 0.3
   &-title
     color: $text-strong
     font-size: $size-large
@@ -80,6 +85,8 @@
   &-url
     line-height: 1.2
     margin-bottom: 20px
+    a
+      +underline
   &-content
     color: inherit
     font-size: $size-normal
@@ -156,6 +163,8 @@
     color: $title
   .projects-url a
     color: $url
+    &:after
+      background: $url
 
 $ivan-background: #eae8e3
 $ivan-link: #de7f2b

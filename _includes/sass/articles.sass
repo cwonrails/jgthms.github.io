@@ -110,3 +110,56 @@
       text-align: center
       top: 5px
       width: 30px
+
+.jt svg
+  -skrollr-anchor-target: "#page"
+  -skrollr-animation-name: jtAnimation
+
+@-skrollr-keyframes jtAnimation
+  bottom-bottom
+    fill: #{'rgb(36, 36, 36)'}
+  top-bottom
+    fill: #{'rgb(255,255,255)'}
+
+.nav.is-menu a
+  -skrollr-anchor-target: "#page"
+  -skrollr-animation-name: navAnimation
+
+@-skrollr-keyframes navAnimation
+  bottom-bottom
+    color: #{'rgb(36, 36, 36)'}
+  top-bottom
+    color: #{'rgb(255,255,255)'}
+
+.heading
+  -skrollr-anchor-target: "#page"
+  -skrollr-animation-name: headingAnimation
+
+@-skrollr-keyframes headingAnimation
+  center-top
+    opacity: 1
+    transform: scale(1) translateY(0%)
+  top-top
+    opacity: 0
+    transform: scale(0.9) translateY(-40%)
+
+#page
+  -skrollr-animation-name: pageAnimation
+
+@-skrollr-keyframes pageAnimation
+  center-top
+    background: #{'rgba(255,255,255,0)'}
+  top-top
+    background: #{'rgba(255,255,255,1)'}
+
+#footer
+  -skrollr-anchor-target: "#page"
+  -skrollr-animation-name: footerAnimation
+
+@-skrollr-keyframes footerAnimation
+  top-top
+    opacity: 0
+  top-center
+    opacity: 1
+  top-bottom
+    opacity: 1

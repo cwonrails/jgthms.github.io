@@ -7,15 +7,6 @@ $behind: -200px
 $middle: -50px
 $front: 100px
 
-.is-transformed,
-.is-zoomed,
-.is-unzoomed,
-.index-content
-  transition: transform 0.7s ease-out
-
-#follow
-  transition: transform 0.4s ease-out
-
 .index
   text-align: center
   &-section
@@ -168,54 +159,10 @@ $front: 100px
         max-width: 100px
         path
           fill: $black
-  &-follow
-    text-align: center
-    &-title
-      color: $text-light
-      font-size: $size-large
-      margin-bottom: 20px
-      strong
-        color: $text-strong
-        font-weight: 400
-    &-icon
-      display: inline-block
-      height: 60px
-      line-height: 60px
-      vertical-align: top
-      text-align: center
-      width: 60px
-      svg
-        height: 32px
-        margin: 14px
-        position: relative
-        width: 32px
-      &.is-twitter
-        +pop($twitter)
-        svg
-          path
-            fill: $twitter
-        &:hover
-          svg
-            path
-              fill: white
-      &.is-github
-        +pop($github)
-        svg
-          path
-            fill: $github
-        &:hover
-          svg
-            path
-              fill: white
-  &-dots
-    display: none
   +tablet
     &-content
       font-size: $size-medium-tablet
       margin: 0 100px
-    &-follow
-      &-title
-        font-size: $size-large-tablet
   +desktop
     height: 100vh
     overflow: auto
@@ -255,9 +202,6 @@ $front: 100px
           margin-left: 0
           margin-right: 20px
           margin-top: 0
-    &-follow
-      align-items: center
-      min-height: 0
 
 .index-section
   &.is-improbable
@@ -292,7 +236,3 @@ $front: 100px
         &:hover
           background-color: $ivanballini
           color: white
-  &.is-follow
-    justify-content: center
-    padding-bottom: 50px + $magic
-

@@ -128,29 +128,14 @@
         line-height: $magic
         margin-right: $magic
       .nav-link
+        +underline
         position: relative
-        &:after
-          background: $black
-          bottom: -4px
-          opacity: $opacity-strong
-          content: ""
-          display: block
-          left: 0
-          height: 1px
-          position: absolute
-          transition: width $speed $easing
-          width: 0
-        &:hover,
-        &.is-active
-          &:after
-            width: 100%
     &.is-elsewhere
       bottom: $offset
       font-size: 14px
       opacity: $opacity-light
       right: $offset
       text-align: center
-      // transform: scale(0.86)
       transform-origin: right bottom
       transition: none $speed $easing
       transition-property: opacity, transform

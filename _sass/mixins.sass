@@ -58,6 +58,25 @@
     \::selection
       @content
 
+=underline
+  position: relative
+  &:after
+    background: $black
+    bottom: -4px
+    opacity: $opacity-strong
+    content: ""
+    display: block
+    left: 0
+    height: 1px
+    position: absolute
+    transition: width $speed $easing
+    width: 0
+  &:hover,
+  &.is-active
+    text-decoration: none
+    &:after
+      width: 100%
+
 @function specialGradient($first, $second)
   @return linear-gradient(141deg, $first 29%, $second)
 
