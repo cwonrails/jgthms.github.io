@@ -5,18 +5,16 @@
 @import "pygments-oceanic-next"
 
 .post
-  margin: 0 20px
-  &-back
-    display: none
-    font-size: $size-normal
-    padding-top: 40px
-    text-align: center
-    a:hover
-      background: $link
-      color: $link-invert
+  padding-bottom: $space-mobile
+  padding-left: 20px
+  padding-right: 20px
   &-header
-    padding: 40px 20px
-    text-align: center
+    padding-bottom: $space-mobile
+    padding-left: 20px
+    padding-right: 20px
+    padding-top: ($space-mobile * 2) + $magic
+    .container
+      max-width: 620px
   &-info
     color: $black
     font-size: $size-small
@@ -38,7 +36,8 @@
     line-height: 1.2
   &-pagination
     font-size: $size-normal
-    padding-bottom: 20px
+    padding-bottom: $space-mobile
+    position: relative
     &-button
       border: 1px solid $link
       border-radius: 3px
@@ -140,9 +139,7 @@
       list-style: disc outside
       margin: 20px
     figure:not(.highlight)
-      background: hsl(0, 0%, 98%)
       margin: 20px 0
-      padding: 20px
       text-align: center
       &:first-child
         margin-top: 0 !important
@@ -150,7 +147,7 @@
         display: inline-block
         vertical-align: top
     figcaption
-      color: $text
+      color: $text-light
       font-size: $size-small
       margin-top: 20px
     blockquote
@@ -220,14 +217,8 @@
         background: $green
         box-shadow: 0 0 0 5px $green
   +tablet
-    &-back
-      left: 0
-      padding-top: 0
-      position: absolute
-      top: 100px
-    &-header
-      padding: 100px
-      padding-bottom: 50px
+    padding-left: 40px
+    padding-right: 40px
     &-info
       font-size: $size-small-tablet
     &-title
@@ -259,25 +250,18 @@
           position: absolute
           top: 5px
   +desktop
-    margin: 0
-    padding: 0
-    padding-bottom: 50vh
+    padding-bottom: $space-desktop
     &-header
-      padding: (120px + $magic) 0 120px
+      padding-bottom: $space-desktop
+      padding-top: $space-desktop
+    &-info
+      line-height: $magic
+      margin-bottom: $space-desktop
     &-pagination
-      align-items: center
-      bottom: 0
-      display: flex
-      height: 50vh
-      justify-content: center
-      left: 0
-      padding: 0
-      position: fixed
-      right: 0
+      padding-bottom: $space-desktop
       .container
         align-items: stretch
         display: flex
-        flex-grow: 1
       &-button
         margin-top: 0
         strong

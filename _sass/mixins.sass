@@ -92,7 +92,6 @@
       color: $link-invert
 
 $tablet: 601px
-$laptop: 769px
 $desktop: 993px
 
 =from($device)
@@ -107,16 +106,8 @@ $desktop: 993px
   @media screen and (max-width: $tablet - 1px)
     @content
 
-=touch
-  @media screen and (max-width: $laptop - 1px)
-    @content
-
 =tablet
   @media screen and (min-width: $tablet)
-    @content
-
-=laptop
-  @media screen and (min-width: $laptop)
     @content
 
 =desktop

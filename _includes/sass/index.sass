@@ -8,11 +8,14 @@ $middle: -50px
 $front: 100px
 
 .index
+  padding-top: ($space-mobile + $magic)
   text-align: center
   &-section
     align-items: center
     display: flex
     padding-top: 50px + $magic
+    &:last-child
+      padding-bottom: 50px + $magic
   &-image
     display: none
     position: absolute

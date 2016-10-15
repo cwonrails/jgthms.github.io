@@ -160,13 +160,13 @@ games:
 <hgroup class="heading">
   <div class="container">
     <h1 class="heading-title">Favourite things</h1>
-    <nav class="tabs">
+    <nav class="heading-nav">
       <a href="/favourite-websites.html">Websites</a><a class="is-active" href="/favourite-game-boy-games.html">Game Boy</a><a href="/favourite-nintendo-64-games.html">Nintendo 64</a>
     </nav>
   </div>
 </hgroup>
 
-<section class="page">
+<main class="favourites">
   <div class="container">
     {% for game in page.games %}
       <article class="favourites-item is-gameboy">
@@ -187,4 +187,4 @@ games:
       </article>
     {% endfor %}
   </div>
-</section>
+</main>

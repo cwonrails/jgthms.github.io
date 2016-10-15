@@ -4,7 +4,9 @@
 @import "mixins"
 
 .links
-  margin: 0 20px
+  padding-bottom: $space-mobile
+  padding-left: 20px
+  padding-right: 20px
   &-item
     position: relative
     & + &
@@ -49,6 +51,9 @@
   &-description
     margin-top: 5px
   +tablet
+    padding-bottom: $space-desktop
+    padding-left: $space-desktop
+    padding-right: $space-desktop
     &-item
       padding-left: $column-width + $column-gap
     &-category
@@ -63,7 +68,6 @@
     &-domain
       font-size: $size-small-tablet
   +desktop
-    margin: 0
     &-item
       & + &
         margin-top: $space-desktop

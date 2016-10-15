@@ -119,15 +119,6 @@ projects:
   icons: ['internet-explorer']
 ---
 
-<hgroup class="heading">
-  <div class="container">
-    <h1 class="heading-title">Open source and side projects</h1>
-    <nav class="tabs">
-      <strong class="is-active">For fun and knowledge</strong>
-    </nav>
-  </div>
-</hgroup>
-
 {% for project in page.projects %}
   <article class="projects-item is-{{project.slug}}">
     <a class="projects-device is-{{project.device}}" href="{{project.url}}">

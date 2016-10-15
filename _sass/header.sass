@@ -5,7 +5,7 @@
   opacity: $opacity-strong
   padding: 4px
   position: absolute
-  top: $offset
+  top: $space-mobile
   width: $magic
   svg
     display: block
@@ -19,7 +19,7 @@
   line-height: $magic
   position: absolute
   text-align: center
-  top: $offset
+  top: $space-mobile
   width: calc(50% - 36px)
   &.is-menu
     left: 0
@@ -79,10 +79,10 @@
 
 +desktop
   .jt
-    left: $offset
+    left: $space-desktop
     opacity: 0.14
     position: fixed
-    top: $offset
+    top: $space-desktop
     transition: opacity $speed $easing
     svg
       path
@@ -118,8 +118,8 @@
       &.is-email
         +pop($jt)
     &.is-menu
-      bottom: $offset - ($magic / 2)
-      left: $offset
+      bottom: $space-desktop - ($magic / 2)
+      left: $space-desktop
       transform: rotate(-90deg)
       transform-origin: top left
       li
@@ -131,10 +131,10 @@
         +underline
         position: relative
     &.is-elsewhere
-      bottom: $offset
+      bottom: $space-desktop
       font-size: 14px
       opacity: $opacity-light
-      right: $offset
+      right: $space-desktop
       text-align: center
       transform-origin: right bottom
       transition: none $speed $easing

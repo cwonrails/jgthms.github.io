@@ -7,14 +7,14 @@ route: articles
 <hgroup class="heading">
   <div class="container">
     <h1 class="heading-title">Random thoughts about the Web</h1>
-    <nav class="tabs">
+    <nav class="heading-nav">
       <a class="is-active" href="articles.html">All articles</a><a href="recommended-articles.html">Only recommended</a>
     </nav>
   </div>
 </hgroup>
 
-<section id="page" class="page">
+<main id="articles" class="articles">
   <div class="container">
     {% include posts.html %}
   </div>
-</section>
+</main>

@@ -3,8 +3,12 @@
 @import "variables"
 @import "mixins"
 
+.heading
+  .container
+    max-width: 780px
+
 .favourites
-  margin: 0 20px
+  padding-bottom: $space-mobile
   &-item
     position: relative
     & + &
@@ -41,8 +45,8 @@
     line-height: 1
     margin-top: 5px
     padding-left: 50px
-    a:hover
-      text-decoration: underline
+    a
+      +underline
   &-developer
     color: $text-light
   &-cover
@@ -70,7 +74,7 @@
       font-size: $size-small-tablet
       padding-left: 70px
   +desktop
-    margin: 0
+    padding-bottom: $space-desktop * 2
     &-item
       padding-left: 400px
       & + &
