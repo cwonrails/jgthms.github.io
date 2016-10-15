@@ -116,28 +116,28 @@
       top: 5px
       width: 30px
 
-// .jt svg
-//   -skrollr-anchor-target: "#page"
-//   -skrollr-animation-name: jtAnimation
+.jt svg path
+  -skrollr-anchor-target: "#articles"
+  -skrollr-animation-name: jtAnimation
 
-// @-skrollr-keyframes jtAnimation
-//   bottom-bottom
-//     fill: #{'rgb(36, 36, 36)'}
-//   top-bottom
-//     fill: #{'rgb(255,255,255)'}
+@-skrollr-keyframes jtAnimation
+  bottom-bottom
+    #{'@fill'}: #{'rgb(36, 36, 36)'}
+  top-bottom
+    #{'@fill'}: #{'rgb(255,255,255)'}
 
-// .nav.is-menu a
-//   -skrollr-anchor-target: "#page"
-//   -skrollr-animation-name: navAnimation
+.nav.is-menu a
+  -skrollr-anchor-target: "#articles"
+  -skrollr-animation-name: navAnimation
 
-// @-skrollr-keyframes navAnimation
-//   bottom-bottom
-//     color: #{'rgb(36, 36, 36)'}
-//   top-bottom
-//     color: #{'rgb(255,255,255)'}
+@-skrollr-keyframes navAnimation
+  bottom-bottom
+    color: #{'rgb(36, 36, 36)'}
+  top-bottom
+    color: #{'rgb(255,255,255)'}
 
 // .heading
-//   -skrollr-anchor-target: "#page"
+//   -skrollr-anchor-target: "#articles"
 //   -skrollr-animation-name: headingAnimation
 
 // @-skrollr-keyframes headingAnimation
@@ -148,7 +148,7 @@
 //     opacity: 0
 //     transform: scale(0.9) translateY(-40%)
 
-// #page
+// #articles
 //   -skrollr-animation-name: pageAnimation
 
 // @-skrollr-keyframes pageAnimation
@@ -158,7 +158,7 @@
 //     background: #{'rgba(255,255,255,1)'}
 
 // #footer
-//   -skrollr-anchor-target: "#page"
+//   -skrollr-anchor-target: "#articles"
 //   -skrollr-animation-name: footerAnimation
 
 // @-skrollr-keyframes footerAnimation

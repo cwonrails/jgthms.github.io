@@ -298,3 +298,24 @@
         margin: 40px -80px
       .highlight
         padding: 20px
+
+
+.jt svg path
+  -skrollr-anchor-target: "#post"
+  -skrollr-animation-name: jtAnimation
+
+@-skrollr-keyframes jtAnimation
+  bottom-bottom
+    #{'@fill'}: #{'rgb(36, 36, 36)'}
+  top-bottom
+    #{'@fill'}: #{'rgb(255,255,255)'}
+
+.nav.is-menu a
+  -skrollr-anchor-target: "#post"
+  -skrollr-animation-name: navAnimation
+
+@-skrollr-keyframes navAnimation
+  bottom-bottom
+    color: #{'rgb(36, 36, 36)'}
+  top-bottom
+    color: #{'rgb(255,255,255)'}
