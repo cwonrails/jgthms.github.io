@@ -153,14 +153,23 @@
       font-size: $size-small
       margin-top: 20px
     blockquote
-      background: white
-      border-left: 4px solid #db4e44
-      color: #7a7a7a
+      font-size: 1.4em
       font-style: italic
-      margin: 20px 0
-      padding: 20px 40px
+      line-height: 1.4
+      margin: 2em
+      position: relative
+      text-align: left
+      &:before
+        background: $pink
+        content: ""
+        display: block
+        height: 1.4em
+        margin-left: -0.7em
+        position: absolute
+        width: 1.4em
       p
         margin: 0
+        position: relative
     table
       background: rgba(white, 0.71)
       font-size: $size-small
