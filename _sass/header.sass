@@ -13,16 +13,33 @@
     width: 32px
 
 .toggle
+  align-items: center
+  display: flex
   font-size: $size-small
-  line-height: $magic
+  height: $magic
+  justify-content: center
   position: absolute
   text-align: center
   top: $space-mobile
   width: calc(50% - 36px)
-  &.is-menu
-    left: 0
+  a
+    border: 0 solid $black
+    opacity: $opacity-strong
+    overflow: hidden
+    position: relative
+    text-indent: -290486px
   &.is-elsewhere
+    left: 0
+    a
+      border-width: 0 1px
+      height: 14px
+      width: 7px
+  &.is-menu
     right: 0
+    a
+      border-width: 1px 0
+      height: 7px
+      width: 14px
   +desktop
     display: none
 
@@ -45,7 +62,7 @@
     li
       padding: 20px
     &-link
-      color: white
+      color: white !important
       display: inline-block
       min-width: 40px
       vertical-align: top
