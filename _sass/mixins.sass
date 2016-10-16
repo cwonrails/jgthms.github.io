@@ -34,16 +34,16 @@
     &:before
       animation: jelly-pop 1000ms linear both
 
-=scrollbar
+=scrollbar($thumb: $visited, $background: $border, $width: 10px)
   -webkit-overflow-scrolling: touch
   overflow: hidden
   overflow-y: scroll
   &::-webkit-scrollbar
-    background: $border
+    background: $background
     cursor: pointer
-    width: 10px
+    width: $width
   &::-webkit-scrollbar-thumb
-    background: $visited
+    background: $thumb
     cursor: pointer
 
 =selection($current-selector: false)
@@ -57,6 +57,61 @@
       @content
     \::selection
       @content
+
+=skrollr($id)
+  .jt
+    -skrollr-anchor-target: $id
+    -skrollr-animation-name: opacityAnimation
+
+  @-skrollr-keyframes opacityAnimation
+    bottom-bottom
+      opacity: $opacity-light
+    top-bottom
+      opacity: $opacity-strong
+
+  .jt svg path
+    -skrollr-anchor-target: $id
+    -skrollr-animation-name: jtAnimation
+
+  @-skrollr-keyframes jtAnimation
+    bottom-bottom
+      #{'@fill'}: #{'rgb(36, 36, 36)'}
+    top-bottom
+      #{'@fill'}: #{'rgb(255,255,255)'}
+
+  .nav.is-menu a:not(.is-active)
+    -skrollr-anchor-target: $id
+    -skrollr-animation-name: navAnimation
+
+  @-skrollr-keyframes navAnimation
+    bottom-bottom
+      color: #{'rgb(36, 36, 36)'}
+      opacity: $opacity-light
+    top-bottom
+      color: #{'rgb(255,255,255)'}
+      opacity: $opacity-strong
+
+  .nav.is-menu a.is-active
+    -skrollr-anchor-target: $id
+    -skrollr-animation-name: activeAnimation
+
+  @-skrollr-keyframes activeAnimation
+    bottom-bottom
+      color: #{'rgb(36, 36, 36)'}
+      opacity: $opacity-strong
+    top-bottom
+      color: #{'rgb(255,255,255)'}
+      opacity: $opacity-strong
+
+  .nav-underline
+    -skrollr-anchor-target: $id
+    -skrollr-animation-name: underlineAnimation
+
+  @-skrollr-keyframes underlineAnimation
+    bottom-bottom
+      background: #{'rgb(0, 0, 0)'}
+    top-bottom
+      background: #{'rgb(255, 36, 80)'}
 
 =underline
   position: relative

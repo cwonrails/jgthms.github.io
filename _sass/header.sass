@@ -66,6 +66,8 @@
       display: inline-block
       min-width: 40px
       vertical-align: top
+    &-underline
+      display: none
     &.is-elsewhere
       svg
         display: inline-block
@@ -140,8 +142,23 @@
         line-height: $magic
         margin-right: $magic
       .nav-link
-        +underline
         position: relative
+        &:hover,
+        &.is-active
+          text-decoration: none
+          .nav-underline
+            width: 100%
+      .nav-underline
+        background: $black
+        bottom: -4px
+        opacity: $opacity-strong
+        content: ""
+        display: block
+        left: 0
+        height: 1px
+        position: absolute
+        transition: width $speed $easing
+        width: 0
     &.is-elsewhere
       bottom: $space-desktop
       font-size: 14px

@@ -119,6 +119,7 @@ projects:
   icons: ['internet-explorer']
 ---
 
+<main id="projects">
 {% for project in page.projects %}
   <article class="projects-item is-{{project.slug}}">
     <a class="projects-device is-{{project.device}}" href="{{project.url}}">
@@ -167,3 +168,4 @@ projects:
     </div>
   </article>
 {% endfor %}
+</main>

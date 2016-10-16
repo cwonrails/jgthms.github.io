@@ -4,7 +4,6 @@
 @import "mixins"
 
 .projects
-  padding-bottom: 0
   &-item
     overflow: hidden
     padding: $space-mobile
@@ -110,7 +109,6 @@
         height: 30px
         width: 30px
   +desktop
-    padding-bottom: 0
     &-item
       height: 200vh
       padding: 0
@@ -198,3 +196,5 @@ $ivan-title: #1b1e21
     +project(#96c909, rgba(black, 0.48), #fff, #1a397f)
   &.is-bbxworld
     +project(#362f2d, rgba(white, 0.48), #8dc63f, white)
+
++skrollr("#projects")

@@ -1,0 +1,8 @@
+name: Jeremy Thomas
+description: Frontend Designer from Bordeaux
+url: http://localhost:4000
+markdown: kramdown
+permalink: :title.html
+exclude: ['_backup']
+sass:
+  style: compressed
