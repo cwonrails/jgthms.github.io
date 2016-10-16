@@ -108,6 +108,9 @@
       svg
         height: 30px
         width: 30px
+  +until($desktop)
+    &-item:first-child
+      padding-top: ($space-mobile * 2) + $magic
   +desktop
     &-item
       height: 200vh
