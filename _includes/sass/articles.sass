@@ -88,21 +88,24 @@
       font-size: $size-small-tablet
     &-title
       font-size: $size-medium-tablet
+    &-introduction
+      font-size: $size-normal-tablet
   +desktop
+    padding-left: $space-side
+    padding-right: $space-side
     &-year,
     &-season
       display: inline-block
-      left: 50%
+      left: $space-side
       position: absolute
       transform: translateY(5px)
       &.affix
         position: fixed
-        top: 53px
+        top: 63px
     &-year
-      margin-left: -470px
       z-index: 1
     &-season
-      margin-left: -390px
+      left: $space-side + 70px
     &-article
       margin-bottom: $space-desktop
       padding-left: $column-width + $column-gap

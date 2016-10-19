@@ -102,35 +102,31 @@ links:
 ---
 
 <hgroup class="heading">
-  <div class="container">
-    <h1 class="heading-title">Links</h1>
-    <p class="heading-subtitle">For insight and enlightenment</p>
-  </div>
+  <h1 class="heading-title">Links</h1>
+  <p class="heading-subtitle">For insight and enlightenment</p>
 </hgroup>
 
 <main id="links" class="links">
-  <div class="container">
-    {% for link in page.links %}
-      <article class="links-item">
-        <p class="links-category is-{{link.category}}">
-          <span>{{link.category}}</span>
-        </p>
-        <h2 class="links-title">
-          <a href="{{link.url}}">
-            {{link.name}}
-          </a>
-        </h2>
-        <h3 class="links-domain">
-          {% if link.domain == nil or link.domain == "" %}
-            {{link.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first}}
-          {% else %}
-            {{link.domain}}
-          {% endif %}
-        </h3>
-        <p class="links-description">
-          {{link.description}}
-        </p>
-      </article>
-    {% endfor %}
-  </div>
+  {% for link in page.links %}
+    <article class="links-item">
+      <p class="links-category is-{{link.category}}">
+        <span>{{link.category}}</span>
+      </p>
+      <h2 class="links-title">
+        <a href="{{link.url}}">
+          {{link.name}}
+        </a>
+      </h2>
+      <h3 class="links-domain">
+        {% if link.domain == nil or link.domain == "" %}
+          {{link.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first}}
+        {% else %}
+          {{link.domain}}
+        {% endif %}
+      </h3>
+      <p class="links-description">
+        {{link.description}}
+      </p>
+    </article>
+  {% endfor %}
 </main>

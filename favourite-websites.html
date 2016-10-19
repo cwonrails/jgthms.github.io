@@ -78,37 +78,33 @@ websites:
 ---
 
 <hgroup class="heading">
-  <div class="container">
-    <h1 class="heading-title">Favourite things</h1>
-    <nav class="heading-nav">
-      <a class="is-active" href="/favourite-websites.html">Websites</a><a href="/favourite-game-boy-games.html">Game Boy</a><a href="/favourite-nintendo-64-games.html">Nintendo 64</a>
-    </nav>
-  </div>
+  <h1 class="heading-title">Favourite things</h1>
+  <nav class="heading-nav">
+    <a class="is-active" href="/favourite-websites.html">Websites</a><a href="/favourite-game-boy-games.html">Game Boy</a><a href="/favourite-nintendo-64-games.html">Nintendo 64</a>
+  </nav>
 </hgroup>
 
 <main id="favourites" class="favourites">
-  <div class="container">
-    {% for website in page.websites %}
-      <article class="favourites-item is-website">
-        <p class="favourites-rank">
-          <span>{{11 | minus:forloop.index}}</span>
-        </p>
-        <h2 class="favourites-name">{{website.name}}</h2>
-        <h3 class="favourites-domain">
-          <a class="favourites-link" href="{{website.url}}">
-            {{ website.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first }}
-          </a>
-        </h3>
-        <a class="favourites-cover" href="{{website.url}}">
-          <img class="lazy" data-src="/images/favourites/{{website.slug}}.jpg" src="/images/favourites/website-loading.png">
-          <noscript>
-            <img src="/images/favourites/{{website.slug}}.jpg">
-          </noscript>
+  {% for website in page.websites %}
+    <article class="favourites-item is-website">
+      <p class="favourites-rank">
+        <span>{{11 | minus:forloop.index}}</span>
+      </p>
+      <h2 class="favourites-name">{{website.name}}</h2>
+      <h3 class="favourites-domain">
+        <a class="favourites-link" href="{{website.url}}">
+          {{ website.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first }}
         </a>
-        <div class="favourites-content">
-          {{website.content}}
-        </div>
-      </article>
-    {% endfor %}
-  </div>
+      </h3>
+      <a class="favourites-cover" href="{{website.url}}">
+        <img class="lazy" data-src="/images/favourites/{{website.slug}}.jpg" src="/images/favourites/website-loading.png">
+        <noscript>
+          <img src="/images/favourites/{{website.slug}}.jpg">
+        </noscript>
+      </a>
+      <div class="favourites-content">
+        {{website.content}}
+      </div>
+    </article>
+  {% endfor %}
 </main>

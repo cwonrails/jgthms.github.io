@@ -6,16 +6,12 @@ state: only-recommended
 ---
 
 <hgroup class="heading">
-  <div class="container">
-    <h1 class="heading-title">Random thoughts about the Web</h1>
-    <nav class="heading-nav">
-      <a href="articles.html">All articles</a><a class="is-active" href="recommended-articles.html">Only recommended</a>
-    </nav>
-  </div>
+  <h1 class="heading-title">Random thoughts about the Web</h1>
+  <nav class="heading-nav">
+    <a href="articles.html">All articles</a><a class="is-active" href="recommended-articles.html">Only recommended</a>
+  </nav>
 </hgroup>
 
 <section id="articles" class="articles only-recommended">
-  <div class="container">
-    {% include recommended-posts.html %}
-  </div>
+  {% include recommended-posts.html %}
 </section>

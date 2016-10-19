@@ -146,8 +146,9 @@
       background: $visited
       color: $link-invert
 
-$tablet: 601px
-$desktop: 993px
+$tablet: 600px
+$desktop: 990px
+$widescreen: 1280px
 
 =from($device)
   @media screen and (min-width: $device)
@@ -167,4 +168,8 @@ $desktop: 993px
 
 =desktop
   @media screen and (min-width: $desktop)
+    @content
+
+=widescreen
+  @media screen and (min-width: $widescreen)
     @content
