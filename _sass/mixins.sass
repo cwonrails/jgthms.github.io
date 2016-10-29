@@ -123,13 +123,16 @@
     display: block
     left: 0
     height: 1px
+    opacity: 0
     position: absolute
-    transition: width $speed $easing
+    transition: none $speed $easing
+    transition-property: opacity, width
     width: 0
   &:hover,
   &.is-active
     text-decoration: none
     &:after
+      opacity: 1
       width: 100%
 
 @function specialGradient($first, $second)

@@ -150,12 +150,12 @@
     &-content
       width: 50%
 
-=project($background, $text, $date, $title: $date, $url: $date)
+=project($background, $text, $date, $title: $date, $url: $date, $icon: $text)
   background: $background
   color: $text
   svg
     path
-      fill: $text
+      fill: $icon
   .projects-date
     color: $date
     &:after
@@ -173,6 +173,8 @@ $ivan-text: #4d4d4d
 $ivan-title: #1b1e21
 
 .projects-item
+  &.is-arnaudbenard
+    +project(#ff2b53, #ecffe9, #ecffe9, #fff, #fff, rgba(black, 0.4))
   &.is-bulma
     +project($bulma, rgba(white, 0.71), white)
   &.is-marksheet
