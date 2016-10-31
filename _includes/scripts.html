@@ -10,6 +10,10 @@
 <script type="text/javascript" src="/javascript/skrollr.min.js"></script>
 <script type="text/javascript" src="/javascript/global.js"></script>
 
+{% if page.route == 'index' %}
+  <script type="text/javascript" src="/javascript/index.js"></script>
+{% endif %}
+
 {% if page.layout == 'post' %}
   <script type="text/javascript" src="/javascript/post.js"></script>
 {% endif %}
