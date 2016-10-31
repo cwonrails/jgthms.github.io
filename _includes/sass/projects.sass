@@ -46,6 +46,7 @@
         left: 266px
         top: 83px
   &-date
+    font-size: $size-small
     margin-bottom: 40px
     position: relative
     &:after
@@ -74,14 +75,16 @@
       opacity: 0.3
   &-title
     color: $text-strong
-    font-size: $size-large
-    font-weight: 400
+    font-family: $family-secondary
+    font-size: $size-medium
+    font-weight: 700
     line-height: 1.2
     margin-top: 20px
     a
       &:hover
         padding: 0
   &-url
+    font-size: $size-small
     line-height: 1.2
     margin-bottom: 20px
     a
@@ -132,6 +135,7 @@
         position: fixed
         width: 940px
     &-date
+      font-size: $size-small-tablet
       line-height: 40px
       padding-top: 50px
     &-device
@@ -146,7 +150,9 @@
       &.is-ipad-v
         transform: scale(0.75) translate3d(80px, -62.5%, 0)
     &-title
-      font-size: $size-large-tablet
+      font-size: $size-medium-tablet
+    &-url
+      font-size: $size-small-tablet
     &-content
       width: 50%
 

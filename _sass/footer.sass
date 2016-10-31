@@ -9,13 +9,16 @@
   position: relative
   text-align: center
   a
-    color: white
+    color: #fff
   &-title
+    color: $pink
+    font-family: $family-secondary
     font-size: $size-large
+    font-weight: 400
     margin-bottom: 20px
     strong
-      color: white
-      font-weight: 400
+      color: #fff
+      font-weight: 700
   &-icon
     display: inline-block
     height: 60px
@@ -36,13 +39,13 @@
       &:hover
         svg
           path
-            fill: white
+            fill: #fff
     &.is-github
       +pop($github)
       svg
         path
-          fill: white
+          fill: #fff
       &:hover
         svg
           path
-            fill: white
+            fill: #fff

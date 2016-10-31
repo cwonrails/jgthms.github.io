@@ -4,7 +4,7 @@ route: post
 ---
 
 <header class="post-header">
-  <div class="post-container">
+  <div class="container">
     <p class="post-info">
       <em class="post-date">{{page.date | date_to_string}}</em>
       in
@@ -15,8 +15,8 @@ route: post
   </div>
 </header>
 
-<section id="post" class="post">
-  <div class="post-container">
+<section id="post" class="post-main">
+  <div class="container">
     <article id="content" class="post-content">
       {{content}}
     </article>
@@ -24,7 +24,7 @@ route: post
 </section>
 
 <nav class="post-pagination">
-  <div class="post-container">
+  <div class="container">
     <nav class="post-pagination-share">
       <a
         class="post-pagination-button is-twitter"

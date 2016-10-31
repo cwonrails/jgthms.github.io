@@ -5,9 +5,6 @@
 @import "pygments-oceanic-next"
 
 .post
-  padding-bottom: $space-mobile
-  padding-left: 20px
-  padding-right: 20px
   &-header
     padding-bottom: $space-mobile
     padding-left: 20px
@@ -24,8 +21,9 @@
     font-weight: 400
   &-title
     color: $text-strong
+    font-family: $family-secondary
     font-size: $size-large
-    font-weight: 400
+    font-weight: 700
     line-height: 1.2
     margin-bottom: 10px
   &-introduction
@@ -88,6 +86,12 @@
           svg
             path
               fill: white
+      &.is-next strong
+        font-size: 1.2em
+  &-main
+    padding-bottom: $space-mobile
+    padding-left: 20px
+    padding-right: 20px
   &-content
     a
       border-bottom: 1px solid
@@ -101,6 +105,7 @@
     h2,
     h3
       color: $text-strong
+      font-family: $family-secondary
       font-size: 1.4em
       font-weight: 700
       line-height: 1.2
@@ -117,11 +122,6 @@
       margin: 20px 0
       padding: 10px
       text-align: center
-    p,
-    ol,
-    ul,
-    figure
-      max-width: 40em
     p
       margin: 1em 0
       &:first-child
@@ -157,7 +157,7 @@
       margin-top: 1em
     blockquote
       font-size: 1.4em
-      font-style: italic
+      font-style: normal
       line-height: 1.4
       margin: 2em
       max-width: 36em
@@ -224,14 +224,15 @@
         background: $green
         box-shadow: 0 0 0 5px $green
   +tablet
-    padding-left: 40px
-    padding-right: 40px
     &-info
       font-size: $size-small-tablet
     &-title
       font-size: $size-large-tablet
     &-introduction
       font-size: $size-medium-tablet
+    &-main
+      padding-left: 40px
+      padding-right: 40px
     &-content
       h2,
       h3
@@ -245,24 +246,30 @@
           vertical-align: top
           width: 40px
   +desktop
-    padding-bottom: $space-desktop
-    padding-left: $space-side
-    padding-right: $space-side
     &-header
       padding-bottom: $space-desktop
       padding-left: $space-side
       padding-right: $space-side
       padding-top: $space-desktop
+      .container
+        max-width: 800px
     &-info
       line-height: $magic
       margin-bottom: $space-desktop
+    &-main
+      padding-bottom: $space-desktop
+      padding-left: $space-side
+      padding-right: $space-side
+      .container
+        max-width: 800px
     &-pagination
       padding-bottom: $space-desktop
       padding-left: $space-side
       padding-right: $space-side
-      .post-container
+      .container
         align-items: stretch
         display: flex
+        max-width: 800px
       &-button
         margin-top: 0
         strong
@@ -282,14 +289,17 @@
         display: flex
         flex-direction: column
         justify-content: space-between
-        width: 210px
       &-share
         margin-right: $column-gap
         order: 1
+        width: 210px
       &-before
         margin-left: $column-gap
         order: 3
-  +widescreen
-    font-size: 24px
+        text-align: center
+        width: 140px
+        .post-pagination-button
+          padding-left: 0
+          padding-right: 0
 
 +skrollr("#post")

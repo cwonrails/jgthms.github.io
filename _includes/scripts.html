@@ -5,12 +5,12 @@
 </noscript>
 
 <script type="text/javascript" src="/javascript/zepto.min.js"></script>
+<script type="text/javascript" src="/javascript/jquery.unveil.js"></script>
 <script type="text/javascript" src="/javascript/skrollr.stylesheets.min.js"></script>
 <script type="text/javascript" src="/javascript/skrollr.min.js"></script>
-<script type="text/javascript" src="/javascript/jgthms.js"></script>
+<script type="text/javascript" src="/javascript/global.js"></script>
 
 {% if page.layout == 'post' %}
-  <script type="text/javascript" src="/javascript/jquery.unveil.js"></script>
   <script type="text/javascript" src="/javascript/post.js"></script>
 {% endif %}
 
@@ -19,13 +19,7 @@
   <script type="text/javascript" src="/javascript/articles.js"></script>
 {% endif %}
 
-{% if page.route == 'favourites' %}
-  <script type="text/javascript" src="/javascript/jquery.unveil.js"></script>
-  <script type="text/javascript" src="/javascript/favourites.js"></script>
-{% endif %}
-
 {% if page.route == 'projects' %}
-  <script type="text/javascript" src="/javascript/jquery.unveil.js"></script>
   <script type="text/javascript" src="/javascript/affix.js"></script>
   <script type="text/javascript" src="/javascript/projects.js"></script>
 {% endif %}
@@ -33,7 +27,7 @@
 <script>
   WebFontConfig = {
     google: {
-      families: ['Karla:400,400i,700,700i']
+      families: ['Roboto:400,400i,700,700i', 'Roboto+Slab:400,700']
     }
   };
 

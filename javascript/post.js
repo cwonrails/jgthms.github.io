@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-  $('img.lazy').unveil();
-
   var $headings = $('#content h2, #content h3');
 
   $headings.each(function() {

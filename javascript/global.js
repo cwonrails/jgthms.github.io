@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // Contact
   function R(s) {
     return R13(R5(s));
   }
@@ -29,6 +30,7 @@ $(document).ready(function() {
   var m = 'ookqrfvta@tznvy.pbz';
   $c.attr('href', R(t+m));
 
+  // Nav
   $('.toggle a').click( function() {
     var target = $(this).data('target');
     $('html').addClass(target + '-open');
@@ -42,6 +44,10 @@ $(document).ready(function() {
     }
   });
 
+  // jQuery Unveil
+  $('img.lazy').unveil();
+
+  // Skrollr
   var s = skrollr.init({
     mobileCheck: function() { return false; },
   });
