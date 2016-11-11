@@ -60,7 +60,6 @@
       width: 60px
   &-logo
     display: inline-block
-    height: 200px
     margin-bottom: 20px
     position: relative
     transition: opacity $speed $easing
@@ -75,18 +74,19 @@
       opacity: 0.3
   &-title
     color: $text-strong
-    font-family: $family-secondary
-    font-size: $size-medium
+    @extend %family-secondary
+    font-size: $size-large
     font-weight: 700
-    line-height: 1.2
+    line-height: 1
     margin-top: 20px
     a
       &:hover
         padding: 0
   &-url
     font-size: $size-small
-    line-height: 1.2
+    line-height: 1
     margin-bottom: 20px
+    margin-top: 5px
     a
       +underline
   &-content
@@ -135,9 +135,11 @@
         position: fixed
         width: 940px
     &-date
-      font-size: $size-small-tablet
-      line-height: 40px
-      padding-top: 50px
+      line-height: 20px
+      padding-bottom: 15px
+      padding-top: 70px
+    &-logo
+      height: 200px
     &-device
       display: block
       left: 50%
@@ -149,10 +151,6 @@
       &.is-ipad-h,
       &.is-ipad-v
         transform: scale(0.75) translate3d(80px, -62.5%, 0)
-    &-title
-      font-size: $size-medium-tablet
-    &-url
-      font-size: $size-small-tablet
     &-content
       width: 50%
 

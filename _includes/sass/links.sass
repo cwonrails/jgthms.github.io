@@ -18,9 +18,9 @@
       border-radius: 3px
       color: white
       display: inline-block
-      font-size: $size-small
-      height: 24px
-      line-height: 24px
+      font-size: $size-tiny
+      height: 1.25rem
+      line-height: 1.25rem
       padding: 0 8px
       vertical-align: top
     &.is-design
@@ -41,15 +41,21 @@
       span
         background: $purple
   &-title
-    font-family: $family-secondary
+    @extend %family-secondary
     font-size: $size-medium
     font-weight: 700
     line-height: 1.2
     a
       +visited
+      border-radius: $radius
+      display: inline-block
+      left: -0.25em
+      padding: 0.125em 0.25em
+      position: relative
+      vertical-align: top
   &-domain
     color: $text-light
-    font-size: $size-small
+    font-size: $size-tiny
   &-description
     margin-top: 5px
   +tablet
@@ -63,12 +69,10 @@
       margin-bottom: 0
       position: absolute
       text-align: right
-      top: 5px
+      top: calc((#{$size-medium} * 1.2 * 1.25) / 2)
       width: 120px
-    &-title
-      font-size: $size-medium-tablet
-    &-domain
-      font-size: $size-small-tablet
+      span
+        transform: translateY(-50%)
   +desktop
     max-width: 1260px
     padding-left: $space-side

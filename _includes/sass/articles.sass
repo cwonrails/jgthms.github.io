@@ -14,9 +14,9 @@
     border-radius: 3px
     color: $jt
     display: none
-    font-size: $size-small
-    height: 24px
-    line-height: 24px
+    font-size: $size-tiny
+    height: 1.25rem
+    line-height: 1.25rem
     text-align: center
     vertical-align: top
     width: 48px
@@ -37,7 +37,7 @@
   &-border
     display: none
   &-article
-    margin-bottom: $space-mobile
+    margin-bottom: 2rem
     padding-left: 20px
     position: relative
     &:last-child
@@ -60,22 +60,27 @@
         fill: $yellow
   &-info
     float: right
-    font-size: $size-small
-    line-height: 20px
+    font-size: $size-tiny
     margin-left: 10px
     padding-top: 4px
     text-align: right
   &-date
     display: block
   &-title
-    font-family: $family-secondary
+    @extend %family-secondary
     font-size: $size-medium
     line-height: 1.2
     a
       +visited
+      border-radius: $radius
+      display: inline-block
+      left: -0.25em
+      padding: 0.125em 0.25em
+      position: relative
+      vertical-align: top
   &-introduction
     color: $text-light
-    font-size: $size-normal
+    font-size: $size-small
     line-height: 1.2
     margin-top: 5px
   &.only-recommended
@@ -85,12 +90,6 @@
     padding-bottom: $space-desktop
     padding-left: $space-desktop
     padding-right: $space-desktop
-    &-info
-      font-size: $size-small-tablet
-    &-title
-      font-size: $size-medium-tablet
-    &-introduction
-      font-size: $size-normal-tablet
   +desktop
     padding-left: $space-side
     padding-right: $space-side
@@ -98,20 +97,18 @@
     &-season
       display: inline-block
       left: $space-side
+      margin-top: calc(#{$size-medium} * 1.2 * 1.25 / 2)
       position: absolute
-      transform: translateY(5px)
+      transform: translateY(-50%)
       &.affix
         position: fixed
-        top: 63px
+        top: 60px
     &-year
       z-index: 1
     &-season
       left: $space-side + 70px
     &-article
-      margin-bottom: $space-desktop
       padding-left: $column-width + $column-gap
-      &:last-child
-        margin-bottom: 0
     &-star
       left: 128px
       line-height: 33px

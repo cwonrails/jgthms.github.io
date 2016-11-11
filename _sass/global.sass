@@ -12,12 +12,13 @@
     line-height: 1.2
   &-title
     color: $text-strong
-    font-family: $family-secondary
+    @extend %family-secondary
     font-size: $size-medium
     font-weight: 700
   &-subtitle
     color: $text-light
   &-nav
+    font-size: $size-small
     margin-top: 0.5em
     a
       +underline
@@ -29,7 +30,6 @@
         opacity: $opacity-strong
   +tablet
     &-title
-      font-size: $size-medium-tablet
       line-height: $magic
   +desktop
     padding-bottom: $space-desktop

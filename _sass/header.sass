@@ -15,7 +15,7 @@
 .toggle
   align-items: center
   display: flex
-  font-size: $size-small
+  font-size: $size-tiny
   height: $magic
   justify-content: center
   position: absolute
@@ -44,7 +44,7 @@
     display: none
 
 .nav.is-menu
-  font-family: $family-secondary
+  @extend %family-secondary
   font-weight: 400
 
 +until($desktop)

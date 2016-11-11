@@ -12,7 +12,7 @@
     padding-top: ($space-mobile * 2) + $magic
   &-info
     color: $black
-    font-size: $size-small
+    font-size: $size-tiny
     margin-bottom: 10px
     opacity: $opacity-light
   &-date,
@@ -21,7 +21,7 @@
     font-weight: 400
   &-title
     color: $text-strong
-    font-family: $family-secondary
+    @extend %family-secondary
     font-size: $size-large
     font-weight: 700
     line-height: 1.2
@@ -31,7 +31,7 @@
     font-size: $size-medium
     line-height: 1.2
   &-pagination
-    font-size: $size-normal
+    font-size: $size-tiny
     padding-bottom: $space-mobile
     padding-left: 20px
     padding-right: 20px
@@ -105,7 +105,7 @@
     h2,
     h3
       color: $text-strong
-      font-family: $family-secondary
+      @extend %family-secondary
       font-size: 1.4em
       font-weight: 700
       line-height: 1.2
@@ -118,7 +118,7 @@
         margin-right: 10px
     aside
       color: $text-light
-      font-size: $size-small
+      font-size: $size-tiny
       margin: 20px 0
       padding: 10px
       text-align: center
@@ -153,7 +153,7 @@
         vertical-align: top
     figcaption
       color: $text-light
-      font-size: $size-small
+      font-size: $size-tiny
       margin-top: 1em
     blockquote
       font-size: 1.4em
@@ -224,12 +224,6 @@
         background: $green
         box-shadow: 0 0 0 5px $green
   +tablet
-    &-info
-      font-size: $size-small-tablet
-    &-title
-      font-size: $size-large-tablet
-    &-introduction
-      font-size: $size-medium-tablet
     &-main
       padding-left: 40px
       padding-right: 40px
@@ -252,7 +246,7 @@
       padding-right: $space-side
       padding-top: $space-desktop
       .container
-        max-width: 800px
+        max-width: 40rem
     &-info
       line-height: $magic
       margin-bottom: $space-desktop
@@ -261,7 +255,7 @@
       padding-left: $space-side
       padding-right: $space-side
       .container
-        max-width: 800px
+        max-width: 40rem
     &-pagination
       padding-bottom: $space-desktop
       padding-left: $space-side
@@ -269,7 +263,7 @@
       .container
         align-items: stretch
         display: flex
-        max-width: 800px
+        max-width: 40rem
       &-button
         margin-top: 0
         strong

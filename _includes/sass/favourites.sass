@@ -23,7 +23,7 @@
     display: block
     height: $size-medium * 2
     left: 0
-    line-height: ($size-medium * 2) - 2px
+    line-height: calc(($size-medium * 2) - 2px)
     position: absolute
     text-align: center
     top: 0
@@ -38,8 +38,8 @@
       position: relative
   &-name
     color: $text-strong
-    font-family: $family-secondary
-    font-size: $size-medium
+    @extend %family-secondary
+    font-size: $size-big
     font-weight: 700
     line-height: 1
     padding-left: 50px
@@ -63,19 +63,19 @@
   &-content
     a
       +visited
+      border-radius: $radius
+      display: inline-block
+      left: -0.25em
+      padding: 0.1em 0.25em
+      position: relative
+      vertical-align: top
     p:not(:last-child)
       margin-bottom: 1em
   +tablet
-    &-rank
-      height: $size-medium-tablet * 2
-      line-height: $size-medium-tablet * 2
-      width: $size-medium-tablet * 2
     &-name
-      font-size: $size-medium-tablet
       padding-left: 70px
     &-domain,
     &-developer
-      font-size: $size-small-tablet
       padding-left: 70px
   +desktop
     max-width: 1260px
