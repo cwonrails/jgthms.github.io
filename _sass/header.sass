@@ -15,23 +15,23 @@
 .menu-link
   +underline
   color: $text-light
+  display: block
+  line-height: 16px
   position: relative
+  text-align: center
   transition-duration: $speed
   transition-property: color
   .icon
-    bottom: 100%
-    left: 50%
-    margin-left: -16px
+    display: block
+    margin-bottom: 8px
+    margin-left: auto
+    margin-right: auto
     opacity: 1
-    position: absolute
-    transform: scale(0.5) translateY(-1rem)
+    position: relative
+    transform: scale(0.5)
     transform-origin: center bottom
     transition-duration: 100ms
     transition-property: opacity, transform
-  &:hover
-    .icon
-      opacity: 1
-      transform: scale(0.5) translateY(-1rem)
   &.is-articles
     &:hover,
     &.is-active
@@ -61,7 +61,7 @@
   .menu
     position: absolute
     right: 60px
-    top: 60px
+    top: 28px
   .menu-list
     align-content: center
     display: flex
