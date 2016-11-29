@@ -1,0 +1,90 @@
+.up
+  position: relative
+
+.up-svg
+  animation: none 1s $cubic-magic both
+
+.up-polygon
+  stroke: $orange
+
+.up-road
+  animation: none 1s linear both
+  height: 16px
+  position: absolute
+  transform-origin: center center
+  width: 2px
+
+.up-road-1
+  left: 4px
+  top: 100%
+
+.up-road-2
+  height: 8px
+  left: -4px
+  top: 150%
+
+.up-road-3
+  right: 4px
+  top: 100%
+
+.up-road-4
+  height: 8px
+  right: -4px
+  top: 150%
+
+.up-line
+  animation: none 1s $cubic-magic both
+  animation-duration: 0.5s
+  animation-iteration-count: 2
+  background: $orange
+  border-radius: 290486px
+  height: 100%
+  left: 0
+  opacity: 0
+  position: absolute
+  top: 0
+  transform-origin: center center
+  width: 2px
+
+.up-road
+  animation-duration: 0.5s
+  animation-iteration-count: 2
+
+.up-road-2,
+.up-road-3
+  animation-delay: 100ms
+  .up-line
+    animation-delay: 100ms
+
+.menu-link:hover
+  .up-svg
+    animation-name: goingUp
+  .up-road
+    animation-name: upRideRoad
+  .up-line
+    animation-name: upLineRoad
+
+@keyframes upRideRoad
+  0%
+    transform: translateY(-64px)
+  100%
+    transform: translateY(64px)
+
+@keyframes upLineRoad
+  0%
+    opacity: 0
+    transform: scaleY(0)
+  50%
+    opacity: 1
+    transform: scaleY(1.5)
+  100%
+    opacity: 0
+    transform: scaleY(0)
+
+@keyframes goingUp
+  0%
+    opacity: 0
+    transform: translateY(100%)
+  100%
+    opacity: 1
+    transform: translateY(0)

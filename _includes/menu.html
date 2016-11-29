@@ -1,27 +1,38 @@
-<nav id="menu" class="nav is-menu">
-  <ul>
-    <li>
-      <a class="nav-link{% if page.route == 'articles' or page.layout == 'post' %} is-active{% endif %}" href="/articles.html">
+<nav id="menu" class="menu">
+  <ul class="menu-list">
+    <li class="menu-item">
+      <a class="menu-link{% if page.route == 'articles' or page.layout == 'post' %} is-active{% endif %}" href="/articles.html">
         Articles
-        <span class="nav-underline"></span>
+        {% include icons/square.html %}
+        <span class="menu-underline"></span>
       </a>
     </li>
-    <li>
-      <a class="nav-link{% if page.route == 'favourites' %} is-active{% endif %}" href="/favourite-websites.html">
-        Favourites
-        <span class="nav-underline"></span>
+    <li class="menu-item">
+      <a class="menu-link{% if page.route == 'favourites' %} is-active{% endif %}" href="/open-source.html">
+        Open source
+        {% include icons/circle.html %}
+        <span class="menu-underline"></span>
       </a>
     </li>
-    <li>
-      <a class="nav-link{% if page.route == 'projects' %} is-active{% endif %}" href="/projects.html">
+    <li class="menu-item">
+      <a class="menu-link{% if page.route == 'projects' %} is-active{% endif %}" href="/projects.html">
         Projects
-        <span class="nav-underline"></span>
+        {% include icons/up.html %}
+        <span class="menu-underline"></span>
       </a>
     </li>
-    <li>
-      <a class="nav-link{% if page.route == 'links' %} is-active{% endif %}" href="/links.html">
+    <li class="menu-item">
+      <a class="menu-link{% if page.route == 'favourites' %} is-active{% endif %}" href="/favourite-websites.html">
+        Favourites
+        {% include icons/diamond.html %}
+        <span class="menu-underline"></span>
+      </a>
+    </li>
+    <li class="menu-item">
+      <a class="menu-link{% if page.route == 'links' %} is-active{% endif %}" href="/links.html">
         Links
-        <span class="nav-underline"></span>
+        {% include icons/right.html %}
+        <span class="menu-underline"></span>
       </a>
     </li>
   </ul>

@@ -19,9 +19,6 @@
 
   <article class="articles-article is-{{post.category | downcase}}{% if post.recommended == true %} is-recommended{% endif %}">
     {% if post.recommended == true %}
-      <div class="articles-star">
-        {% include svg/star.html %}
-      </div>
     {% endif %}
     <p class="articles-info">
       <em class="articles-date">{{post.date | date_to_string}}</em>

@@ -1,0 +1,71 @@
+.right
+  position: relative
+
+.right-polygon
+  stroke: $purple
+
+.right-svg
+  animation: none 1s cubic-bezier(1, -0.5, 0.5, 1.5) both
+
+.right-mini
+  animation: none 0.8s cubic-bezier(1, -0.5, 1, 1) both
+  margin-top: -6px
+  position: absolute
+
+.right-mini-1
+  left: 48px
+  top: 50%
+  animation-delay: 0ms
+  .right-triangle
+    animation-delay: 0ms
+
+.right-mini-2
+  left: 40px
+  top: 20%
+  animation-delay: 50ms
+  .right-triangle
+    animation-delay: 50ms
+
+.right-mini-3
+  left: 44px
+  top: 70%
+  animation-delay: 100ms
+  .right-triangle
+    animation-delay: 100ms
+
+.right-triangle
+  animation: none 0.8s 200ms linear both
+  border: solid transparent
+  border-width: 6px 9px
+  border-left-color: $purple
+  opacity: 0
+
+.menu-link:hover
+  .right-svg
+    animation-name: rightGoing
+  .right-mini
+    animation-name: rightMore
+  .right-triangle
+    animation-name: rightTriangle
+
+@keyframes rightGoing
+  0%
+    opacity: 0
+    transform: scale(0.8) translateX(-100%)
+  100%
+    opacity: 1
+    transform: scale(1) translateX(0)
+
+@keyframes rightMore
+  0%
+    transform: scale(0.8) translateX(-300%)
+  100%
+    transform: scale(1) translateX(300%)
+
+@keyframes rightTriangle
+  0%
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    opacity: 0
