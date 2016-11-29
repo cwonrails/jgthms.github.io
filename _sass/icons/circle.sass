@@ -5,7 +5,7 @@
 
 .circle-circle
   animation: none 1s ease-in-out both
-  stroke: $green
+  stroke: $border
   stroke-dasharray: 90
   stroke-dashoffset: 0
   transform-origin: center center
@@ -26,11 +26,18 @@
   animation-delay: 0.5s
   border-width: 1px
 
-.menu-link:hover
+.menu-link:hover,
+.menu-link.is-active
   .circle-circle
     animation-name: circleDash
+    stroke: $open-source
   .circle-ripple
     animation-name: circleRipple
+
+.menu-link.is-active
+  .circle-circle,
+  .circle-ripple
+    animation-duration: 0s
 
 @keyframes circleRipple
   0%

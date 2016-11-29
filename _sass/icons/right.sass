@@ -2,7 +2,7 @@
   position: relative
 
 .right-polygon
-  stroke: $purple
+  stroke: $border
 
 .right-svg
   animation: none 1s cubic-bezier(1, -0.5, 0.5, 1.5) both
@@ -37,16 +37,25 @@
   animation: none 0.8s 200ms linear both
   border: solid transparent
   border-width: 6px 9px
-  border-left-color: $purple
+  border-left-color: $links
   opacity: 0
 
-.menu-link:hover
+.menu-link:hover,
+.menu-link.is-active
   .right-svg
     animation-name: rightGoing
+  .right-polygon
+    stroke: $links
   .right-mini
     animation-name: rightMore
   .right-triangle
     animation-name: rightTriangle
+
+.menu-link.is-active
+  .right-svg,
+  .right-mini,
+  .right-triangle
+    animation-duration: 0s
 
 @keyframes rightGoing
   0%

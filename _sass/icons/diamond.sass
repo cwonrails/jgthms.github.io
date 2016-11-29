@@ -6,7 +6,7 @@
   animation-timing-function: cubic-bezier(0, 1, 0, 1)
 
 .diamond-polygon
-  stroke: $cyan
+  stroke: $border
 
 .diamond-dust
   animation: none 0.8s linear both
@@ -30,7 +30,7 @@
 
 .diamond-lines
   animation: none 0.8s linear both
-  border-color: $cyan
+  border-color: $favourites
   border-style: solid
   border-width: 2px 0
   height: 100%
@@ -51,15 +51,26 @@
   .diamond-lines
     animation-delay: 50ms
 
-.menu-link:hover
+.menu-link:hover,
+.menu-link.is-active
   .diamond-svg
     animation-name: diamondEnter
+  .diamond-polygon
+    stroke: $favourites
   .diamond-dust
     animation-name: diamondDust
   .diamond-wheel
     animation-name: diamondWheel
   .diamond-lines
     animation-name: diamondLines
+
+.menu-link.is-active
+  .diamond-svg,
+  .diamond-polygon,
+  .diamond-dust,
+  .diamond-wheel,
+  .diamond-lines
+    animation-duration: 0s
 
 @keyframes diamondEnter
   0%

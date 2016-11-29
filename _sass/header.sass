@@ -13,8 +13,11 @@
     width: 16px
 
 .menu-link
-  color: $text
+  +underline
+  color: $text-light
   position: relative
+  transition-duration: $speed
+  transition-property: color
   .icon
     bottom: 100%
     left: 50%
@@ -29,6 +32,26 @@
     .icon
       opacity: 1
       transform: scale(0.5) translateY(-1rem)
+  &.is-articles
+    &:hover,
+    &.is-active
+      color: $articles
+  &.is-open-source
+    &:hover,
+    &.is-active
+      color: $open-source
+  &.is-projects
+    &:hover,
+    &.is-active
+      color: $projects
+  &.is-favourites
+    &:hover,
+    &.is-active
+      color: $favourites
+  &.is-links
+    &:hover,
+    &.is-active
+      color: $links
 
 +desktop
   .jt

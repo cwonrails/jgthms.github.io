@@ -5,7 +5,7 @@
   animation: none 1s $cubic-magic both
 
 .up-polygon
-  stroke: $orange
+  stroke: $border
 
 .up-road
   animation: none 1s linear both
@@ -36,7 +36,7 @@
   animation: none 1s $cubic-magic both
   animation-duration: 0.5s
   animation-iteration-count: 2
-  background: $orange
+  background: $projects
   border-radius: 290486px
   height: 100%
   left: 0
@@ -56,13 +56,22 @@
   .up-line
     animation-delay: 100ms
 
-.menu-link:hover
+.menu-link:hover,
+.menu-link.is-active
   .up-svg
     animation-name: goingUp
+  .up-polygon
+    stroke: $projects
   .up-road
     animation-name: upRideRoad
   .up-line
     animation-name: upLineRoad
+
+.menu-link.is-active
+  .up-svg,
+  .up-road,
+  .up-line
+    animation-duration: 0s
 
 @keyframes upRideRoad
   0%

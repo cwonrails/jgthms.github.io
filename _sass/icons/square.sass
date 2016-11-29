@@ -5,11 +5,11 @@
   width: 32px
 
 .square-rect
-  stroke: $blue
+  stroke: $border
 
 .square-mini
   background-size: 100%
-  border: 2px solid $blue
+  border: 2px solid $articles
   display: block
   height: 12px
   left: 0
@@ -19,7 +19,7 @@
   width: 12px
   &:before, &:after
     background-size: 100%
-    border: 2px solid $blue
+    border: 2px solid $articles
     display: block
     height: 12px
     left: 0
@@ -60,9 +60,12 @@
     animation: none 1s 0.15s $cubic-magic both
     opacity: .4
 
-.menu-link:hover
+.menu-link:hover,
+.menu-link.is-active
   .square
     animation-name: squarePulse
+  .square-rect
+    stroke: $articles
   .square-mini-1
     animation-name: squareFloatMain-1
     &:before
@@ -75,6 +78,16 @@
       animation-name: squareFloatSub-3
     &:after
       animation-name: squareFloatSub-4
+
+.menu-link.is-active
+  .square,
+  .square-mini-1,
+  .square-mini-1:before,
+  .square-mini-1:after,
+  .square-mini-2,
+  .square-mini-2:before,
+  .square-mini-2:after
+    animation-duration: 0s
 
 @keyframes squarePulse
   0%

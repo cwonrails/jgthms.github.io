@@ -1,35 +1,35 @@
 <nav id="menu" class="menu">
   <ul class="menu-list">
     <li class="menu-item">
-      <a class="menu-link{% if page.route == 'articles' or page.layout == 'post' %} is-active{% endif %}" href="/articles.html">
+      <a class="menu-link is-articles {% if page.route == 'articles' or page.layout == 'post' %} is-active{% endif %}" href="/articles.html">
         Articles
         {% include icons/square.html %}
         <span class="menu-underline"></span>
       </a>
     </li>
     <li class="menu-item">
-      <a class="menu-link{% if page.route == 'favourites' %} is-active{% endif %}" href="/open-source.html">
+      <a class="menu-link is-open-source {% if page.route == 'open-source' %} is-active{% endif %}" href="/open-source.html">
         Open source
         {% include icons/circle.html %}
         <span class="menu-underline"></span>
       </a>
     </li>
     <li class="menu-item">
-      <a class="menu-link{% if page.route == 'projects' %} is-active{% endif %}" href="/projects.html">
+      <a class="menu-link is-projects {% if page.route == 'projects' %} is-active{% endif %}" href="/projects.html">
         Projects
         {% include icons/up.html %}
         <span class="menu-underline"></span>
       </a>
     </li>
     <li class="menu-item">
-      <a class="menu-link{% if page.route == 'favourites' %} is-active{% endif %}" href="/favourite-websites.html">
+      <a class="menu-link is-favourites {% if page.route == 'favourites' %} is-active{% endif %}" href="/favourite-websites.html">
         Favourites
         {% include icons/diamond.html %}
         <span class="menu-underline"></span>
       </a>
     </li>
     <li class="menu-item">
-      <a class="menu-link{% if page.route == 'links' %} is-active{% endif %}" href="/links.html">
+      <a class="menu-link is-links {% if page.route == 'links' %} is-active{% endif %}" href="/links.html">
         Links
         {% include icons/right.html %}
         <span class="menu-underline"></span>
