@@ -11,7 +11,7 @@
   transform-origin: center center
 
 .circle-ripple
-  animation: none 1s ease-out both
+  animation: none 2s ease-out both
   border: 2px solid $green
   border-radius: 290486px
   opacity: 0
@@ -26,6 +26,7 @@
   animation-delay: 0.5s
   border-width: 1px
 
+.heading-icon,
 .menu-link:hover,
 .menu-link.is-active
   .circle-circle
@@ -33,6 +34,10 @@
     stroke: $open-source
   .circle-ripple
     animation-name: circleRipple
+
+.heading-icon
+  .circle-ripple
+    animation-iteration-count: infinite
 
 .menu-link.is-active
   .circle-circle,
@@ -43,9 +48,9 @@
   0%
     opacity: 0
     transform: scale(0.5, 0.5)
-  50%
+  25%
     opacity: 0.5
-  100%
+  50%
     opacity: 0
     transform: scale(2, 2)
 

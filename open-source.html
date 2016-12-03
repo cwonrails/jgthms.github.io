@@ -1,0 +1,97 @@
+---
+layout: default
+title: "Open source projects by Jeremy Thomas"
+route: open-source
+
+repos:
+- id: css-reference
+  url: http://cssreference.io
+  year: 2016
+  month: 11
+  name: "CSS Reference"
+  description: A free visual guide to the most popular CSS properties
+- id: wysiwyg.css
+  url: http://jgthms.com/wysiwyg.css/
+  year: 2016
+  month: 09
+  name: "wysiwyg.css"
+  description: A tiny CSS for generated HTML or Markdown content
+- id: minireset.css
+  url: http://jgthms.com/minireset.css/
+  year: 2016
+  month: 08
+  name: "minireset.css"
+  description: A tiny modern CSS reset
+- id: web-design-in-4-minutes
+  url: http://jgthms.com/web-design-in-4-minutes
+  year: 2016
+  month: 07
+  name: "Web design in 4 minutes"
+  description: A self-referential tutorial as a single webpage experiment
+- id: bulma
+  url: http://bulma.io
+  year: 2016
+  month: 01
+  name: "Bulma"
+  description: Modern CSS framework based on Flexbox
+- id: marksheet
+  url: http://marksheet.io
+  year: 2015
+  month: 06
+  name: "MarkSheet"
+  description: Free tutorial to learn HTML and CSS
+- id: juketube
+  url: http://jgthms.com/juketube/
+  year: 2013
+  month: 10
+  name: "JukeTube"
+  description: A YouTube jukebox built with AngularJS
+# - id: css-art-science
+#  url: http://jgthms.com/css-art-science/
+#  year: 2012
+#  month: 03
+#  name: "CSS : l'Art & la Science"
+#  description: A journey through HTML and CSS
+---
+
+<hgroup class="heading">
+  <div class="heading-icon">
+    {% include icons/circle.html %}
+  </div>
+  <h1 class="heading-title">Open Source</h1>
+  <p class="heading-subtitle">For insight and enlightenment</p>
+</hgroup>
+
+<p class="github-link">
+  <a href="https://github.com/jgthms">
+    <span>github.com/</span>
+    <strong>jgthms</strong>
+  </a>
+</p>
+
+<main id="repos" class="repos">
+  {% for repo in page.repos %}
+    {% assign month = repo.month %}
+    {% capture namedmonth %}{% case month %}{% when 01 %}Jan{% when 02 %}Feb{% when 03 %}Mar{% when 04 %}Apr{% when 05 %}May{% when 06 %}Jun{% when 07 %}Jul{% when 08 %}Aug{% when 09 %}Sep{% when 10 %}Oct{% when 11 %}Nov{% when 12 %}Dec{% endcase %}{% endcapture %}
+    <article class="repo-item">
+      <aside class="repo-date">
+        <p class="repo-year">{{repo.year}}</p>
+        <p class="repo-month">{{namedmonth}}</p>
+      </aside>
+      <a class="repo-icon" href="{{repo.url}}" style="background-image: url({{site.url}}/images/open-source/{{repo.id}}.png);"></a>
+      <header class="repo-header">
+        <h2 class="repo-title">
+          <a href="{{repo.url}}">
+            {{repo.name}}
+          </a>
+        </h2>
+        <p class="repo-description">
+          {{repo.description}}
+        </p>
+      </header>
+      <div class="repo-stars">
+        <!-- <iframe src="https://ghbtns.com/github-btn.html?user=jgthms&repo={{repo.id}}&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe> -->
+      </div>
+    </article>
+  {% endfor %}
+</main>
