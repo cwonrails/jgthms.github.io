@@ -1,53 +1,85 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  var bLazy = new Blazy();
-
+  /* Nav stuff */
   var $root = document.documentElement;
-  var bodyBackgroundOriginal = $root.style.getPropertyValue('--bodyBackground');
-  var colorLinkOriginal = $root.style.getPropertyValue('--colorLink');
+  var rootStyles = window.getComputedStyle($root);
+  var colorLinkOriginal = rootStyles.getPropertyValue('--colorLink');
+  var colorLinkInvertOriginal = rootStyles.getPropertyValue('--colorLinkInvert');
   var $nav = document.getElementById('nav');
   var $navLinks = document.querySelectorAll('.nav-link');
   var $title = document.getElementById('title');
   var titleOriginal = $title.innerHTML;
-  var $helloLinks = document.querySelectorAll('#jt, .hello a, .elsewhere-link');
+  var $helloLinks = document.querySelectorAll('.nav-link, #jt, .hello a, .elsewhere-link');
 
-  Array.prototype.forEach.call($navLinks, function($item) {
-    var backgroundColor = $item.dataset.backgroundColor;
-    var color = $item.dataset.color;
-    $item.addEventListener('mouseenter', function(event) {
-      $root.style.setProperty(`--colorLink`, color);
-      setTitle(this);
+  function addEventListeners() {
+    Array.prototype.forEach.call($helloLinks, function($item) {
+      $item.addEventListener('mouseenter', eventHelloLinkEnter);
+      $item.addEventListener('mouseleave', eventHelloLinkLeave);
     });
-  });
+  }
 
-  $nav.addEventListener('mouseleave', function(event) {
-    $root.style.setProperty(`--colorLink`, colorLinkOriginal);
+  function removeEventListeners() {
+    Array.prototype.forEach.call($helloLinks, function($item) {
+      $item.removeEventListener('mouseenter', eventHelloLinkEnter);
+      $item.removeEventListener('mouseleave', eventHelloLinkLeave);
+    });
+  }
+
+  function eventHelloLinkEnter(event) {
+    setTitle(event.target);
+  }
+
+  function eventHelloLinkLeave(event) {
     unsetTitle();
-  });
-
-  Array.prototype.forEach.call($helloLinks, function($item) {
-    $item.addEventListener('mouseenter', function(event) {
-      setTitle(this);
-    });
-    $item.addEventListener('mouseleave', function(event) {
-      unsetTitle();
-    });
-  });
+  }
 
   function setTitle($el) {
     var title = $el.dataset.title;
     $title.innerHTML = title;
     $title.classList.add('is-hovering');
+    var color = $el.dataset.color;
+    if (color) {
+      $root.style.setProperty(`--colorLink`, color);
+    }
+    if ($el.dataset.invert) {
+      $root.style.setProperty(`--colorLinkInvert`, 'rgba(0,0,0,0.71)');
+    } else {
+      $root.style.setProperty(`--colorLinkInvert`, '#fff');
+    }
   }
 
   function unsetTitle() {
     $title.innerHTML = titleOriginal;
     $title.classList.remove('is-hovering');
+    $root.style.setProperty(`--colorLink`, colorLinkOriginal);
+    $root.style.setProperty(`--colorLinkInvert`, colorLinkInvertOriginal);
   }
 
-  var $top = document.getElementById('top');
-  $top.addEventListener('click', function(event) {
-    window.scrollTo(0,0);
+  function doneResizing() {
+    if (window.innerWidth > 800) {
+      addEventListeners();
+    } else {
+      removeEventListeners();
+    }
+  }
+  doneResizing();
+
+  var resizeId;
+  window.addEventListener('resize', function(event) {
+    clearTimeout(resizeId);
+    resizeId = setTimeout(doneResizing, 500);
   });
+
+  /* Image lazy load */
+  var bLazy = new Blazy();
+
+  /* Back to top */
+  var $top = document.getElementById('top');
+
+  if ($top) {
+    $top.addEventListener('click', function(event) {
+      window.scrollTo(0,0);
+    });
+  }
 
 });

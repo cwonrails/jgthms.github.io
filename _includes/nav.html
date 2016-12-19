@@ -2,36 +2,38 @@
   <a class="nav-link is-articles {% if page.route == 'articles' or page.layout == 'post' %} is-active{% endif %}"
     href="/articles.html"
     data-title="Articles"
-    data-color="deepskyblue"
-    data-background-color="aliceblue">
+    data-color="#2478ff"
+    data-other-color="aliceblue">
     {% include icons/square.html %}
   </a>
   <a class="nav-link is-open-source {% if page.route == 'open-source' %} is-active{% endif %}"
     href="/open-source.html"
     data-title="Open Source"
-    data-color="springgreen"
-    data-background-color="honeydew">
+    data-color="#24ff70"
+    data-invert="true"
+    data-other-color="honeydew">
     {% include icons/circle.html %}
   </a>
   <a class="nav-link is-projects {% if page.route == 'projects' %} is-active{% endif %}"
     href="/projects.html"
     data-title="Projects"
-    data-color="tomato"
-    data-background-color="antiquewhite">
+    data-color="#ff5724"
+    data-other-color="antiquewhite">
     {% include icons/up.html %}
   </a>
   <a class="nav-link is-favourites {% if page.route == 'favourites' %} is-active{% endif %}"
     href="/favourite-websites.html"
     data-title="Favourites"
-    data-color="cyan"
-    data-background-color="azure">
+    data-color="#24ffde"
+    data-invert="true"
+    data-other-color="azure">
     {% include icons/diamond.html %}
   </a>
   <a class="nav-link is-links {% if page.route == 'links' %} is-active{% endif %}"
     href="/links.html"
     data-title="Links"
-    data-color="fuchsia"
-    data-background-color="ghostwhite">
+    data-color="#9524ff"
+    data-other-color="ghostwhite">
     {% include icons/right.html %}
   </a>
 </nav>
