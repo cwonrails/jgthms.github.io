@@ -3,6 +3,7 @@ layout: post
 title: Target blank is for laptop and Mac users
 introduction: I've always loathed the target _blank feature. Maybe wrongly so.
 category: UX
+published: false
 ---
 
 For more than a decade, my main computer has been a regular PC tower. Alongside Windows XP as my default OS, I've become well acquainted with the 3-buttons mouse. Whether for gaming, text editing, or just browsing, the middle click has supplanted the right one as my second most used button.

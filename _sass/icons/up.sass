@@ -5,7 +5,7 @@
   animation: none 1s $cubic-magic both
 
 .up-polygon
-  stroke: $border
+  stroke: $icon-stroke
 
 .up-road
   animation: none 1s linear both
@@ -56,8 +56,9 @@
   .up-line
     animation-delay: 100ms
 
-.menu-link:hover,
-.menu-link.is-active
+.glyph,
+.nav-link:hover,
+.nav-link.is-active
   .up-svg
     animation-name: goingUp
   .up-polygon
@@ -67,7 +68,7 @@
   .up-line
     animation-name: upLineRoad
 
-.menu-link.is-active
+.nav-link.is-active
   .up-svg,
   .up-road,
   .up-line

@@ -3,7 +3,7 @@ layout: post
 title: 'In CSS: use pixels, not em'
 introduction: Precision over elegance
 category: Code
-recommended: true
+published: false
 ---
 
 CSS provides several [size units](http://marksheet.io/css-size-units.html):

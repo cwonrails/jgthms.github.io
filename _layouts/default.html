@@ -2,8 +2,31 @@
 <html class="{% if page.route %}is-{{page.route}}{% elsif page.layout %}is-{{page.layout}}{% endif %}">
   {% include head.html %}
   <body>
-    {% include header.html %}
-    {% include menu.html %}
-    <main id="content">{{content}}</main>
+    <header class="header">
+      {% include jt.html %}
+      {% if page.route == "index" %}
+        <div class="hello">
+          <h1>
+            <strong>Frontend Designer</strong> from Bordeaux, currently working for <a class="is-improbable" data-title="Build worlds where everything matters" href="https://improbable.io">Improbable</a> in sunny London.
+          </h1>
+          <p>
+            I wrote <a class="is-marksheet" data-title="Free HTML and CSS tutorial" href="http://marksheet.io/">MarkSheet</a>, <a class="is-bulma" data-title="Modern CSS framework based on Flexbox" href="http://bulma.io/">Bulma</a>, and <a class="is-cssreference" data-title="Visual and animated guide to CSS properties" href="http://cssreference.io/">CSS Reference</a>.
+          </p>
+        </div>
+      {% endif %}
+      {% include nav.html %}
+    </header>
+    <h1 id="title" class="title">
+      <div>
+        {{page.pageTitle}}
+      </div>
+    </h1>
+    {% if page.route != "index" and  page.layout != "post" %}
+      {% include glyph.html %}
+    {% endif %}
+    <main id="content" class="content">
+      {{content}}
+    </main>
+    {% include scripts.html %}
   </body>
 </html>

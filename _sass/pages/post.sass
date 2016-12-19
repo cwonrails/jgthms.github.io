@@ -1,0 +1,126 @@
+.post-heading
+  +container(30rem)
+
+.post-content
+  margin-top: 4rem
+  a
+    +visited
+  h2,
+  h3
+    font-size: 1.4em
+    font-weight: 700
+    line-height: 1.2
+    margin-bottom: 1em
+    margin-top: 2em
+    position: relative
+    a
+      border-bottom: none
+      font-weight: 400
+      margin-right: 10px
+  aside
+    color: $text-light
+    font-size: 0.75em
+    margin: 20px 0
+    padding: 10px
+    text-align: center
+  p
+    margin: 1em 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+    &.note
+      background: rgba(black, 0.04)
+      color: $text
+      padding: 20px
+      code
+        background: white
+        padding-bottom: 2px
+  ol
+    list-style: decimal outside
+    margin: 1em
+    margin-left: 2em
+  ul
+    list-style: disc outside
+    margin: 1em
+    margin-left: 2em
+  figure:not(.highlight)
+    margin: 2em 0
+    text-align: center
+    &:first-child
+      margin-top: 0 !important
+    img
+      display: inline-block
+      vertical-align: top
+  figcaption
+    color: $text-light
+    font-size: 0.75em
+    margin-top: 1em
+  blockquote
+    font-size: 1.4em
+    font-style: normal
+    line-height: 1.4
+    margin: 2em
+    max-width: 36em
+    position: relative
+    text-align: left
+    &:before
+      background: $pink
+      content: ""
+      display: block
+      height: 1.4em
+      margin-left: -0.7em
+      position: absolute
+      width: 1.4em
+    p
+      margin: 0
+      position: relative
+  table
+    font-size: 0.8em
+    margin: 2em 0
+    width: 100%
+    th,
+    td
+      border: 2px solid $border
+      padding: 0.8em 1em
+      text-align: left
+      &.empty
+        background: none
+        border: none
+      code
+        font-size: 1em
+        padding-bottom: 2px
+  code,
+  pre
+    background: white
+    color: $link
+    font-size: 0.8em
+  code
+    background: $background
+    padding: 2px 6px 4px
+    position: relative
+    top: -2px
+  pre
+    padding: 1em
+    code
+      font-size: 1em
+  .highlight
+    code,
+    pre
+      background: transparent
+      color: inherit
+  .highlight
+    overflow: auto
+    pre
+      white-space: pre-wrap
+  .top-highlight
+    background: lighten($green, 30%)
+    box-shadow: 0 0 0 5px lighten($green, 30%)
+    color: $jt
+    padding: 2px 0 3px
+    position: relative
+    transition: none $speed $easing
+    transition-property: background, box-shadow, color
+    &:hover
+      background: $green
+      box-shadow: 0 0 0 5px $green

@@ -1,0 +1,80 @@
+.github-link
+  background: $open-source
+  font-size: 1.5rem
+  font-weight: 300
+  padding: 2rem
+  a
+    color: $open-source-invert
+  span
+    opacity: 0.3
+  strong
+    color: inherit
+    font-weight: 300
+
+.repo-date
+  color: $text-light
+  display: flex
+  font-weight: 300
+
+.repo-year
+  flex-basis: 50%
+
+.repo-item
+  border-bottom: 1px solid $border
+
+.repo-icon
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: contain
+  display: block
+
+.repo-title
+  font-size: 1.75rem
+  font-weight: 300
+  line-height: 1.2
+
+.repo-description
+  color: $text-strong
+  font-size: 1.25rem
+  font-weight: 300
+  margin-top: 0.5rem
+
+.repo-stars
+  display: flex
+  height: 30px
+
++mobile
+  .github-link
+    text-align: center
+  .repo-item
+    padding: 2rem
+  .repo-icon
+    height: 160px
+    margin: 2rem
+  .repo-stars
+    margin-top: 1rem
+
++tablet
+  .repo-item
+    display: flex
+    padding: 2rem
+  .repo-date
+    flex-basis: 20%
+    flex-shrink: 0
+  .repo-icon
+    flex-grow: 0
+    flex-shrink: 0
+    margin-right: 2rem
+    width: 90px
+  .repo-header
+    flex-basis: 20%
+    flex-grow: 1
+    flex-shrink: 1
+  .repo-stars
+    flex-basis: 160px
+    flex-shrink: 0
+    margin-left: 2rem
+
++desktop
+  .repo-item
+    padding: 4rem

@@ -1,0 +1,76 @@
+.jt
+  background: $pink
+  border-radius: 4px
+  display: block
+  height: 4rem
+  padding: 1rem
+  width: 4rem
+  svg
+    display: block
+    height: 2rem
+    width: 2rem
+
+.menu-link
+  +underline
+  color: $text-light
+  display: block
+  height: 4rem
+  line-height: 16px
+  position: relative
+  text-align: center
+  transition-duration: $speed
+  transition-property: color
+  .icon
+    display: block
+    margin-bottom: 12px
+    margin-left: auto
+    margin-right: auto
+    opacity: 1
+    padding-top: 2px
+    position: relative
+    transform: scale(0.5)
+    transform-origin: center bottom
+    transition-duration: 100ms
+    transition-property: opacity, transform
+  &.is-articles
+    &:hover,
+    &.is-active
+      color: $articles
+  &.is-open-source
+    &:hover,
+    &.is-active
+      color: $open-source
+  &.is-projects
+    &:hover,
+    &.is-active
+      color: $projects
+  &.is-favourites
+    &:hover,
+    &.is-active
+      color: $favourites
+  &.is-links
+    &:hover,
+    &.is-active
+      color: $links
+
++mobile
+  .jt
+    margin: 2rem auto
+  .menu
+    display: none
+
++desktop
+  .jt
+    left: 4rem
+    position: absolute
+    top: 4rem
+  .menu
+    position: absolute
+    right: 4rem
+    top: 4rem
+  .menu-list
+    align-content: center
+    display: flex
+    justify-content: center
+  .menu-item
+    margin-left: 2rem

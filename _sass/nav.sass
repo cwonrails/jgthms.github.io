@@ -1,0 +1,43 @@
+.nav
+  align-items: center
+  display: flex
+  justify-content: center
+
+.nav-link
+  align-items: center
+  display: flex
+  height: 4rem
+  justify-content: center
+  position: relative
+  text-align: center
+  transition-duration: $speed
+  transition-property: color
+  width: 4rem
+  .icon
+    display: block
+    opacity: 1
+    position: relative
+    transform: scale(0.5)
+    transform-origin: center center
+    transition-duration: 100ms
+    transition-property: opacity, transform
+  &.is-articles
+    &:hover,
+    &.is-active
+      color: $articles
+  &.is-open-source
+    &:hover,
+    &.is-active
+      color: $open-source
+  &.is-projects
+    &:hover,
+    &.is-active
+      color: $projects
+  &.is-favourites
+    &:hover,
+    &.is-active
+      color: $favourites
+  &.is-links
+    &:hover,
+    &.is-active
+      color: $links

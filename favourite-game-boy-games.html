@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Favourite Game Boy games of Jeremy Thomas
+pageTitle: "Favourites"
 route: favourites
 
 games:
@@ -157,28 +158,27 @@ games:
     </p>
 ---
 
-<hgroup class="heading">
-  <h1 class="heading-title">Favourite things</h1>
-  <nav class="heading-nav">
-    <a href="/favourite-websites.html">Websites</a><a class="is-active" href="/favourite-game-boy-games.html">Game Boy</a><a href="/favourite-nintendo-64-games.html">Nintendo 64</a>
-  </nav>
-</hgroup>
+<nav class="heading-nav">
+  <a href="/favourite-websites.html">Websites</a>
+  <a class="is-active" href="/favourite-game-boy-games.html">Game Boy</a>
+  <a href="/favourite-nintendo-64-games.html">Nintendo 64</a>
+</nav>
 
-<main id="favourites" class="favourites">
+<main id="favourites" class="list">
   {% for game in page.games %}
-    <article class="favourites-item is-gameboy">
-      <p class="favourites-rank">
+    <article class="item is-gameboy">
+      <p class="item-rank">
         <span>{{11 | minus:forloop.index}}</span>
       </p>
-      <h2 class="favourites-name">{{game.name}}</h2>
-      <h3 class="favourites-developer">{{game.developer}}</h3>
-      <figure class="favourites-cover">
-        <img class="lazy" data-src="/images/favourites/{{game.slug}}.jpg" src="/images/favourites/gameboy-loading.png">
+      <h2 class="item-title">{{game.name}}</h2>
+      <h3 class="item-info">{{game.developer}}</h3>
+      <figure class="item-image">
+        <img class="b-lazy" data-src="/images/favourites/{{game.slug}}.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
         <noscript>
           <img src="/images/favourites/{{game.slug}}.jpg">
         </noscript>
       </figure>
-      <div class="favourites-content">
+      <div class="item-content">
         {{game.content}}
       </div>
     </article>

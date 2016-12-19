@@ -1,0 +1,13 @@
+<div class="glyph">
+  {% if page.route == 'articles' %}
+    {% include icons/square.html %}
+  {% elsif page.route == 'open-source' %}
+    {% include icons/circle.html %}
+  {% elsif page.route == 'projects' %}
+    {% include icons/up.html %}
+  {% elsif page.route == 'favourites' %}
+    {% include icons/diamond.html %}
+  {% elsif page.route == 'links' %}
+    {% include icons/right.html %}
+  {% endif %}
+</div>

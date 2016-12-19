@@ -1,26 +1,64 @@
+\:root
+  --bodyBackground: #{$white}
+  --colorText: #{$text}
+  --colorLink: #{$pink}
+  --colorLinkInvert: #{$pink-invert}
+  --visited: #{$visited}
+  --visitedInvert: #{$visited-invert}
+  --sizeBody: 16px
+  +tablet
+    --sizeBody: 18px
+  +desktop
+    --sizeBody: 20px
+
 html
-  background: #fff
-  font-size: 16px
+  background: var(--bodyBackground)
+  font-size: var(--sizeBody)
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
-  min-width: 300px
+  min-width: 320px
   text-rendering: optimizeLegibility
+  transition-duration: $speed
+  transition-property: background
+  &.is-articles,
+  &.is-post
+    --colorLink: #{$articles}
+    --colorLinkInvert: #{$articles-invert}
+  &.is-open-source
+    --colorLink: #{$open-source}
+    --colorLinkInvert: #{$open-source-invert}
+  &.is-projects
+    --colorLink: #{$projects}
+    --colorLinkInvert: #{$projects-invert}
+  &.is-favourites
+    --colorLink: #{$favourites}
+    --colorLinkInvert: #{$favourites-invert}
+  &.is-links
+    --colorLink: #{$links}
+    --colorLinkInvert: #{$links-invert}
 
 code,
 pre
   font-family: $family-monospace
 
 body
-  color: $text
+  color: var(--colorText)
   font-family: $family-primary
   font-size: 1rem
+  font-weight: 300
   letter-spacing: 0.04em
   line-height: 1.6
 
 a
-  color: $link
+  color: var(--colorLink)
   cursor: pointer
   text-decoration: none
+
+hr
+  background: $border
+  border: none
+  display: block
+  height: 1px
 
 img
   max-height: 100%
@@ -28,6 +66,7 @@ img
 
 strong
   color: $text-strong
+  font-weight: $weight-semibold
 
 svg
   height: auto
@@ -42,5 +81,5 @@ pre
   word-wrap: normal
 
 +selection
-  background: $link
-  color: white
+  background: var(--colorLink)
+  color: var(--colorLinkInvert)

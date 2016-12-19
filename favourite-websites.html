@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Favourite Websites of Jeremy Thomas
+pageTitle: "Favourites"
 route: favourites
 
 websites:
@@ -77,32 +78,31 @@ websites:
     <p>By transcending the futile technological fluffs and tasteless graphical trends, Wikipedia simply embodies what every website is meant for, when you stop looking at the page and start using it for what you initially came for: the content.</p>
 ---
 
-<hgroup class="heading">
-  <h1 class="heading-title">Favourite things</h1>
-  <nav class="heading-nav">
-    <a class="is-active" href="/favourite-websites.html">Websites</a><a href="/favourite-game-boy-games.html">Game Boy</a><a href="/favourite-nintendo-64-games.html">Nintendo 64</a>
-  </nav>
-</hgroup>
+<nav class="heading-nav">
+  <a class="is-active" href="/favourite-websites.html">Websites</a>
+  <a href="/favourite-game-boy-games.html">Game Boy</a>
+  <a href="/favourite-nintendo-64-games.html">Nintendo 64</a>
+</nav>
 
-<main id="favourites" class="favourites">
+<main id="favourites" class="list favourites">
   {% for website in page.websites %}
-    <article class="favourites-item is-website">
-      <p class="favourites-rank">
+    <article class="item favourites-item is-website">
+      <p class="item-rank">
         <span>{{11 | minus:forloop.index}}</span>
       </p>
-      <h2 class="favourites-name">{{website.name}}</h2>
-      <h3 class="favourites-domain">
-        <a class="favourites-link" href="{{website.url}}">
+      <h2 class="item-title">{{website.name}}</h2>
+      <p class="item-link">
+        <a href="{{website.url}}">
           {{ website.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first }}
         </a>
-      </h3>
-      <a class="favourites-cover" href="{{website.url}}">
-        <img class="lazy" data-src="/images/favourites/{{website.slug}}.jpg" src="/images/favourites/website-loading.png">
+      </p>
+      <a class="item-image" href="{{website.url}}">
+        <img class="b-lazy" data-src="/images/favourites/{{website.slug}}.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
         <noscript>
           <img src="/images/favourites/{{website.slug}}.jpg">
         </noscript>
       </a>
-      <div class="favourites-content">
+      <div class="item-content">
         {{website.content}}
       </div>
     </article>

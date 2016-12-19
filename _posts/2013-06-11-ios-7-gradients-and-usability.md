@@ -3,6 +3,7 @@ layout: post
 title: iOS 7, gradients, and usability
 introduction: When Apple unveiled its new iOS 7 interface, both enthuasists and skeptics had something to say. Including me...
 category: UI
+published: false
 ---
 
 I must say, I was *very* surprised by Apple's iOS 7 unveiling. I'm a designer (though not a great one) so I'm usually first concerned about how it looks and my first thought was "It looks terrible." And apparently, [I'm not the only one](http://designerscomplaining.tumblr.com/). Of course it's hard to have a complete valid judgment without having held an iPhone with iOS 7 in your own hands. But I remember being delighted by the first iOS's screenshots back in 2007. It was a great start and a solid base to increment on, hence the light changes in a span of 6 years.

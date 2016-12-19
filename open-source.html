@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Open source projects by Jeremy Thomas"
+pageTitle: "Open Source"
 route: open-source
 
 repos:
@@ -54,43 +55,30 @@ repos:
 #  description: A journey through HTML and CSS
 ---
 
-<hgroup class="heading">
-  <div class="heading-icon">
-    {% include icons/circle.html %}
-  </div>
-  <h1 class="heading-title">Open Source</h1>
-  <p class="heading-subtitle">For insight and enlightenment</p>
-</hgroup>
+<!-- <a class="github-link" href="https://github.com/jgthms">
+  <span>github.com/</span>
+  <strong>jgthms</strong>
+</a> -->
 
-<p class="github-link">
-  <a href="https://github.com/jgthms">
-    <span>github.com/</span>
-    <strong>jgthms</strong>
-  </a>
-</p>
-
-<main id="repos" class="repos">
+<main id="repos" class="list">
   {% for repo in page.repos %}
     {% assign month = repo.month %}
     {% capture namedmonth %}{% case month %}{% when 01 %}Jan{% when 02 %}Feb{% when 03 %}Mar{% when 04 %}Apr{% when 05 %}May{% when 06 %}Jun{% when 07 %}Jul{% when 08 %}Aug{% when 09 %}Sep{% when 10 %}Oct{% when 11 %}Nov{% when 12 %}Dec{% endcase %}{% endcapture %}
-    <article class="repo-item">
-      <aside class="repo-date">
-        <p class="repo-year">{{repo.year}}</p>
-        <p class="repo-month">{{namedmonth}}</p>
+    <article class="item">
+      <aside class="item-rank">
+        {{repo.year}} {{namedmonth}}
       </aside>
-      <a class="repo-icon" href="{{repo.url}}" style="background-image: url({{site.url}}/images/open-source/{{repo.id}}.png);"></a>
-      <header class="repo-header">
-        <h2 class="repo-title">
-          <a href="{{repo.url}}">
-            {{repo.name}}
-          </a>
-        </h2>
-        <p class="repo-description">
-          {{repo.description}}
-        </p>
-      </header>
-      <div class="repo-stars">
-        <!-- <iframe src="https://ghbtns.com/github-btn.html?user=jgthms&repo={{repo.id}}&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe> -->
+      <a class="item-icon" href="{{repo.url}}" style="background-image: url({{site.url}}/images/open-source/{{repo.id}}.png);"></a>
+      <h2 class="item-title">
+        <a href="{{repo.url}}">
+          {{repo.name}}
+        </a>
+      </h2>
+      <p class="item-content">
+        {{repo.description}}
+      </p>
+      <div class="item-stars">
+        <iframe src="https://ghbtns.com/github-btn.html?user=jgthms&repo={{repo.id}}&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
       </div>
     </article>
   {% endfor %}

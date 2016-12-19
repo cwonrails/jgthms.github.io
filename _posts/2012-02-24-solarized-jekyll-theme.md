@@ -3,6 +3,7 @@ layout: post
 title: Solarized Jekyll Theme
 introduction: The Solarized color scheme isn't for programmers only.
 category: UI
+published: false
 ---
 
 **Update**: as I've modified my design since, this post isn't as relevant as before. But you can check the design in the repo.

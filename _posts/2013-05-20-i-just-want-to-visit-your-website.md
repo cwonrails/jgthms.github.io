@@ -3,6 +3,7 @@ layout: post
 title: I just want to visit your website
 introduction: I've stopped using Google Analytics for the last 2 years. I wish other websites would stop, or at least restrain, the amount of scripts they try to load.
 category: UX
+published: false
 ---
 
 Alongside Adblock Plus, I used to run the [NoScript](https://addons.mozilla.org/en-US/firefox/addon/noscript/) Firefox add-on to prevent malicious sites from messing with my browser but mostly to prevent any useless social or analytics script to load. It was until I found out about [Ghostery](https://addons.mozilla.org/en-US/firefox/addon/ghostery/) which is less restrictive (and maybe less secure) but gets the job done: maintain some kind of privacy while browsing the web.

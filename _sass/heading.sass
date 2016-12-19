@@ -1,21 +1,23 @@
 .heading
-  text-align: center
+  +container(40rem)
+  margin-top: 4rem
 
-.heading-icon
-  +center
+.heading-info
+  color: $text-light
+  font-size: 0.8em
 
 .heading-title
-  font-size: 2rem
-  font-weight: 300
+  font-size: 1.8rem
   line-height: 1.2
 
-+mobile
-  .heading
-    padding: 4rem 2rem
-  .heading-icon
-    margin-bottom: 1rem
+.heading-introduction
+  font-size: 1.2rem
 
-html.is-open-source
-  .heading
-    background: #000
-    color: #fff
+.heading-nav
+  +center
+  margin-bottom: 4rem
+  a
+    +underline
+    margin: 0 0.5rem
+    &.is-active
+      color: $black

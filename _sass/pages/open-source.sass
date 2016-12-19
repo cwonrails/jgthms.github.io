@@ -1,28 +1,17 @@
 .github-link
   background: $open-source
+  color: $open-source-invert
+  display: block
   font-size: 1.5rem
   font-weight: 300
+  margin-bottom: 4rem
   padding: 2rem
-  a
-    color: $open-source-invert
+  text-align: center
   span
     opacity: 0.3
   strong
     color: inherit
     font-weight: 300
-
-.repo-item
-  border-bottom: 1px solid $border
-  padding: 2rem
-
-.repo-icon
-  background-position: center center
-  background-repeat: no-repeat
-  background-size: contain
-  display: block
-  height: 160px
-  width: 160px
-
-+mobile
-  .github-link
-    text-align: center
+  &:hover
+    background: #000
+    color: #fff

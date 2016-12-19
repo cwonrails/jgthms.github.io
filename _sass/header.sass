@@ -1,73 +1,42 @@
-.jt
-  background: $pink
-  border-radius: 4px
-  display: block
-  height: 64px
-  margin: 2rem auto
-  padding: 16px
-  width: 64px
-  svg
-    display: block
-    height: 32px
-    width: 32px
+.header
+  +center
+  flex-direction: column
+  height: 40vh
+  min-width: 100vw
 
-.menu-link
-  +underline
-  color: $text-light
-  display: block
-  line-height: 16px
-  position: relative
-  text-align: center
-  transition-duration: $speed
-  transition-property: color
-  .icon
-    display: block
-    margin-bottom: 8px
-    margin-left: auto
-    margin-right: auto
-    opacity: 1
-    position: relative
-    transform: scale(0.5)
-    transform-origin: center bottom
-    transition-duration: 100ms
-    transition-property: opacity, transform
-  &.is-articles
-    &:hover,
-    &.is-active
-      color: $articles
-  &.is-open-source
-    &:hover,
-    &.is-active
-      color: $open-source
-  &.is-projects
-    &:hover,
-    &.is-active
-      color: $projects
-  &.is-favourites
-    &:hover,
-    &.is-active
-      color: $favourites
-  &.is-links
-    &:hover,
-    &.is-active
-      color: $links
+html.is-index
+  .header
+    +overlay
+    height: 100vh
+    justify-content: space-between
+    padding-bottom: 3rem
+    padding-top: calc(20vh - 4rem)
+    position: fixed
 
-+mobile
-  .menu
-    display: none
-
-+desktop
-  .jt
-    left: 60px
-    position: absolute
-    top: 60px
-  .menu
-    position: absolute
-    right: 60px
-    top: 28px
-  .menu-list
-    align-content: center
-    display: flex
-    justify-content: center
-  .menu-item
-    margin-left: 2rem
+.hello
+  +container(40rem)
+  font-size: 1.4rem
+  p
+    color: $text-light
+    font-size: 0.75em
+    margin-top: 1rem
+  a
+    border-bottom: 1px solid $border
+    color: inherit
+    padding-bottom: 2px
+    &.is-marksheet
+      color: $marksheet
+      &:hover
+        border-bottom-color: $marksheet
+    &.is-bulma
+      color: $bulma
+      &:hover
+        border-bottom-color: $bulma
+    &.is-cssreference
+      color: $cssreference
+      &:hover
+        border-bottom-color: $cssreference
+    &.is-improbable
+      color: $improbable
+      &:hover
+        border-bottom-color: $improbable

@@ -1,4 +1,96 @@
+.content
+  position: relative
+
+.container
+  +container(40rem)
+
 .icon
   height: 32px
   position: relative
   width: 32px
+
+.glyph
+  +center
+  // background: #000
+  // height: calc(100vh - 36rem) // header height = 11rem
+  // margin: 7rem 0
+  // height: calc(100vh - 22rem)
+  height: 20vh
+  margin-bottom: 10vh
+
+.title
+  +center
+  +overlay
+  color: #000
+  font-size: 6rem
+  font-size: 10vmin
+  font-weight: $weight-bold
+  letter-spacing: 0.5em
+  opacity: 0.05
+  pointer-events: none
+  position: fixed
+  text-align: center
+  text-transform: uppercase
+  &.is-hovering
+    opacity: 1
+
+.list
+  +container(30rem)
+  padding-bottom: 25vh
+
+.item
+  margin-bottom: 4rem
+  position: relative
+  &:last-child
+    margin-bottom: 0
+
+.item-info
+  color: $text-light
+  font-size: 0.8em
+
+.item-title
+  font-size: 1.2rem
+  line-height: 1.2
+  a
+    +visited
+    padding: 2px 0
+
+.item-link
+  a
+    +visited
+    padding: 2px 0
+
+.item-icons
+  align-items: center
+  display: flex
+  margin-top: 1rem
+  li
+    margin-right: 0.5rem
+  svg
+    height: 1rem
+
+.item-stars
+  display: flex
+  height: 30px
+  margin-top: 0.5rem
+
+.item-content
+  p + p
+    margin-top: 1em
+  a
+    +visited
+
++tablet
+  .item-rank
+    color: $text-light
+    margin-right: 2rem
+    position: absolute
+    right: 100%
+    text-align: right
+    top: 0
+  .item-stars
+    left: 100%
+    margin-left: 1rem
+    margin-top: 0
+    position: absolute
+    top: 0

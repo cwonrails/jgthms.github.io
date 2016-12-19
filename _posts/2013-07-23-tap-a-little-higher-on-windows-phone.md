@@ -3,6 +3,7 @@ layout: post
 title: Tap a little higher on Windows Phone
 introduction: I was wondering why I kept failing to tap links correctly. Now I know why.
 category: UX
+published: false
 ---
 
 I recently purchased a [Nokia Lumia 620](http://www.nokia.com/global/products/phone/lumia620/). I owned an iPhone some years ago, but when it got stolen, I didn't feel the need to have a permanent internet access anymore. But recently I figured that owning a smartphone is ultimately benefitial, as long as you prevent yourself from installing any casual game or aimlessly browsing the web.

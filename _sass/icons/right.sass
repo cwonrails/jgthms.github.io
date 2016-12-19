@@ -2,7 +2,7 @@
   position: relative
 
 .right-polygon
-  stroke: $border
+  stroke: $icon-stroke
 
 .right-svg
   animation: none 1s cubic-bezier(1, -0.5, 0.5, 1.5) both
@@ -40,9 +40,10 @@
   border-left-color: $links
   opacity: 0
 
+.glyph,
 .heading-icon,
-.menu-link:hover,
-.menu-link.is-active
+.nav-link:hover,
+.nav-link.is-active
   .right-svg
     animation-name: rightGoing
   .right-polygon
@@ -52,7 +53,7 @@
   .right-triangle
     animation-name: rightTriangle
 
-.menu-link.is-active
+.nav-link.is-active
   .right-svg,
   .right-mini,
   .right-triangle

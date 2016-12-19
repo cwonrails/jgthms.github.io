@@ -6,7 +6,7 @@
   animation-timing-function: cubic-bezier(0, 1, 0, 1)
 
 .diamond-polygon
-  stroke: $border
+  stroke: $icon-stroke
 
 .diamond-dust
   animation: none 0.8s linear both
@@ -51,8 +51,8 @@
   .diamond-lines
     animation-delay: 50ms
 
-.menu-link:hover,
-.menu-link.is-active
+.nav-link:hover,
+.nav-link.is-active
   .diamond-svg
     animation-name: diamondEnter
   .diamond-polygon
@@ -64,8 +64,9 @@
   .diamond-lines
     animation-name: diamondLines
 
+.glyph,
 .heading-icon,
-.menu-link.is-active
+.nav-link.is-active
   .diamond-svg,
   .diamond-polygon,
   .diamond-dust,

@@ -5,7 +5,7 @@
   width: 32px
 
 .square-rect
-  stroke: $border
+  stroke: $icon-stroke
 
 .square-mini
   background-size: 100%
@@ -60,8 +60,9 @@
     animation: none 1s 0.15s $cubic-magic both
     opacity: .4
 
-.menu-link:hover,
-.menu-link.is-active
+.glyph,
+.nav-link:hover,
+.nav-link.is-active
   .square
     animation-name: squarePulse
   .square-rect
@@ -79,7 +80,7 @@
     &:after
       animation-name: squareFloatSub-4
 
-.menu-link.is-active
+.nav-link.is-active
   .square,
   .square-mini-1,
   .square-mini-1:before,

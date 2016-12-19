@@ -1,0 +1,37 @@
+<nav id="nav" class="nav">
+  <a class="nav-link is-articles {% if page.route == 'articles' or page.layout == 'post' %} is-active{% endif %}"
+    href="/articles.html"
+    data-title="Articles"
+    data-color="deepskyblue"
+    data-background-color="aliceblue">
+    {% include icons/square.html %}
+  </a>
+  <a class="nav-link is-open-source {% if page.route == 'open-source' %} is-active{% endif %}"
+    href="/open-source.html"
+    data-title="Open Source"
+    data-color="springgreen"
+    data-background-color="honeydew">
+    {% include icons/circle.html %}
+  </a>
+  <a class="nav-link is-projects {% if page.route == 'projects' %} is-active{% endif %}"
+    href="/projects.html"
+    data-title="Projects"
+    data-color="tomato"
+    data-background-color="antiquewhite">
+    {% include icons/up.html %}
+  </a>
+  <a class="nav-link is-favourites {% if page.route == 'favourites' %} is-active{% endif %}"
+    href="/favourite-websites.html"
+    data-title="Favourites"
+    data-color="cyan"
+    data-background-color="azure">
+    {% include icons/diamond.html %}
+  </a>
+  <a class="nav-link is-links {% if page.route == 'links' %} is-active{% endif %}"
+    href="/links.html"
+    data-title="Links"
+    data-color="fuchsia"
+    data-background-color="ghostwhite">
+    {% include icons/right.html %}
+  </a>
+</nav>

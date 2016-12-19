@@ -3,6 +3,7 @@ layout: post
 title: Why I'm still uncomfortable using my iMac
 introduction: The pros and cons of an Apple computer.
 category: Thoughts
+published: false
 ---
 
 I bought my first Mac two years ago, a brand new (and relatively expensive) 27 inch iMac. The main reason behind my purchase was my wish to turn it into my primary music production setup. I intensively use Ableton Live (for recording and writing) and Logic Pro (for mixing). Since then, my iMac has proved to be a very reliable and fast computer for my musical needs. Mac OS' UI and core features are very pleasant as well: Spotlight, Finder's column view, Time Machine backups, keyboard controls, screen captures... Apple's own software is also of great use: iTunes works *way* better than Windows' counterpart, iMovie is incredibly easy to handle, and iPhoto has proved very useful. My iMac has also become my programming computer considering how easy it is to install Python, Ruby, Rails, Node.js, Git...

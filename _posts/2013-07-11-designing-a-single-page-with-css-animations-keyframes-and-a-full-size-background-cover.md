@@ -3,6 +3,7 @@ layout: post
 title: Designing with CSS animations
 introduction: I wasn't using the jt.ms domain I bought last year and thought it would be a good opportunity to play with CSS 3 animations.
 category: Code
+published: false
 ---
 
 [![JT.ms](/images/post/jtms.jpg)](http://jt.ms)

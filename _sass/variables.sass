@@ -3,17 +3,22 @@
 $pink: #ff2450
 $pink-invert: findColorInvert($pink, "pink")
 
-$orange: #ff5724
+$orange: tomato
+$orange-light: antiquewhite
 $orange-invert: findColorInvert($orange, "orange")
-$yellow: #ffd324
+$yellow: gold
 $yellow-invert: findColorInvert($yellow, "yellow")
-$green: #24ff70
+$green: springgreen
+$green-light: honeydew
 $green-invert: findColorInvert($green, "green")
-$cyan: #24ffde
+$cyan: cyan
+$cyan-light: azure
 $cyan-invert: findColorInvert($cyan, "cyan")
-$blue: #2478ff
+$blue: deepskyblue
+$blue-light: aliceblue
 $blue-invert: findColorInvert($blue, "blue")
-$purple: #9524ff
+$purple: fuchsia
+$purple-light: ghostwhite
 $purple-invert: findColorInvert($purple, "purple")
 
 $jt: #310736
@@ -24,6 +29,7 @@ $jt-invert: findColorInvert($jt, "jt")
 $improbable: #ff2e01
 $marksheet: #d16098
 $bulma: #00d1b2
+$cssreference: #310736
 $ivanballini: #de7f2b
 $codeatuni: #509bee
 
@@ -39,41 +45,55 @@ $rss: #f26522
 
 // Colors
 
+$white:         hsl(0, 0%, 100%)
 $background:    hsl(0, 0%, 96%)
 $border:        hsl(0, 0%, 86%)
 $visited:       hsl(0, 0%, 71%)
 $text-light:    hsl(0, 0%, 48%)
 $text:          hsl(0, 0%, 29%)
 $black:         hsl(0, 0%, 14%)
-$text-strong:   $black
+
+$visited-invert: $white
+$text:           $black
+$text-strong:    $black
 
 $link:          $pink
-$link-invert:   white
+$link-invert:   #fff
 
 // Sections
 
+$icon-stroke: rgba(black, 0.2)
+
 $articles: $blue
+$articles-light: $blue-light
 $articles-invert: $blue-invert
 $open-source: $green
+$open-source-light: $green-light
 $open-source-invert: $green-invert
 $projects: $orange
+$projects-light: $orange-light
 $projects-invert: $orange-invert
 $favourites: $cyan
+$favourites-light: $cyan-light
 $favourites-invert: $cyan-invert
 $links: $purple
+$links-light: $purple-light
 $links-invert: $purple-invert
+
+// Typography
+
+$weight-light: 300
+$weight-normal: 400
+$weight-semibold: 600
+$weight-bold: 700
 
 // Dimensions
 
 $column-width: 140px
 $column-gap: 20px
 
-$size-tiny: 0.75rem
-$size-small: 0.875rem
 $size-normal: 1rem
-$size-medium: 1.25rem
-$size-big: 1.5rem
-$size-large: 1.75rem
+$size-h1: 1.6rem
 
 $space-mobile: 40px
 $space-desktop: 60px

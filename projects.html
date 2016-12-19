@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Projects by Jeremy Thomas
+pageTitle: "Projects"
 route: projects
 
 projects:
@@ -129,53 +130,49 @@ projects:
   icons: ['internet-explorer']
 ---
 
-<main id="projects">
+<main id="projects" class="list">
 {% for project in page.projects %}
-  <article class="projects-item is-{{project.slug}}">
-    <a class="projects-device is-{{project.device}}" href="{{project.url}}">
-      <img class="lazy" data-src="/images/screenshots/{{project.slug}}.jpg" src="/images/projects/empty.png">
+  <article class="item is-{{project.slug}}">
+    <!-- <a class="item-cover projects-device is-{{project.device}}" href="{{project.url}}">
+      <img class="b-lazy" data-src="/images/screenshots/{{project.slug}}.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
       <noscript>
         <img src="/images/screenshots/{{project.slug}}.jpg">
       </noscript>
+    </a> -->
+
+    <p class="item-rank">{{project.date}}</p>
+
+    <a class="item-image" href="{{project.url}}">
+      <img class="b-lazy" data-src="/images/projects/{{project.slug}}.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+      <noscript>
+        <img src="/images/projects/{{project.slug}}.png">
+      </noscript>
     </a>
 
-    <div class="container">
-      <div class="projects-body">
-        <p class="projects-date">{{project.date}}</p>
+    <h2 class="item-title projects-title">
+      {{project.name}}
+    </h2>
 
-        <a class="projects-logo" href="{{project.url}}">
-          <img class="lazy" data-src="/images/projects/{{project.slug}}.png" src="/images/projects/empty.png">
-          <noscript>
-            <img src="/images/projects/{{project.slug}}.png">
-          </noscript>
-        </a>
+    <p class="item-link">
+      <a href="{{project.url}}">
+        {% if project.domain == nil or project.domain == "" %}
+          {{project.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first}}
+        {% else %}
+          {{project.domain}}
+        {% endif %}
+      </a>
+    </p>
 
-        <h2 class="projects-title">
-          {{project.name}}
-        </h2>
-
-        <p class="projects-url">
-          <a href="{{project.url}}">
-            {% if project.domain == nil or project.domain == "" %}
-              {{project.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first}}
-            {% else %}
-              {{project.domain}}
-            {% endif %}
-          </a>
-        </p>
-
-        <div class="projects-content">
-          {{project.content}}
-        </div>
-
-        <ul class="projects-icons">
-          {% for icon in project.icons %}
-            {% assign svgpath = icon | prepend: "svg/" | append: ".html" %}
-            <li>{% include {{svgpath}} %}</li>
-          {% endfor %}
-        </ul>
-      </div>
+    <div class="item-content">
+      {{project.content}}
     </div>
+
+    <ul class="item-icons">
+      {% for icon in project.icons %}
+        {% assign svgpath = icon | prepend: "svg/" | append: ".html" %}
+        <li>{% include {{svgpath}} %}</li>
+      {% endfor %}
+    </ul>
   </article>
 {% endfor %}
 </main>

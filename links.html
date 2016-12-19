@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Links of Jeremy Thomas
+pageTitle: "Links"
 route: links
 
 links:
@@ -101,33 +102,25 @@ links:
   description: How inexperienced game developers went against the grain to create magic
 ---
 
-<hgroup class="heading">
-  <div class="heading-icon">
-    {% include icons/right.html %}
-  </div>
-  <h1 class="heading-title">Links</h1>
-  <p class="heading-subtitle">For insight and enlightenment</p>
-</hgroup>
-
-<main id="links" class="links">
+<main id="links" class="list links">
   {% for link in page.links %}
-    <article class="links-item">
-      <p class="links-category is-{{link.category}}">
+    <article class="item">
+      <p class="item-rank is-{{link.category}}">
         <span>{{link.category}}</span>
       </p>
-      <h2 class="links-title">
+      <h2 class="item-title">
         <a href="{{link.url}}">
           {{link.name}}
         </a>
       </h2>
-      <h3 class="links-domain">
+      <p class="item-info">
         {% if link.domain == nil or link.domain == "" %}
           {{link.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first}}
         {% else %}
           {{link.domain}}
         {% endif %}
-      </h3>
-      <p class="links-description">
+      </p>
+      <p class="item-content">
         {{link.description}}
       </p>
     </article>
