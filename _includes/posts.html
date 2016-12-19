@@ -18,14 +18,16 @@
   {% endif %}
 
   <article class="item articles-article is-{{post.category | downcase}}{% if post.recommended == true %} is-recommended{% endif %}">
-    <p class="item-rank">
-      {{post.date | date_to_string}}
-    </p>
-    <h2 class="item-title">
-      <a href="{{post.url}}">{{post.title}}</a>
-    </h2>
-    {% if post.introduction %}
-      <p class="item-introduction">{{post.introduction}}</p>
-    {% endif %}
+    <div class="item-container">
+      <p class="item-rank">
+        {{post.date | date_to_string}}
+      </p>
+      <h2 class="item-title">
+        <a href="{{post.url}}">{{post.title}}</a>
+      </h2>
+      {% if post.introduction %}
+        <p class="item-introduction">{{post.introduction}}</p>
+      {% endif %}
+    </div>
   </article>
 {% endfor %}
