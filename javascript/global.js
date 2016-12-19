@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var $navLinks = document.querySelectorAll('.nav-link');
   var $title = document.getElementById('title');
   var titleOriginal = $title.innerHTML;
-  var $helloLinks = document.querySelectorAll('#jt, .hello a');
+  var $helloLinks = document.querySelectorAll('#jt, .hello a, .elsewhere-link');
 
   Array.prototype.forEach.call($navLinks, function($item) {
     var backgroundColor = $item.dataset.backgroundColor;

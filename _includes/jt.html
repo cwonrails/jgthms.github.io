@@ -1,3 +1,9 @@
-<a id="jt" data-title="Hello I'm Jeremy Thomas" class="jt{% if page.route == 'index' %} is-active{% endif %}" href="/">
-  {% include svg/jt.html %}
-</a>
+{% if page.route == "index" %}
+  <a id="jt" data-title="Hello I'm Jeremy Thomas" class="jt{% if page.route == 'index' %} is-active{% endif %}" href="/">
+    {% include svg/jt.html %}
+  </a>
+{% else %}
+  <a id="jt" data-title="Back home" class="jt{% if page.route == 'index' %} is-active{% endif %}" href="/">
+    {% include svg/jt.html %}
+  </a>
+{% endif %}

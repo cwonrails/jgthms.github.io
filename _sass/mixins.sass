@@ -44,6 +44,9 @@
   &:hover
     &:before
       animation: jelly-pop 1000ms linear both
+    svg
+      path
+        fill: #fff
 
 =scrollbar($thumb: $visited, $background: $border, $width: 10px)
   -webkit-overflow-scrolling: touch
@@ -123,6 +126,10 @@ $widescreen: 1280px
 
 =tablet
   @media screen and (min-width: $tablet)
+    @content
+
+=touch
+  @media screen and (max-width: $desktop - 1px)
     @content
 
 =desktop
