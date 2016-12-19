@@ -87,16 +87,6 @@ projects:
     <p>After a lot of delays, the website was finalised almost 2 years after its inception and embodies my first decently sized jQuery project.</p>
   icons: ['html5', 'css3']
 
-- name: Yeek
-  device: imac
-  url: http://yeek.fr
-  slug: yeek
-  date: October 2011
-  content: >
-    <p>My first attempt at a passive income website: a simple collection of affiliated links.</p>
-    <p>This project has shown that in e-commerce especially, marketing sometimes overshadows content.</p>
-  icons: ['wordpress-icon', 'amazon']
-
 - name: Editions Magellan
   device: ipad-v
   url: http://www.editions-magellan.com
@@ -130,9 +120,9 @@ projects:
   icons: ['internet-explorer']
 ---
 
-<main id="projects" class="list">
+<main id="projects" class="projects">
 {% for project in page.projects %}
-  <article class="item is-{{project.slug}}">
+  <article class="item project project--{{project.slug}}">
     <!-- <a class="item-cover projects-device is-{{project.device}}" href="{{project.url}}">
       <img class="b-lazy" data-src="/images/screenshots/{{project.slug}}.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
       <noscript>
@@ -140,39 +130,41 @@ projects:
       </noscript>
     </a> -->
 
-    <p class="item-rank">{{project.date}}</p>
+    <div class="item-container">
+      <p class="item-rank">{{project.date}}</p>
 
-    <a class="item-image" href="{{project.url}}">
-      <img class="b-lazy" data-src="/images/projects/{{project.slug}}.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-      <noscript>
-        <img src="/images/projects/{{project.slug}}.png">
-      </noscript>
-    </a>
-
-    <h2 class="item-title projects-title">
-      {{project.name}}
-    </h2>
-
-    <p class="item-link">
-      <a href="{{project.url}}">
-        {% if project.domain == nil or project.domain == "" %}
-          {{project.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first}}
-        {% else %}
-          {{project.domain}}
-        {% endif %}
+      <a class="item-image" href="{{project.url}}">
+        <img class="b-lazy" data-src="/images/projects/{{project.slug}}.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        <noscript>
+          <img src="/images/projects/{{project.slug}}.png">
+        </noscript>
       </a>
-    </p>
 
-    <div class="item-content">
-      {{project.content}}
+      <h2 class="item-title projects-title">
+        {{project.name}}
+      </h2>
+
+      <p class="item-link">
+        <a href="{{project.url}}">
+          {% if project.domain == nil or project.domain == "" %}
+            {{project.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first}}
+          {% else %}
+            {{project.domain}}
+          {% endif %}
+        </a>
+      </p>
+
+      <div class="item-content">
+        {{project.content}}
+      </div>
+
+      <ul class="item-icons">
+        {% for icon in project.icons %}
+          {% assign svgpath = icon | prepend: "svg/" | append: ".html" %}
+          <li>{% include {{svgpath}} %}</li>
+        {% endfor %}
+      </ul>
     </div>
-
-    <ul class="item-icons">
-      {% for icon in project.icons %}
-        {% assign svgpath = icon | prepend: "svg/" | append: ".html" %}
-        <li>{% include {{svgpath}} %}</li>
-      {% endfor %}
-    </ul>
   </article>
 {% endfor %}
 </main>

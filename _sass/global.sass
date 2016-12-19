@@ -26,14 +26,14 @@
   font-size: 10vmin
   font-weight: $weight-bold
   letter-spacing: 0.5em
-  opacity: 0.05
+  opacity: 0.04
   overflow: hidden
   padding: 0 10vw
   pointer-events: none
   position: fixed
   text-align: center
   text-transform: uppercase
-  &.is-hovering
+  html.is-hovering &
     background: var(--colorLink)
     color: var(--colorLinkInvert)
     mix-blend-mode: multiply
@@ -102,7 +102,7 @@
 
 .item-image
   img
-    max-height: 240px
+    max-height: 320px
 
 +tablet
   .item-rank

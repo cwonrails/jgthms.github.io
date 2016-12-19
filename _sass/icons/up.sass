@@ -5,7 +5,7 @@
   animation: none 1s $cubic-magic both
 
 .up-polygon
-  stroke: $icon-stroke
+  stroke: var(--iconStroke)
 
 .up-road
   animation: none 1s linear both
@@ -36,7 +36,7 @@
   animation: none 1s $cubic-magic both
   animation-duration: 0.5s
   animation-iteration-count: 2
-  background: $projects
+  background: var(--iconStroke)
   border-radius: 290486px
   height: 100%
   left: 0
@@ -57,22 +57,18 @@
     animation-delay: 100ms
 
 .glyph,
-.nav-link:hover,
-.nav-link.is-active
+.nav-link:hover
   .up-svg
     animation-name: goingUp
-  .up-polygon
-    stroke: $projects
   .up-road
     animation-name: upRideRoad
   .up-line
     animation-name: upLineRoad
 
-.nav-link.is-active
-  .up-svg,
-  .up-road,
-  .up-line
-    animation-duration: 0s
+.glyph,
+html:not(.is-hovering) .nav-link.is-active
+  .up
+    --iconStroke: #{$projects}
 
 @keyframes upRideRoad
   0%

@@ -5,14 +5,14 @@
 
 .circle-circle
   animation: none 1s ease-in-out both
-  stroke: $icon-stroke
+  stroke: var(--iconStroke)
   stroke-dasharray: 90
   stroke-dashoffset: 0
   transform-origin: center center
 
 .circle-ripple
   animation: none 2s ease-out both
-  border: 2px solid $green
+  border: 2px solid var(--iconStroke)
   border-radius: 290486px
   opacity: 0
   position: absolute
@@ -27,27 +27,20 @@
   border-width: 1px
 
 .glyph,
-.heading-icon,
-.menu-link:hover,
-.nav-link:hover,
-.menu-link.is-active,
-.nav-link.is-active
+.nav-link:hover
   .circle-circle
     animation-name: circleDash
-    stroke: $open-source
   .circle-ripple
     animation-name: circleRipple
 
-.glyph,
-.heading-icon
+.glyph
   .circle-ripple
     animation-iteration-count: infinite
 
-.menu-link.is-active,
-.nav-link.is-active
-  .circle-circle,
-  .circle-ripple
-    animation-duration: 0s
+.glyph,
+html:not(.is-hovering) .nav-link.is-active
+  .circle
+    --iconStroke: #{$open-source}
 
 @keyframes circleRipple
   0%

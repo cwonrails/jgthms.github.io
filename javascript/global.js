@@ -3,13 +3,17 @@ document.addEventListener('DOMContentLoaded', function() {
   /* Nav stuff */
   var $root = document.documentElement;
   var rootStyles = window.getComputedStyle($root);
-  var colorLinkOriginal = rootStyles.getPropertyValue('--colorLink');
-  var colorLinkInvertOriginal = rootStyles.getPropertyValue('--colorLinkInvert');
   var $nav = document.getElementById('nav');
   var $navLinks = document.querySelectorAll('.nav-link');
   var $title = document.getElementById('title');
-  var titleOriginal = $title.innerHTML;
   var $helloLinks = document.querySelectorAll('.nav-link, #jt, .hello a, .elsewhere-link');
+
+  var originals = {
+    colorLink: rootStyles.getPropertyValue('--colorLink'),
+    colorLinkInvert: rootStyles.getPropertyValue('--colorLinkInvert'),
+    iconStroke: rootStyles.getPropertyValue('--iconStroke'),
+    title: $title.innerHTML,
+  };
 
   function addEventListeners() {
     Array.prototype.forEach.call($helloLinks, function($item) {
@@ -36,23 +40,26 @@ document.addEventListener('DOMContentLoaded', function() {
   function setTitle($el) {
     var title = $el.dataset.title;
     $title.innerHTML = title;
-    $title.classList.add('is-hovering');
+    $root.classList.add('is-hovering');
     var color = $el.dataset.color;
     if (color) {
       $root.style.setProperty(`--colorLink`, color);
     }
     if ($el.dataset.invert) {
       $root.style.setProperty(`--colorLinkInvert`, 'rgba(0,0,0,0.71)');
+      $root.style.setProperty(`--iconStroke`, 'rgba(0,0,0,0.71)');
     } else {
       $root.style.setProperty(`--colorLinkInvert`, '#fff');
+      $root.style.setProperty(`--iconStroke`, '#fff');
     }
   }
 
   function unsetTitle() {
-    $title.innerHTML = titleOriginal;
-    $title.classList.remove('is-hovering');
-    $root.style.setProperty(`--colorLink`, colorLinkOriginal);
-    $root.style.setProperty(`--colorLinkInvert`, colorLinkInvertOriginal);
+    $title.innerHTML = originals.title;
+    $root.classList.remove('is-hovering');
+    $root.style.setProperty(`--colorLink`, originals.colorLink);
+    $root.style.setProperty(`--colorLinkInvert`, originals.colorLinkInvert);
+    $root.style.setProperty(`--iconStroke`, originals.iconStroke);
   }
 
   function doneResizing() {

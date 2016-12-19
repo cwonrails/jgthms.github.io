@@ -1,0 +1,77 @@
+=project($background, $color, $link, $color-light: $color, $color-strong: $link)
+  --projectBackground: $background
+  --projectColor: $color
+  --projectColorLight: $color-light
+  --projectColorStrong: $color-strong
+  --projectLink: $link
+
+.project
+  background: var(--projectBackground)
+  color: var(--projectColor)
+  margin-bottom: 0
+  padding: 2rem
+  .item-link a
+    &,
+    &:visited
+      color: var(--projectLink)
+      &:hover
+        background: var(--projectColorStrong)
+        color: var(--projectBackground)
+  .item-rank
+    color: var(--projectColorLight)
+  .item-title
+    color: var(--projectColorStrong)
+  .item-icons svg  path
+    fill: var(--projectColorLight)
+
+.project--arnaudbenard
+  +project(#ff2b53, #ecffe9, #fff, rgba(#000, 0.29))
+
+.project--bulma
+  +project($bulma, rgba(#fff, 0.71), #fff)
+
+.project--marksheet
+  +project($marksheet, #f4f1ce, #fff, rgba(#000, 0.21))
+
+$ivan-background: #eae8e3
+$ivan-link: #de7f2b
+$ivan-text: #4d4d4d
+$ivan-title: #1b1e21
+
+.project--ivan-ballini
+  +project($ivan-background, $ivan-text, $ivan-link)
+
+.project--css-off-2013
+  +project(#cdc9dd, #6e6c77, #fff, #6e6c77, #000)
+
+.project--juketube
+  +project(#cdc9dd, #6e6c77, #fff, #6e6c77, #000)
+
+.project--juketube
+  +project(#eee, #888, #df1f1f, #22242a)
+
+.project--bbxdesign
+  +project(#f5574c, rgba(#fff, 0.71), #fff)
+
+.project--cambodia-vietnam-2010
+  +project(#dacfb1, #6b6450, #914839, #485c39, #3b5757)
+
+.project--yeek
+  +project(#eeeff2, #4c566c, #0589f5, #040404)
+
+.project--editions-magellan
+  +project(#332003, rgba(#fff, 0.29), #c78312, #fff)
+
+.project--golf-de-margaux
+  +project(#96c909, rgba(black, 0.48), #fff, #1a397f)
+
+.project--bbxworld
+  +project(#362f2d, rgba(#fff, 0.48), #8dc63f, #fff)
+
+
++desktop
+  .project
+    align-items: center
+    display: flex
+    min-height: 100vh
+    padding: 4rem

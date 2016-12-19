@@ -1,3 +1,6 @@
+// \:root
+//   --iconArticles: #{$articles}
+
 .square
   animation: none 0.25s $cubic-magic both
   height: 32px
@@ -5,11 +8,11 @@
   width: 32px
 
 .square-rect
-  stroke: $icon-stroke
+  stroke: var(--iconStroke)
 
 .square-mini
   background-size: 100%
-  border: 2px solid $articles
+  border: 2px solid var(--iconStroke)
   display: block
   height: 12px
   left: 0
@@ -19,7 +22,7 @@
   width: 12px
   &:before, &:after
     background-size: 100%
-    border: 2px solid $articles
+    border: 2px solid var(--iconStroke)
     display: block
     height: 12px
     left: 0
@@ -61,12 +64,9 @@
     opacity: .4
 
 .glyph,
-.nav-link:hover,
-.nav-link.is-active
+.nav-link:hover
   .square
     animation-name: squarePulse
-  .square-rect
-    stroke: $articles
   .square-mini-1
     animation-name: squareFloatMain-1
     &:before
@@ -80,15 +80,10 @@
     &:after
       animation-name: squareFloatSub-4
 
-.nav-link.is-active
-  .square,
-  .square-mini-1,
-  .square-mini-1:before,
-  .square-mini-1:after,
-  .square-mini-2,
-  .square-mini-2:before,
-  .square-mini-2:after
-    animation-duration: 0s
+.glyph,
+html:not(.is-hovering) .nav-link.is-active
+  .square
+    --iconStroke: #{$articles}
 
 @keyframes squarePulse
   0%
