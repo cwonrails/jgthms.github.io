@@ -44,12 +44,14 @@
   &:last-child
     margin-bottom: 0
 
-.item-info
+.item-info,
+.item-rank
   color: $text-light
   font-size: 0.8em
+  white-space: nowrap
 
 .item-title
-  font-size: 1.2rem
+  font-size: 1.4rem
   line-height: 1.2
   a
     +visited
@@ -68,6 +70,8 @@
     margin-right: 0.5rem
   svg
     height: 1rem
+    path
+      fill: $border
 
 .item-stars
   display: flex
@@ -80,6 +84,10 @@
   a
     +visited
 
+.item-image
+  img
+    max-height: 240px
+
 +tablet
   .item-rank
     color: $text-light
@@ -87,7 +95,7 @@
     position: absolute
     right: 100%
     text-align: right
-    top: 0
+    top: 0.3rem
   .item-stars
     left: 100%
     margin-left: 1rem

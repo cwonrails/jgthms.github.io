@@ -46,12 +46,12 @@ route: post
     </nav>
 
     {% if page.previous %}
-      <a class="post-pagination-button is-next" href="{{page.previous.url}}" rel="previous">
+      <a class="post-pagination-link is-next" href="{{page.previous.url}}" rel="previous">
         Next &rarr;
         <strong>{{page.previous.title}}</strong>
       </a>
     {% else %}
-      <a class="post-pagination-button is-next" href="/articles.html" rel="previous">
+      <a class="post-pagination-link is-next" href="/articles.html" rel="previous">
         Back to articles! &uarr;
         <strong>You've reached the end</strong>
       </a>
@@ -59,16 +59,16 @@ route: post
 
     <nav class="post-pagination-before">
       {% if page.next %}
-        <a class="post-pagination-button is-previous" href="{{page.next.url}}" rel="next">
+        <a class="post-pagination-link is-previous" href="{{page.next.url}}" rel="next">
           &larr; Previous
         </a>
       {% else %}
-        <span class="post-pagination-button is-previous is-disabled">
+        <span class="post-pagination-link is-previous is-disabled">
           &larr; Previous
         </span>
       {% endif %}
 
-      <a id="top" class="post-pagination-button is-top">
+      <a id="top" class="post-pagination-link is-top">
         Back to top &uarr;
       </a>
     </nav>
