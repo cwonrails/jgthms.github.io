@@ -1,0 +1,29 @@
+<noscript>
+  <style type="text/css">
+    #contact{ display: none;}
+  </style>
+</noscript>
+
+<script type="text/javascript" src="/javascript/zepto.min.js"></script>
+<script type="text/javascript" src="/javascript/jquery.unveil.js"></script>
+<script type="text/javascript" src="/javascript/skrollr.stylesheets.min.js"></script>
+<script type="text/javascript" src="/javascript/skrollr.min.js"></script>
+<script type="text/javascript" src="/javascript/global.js"></script>
+
+{% if page.route == 'index' %}
+  <script type="text/javascript" src="/javascript/index.js"></script>
+{% endif %}
+
+{% if page.layout == 'post' %}
+  <script type="text/javascript" src="/javascript/post.js"></script>
+{% endif %}
+
+{% if page.route == 'articles' %}
+  <script type="text/javascript" src="/javascript/affix.js"></script>
+  <script type="text/javascript" src="/javascript/articles.js"></script>
+{% endif %}
+
+{% if page.route == 'projects' %}
+  <script type="text/javascript" src="/javascript/affix.js"></script>
+  <script type="text/javascript" src="/javascript/projects.js"></script>
+{% endif %}

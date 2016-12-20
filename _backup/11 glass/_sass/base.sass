@@ -1,0 +1,81 @@
+html
+  background: #fff
+  font-size: 16px
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  min-width: 300px
+  text-rendering: optimizeLegibility
+  +scrollbar
+  +tablet
+    font-size: 18px
+  +desktop
+    overflow: auto
+    overflow-x: hidden
+    overflow-y: scroll
+    &.is-index
+      overflow: hidden
+      body
+        overflow: hidden
+      .the
+        animation: winter-spring ($speed * 2) $easing
+        right: 20px
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section
+  display: block
+
+code,
+pre
+  font-family: $family-monospace
+
+body
+  color: $text
+  font-family: $family-primary
+  font-size: 1rem
+  line-height: 1.6
+
+a
+  color: $link
+  cursor: pointer
+  text-decoration: none
+  transition: none $speed $easing
+  transition-property: background, color
+
+img
+  max-height: 100%
+  max-width: 100%
+
+hr
+  border-top: 1px solid $link
+  margin: 0
+
+strong
+  color: $text-strong
+
+svg
+  height: auto
+  width: auto
+  path
+    transition: fill $speed $easing
+
+pre
+  white-space: pre
+  word-wrap: normal
+
+.container
+  margin: 0 auto
+  max-width: 400px
+  position: relative
+  +tablet
+    max-width: 640px
+  +desktop
+    max-width: 940px
+
++selection
+  background: $link
+  color: white

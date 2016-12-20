@@ -1,0 +1,48 @@
+.content
+  position: relative
+
+.container
+  +container(40rem)
+
+.icon
+  height: 32px
+  position: relative
+  width: 32px
+
+.glyph
+  +center
+  // background: #000
+  // height: calc(100vh - 36rem) // header height = 11rem
+  // margin: 7rem 0
+  // height: calc(100vh - 22rem)
+  height: 20vh
+  margin-bottom: 10vh
+
+.title
+  +center
+  +overlay
+  color: #000
+  font-size: 6rem
+  font-size: 10vmin
+  font-weight: $weight-bold
+  letter-spacing: 0.5em
+  opacity: 0.04
+  overflow: hidden
+  padding: 0 10vw
+  pointer-events: none
+  position: fixed
+  text-align: justify
+  text-transform: uppercase
+  // transition-duration: 86ms
+  // transition-property: background, color, opacity
+  word-break: break-all
+  html.is-hovering &
+    background: var(--colorLink)
+    color: var(--colorLinkInvert)
+    mix-blend-mode: multiply
+    opacity: 1
+    z-index: 86
+
+.list
+  +container(30rem)
+  padding-bottom: 25vh

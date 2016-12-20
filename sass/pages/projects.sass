@@ -17,7 +17,7 @@
       &:hover
         background: var(--projectColorStrong)
         color: var(--projectBackground)
-  .item-rank
+  .item-info
     color: var(--projectColorLight)
   .item-title
     color: var(--projectColorStrong)
@@ -39,7 +39,7 @@ $ivan-text: #4d4d4d
 $ivan-title: #1b1e21
 
 .project--ivan-ballini
-  +project($ivan-background, $ivan-text, $ivan-link)
+  +project($ivan-background, $ivan-text, $ivan-link, $ivan-text, #000)
 
 .project--css-off-2013
   +project(#cdc9dd, #6e6c77, #fff, #6e6c77, #000)
@@ -48,7 +48,7 @@ $ivan-title: #1b1e21
   +project(#cdc9dd, #6e6c77, #fff, #6e6c77, #000)
 
 .project--juketube
-  +project(#eee, #888, #df1f1f, #22242a)
+  +project(#eee, #888, #df1f1f, #22242a, #000)
 
 .project--bbxdesign
   +project(#f5574c, rgba(#fff, 0.71), #fff)
@@ -60,13 +60,13 @@ $ivan-title: #1b1e21
   +project(#eeeff2, #4c566c, #0589f5, #040404)
 
 .project--editions-magellan
-  +project(#332003, rgba(#fff, 0.29), #c78312, #fff)
+  +project(#332003, rgba(#fff, 0.48), #c78312, rgba(#fff, 0.29), #fff)
 
 .project--golf-de-margaux
   +project(#96c909, rgba(black, 0.48), #fff, #1a397f)
 
 .project--bbxworld
-  +project(#362f2d, rgba(#fff, 0.48), #8dc63f, #fff)
+  +project(#362f2d, rgba(#fff, 0.48), #8dc63f, rgba(#fff, 0.29), #fff)
 
 
 +desktop

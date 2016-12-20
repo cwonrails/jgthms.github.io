@@ -1,0 +1,178 @@
+=clippath($edge)
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, $edge 100%, $edge $edge, calc(100% - #{$edge}) $edge, calc(100% - #{$edge}) calc(100% - #{$edge}), $edge calc(100% - #{$edge}), $edge 100%, 100% 100%, 100% 0%)
+  clip-path: polygon(0% 0%, 0% 100%, $edge 100%, $edge $edge, calc(100% - #{$edge}) $edge, calc(100% - #{$edge}) calc(100% - #{$edge}), $edge calc(100% - #{$edge}), $edge 100%, 100% 100%, 100% 0%)
+
+=cover
+  &:after
+    +overlay
+    background: $black
+    content: ""
+    display: block
+    opacity: 0
+    transition: opacity $speed $easing
+  &:hover
+    &:after
+      opacity: $opacity-light
+
+=overlay($offset: 0)
+  bottom: $offset
+  left: $offset
+  position: absolute
+  right: $offset
+  top: $offset
+
+=pop($color)
+  position: relative
+  &:before
+    +overlay
+    background: $color
+    border-radius: 290486px
+    content: " "
+    display: block
+    opacity: 0
+  &:hover
+    &:before
+      animation: jelly-pop 1000ms linear both
+
+=scrollbar($thumb: $visited, $background: $border, $width: 10px)
+  -webkit-overflow-scrolling: touch
+  overflow: hidden
+  overflow-y: scroll
+  &::-webkit-scrollbar
+    background: $background
+    cursor: pointer
+    width: $width
+  &::-webkit-scrollbar-thumb
+    background: $thumb
+    cursor: pointer
+
+=selection($current-selector: false)
+  @if $current-selector
+    &::-moz-selection
+      @content
+    &::selection
+      @content
+  @else
+    \::-moz-selection
+      @content
+    \::selection
+      @content
+
+=skrollr($id)
+  .jt
+    -skrollr-anchor-target: $id
+    -skrollr-animation-name: opacityAnimation
+
+  @-skrollr-keyframes opacityAnimation
+    bottom-bottom
+      opacity: $opacity-light
+    top-bottom
+      opacity: $opacity-strong
+
+  .jt svg path
+    -skrollr-anchor-target: $id
+    -skrollr-animation-name: jtAnimation
+
+  @-skrollr-keyframes jtAnimation
+    bottom-bottom
+      #{'@fill'}: #{'rgb(36, 36, 36)'}
+    top-bottom
+      #{'@fill'}: #{'rgb(255,255,255)'}
+
+  .nav.is-menu a:not(.is-active)
+    -skrollr-anchor-target: $id
+    -skrollr-animation-name: navAnimation
+
+  @-skrollr-keyframes navAnimation
+    bottom-bottom
+      color: #{'rgb(36, 36, 36)'}
+      opacity: $opacity-light
+    top-bottom
+      color: #{'rgb(255,255,255)'}
+      opacity: $opacity-strong
+
+  .nav.is-menu a.is-active
+    -skrollr-anchor-target: $id
+    -skrollr-animation-name: activeAnimation
+
+  @-skrollr-keyframes activeAnimation
+    bottom-bottom
+      color: #{'rgb(36, 36, 36)'}
+      opacity: $opacity-strong
+    top-bottom
+      color: #{'rgb(255,255,255)'}
+      opacity: $opacity-strong
+
+  .nav-underline
+    -skrollr-anchor-target: $id
+    -skrollr-animation-name: underlineAnimation
+
+  @-skrollr-keyframes underlineAnimation
+    bottom-bottom
+      background: #{'rgb(0, 0, 0)'}
+    top-bottom
+      background: #{'rgb(255, 36, 80)'}
+
+=underline
+  position: relative
+  &:after
+    background: $black
+    bottom: -4px
+    opacity: $opacity-strong
+    content: ""
+    display: block
+    left: 0
+    height: 1px
+    opacity: 0
+    position: absolute
+    transition: none $speed $easing
+    transition-property: opacity, width
+    width: 0
+  &:hover,
+  &.is-active
+    text-decoration: none
+    &:after
+      opacity: 1
+      width: 100%
+
+@function specialGradient($first, $second)
+  @return linear-gradient(141deg, $first 29%, $second)
+
+=visited
+  &:hover
+    background: $link
+    color: $link-invert
+    text-decoration: none
+  &:visited
+    color: $visited
+    &:hover
+      background: $visited
+      color: $link-invert
+
+$tablet: 600px
+$desktop: 990px
+$widescreen: 1280px
+
+=from($device)
+  @media screen and (min-width: $device)
+    @content
+
+=until($device)
+  @media screen and (max-width: $device - 1px)
+    @content
+
+=mobile
+  @media screen and (max-width: $tablet - 1px)
+    @content
+
+=tablet
+  @media screen and (min-width: $tablet)
+    @content
+
+=desktop
+  @media screen and (min-width: $desktop)
+    @content
+
+=widescreen
+  @media screen and (min-width: $widescreen)
+    @content

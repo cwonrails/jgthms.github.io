@@ -1,0 +1,13 @@
+.columns
+  +tablet
+    display: flex
+
+.column
+  flex-basis: 0
+  flex-grow: 0
+  flex-shrink: 1
+  padding-left: 1rem
+  padding-right: 1rem
+  @for $i from 1 through 12
+    &.is-#{$i}
+      flex-basis: ($i / 12) * 100%

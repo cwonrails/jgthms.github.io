@@ -1,0 +1,86 @@
+.heading
+  padding-bottom: $space-mobile
+  padding-left: 20px
+  padding-right: 20px
+  padding-top: ($space-mobile * 2) + $magic
+  position: relative
+  text-align: center
+  .container
+    max-width: 620px
+  &-title,
+  &-subtitle
+    line-height: 1.2
+  &-title
+    color: $text-strong
+    @extend %family-secondary
+    font-size: $size-medium
+    font-weight: 700
+  &-subtitle
+    color: $text-light
+  &-nav
+    font-size: $size-small
+    margin-top: 0.5em
+    a
+      +underline
+      color: $black
+      margin: 0 0.5em
+      opacity: $opacity-light
+      &:hover,
+      &.is-active
+        opacity: $opacity-strong
+  +tablet
+    &-title
+      line-height: $magic
+  +desktop
+    padding-bottom: $space-desktop
+    padding-left: $space-side
+    padding-right: $space-side
+    padding-top: $space-desktop
+    text-align: left
+    &-nav
+      a
+        margin-left: 0
+        margin-right: 1em
+
+.brand
+  +overlay
+  align-items: center
+  display: flex
+  justify-content: center
+  position: fixed
+  svg
+    height: 240px
+    width: 240px
+    path
+      fill: hsl(0, 0%, 94%)
+
+.the
+  border: 1px solid $pink
+  bottom: 10px
+  display: none
+  left: 10px
+  pointer-events: none
+  position: fixed
+  right: 10px
+  top: 10px
+
+.monolith
+  background-image: specialGradient($pink, $jt)
+  bottom: 0
+  display: none
+  left: 0
+  pointer-events: none
+  position: absolute
+  right: 0
+  top: 0
+
++tablet
+  .the
+    display: block
+
+@media screen and (min-width: $tablet) and (-webkit-min-device-pixel-ratio: 0)
+  .the
+    +clippath(1px)
+    border: none
+  .monolith
+    display: block

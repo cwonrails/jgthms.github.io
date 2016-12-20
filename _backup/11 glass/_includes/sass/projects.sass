@@ -1,0 +1,209 @@
+@charset "utf-8"
+
+@import "variables"
+@import "mixins"
+
+.projects
+  &-item
+    overflow: hidden
+    padding: $space-mobile
+    position: relative
+    a:hover
+      text-decoration: underline
+  &-device
+    background-position: 0 0
+    background-repeat: no-repeat
+    display: none
+    position: relative
+    img
+      position: absolute
+    &.is-imac
+      background-image: url("/images/devices/imac.png")
+      height: 1685px
+      width: 2100px
+      img
+        left: 90px
+        top: 90px
+    &.is-ipad-h
+      background-image: url("/images/devices/ipad-h.png")
+      height: 891px
+      width: 1260px
+      img
+        left: 118px
+        top: 61px
+    &.is-ipad-v
+      background-image: url("/images/devices/ipad-v.png")
+      height: 1260px
+      width: 891px
+      img
+        left: 62px
+        top: 118px
+    &.is-macbook-air
+      background-image: url("/images/devices/macbook-air.png")
+      height: 1132px
+      width: 1970px
+      img
+        left: 266px
+        top: 83px
+  &-date
+    font-size: $size-small
+    margin-bottom: 40px
+    position: relative
+    &:after
+      background: $text-strong
+      bottom: -10px
+      content: ""
+      display: block
+      height: 1px
+      left: 0
+      position: absolute
+      width: 60px
+  &-logo
+    display: inline-block
+    margin-bottom: 20px
+    position: relative
+    transition: opacity $speed $easing
+    vertical-align: top
+    img
+      display: block
+      max-height: 200px
+    &:hover
+      opacity: 0.5
+    &:active,
+    &:focus
+      opacity: 0.3
+  &-title
+    color: $text-strong
+    @extend %family-secondary
+    font-size: $size-large
+    font-weight: 700
+    line-height: 1
+    margin-top: 20px
+    a
+      &:hover
+        padding: 0
+  &-url
+    font-size: $size-small
+    line-height: 1
+    margin-bottom: 20px
+    margin-top: 5px
+    a
+      +underline
+  &-content
+    color: inherit
+    font-size: $size-normal
+    p
+      margin: 0
+      & + p
+        margin-top: 10px
+  &-icons
+    margin-top: 20px
+    opacity: 0.48
+    li
+      display: inline-block
+      font-size: 28px
+      height: 30px
+      line-height: 30px
+      margin-right: 10px
+      text-align: center
+      vertical-align: top
+      width: 30px
+      svg
+        height: 30px
+        width: 30px
+  +until($desktop)
+    &-item:first-child
+      padding-top: ($space-mobile * 2) + $magic
+  +desktop
+    &-item
+      height: 200vh
+      padding: 0
+      width: 100%
+      .container
+        align-items: center
+        display: flex
+        min-height: 100vh
+        padding: 200px 0
+        width: 100%
+    &-body
+      left: 0
+      position: absolute
+      top: 0
+      &.affix
+        left: 50%
+        margin-left: -470px
+        position: fixed
+        width: 940px
+    &-date
+      line-height: 20px
+      padding-bottom: 15px
+      padding-top: 70px
+    &-logo
+      height: 200px
+    &-device
+      display: block
+      left: 50%
+      position: absolute
+      top: 50%
+      transform: scale(0.5) translate3d(80px, -100%, 0)
+      transform-origin: left center
+      z-index: 1
+      &.is-ipad-h,
+      &.is-ipad-v
+        transform: scale(0.75) translate3d(80px, -62.5%, 0)
+    &-content
+      width: 50%
+
+=project($background, $text, $date, $title: $date, $url: $date, $icon: $text)
+  background: $background
+  color: $text
+  svg
+    path
+      fill: $icon
+  .projects-date
+    color: $date
+    &:after
+      background: $text
+  .projects-title
+    color: $title
+  .projects-url a
+    color: $url
+    &:after
+      background: $url
+
+$ivan-background: #eae8e3
+$ivan-link: #de7f2b
+$ivan-text: #4d4d4d
+$ivan-title: #1b1e21
+
+.projects-item
+  &.is-arnaudbenard
+    +project(#ff2b53, #ecffe9, #ecffe9, #fff, #fff, rgba(black, 0.4))
+  &.is-bulma
+    +project($bulma, rgba(white, 0.71), white)
+  &.is-marksheet
+    +project($marksheet, #f4f1ce, white)
+    background-color: $marksheet
+    text-shadow: 0 1px 2px rgba(black, .2)
+  &.is-barn-dor
+    +project(#121212, #69707a, #ebb550, white)
+  &.is-ivan-ballini
+    +project($ivan-background, $ivan-text, $ivan-link, $ivan-title)
+  &.is-css-off-2013
+    +project(#cdc9dd, #6e6c77, white, black)
+  &.is-juketube
+    +project(#eee, #888, #df1f1f, #22242a)
+  &.is-bbxdesign
+    +project(#f5574c, rgba(white, 0.71), white)
+  &.is-cambodia-vietnam-2010
+    +project(#dacfb1, #6b6450, #914839, #485c39, #3b5757)
+  &.is-yeek
+    +project(#eeeff2, #4c566c, #0589f5, #040404)
+  &.is-editions-magellan
+    +project(#332003, rgba(white, 0.29), #c78312, white)
+  &.is-golf-de-margaux
+    +project(#96c909, rgba(black, 0.48), #fff, #1a397f)
+  &.is-bbxworld
+    +project(#362f2d, rgba(white, 0.48), #8dc63f, white)
+
++skrollr("#projects")

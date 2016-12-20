@@ -1,0 +1,109 @@
+@charset "utf-8"
+
+@import "variables"
+@import "mixins"
+
+.heading
+  .container
+    max-width: 780px
+
+.favourites
+  padding-bottom: $space-mobile
+  padding-left: 20px
+  padding-right: 20px
+  &-item
+    position: relative
+    & + &
+      margin-top: $space-mobile
+  &-rank
+    background-color: $jt
+    background-image: specialGradient($jt, $pink)
+    border-radius: 290486px
+    color: $link
+    display: block
+    height: $size-medium * 2
+    left: 0
+    line-height: calc(($size-medium * 2) - 2px)
+    position: absolute
+    text-align: center
+    top: 0
+    width: $size-medium * 2
+    &:before
+      +overlay(1px)
+      background: white
+      border-radius: 290486px
+      content: ""
+      display: block
+    span
+      position: relative
+  &-name
+    color: $text-strong
+    @extend %family-secondary
+    font-size: $size-big
+    font-weight: 700
+    line-height: 1
+    padding-left: 50px
+  &-domain,
+  &-developer
+    font-size: $size-small
+    line-height: 1
+    margin-top: 5px
+    padding-left: 50px
+    a
+      +underline
+  &-developer
+    color: $text-light
+  &-cover
+    display: block
+    margin: 20px 0
+    max-width: 320px
+    position: relative
+    img
+      display: block !important
+  &-content
+    a
+      +visited
+      border-radius: $radius
+      display: inline-block
+      left: -0.25em
+      padding: 0.1em 0.25em
+      position: relative
+      vertical-align: top
+    p:not(:last-child)
+      margin-bottom: 1em
+  +tablet
+    &-name
+      padding-left: 70px
+    &-domain,
+    &-developer
+      padding-left: 70px
+  +desktop
+    max-width: 1260px
+    padding-bottom: $space-desktop * 2
+    padding-left: $space-side
+    padding-right: $space-side
+    &-item
+      padding-left: 400px
+      & + &
+        margin-top: $space-desktop
+    &-rank
+      height: 60px
+      line-height: 60px
+      width: 60px
+    &-name,
+    &-domain,
+    &-developer
+      padding-left: 0
+    &-cover
+      left: 80px
+      margin: 0
+      position: absolute
+      top: 0
+      width: 300px
+    &-content
+      margin-top: 20px
+
+a.favourites-cover
+  +cover
+
++skrollr("#favourites")

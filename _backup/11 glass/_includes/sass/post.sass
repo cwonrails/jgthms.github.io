@@ -1,0 +1,299 @@
+@charset "utf-8"
+
+@import "variables"
+@import "mixins"
+@import "pygments-oceanic-next"
+
+.post
+  &-header
+    padding-bottom: $space-mobile
+    padding-left: 20px
+    padding-right: 20px
+    padding-top: ($space-mobile * 2) + $magic
+  &-info
+    color: $black
+    font-size: $size-tiny
+    margin-bottom: 10px
+    opacity: $opacity-light
+  &-date,
+  &-category
+    font-style: normal
+    font-weight: 400
+  &-title
+    color: $text-strong
+    @extend %family-secondary
+    font-size: $size-large
+    font-weight: 700
+    line-height: 1.2
+    margin-bottom: 10px
+  &-introduction
+    color: $text-light
+    font-size: $size-medium
+    line-height: 1.2
+  &-pagination
+    font-size: $size-tiny
+    padding-bottom: $space-mobile
+    padding-left: 20px
+    padding-right: 20px
+    position: relative
+    &-button
+      border: 1px solid $link
+      border-radius: 3px
+      display: block
+      margin-top: 20px
+      padding: 16px 20px
+      position: relative
+      transition: none $speed $easing
+      transition-property: background, border, color
+      strong
+        display: block
+      svg
+        height: 20px
+        margin-top: -10px
+        position: absolute
+        right: 20px
+        top: 50%
+        width: 20px
+      &:hover
+        background: $link
+        color: $link-invert
+      &.is-disabled
+        border-color: $text-light
+        color: $text-light
+        opacity: $opacity-light
+        pointer-events: none
+      &.is-facebook
+        border-color: $facebook
+        color: $facebook
+        svg
+          path
+            fill: $facebook
+        &:hover
+          background: $facebook
+          color: white
+          svg
+            path
+              fill: white
+      &.is-twitter
+        border-color: $twitter
+        color: $twitter
+        svg
+          path
+            fill: $twitter
+        &:hover
+          background: $twitter
+          color: white
+          svg
+            path
+              fill: white
+      &.is-next strong
+        font-size: 1.2em
+  &-main
+    padding-bottom: $space-mobile
+    padding-left: 20px
+    padding-right: 20px
+  &-content
+    a
+      border-bottom: 1px solid
+      word-break: break-word
+      +visited
+      &:hover
+        border-bottom-color: $link
+      &:visited
+        &:hover
+          border-bottom-color: $visited
+    h2,
+    h3
+      color: $text-strong
+      @extend %family-secondary
+      font-size: 1.4em
+      font-weight: 700
+      line-height: 1.2
+      margin-bottom: 1em
+      margin-top: 2em
+      position: relative
+      a
+        border-bottom: none
+        font-weight: 400
+        margin-right: 10px
+    aside
+      color: $text-light
+      font-size: $size-tiny
+      margin: 20px 0
+      padding: 10px
+      text-align: center
+    p
+      margin: 1em 0
+      &:first-child
+        margin-top: 0
+      &:last-child
+        margin-bottom: 0
+      &.note
+        background: rgba(black, 0.04)
+        color: $text
+        padding: 20px
+        code
+          background: white
+          padding-bottom: 2px
+    ol
+      list-style: decimal outside
+      margin: 1em
+      margin-left: 2em
+    ul
+      list-style: disc outside
+      margin: 1em
+      margin-left: 2em
+    figure:not(.highlight)
+      margin: 2em 0
+      text-align: center
+      &:first-child
+        margin-top: 0 !important
+      img
+        display: inline-block
+        vertical-align: top
+    figcaption
+      color: $text-light
+      font-size: $size-tiny
+      margin-top: 1em
+    blockquote
+      font-size: 1.4em
+      font-style: normal
+      line-height: 1.4
+      margin: 2em
+      max-width: 36em
+      position: relative
+      text-align: left
+      &:before
+        background: $pink
+        content: ""
+        display: block
+        height: 1.4em
+        margin-left: -0.7em
+        position: absolute
+        width: 1.4em
+      p
+        margin: 0
+        position: relative
+    table
+      font-size: 0.8em
+      margin: 2em 0
+      width: 100%
+      th,
+      td
+        border: 2px solid $border
+        padding: 0.8em 1em
+        text-align: left
+        &.empty
+          background: none
+          border: none
+        code
+          font-size: 1em
+          padding-bottom: 2px
+    code,
+    pre
+      background: white
+      color: $link
+      font-size: 0.8em
+    code
+      background: $background
+      padding: 2px 6px 4px
+      position: relative
+      top: -2px
+    pre
+      padding: 1em
+      code
+        font-size: 1em
+    .highlight
+      code,
+      pre
+        background: transparent
+        color: inherit
+    .highlight
+      overflow: auto
+      pre
+        white-space: pre-wrap
+    .top-highlight
+      background: lighten($green, 30%)
+      box-shadow: 0 0 0 5px lighten($green, 30%)
+      color: $jt
+      padding: 2px 0 3px
+      position: relative
+      transition: none $speed $easing
+      transition-property: background, box-shadow, color
+      &:hover
+        background: $green
+        box-shadow: 0 0 0 5px $green
+  +tablet
+    &-main
+      padding-left: 40px
+      padding-right: 40px
+    &-content
+      h2,
+      h3
+        margin-top: 60px
+        a
+          display: inline-block
+          margin-right: 5px
+          position: absolute
+          right: 100%
+          text-align: center
+          vertical-align: top
+          width: 40px
+  +desktop
+    &-header
+      padding-bottom: $space-desktop
+      padding-left: $space-side
+      padding-right: $space-side
+      padding-top: $space-desktop
+      .container
+        max-width: 40rem
+    &-info
+      line-height: $magic
+      margin-bottom: $space-desktop
+    &-main
+      padding-bottom: $space-desktop
+      padding-left: $space-side
+      padding-right: $space-side
+      .container
+        max-width: 40rem
+    &-pagination
+      padding-bottom: $space-desktop
+      padding-left: $space-side
+      padding-right: $space-side
+      .container
+        align-items: stretch
+        display: flex
+        max-width: 40rem
+      &-button
+        margin-top: 0
+        strong
+          display: inline
+        &.is-facebook
+          margin-top: 10px
+        &.is-next
+          flex-grow: 1
+          order: 2
+          strong
+            display: block
+        &.is-top
+          margin-top: 10px
+      &-share,
+      &-before
+        align-items: stretch
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+      &-share
+        margin-right: $column-gap
+        order: 1
+        width: 210px
+      &-before
+        margin-left: $column-gap
+        order: 3
+        text-align: center
+        width: 140px
+        .post-pagination-button
+          padding-left: 0
+          padding-right: 0
+
++skrollr("#post")

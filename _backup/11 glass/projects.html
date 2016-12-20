@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Projects by Jeremy Thomas
-pageTitle: "Projects"
 route: projects
 
 projects:
@@ -87,6 +86,16 @@ projects:
     <p>After a lot of delays, the website was finalised almost 2 years after its inception and embodies my first decently sized jQuery project.</p>
   icons: ['html5', 'css3']
 
+- name: Yeek
+  device: imac
+  url: http://yeek.fr
+  slug: yeek
+  date: October 2011
+  content: >
+    <p>My first attempt at a passive income website: a simple collection of affiliated links.</p>
+    <p>This project has shown that in e-commerce especially, marketing sometimes overshadows content.</p>
+  icons: ['wordpress-icon', 'amazon']
+
 - name: Editions Magellan
   device: ipad-v
   url: http://www.editions-magellan.com
@@ -122,55 +131,49 @@ projects:
 
 <main id="projects">
 {% for project in page.projects %}
-  <article class="item project project--{{project.slug}}">
-    <!-- <a class="item-cover projects-device is-{{project.device}}" href="{{project.url}}">
-      <img class="b-lazy" data-src="/images/screenshots/{{project.slug}}.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+  <article class="projects-item is-{{project.slug}}">
+    <a class="projects-device is-{{project.device}}" href="{{project.url}}">
+      <img class="lazy" data-src="/images/screenshots/{{project.slug}}.jpg" src="/images/projects/empty.png">
       <noscript>
         <img src="/images/screenshots/{{project.slug}}.jpg">
       </noscript>
-    </a> -->
+    </a>
 
-    <div class="item-container">
-      <div class="columns">
-        <div class="column is-2">
-          <p class="item-info">{{project.date}}</p>
-        </div>
+    <div class="container">
+      <div class="projects-body">
+        <p class="projects-date">{{project.date}}</p>
 
-        <div class="column is-5">
-          <h2 class="item-title projects-title">
-            {{project.name}}
-          </h2>
+        <a class="projects-logo" href="{{project.url}}">
+          <img class="lazy" data-src="/images/projects/{{project.slug}}.png" src="/images/projects/empty.png">
+          <noscript>
+            <img src="/images/projects/{{project.slug}}.png">
+          </noscript>
+        </a>
 
-          <p class="item-link">
-            <a href="{{project.url}}">
-              {% if project.domain == nil or project.domain == "" %}
-                {{project.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first}}
-              {% else %}
-                {{project.domain}}
-              {% endif %}
-            </a>
-          </p>
+        <h2 class="projects-title">
+          {{project.name}}
+        </h2>
 
-          <div class="item-content">
-            {{project.content}}
-          </div>
-
-          <ul class="item-icons">
-            {% for icon in project.icons %}
-              {% assign svgpath = icon | prepend: "svg/" | append: ".html" %}
-              <li>{% include {{svgpath}} %}</li>
-            {% endfor %}
-          </ul>
-        </div>
-
-        <div class="column is-5">
-          <a class="item-image" href="{{project.url}}">
-            <img class="b-lazy" data-src="/images/projects/{{project.slug}}.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            <noscript>
-              <img src="/images/projects/{{project.slug}}.png">
-            </noscript>
+        <p class="projects-url">
+          <a href="{{project.url}}">
+            {% if project.domain == nil or project.domain == "" %}
+              {{project.url | remove:'http://' | remove:'https://' | remove:'www.' | split:'/' | first}}
+            {% else %}
+              {{project.domain}}
+            {% endif %}
           </a>
+        </p>
+
+        <div class="projects-content">
+          {{project.content}}
         </div>
+
+        <ul class="projects-icons">
+          {% for icon in project.icons %}
+            {% assign svgpath = icon | prepend: "svg/" | append: ".html" %}
+            <li>{% include {{svgpath}} %}</li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </article>

@@ -14,31 +14,31 @@ repos:
 - id: wysiwyg.css
   url: http://jgthms.com/wysiwyg.css/
   year: 2016
-  month: 09
+  month: 9
   name: "wysiwyg.css"
   description: A tiny CSS for generated HTML or Markdown content
 - id: minireset.css
   url: http://jgthms.com/minireset.css/
   year: 2016
-  month: 08
+  month: 8
   name: "minireset.css"
   description: A tiny modern CSS reset
 - id: web-design-in-4-minutes
   url: http://jgthms.com/web-design-in-4-minutes
   year: 2016
-  month: 07
+  month: 7
   name: "Web design in 4 minutes"
   description: A self-referential tutorial as a single webpage experiment
 - id: bulma
   url: http://bulma.io
   year: 2016
-  month: 01
+  month: 1
   name: "Bulma"
   description: Modern CSS framework based on Flexbox
 - id: marksheet
   url: http://marksheet.io
   year: 2015
-  month: 06
+  month: 6
   name: "MarkSheet"
   description: Free tutorial to learn HTML and CSS
 - id: juketube
@@ -50,7 +50,7 @@ repos:
 # - id: css-art-science
 #  url: http://jgthms.com/css-art-science/
 #  year: 2012
-#  month: 03
+#  month: 3
 #  name: "CSS : l'Art & la Science"
 #  description: A journey through HTML and CSS
 ---
@@ -60,24 +60,53 @@ repos:
   <strong>jgthms</strong>
 </a> -->
 
-<main id="repos" class="list">
+<main id="repos" class="items">
   {% for repo in page.repos %}
     {% assign month = repo.month %}
-    {% capture namedmonth %}{% case month %}{% when 01 %}Jan{% when 02 %}Feb{% when 03 %}Mar{% when 04 %}Apr{% when 05 %}May{% when 06 %}Jun{% when 07 %}Jul{% when 08 %}Aug{% when 09 %}Sep{% when 10 %}Oct{% when 11 %}Nov{% when 12 %}Dec{% endcase %}{% endcapture %}
-    <article class="item">
-      <aside class="item-rank">
-        {{repo.year}} {{namedmonth}}
-      </aside>
-      <h2 class="item-title">
-        <a href="{{repo.url}}">
-          {{repo.name}}
+    {% capture namedmonth %}
+      {% case month %}
+        {% when 1 %}Jan
+        {% when 2 %}Feb
+        {% when 3 %}Mar
+        {% when 4 %}Apr
+        {% when 5 %}May
+        {% when 6 %}Jun
+        {% when 7 %}Jul
+        {% when 8 %}Aug
+        {% when 9 %}Sep
+        {% when 10 %}Oct
+        {% when 11 %}Nov
+        {% when 12 %}Dec
+      {% endcase %}
+    {% endcapture %}
+    <article class="item repo columns">
+      <div class="column is-1">
+        <aside class="item-info">
+          {{repo.year}} {{namedmonth}}
+        </aside>
+      </div>
+      <div class="column is-3">
+        <a class="item-image" href="{{repo.url}}">
+          <img class="b-lazy" data-src="/images/open-source/{{repo.id}}.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          <noscript>
+            <img src="/images/open-source/{{repo.id}}.png">
+          </noscript>
         </a>
-      </h2>
-      <p class="item-content">
-        {{repo.description}}
-      </p>
-      <div class="item-stars">
-        <iframe src="https://ghbtns.com/github-btn.html?user=jgthms&repo={{repo.id}}&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+      </div>
+      <div class="column is-5">
+        <h2 class="item-title">
+          <a href="{{repo.url}}">
+            {{repo.name}}
+          </a>
+        </h2>
+        <p class="item-content">
+          {{repo.description}}
+        </p>
+      </div>
+      <div class="column is-3">
+        <div class="item-stars">
+          <iframe src="https://ghbtns.com/github-btn.html?user=jgthms&repo={{repo.id}}&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+        </div>
       </div>
     </article>
   {% endfor %}

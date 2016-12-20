@@ -1,0 +1,84 @@
+@charset "utf-8"
+
+@import "variables"
+@import "mixins"
+
+.links
+  padding-bottom: $space-mobile
+  padding-left: 20px
+  padding-right: 20px
+  &-item
+    position: relative
+    & + &
+      margin-top: $space-mobile
+  &-category
+    margin-bottom: 10px
+    span
+      background: #8e8e93
+      border-radius: 3px
+      color: white
+      display: inline-block
+      font-size: $size-tiny
+      height: 1.25rem
+      line-height: 1.25rem
+      padding: 0 8px
+      vertical-align: top
+    &.is-design
+      span
+        background: $blue
+    &.is-gaming
+      span
+        background: $cyan
+        color: $jt
+    &.is-life
+      span
+        background: $green
+        color: $jt
+    &.is-programming
+      span
+        background: $orange
+    &.is-science
+      span
+        background: $purple
+  &-title
+    @extend %family-secondary
+    font-size: $size-medium
+    font-weight: 700
+    line-height: 1.2
+    a
+      +visited
+      border-radius: $radius
+      display: inline-block
+      left: -0.25em
+      padding: 0.125em 0.25em
+      position: relative
+      vertical-align: top
+  &-domain
+    color: $text-light
+    font-size: $size-tiny
+  &-description
+    margin-top: 5px
+  +tablet
+    padding-bottom: $space-desktop
+    padding-left: $space-desktop
+    padding-right: $space-desktop
+    &-item
+      padding-left: $column-width + $column-gap
+    &-category
+      left: 0
+      margin-bottom: 0
+      position: absolute
+      text-align: right
+      top: calc((#{$size-medium} * 1.2 * 1.25) / 2)
+      width: 120px
+      span
+        transform: translateY(-50%)
+  +desktop
+    max-width: 1260px
+    padding-left: $space-side
+    padding-right: $space-side
+    &-item
+      & + &
+        margin-top: $space-desktop
+
++skrollr("#links")
