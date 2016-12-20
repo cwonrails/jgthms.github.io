@@ -31,8 +31,11 @@
   padding: 0 10vw
   pointer-events: none
   position: fixed
-  text-align: center
+  text-align: justify
   text-transform: uppercase
+  // transition-duration: 86ms
+  // transition-property: background, color, opacity
+  word-break: break-all
   html.is-hovering &
     background: var(--colorLink)
     color: var(--colorLinkInvert)
@@ -54,7 +57,7 @@
     color: #fff
     font-size: 1.6rem
     margin-top: 4em
-    padding: 4em
+    padding: 2em 0
 
 .item-container
   +container(30rem)
@@ -104,7 +107,10 @@
   img
     max-height: 320px
 
-+tablet
++desktop
+  .item
+    &.is-recommended
+      padding: 4em
   .item-rank
     color: $text-light
     margin-right: 2rem
