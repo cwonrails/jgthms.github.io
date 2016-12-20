@@ -1,6 +1,14 @@
 .up
   position: relative
 
+.up-container
+  animation-delay: -0.5s
+  animation-direction: alternate
+  animation-duration: 1s
+  animation-fill-mode: both
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out
+
 .up-svg
   animation: none 1s $cubic-magic both
 
@@ -34,8 +42,8 @@
 
 .up-line
   animation: none 1s $cubic-magic both
-  animation-duration: 0.5s
-  animation-iteration-count: 2
+  animation-duration: 1s
+  animation-iteration-count: infinite
   background: var(--iconStroke)
   border-radius: 290486px
   height: 100%
@@ -47,8 +55,8 @@
   width: 2px
 
 .up-road
-  animation-duration: 0.5s
-  animation-iteration-count: 2
+  animation-duration: 1s
+  animation-iteration-count: infinite
 
 .up-road-2,
 .up-road-3
@@ -60,6 +68,8 @@
 .nav-link:hover
   .up-svg
     animation-name: goingUp
+  .up-container
+    animation-name: upBounce
   .up-road
     animation-name: upRideRoad
   .up-line
@@ -73,17 +83,17 @@ html:not(.is-hovering) .nav-link.is-active
 @keyframes upRideRoad
   0%
     transform: translateY(-64px)
-  100%
+  50%
     transform: translateY(64px)
 
 @keyframes upLineRoad
   0%
     opacity: 0
     transform: scaleY(0)
-  50%
+  25%
     opacity: 1
     transform: scaleY(1.5)
-  100%
+  50%
     opacity: 0
     transform: scaleY(0)
 
@@ -94,3 +104,9 @@ html:not(.is-hovering) .nav-link.is-active
   100%
     opacity: 1
     transform: translateY(0)
+
+@keyframes upBounce
+  0%
+    transform: translateY(4px)
+  100%
+    transform: translateY(-4px)
