@@ -4,6 +4,7 @@ title: CSS interview questions and answers
 introduction: A personal take at a fictitious interview.
 category: Code
 recommended: true
+customImage: css3.png
 ---
 
 While browsing through my starred GitHub repositories, I noticed an interesting one I had forgotten about: [Front-end Job Interview Questions](https://github.com/darcyclarke/Front-end-Developer-Interview-Questions).
@@ -146,7 +147,7 @@ I have a few that I've developed over the years. They're quite personal, but in 
 Here are a few rules I follow:
 
 * I write my CSS in line. I must be part of a very small minority. The thing is: I absolute love information density. I want to see the CSS structure in front of me, so I make use of the all the horizontal space. When writing 1 property per line (as everyone), it's easy to read the properties. But I don't care about the properties: I know them. I want to read the **selectors**. So I have one set of properties per line, with 1 or multiple selectors. Sometimes I put selectors on several lines, sometimes not. Depends.
-* to be able to scan my properties quickly despite the fact that they're on single line, I put them in alphabetical order. It works pretty well with time. I know roughly where to look to find a margin or a width or a text-transform. 
+* to be able to scan my properties quickly despite the fact that they're on single line, I put them in alphabetical order. It works pretty well with time. I know roughly where to look to find a margin or a width or a text-transform.
 * group shared properties with selectors. If several elements share a same set of properties, you could have dedicated class, or repeat yourself, or use a mixin. What I do is just list all the selectors that share this set. Then, I can have specific styles for each of these selectors. *Way* better than having a dedicated class.
 * I only use classes. I keep ids only for jQuery stuff. CSS priority is hard to graps, and ids are powerful selectors. They can take over the styling quite easily. To avoid headaches, I just use classes. Ids are meant to be used for unique elements. But nothing prevents from using classes like that. There's no semantic in CSS. So use .header instead of #header, and you'll avoid priority issues. Especially true when having #nav li, because if a li has #nav-home, you can't use *just* #nav-home and it's stupid because it's an id selector, so the uniqueness should work. But it doesn't because #nav li is stronger. So you have to do #nav #nav-home, which looks really stupid.
 * Here's how I order my styles: reset, fonts, generic tags, shared properties, common elements (that appear on every page), elements, elements *in* context, colors (background, borders included), z-index, animations, CSS3 vendor-prefix stuff.

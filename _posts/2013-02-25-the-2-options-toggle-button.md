@@ -4,6 +4,7 @@ title: The 2-options toggle button
 introduction: Is it on? Or does it turn it on?
 category: UI
 recommended: true
+customImage: toggle-button.png
 ---
 
 I'm always confused by these kinds of switch buttons:
@@ -28,5 +29,3 @@ As a matter of fact, it makes sense because Play/Pause are **actions**, not stat
 That's why the On/Off toggle switches display the current state: they are *meant* to be read as 'It's currently On' and 'It's currently Off', not 'Switch to On' and 'Switch to Off'.
 
 But it's still unclear and not obvious. If you're designing a web app, just use checkboxes. Or even better: Yes/No radio buttons.
-
-

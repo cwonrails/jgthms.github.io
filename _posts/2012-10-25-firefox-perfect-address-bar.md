@@ -4,6 +4,7 @@ title: Firefox and the perfect address bar
 introduction: It's the main reason why it's still my favourite browser.
 category: UX
 recommended: true
+customImage: firefox.png
 ---
 
 Google Chrome has spread the concept of the *Omnibox*: merging a browser's URL bar with the search bar. Type anything, and it'll access one of these 5 sources:
@@ -30,7 +31,7 @@ But what I love most about Firefox's address bar is its **incremental search**. 
 
 * `local` + project name = access a project on the localhost
 * blog name + `admin` = access the admin area of a remote website
-* `tw` + username = access a previously visited twitter profile 
+* `tw` + username = access a previously visited twitter profile
 * `ny` + `wri` = access a NY Times article about writing you've already read but don't remember the exact tile
 * `iph` + `desi` = access all bookmarks tagged 'iphone' and 'design'
 

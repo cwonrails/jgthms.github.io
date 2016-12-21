@@ -4,6 +4,7 @@ title: Wikipedia redesign
 introduction: Probably on every designer's bucket list.
 category: Thoughts
 recommended: true
+customImage: wikipedia.png
 ---
 
 It's a common thing among designers to provide a so-called "unsolicited redesign" of a well-known website and write about it. Here's my humble attempt.

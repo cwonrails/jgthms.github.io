@@ -4,6 +4,7 @@ title: Why I wrote "Web Design in 4 minutes"
 introduction: A visual feedback loop.
 category: Thoughts
 recommended: true
+backgroundImage: web-design-in-4-minutes.jpg
 ---
 
 <figure>

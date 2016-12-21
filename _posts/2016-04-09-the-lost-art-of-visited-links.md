@@ -4,6 +4,7 @@ title: The lost art of visited links
 introduction: The colour of another dimension
 category: UX
 recommended: true
+customImage: cursor.png
 ---
 
 There is a high chance that you've visited [this page](https://www.google.com), [this other page](https://www.youtube.com), and probably [this one](https://news.ycombinator.com) as well. Probably not [this one](https://en.wikipedia.org/wiki/Driebruggen) nor [this one](https://developer.mozilla.org/en/docs/Web/CSS/:visited), but I know for sure that you've been on [this one](/the-lost-art-of-visited-links.html).

@@ -3,7 +3,6 @@ layout: post
 title: An alternative to infinite scroll
 introduction: 2 buttons and some CSS animation
 category : UX
-recommended: true
 ---
 
 <figure>

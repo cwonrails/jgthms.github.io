@@ -7,16 +7,36 @@
   padding-right: 1rem
 
 .item
+  color: var(--colorText)
   margin-bottom: 4em
   position: relative
   &:last-child
     margin-bottom: 0
   &.is-recommended
+    --colorText: #{rgba(#fff, 0.48)}
+    --colorTextLight: #{rgba(#fff, 0.29)}
+    --colorLink: #fff
+    --colorLinkInvert: #{$articles}
+    --visited: #fff
+    --visitedInvert: #000
     background: #000
-    color: #fff
     font-size: 1.6rem
     margin-top: 4em
     padding: 2em 0
+
+.item-background
+  +overlay
+  background-attachment: fixed
+  background-position: center center
+  background-size: cover
+  overflow: hidden
+
+.item-customimage
+  position: absolute
+  right: 0
+  top: 50%
+  transform: scale(0.5) translate(0%, -100%)
+  transform-origin: center center
 
 .item-container
   margin-left: auto
@@ -24,13 +44,14 @@
   max-width: 50rem
   padding-left: 1rem
   padding-right: 1rem
+  position: relative
 
 .item-info
-  color: $text-light
+  color: var(--colorTextLight)
   font-size: 0.8em
 
 .item-rank
-  color: $text-light
+  color: var(--colorTextLight)
   font-size: 1.4em
   line-height: 1.2
 
@@ -75,6 +96,8 @@
     max-height: 320px
 
 +mobile
+  .item-customimage
+    display: none
   .item-stars
     margin-top: 0.5rem
 
@@ -84,3 +107,42 @@
       padding: 4em 0
   .item-rank
     text-align: right
+
+#the-lost-art-of-visited-links
+  background-color: $purple
+
+#wikipedia-redesign
+  background-color: hsl(0, 0%, 20%)
+
+#css-interview-questions-and-answers
+  background-color: $articles
+
+#why-hn-doesnt-need-a-redesign
+  background-color: #f60
+
+#the-2-options-toggle-button
+  background: #eee
+  --colorText: #{$text}
+  --colorTextLight: #{$text-light}
+  --colorLink: #{$articles}
+  --colorLinkInvert: #{$articles-invert}
+  --visited: #{$visited}
+  --visitedInvert: #{$visited-invert}
+
+#there-are-3-levels-of-administration
+  background-color: $green
+  --colorText: #{rgba($green-invert, 0.48)}
+  --colorTextLight: #{rgba($green-invert, 0.29)}
+  --colorLink: #{$green-invert}
+  --colorLinkInvert: #{$green}
+  --visited: #{$green-invert}
+  --visitedInvert: #{$green}
+
+#organized-gmail-inbox
+  background-color: #dd5347
+
+#the-grey-period
+  background-color: #777
+
+#firefox-perfect-address-bar
+  background-color: #0c99d5

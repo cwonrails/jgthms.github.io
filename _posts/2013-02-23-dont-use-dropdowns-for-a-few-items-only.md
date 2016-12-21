@@ -3,7 +3,6 @@ layout: post
 title: Don't use dropdowns for a few items only
 introduction: Decluttering screen real estate doesn't mean using it wrong.
 category: UI
-recommended: true
 ---
 
 Dropdowns (or select boxes) are an easy way to implement a considerable list of options in a small amount of space. A typical use would be a list of countries, or a list of years.
