@@ -1,10 +1,43 @@
 .heading
-  +container(40rem)
+  color: var(--colorText)
   margin-top: 4rem
+  padding: 0 2rem
+  position: relative
   text-align: center
+  &.is-recommended
+    --colorText: #{rgba(#fff, 0.48)}
+    --colorTextLight: #{rgba(#fff, 0.29)}
+    --colorLink: #fff
+    --colorLinkInvert: #{$articles}
+    --visited: #fff
+    --visitedInvert: #000
+    background: #000
+    font-size: 1.6rem
+    margin-top: 0
+    padding: 2rem
+
+.heading-background
+  +overlay
+  background-attachment: fixed
+  background-position: center center
+  background-size: cover
+  overflow: hidden
+
+.heading-customimage
+  position: absolute
+  left: 75%
+  top: 50%
+  transform: scale(0.5) translate(0%, -100%)
+  transform-origin: left center
+
+.heading-container
+  margin-left: auto
+  margin-right: auto
+  max-width: 32rem
+  position: relative
 
 .heading-info
-  color: $text-light
+  color: var(--colorTextLight)
   font-size: 0.8em
 
 .heading-title
@@ -23,3 +56,13 @@
     margin: 0 0.5rem
     &.is-active
       color: $black
+
++mobile
+  .heading-customimage
+    display: none
+
++tablet
+  .heading
+    padding: 0 4rem
+    &.is-recommended
+      padding: 8rem 4rem

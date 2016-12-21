@@ -3,12 +3,20 @@ layout: default
 route: post
 ---
 
-<header class="heading">
-  <p class="heading-info">
-    {{page.date | date_to_string}} in {{page.category}}
-  </p>
-  <h1 class="heading-title">{{page.title}}</h1>
-  <h2 class="heading-introduction">{{page.introduction}}</h2>
+<header id="{{page.id | remove:'/'}}" class="heading {% if page.recommended == true %} is-recommended{% endif %}">
+  {% if page.backgroundImage %}
+    <figure class="heading-background" style="background-image: url(/images/articles/{{page.backgroundImage}})"></figure>
+  {% endif %}
+  {% if page.customImage %}
+    <img class="heading-customimage" src="/images/articles/{{page.customImage}}">
+  {% endif %}
+  <div class="heading-container">
+    <p class="heading-info">
+      {{page.date | date_to_string}} in {{page.category}}
+    </p>
+    <h1 class="heading-title">{{page.title}}</h1>
+    <h2 class="heading-introduction">{{page.introduction}}</h2>
+  </div>
 </header>
 
 <section id="post" class="post-main">
