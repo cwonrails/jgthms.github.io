@@ -11,12 +11,15 @@ html.is-index
     padding-top: calc(20vh - 4rem)
 
 .hello
-  +container(40rem)
+  +container(27em)
   font-size: 1.4rem
+  h1
+    font-size: 1.4em
+    line-height: 1.4
   p
     color: $text-light
-    font-size: 0.75em
-    margin-top: 1rem
+    font-size: 0.8em
+    margin-top: 2em
   a
     border-bottom: 1px solid $border
     color: inherit
@@ -33,6 +36,14 @@ html.is-index
       color: $cssreference
       &:hover
         border-bottom-color: $cssreference
+    &.is-htmlreference
+      color: $htmlreference
+      &:hover
+        border-bottom-color: $htmlreference
+    &.is-web4min
+      color: $web4min
+      &:hover
+        border-bottom-color: $web4min
     &.is-improbable
       color: $improbable
       &:hover
