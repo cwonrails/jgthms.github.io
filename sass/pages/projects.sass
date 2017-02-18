@@ -9,7 +9,7 @@
   background: var(--projectBackground)
   color: var(--projectColor)
   margin-bottom: 0
-  padding: 2rem
+  padding: 2rem 1rem
   .item-link a
     &,
     &:visited
@@ -68,6 +68,12 @@ $ivan-title: #1b1e21
 .project--bbxworld
   +project(#362f2d, rgba(#fff, 0.48), #8dc63f, rgba(#fff, 0.29), #fff)
 
+
++mobile
+  .project
+    .item-image
+      justify-content: flex-start
+      margin-top: 1rem
 
 +desktop
   .project

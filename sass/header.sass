@@ -5,14 +5,14 @@
 
 html.is-index
   .header
-    height: 100vh
+    min-height: 100vh
     justify-content: space-between
     padding-bottom: 3rem
     padding-top: calc(20vh - 4rem)
 
 .hello
   +container(27em)
-  font-size: 1.4rem
+  font-size: 1.2rem
   h1
     font-size: 1.4em
     line-height: 1.4
@@ -48,3 +48,7 @@ html.is-index
       color: $improbable
       &:hover
         border-bottom-color: $improbable
+
++desktop
+  .hello
+    font-size: 1.4rem
