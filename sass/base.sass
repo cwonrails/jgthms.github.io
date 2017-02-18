@@ -2,8 +2,10 @@
   --bodyBackground: #{$white}
   --colorText: #{$text}
   --colorTextLight: #{$text-light}
+  --colorTextStrong: #{$text-strong}
   --colorLink: #{$pink}
   --colorLinkInvert: #{$pink-invert}
+  --colorTitle: #000
   --iconStroke: #{$icon-stroke}
   --visited: #{$visited}
   --visitedInvert: #{$visited-invert}
@@ -36,8 +38,13 @@ html
     --colorLink: #{$projects}
     --colorLinkInvert: #{$projects-invert}
   &.is-favourites
+    --bodyBackground: #{$black}
     --colorLink: #{$favourites}
     --colorLinkInvert: #{$favourites-invert}
+    --colorText: #{$border}
+    --colorTextStrong: #{$white}
+    --colorTitle: #fff
+    --iconStroke: #{$text-light}
   &.is-links
     --colorLink: #{$links}
     --colorLinkInvert: #{$links-invert}
@@ -50,7 +57,7 @@ body
   color: var(--colorText)
   font-family: $family-primary
   font-size: 1rem
-  font-weight: 300
+  // font-weight: 300
   letter-spacing: 0.04em
   line-height: 1.6
 
@@ -70,7 +77,7 @@ img
   max-width: 100%
 
 strong
-  color: $text-strong
+  color: var(--colorTextStrong)
   font-weight: $weight-semibold
 
 svg

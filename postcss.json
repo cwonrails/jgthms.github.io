@@ -1,0 +1,8 @@
+{
+  "use": ["autoprefixer"],
+  "input": "css/main.css",
+  "output": "css/main.css",
+  "autoprefixer": {
+      "browsers": "> 5%"
+  }
+}
