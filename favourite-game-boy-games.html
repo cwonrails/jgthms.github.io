@@ -172,13 +172,6 @@ games:
           <span>{{11 | minus:forloop.index}}</span>
         </p>
       </div>
-      <div class="column is-6">
-        <h2 class="item-title">{{game.name}}</h2>
-        <h3 class="item-info">{{game.developer}}</h3>
-        <div class="item-content">
-          {{game.content}}
-        </div>
-      </div>
       <div class="column is-5">
         <figure class="item-image">
           <img class="b-lazy" data-src="/images/favourites/{{game.slug}}.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
@@ -186,6 +179,13 @@ games:
             <img src="/images/favourites/{{game.slug}}.jpg">
           </noscript>
         </figure>
+      </div>
+      <div class="column is-6">
+        <h2 class="item-title">{{game.name}}</h2>
+        <h3 class="item-info">{{game.developer}}</h3>
+        <div class="item-content">
+          {{game.content}}
+        </div>
       </div>
     </article>
   {% endfor %}

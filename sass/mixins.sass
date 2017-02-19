@@ -98,14 +98,18 @@
   @return linear-gradient(141deg, $first 29%, $second)
 
 =visited
+  border-bottom-color: var(--colorLink)
   &:hover
     background: var(--colorLink)
+    border-bottom-color: var(--colorLink)
     color: var(--colorLinkInvert)
     text-decoration: none
   &:visited
+    border-bottom-color: var(--visited)
     color: var(--visited)
     &:hover
       background: var(--visited)
+      border-bottom-color: var(--visited)
       color: var(--visitedInvert)
 
 $tablet: 600px

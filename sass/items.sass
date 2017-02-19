@@ -51,9 +51,16 @@
   font-size: 0.8em
 
 .item-rank
-  color: var(--colorTextLight)
+  align-items: center
+  background-color: var(--colorLink)
+  border-radius: 290486px
+  color: var(--bodyBackground)
+  display: flex
   font-size: 1.4em
+  height: 4rem
+  justify-content: center
   line-height: 1.2
+  width: 4rem
 
 .item-title
   color: var(--colorTextStrong)
@@ -88,6 +95,9 @@
     margin-top: 1em
   a
     +visited
+    border-bottom-style: solid
+    border-bottom-width: 1px
+    padding-bottom: 2px
 
 .item-image
   align-items: center
@@ -100,6 +110,11 @@
     display: none
   .item-stars
     margin-top: 0.5rem
+  .item-image
+    margin-bottom: 2rem
+  .item-rank
+    justify-content: center
+    margin: 0 auto 2rem
 
 +tablet
   .item

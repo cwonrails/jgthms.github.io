@@ -92,6 +92,14 @@ websites:
           <span>{{11 | minus:forloop.index}}</span>
         </p>
       </div>
+      <div class="column is-5">
+        <a class="item-image" href="{{website.url}}">
+          <img class="b-lazy" data-src="/images/favourites/{{website.slug}}.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          <noscript>
+            <img src="/images/favourites/{{website.slug}}.jpg">
+          </noscript>
+        </a>
+      </div>
       <div class="column is-6">
         <h2 class="item-title">{{website.name}}</h2>
         <p class="item-link">
@@ -102,14 +110,6 @@ websites:
         <div class="item-content">
           {{website.content}}
         </div>
-      </div>
-      <div class="column is-5">
-        <a class="item-image" href="{{website.url}}">
-          <img class="b-lazy" data-src="/images/favourites/{{website.slug}}.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          <noscript>
-            <img src="/images/favourites/{{website.slug}}.jpg">
-          </noscript>
-        </a>
       </div>
     </article>
   {% endfor %}
