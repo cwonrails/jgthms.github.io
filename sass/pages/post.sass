@@ -7,8 +7,8 @@
     +visited
   h2,
   h3
-    font-size: 1.4em
-    font-weight: 700
+    @extend %title
+    font-size: 1.8em
     line-height: 1.2
     margin-bottom: 1em
     margin-top: 2em
@@ -126,14 +126,17 @@
       box-shadow: 0 0 0 5px $green
 
 .post-pagination
+  @extend %title
   padding: 2rem 0 25vh
 
 .post-pagination-button
   align-items: center
   display: flex
-  font-size: 0.75em
+  line-height: 1.6
   margin-right: 1rem
   padding: 0.75em 1em
+  transition-duration: $speed
+  transition-property: background-color
   &:hover
     background: #000
   svg
@@ -144,6 +147,8 @@
       fill: #fff
   strong
     margin-left: 0.25rem
+    transition-duration: $speed
+    transition-property: color
   &.is-twitter
     background: $twitter
     color: #fff
@@ -161,6 +166,14 @@
   margin-bottom: 4rem
 
 .post-pagination-link
+  line-height: 1.6
+  margin: -6px -12px -4px
+  padding: 6px 12px 4px
+  transition-duration: $speed
+  transition-property: background-color, color
+  strong
+    transition-duration: $speed
+    transition-property: color
   &:hover
     background: var(--colorLink)
     color: var(--colorLinkInvert)
@@ -169,7 +182,6 @@
   &.is-next
     font-size: 1.4rem
     display: inline-block
-    line-height: 1.2
     vertical-align: top
     &:hover
       background: var(--colorLink)

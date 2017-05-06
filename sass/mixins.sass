@@ -1,3 +1,9 @@
+%title
+  font-family: $family-secondary
+  line-height: 1.4
+  font-weight: 600
+  letter-spacing: -0.04em
+
 =center
   align-items: center
   display: flex
@@ -75,7 +81,7 @@
 =underline($background: black)
   position: relative
   &:after
-    background: var(--colorTitle)
+    background-color: var(--colorTitle)
     content: ""
     display: block
     left: 0
@@ -99,8 +105,10 @@
 
 =visited
   border-bottom-color: var(--colorLink)
+  transition-duration: $speed
+  transition-property: background-color, color
   &:hover
-    background: var(--colorLink)
+    background-color: var(--colorLink)
     border-bottom-color: var(--colorLink)
     color: var(--colorLinkInvert)
     text-decoration: none
@@ -108,7 +116,7 @@
     border-bottom-color: var(--visited)
     color: var(--visited)
     &:hover
-      background: var(--visited)
+      background-color: var(--visited)
       border-bottom-color: var(--visited)
       color: var(--visitedInvert)
 

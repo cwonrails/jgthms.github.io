@@ -63,17 +63,63 @@
   width: 4rem
 
 .item-title
+  @extend %title
   color: var(--colorTextStrong)
-  font-size: 1.4em
+  font-size: 2em
   line-height: 1.2
   a
     +visited
-    padding: 2px 0
+    display: block
+    margin: -0.375em -0.5em
+    padding: 0.375em 0.5em
+
+.item-box
+  @extend %title
+  color: var(--colorTextStrong)
+  font-size: 2em
+  line-height: 1.2
+
+.item-box-link
+  display: block
+  margin: -0.5em
+  padding: 0.5em
+  position: relative
+  transform-origin: center
+  transition-duration: $speed
+  transition-property: box-shadow, transform
+  &:visited
+    color: var(--visited)
+    &:hover
+      .item-box-background
+        background-color: var(--visited)
+        color: var(--visitedInvert)
+  &:hover
+    color: var(--colorLinkInvert)
+    transform: scale(1.04)
+    .item-box-background
+      background-color: var(--colorLink)
+      box-shadow: 0 0.5em 1em rgba(black, 0.2)
+      transform: scale(1.07, 1.14)
+
+.item-box-background
+  +overlay
+  box-shadow: 0 0.05em 0.1em rgba(black, 0)
+  transform-origin: center
+  transition-duration: $speed
+  transition-property: box-shadow, transform
+  will-change: box-shadow
+
+.item-box-text
+  position: relative
+
+.item-introduction
+  margin-top: 0.5em
 
 .item-link
   a
     +visited
-    padding: 2px 0
+    margin: -0.25em -0.5em -0.375em
+    padding: 0.25em 0.5em 0.375em
 
 .item-icons
   align-items: center

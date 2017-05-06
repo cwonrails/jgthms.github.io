@@ -32,8 +32,11 @@
           </p>
         </div>
         <div class="column {% if post.recommended == true %}is-6{% else %}is-6{% endif %}">
-          <h2 class="item-title">
-            <a href="{{post.url}}">{{post.title}}</a>
+          <h2 class="item-box">
+            <a class="item-box-link" href="{{post.url}}">
+              <span class="item-box-background"></span>
+              <span class="item-box-text">{{post.title}}</span>
+            </a>
           </h2>
           {% if post.introduction %}
             <p class="item-introduction">{{post.introduction}}</p>
