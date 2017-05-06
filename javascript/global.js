@@ -42,8 +42,14 @@ document.addEventListener('DOMContentLoaded', function() {
     $title.innerHTML = title;
     $root.classList.add('is-hovering');
     var color = $el.dataset.color;
+    var background = $el.dataset.background;
     if (color) {
       $root.style.setProperty(`--colorLink`, color);
+    }
+    if (background) {
+      $root.style.setProperty(`--colorLink`, '#fff');
+      $root.style.setProperty(`--colorLinkInvert`, background);
+      return;
     }
     if ($el.dataset.invert) {
       $root.style.setProperty(`--colorLinkInvert`, 'rgba(0,0,0,0.71)');

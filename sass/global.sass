@@ -29,14 +29,17 @@
   position: fixed
   text-align: justify
   text-transform: uppercase
+  transform: scale(1.04)
+  transform-origin: center
   transition-duration: 294ms
-  transition-property: background-color
+  transition-property: background-color, transform
   word-break: break-all
   html.is-hovering &
     background: var(--colorLink)
     color: var(--colorLinkInvert)
     mix-blend-mode: multiply
     opacity: 1
+    transform: scale(1)
     z-index: 86
 
 .list
