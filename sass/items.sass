@@ -23,6 +23,8 @@
     font-size: 1.6rem
     margin-top: 4em
     padding: 2em 0
+    & + &
+      margin-top: -4em
 
 .item-background
   +overlay
@@ -80,14 +82,13 @@
   line-height: 1.2
 
 .item-box-link
-  display: block
-  margin: -0.5em
-  padding: 0.5em
+  display: inline-block
   position: relative
   transform: scale(1)
   transform-origin: center
   transition-duration: $speed
   transition-property: transform
+  will-change: text-shadow, transform
   &:visited
     color: var(--visited)
     &:hover
@@ -96,19 +97,30 @@
         color: var(--visitedInvert)
   &:hover
     color: var(--colorLinkInvert)
-    transform: scale(1.04)
+    text-shadow: 0.125em 0.25em 0.5em rgba(black, 0.2)
     .item-box-background
       background-color: var(--colorLink)
       box-shadow: 0 0.5em 1em rgba(black, 0.2)
-      transform: scale(1.07, 1.14)
+      opacity: 1
+  +tablet
+    &:hover
+      transform: scale(1.04)
+      .item-box-background
+        transform: scale(1.07, 1.14)
 
 .item-box-background
-  +overlay
+  +overlay(-0.5em)
   box-shadow: 0 0.05em 0.1em rgba(black, 0)
+  opacity: 0
   transform-origin: center
   transition-duration: $speed
-  transition-property: box-shadow, transform
+  transition-property: box-shadow, opacity, transform
   will-change: box-shadow
+  &:before
+    +overlay
+    background-image: linear-gradient(171deg, rgba(white, 0.2), rgba(white, 0) 53%)
+    content: ""
+    display: block
 
 .item-box-text
   position: relative
@@ -172,18 +184,26 @@
 
 #the-lost-art-of-visited-links
   background-color: $purple
+  .item-box-link:hover
+    color: $purple
 
 #wikipedia-redesign
   background-color: hsl(0, 0%, 20%)
+  .item-box-link:hover
+    color: hsl(0, 0%, 20%)
 
 #css-interview-questions-and-answers
   background-color: $articles
+  .item-box-link:hover
+    color: $articles
 
 #why-hn-doesnt-need-a-redesign
   background-color: #f60
+  .item-box-link:hover
+    color: #f60
 
 #the-2-options-toggle-button
-  background: #eee
+  background-color: #eee
   --colorText: #{$text}
   --colorTextLight: #{$text-light}
   --colorLink: #{$articles}
@@ -202,9 +222,15 @@
 
 #organized-gmail-inbox
   background-color: #dd5347
+  .item-box-link:hover
+    color: #dd5347
 
 #the-grey-period
   background-color: #777
+  .item-box-link:hover
+    color: #777
 
 #firefox-perfect-address-bar
   background-color: #0c99d5
+  .item-box-link:hover
+    color: #0c99d5

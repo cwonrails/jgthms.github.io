@@ -43,7 +43,6 @@ html.is-index
     cursor: help
 
 .hello a
-  color: $improbable
   display: inline-block
   position: relative
   transform: scale(1)
@@ -53,46 +52,50 @@ html.is-index
   strong
     color: currentColor
   .item-box-background
-    bottom: -7%
-    left: -4%
-    right: -4%
-    top: -7%
+    bottom: -0.25em
+    left: -0.25em
+    right: -0.25em
+    top: -0.25em
   &:hover
-    transform: scale(1.04)
     z-index: 96
     .item-box-background
       background-color: $white
       box-shadow: 0 0.5em 1em rgba(black, 0.2)
-      transform: scale(1.07, 1.14)
+      opacity: 1
+  +tablet
+    &:hover
+      transform: scale(1.04)
+      .item-box-background
+        transform: scale(1.07, 1.14)
 
 .hello a.is-improbable
-  .item-box-background
-    bottom: -7%
-    left: -4%
-    right: -4%
-    top: -7%
+  color: $improbable
+//   .item-box-background
+//     bottom: -7%
+//     left: -4%
+//     right: -4%
+//     top: -7%
 
 .hello a.is-marksheet
   .item-box-background
-    left: -7%
-    right: -7%
+    left: -0.5em
+    right: -0.5em
 
 .hello a.is-bulma
   .item-box-background
-    left: -14%
-    right: -14%
+    left: -0.5em
+    right: -0.5em
 
-.hello a.is-web4min
-  .item-box-background
-    left: -2%
-    right: -2%
+// .hello a.is-web4min
+//   .item-box-background
+//     left: -2%
+//     right: -2%
 
 .hello a.is-codeatuni
   .item-box-background
-    bottom: -21%
-    left: -14%
-    right: -14%
-    top: -21%
+    bottom: -0.375em
+    left: -0.5em
+    right: -0.5em
 
 +desktop
   .hello

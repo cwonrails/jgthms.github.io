@@ -28,11 +28,13 @@
   pointer-events: none
   position: fixed
   text-align: justify
+  // text-shadow: 0.125em 0.25em 0.5em rgba(black, 0.2)
   text-transform: uppercase
   transform: scale(1.04)
   transform-origin: center
   transition-duration: 294ms
-  transition-property: background-color, transform
+  transition-property: background-color, opacity, transform
+  will-change: background-color, opacity, text-shadow, transform
   word-break: break-all
   html.is-hovering &
     background: var(--colorLink)
