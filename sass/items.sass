@@ -92,15 +92,14 @@
   &:visited
     color: var(--visited)
     &:hover
+      color: var(--visitedInvert)
       .item-box-background
         background-color: var(--visited)
-        color: var(--visitedInvert)
   &:hover
     color: var(--colorLinkInvert)
     text-shadow: 0.125em 0.25em 0.5em rgba(black, 0.2)
     .item-box-background
       background-color: var(--colorLink)
-      box-shadow: 0 0.5em 1em rgba(black, 0.2)
       opacity: 1
   +tablet
     &:hover
@@ -110,12 +109,13 @@
 
 .item-box-background
   +overlay(-0.5em)
-  box-shadow: 0 0.05em 0.1em rgba(black, 0)
+  box-shadow: 0 0.5em 1em rgba(black, 0.2)
+  // box-shadow: 0 0.05em 0.1em rgba(black, 0.2)
   opacity: 0
   transform-origin: center
   transition-duration: $speed
-  transition-property: box-shadow, opacity, transform
-  will-change: box-shadow
+  transition-property: opacity, transform
+  will-change: opacity, transform
   &:before
     +overlay
     background-image: linear-gradient(171deg, rgba(white, 0.2), rgba(white, 0) 53%)
@@ -124,6 +124,7 @@
 
 .item-box-text
   position: relative
+  word-break: break-word
 
 .item-introduction
   margin-top: 0.5em

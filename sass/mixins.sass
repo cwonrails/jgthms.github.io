@@ -42,17 +42,15 @@
   position: relative
   &:before
     +overlay
-    background: $color
+    background-color: $color
     border-radius: 290486px
+    box-shadow: 0 0.5em 1em rgba(black, 0.2)
     content: " "
     display: block
     opacity: 0
   &:hover
     &:before
       animation: jelly-pop 1000ms linear both
-    svg
-      path
-        fill: #fff
 
 =scrollbar($thumb: $visited, $background: $border, $width: 10px)
   -webkit-overflow-scrolling: touch

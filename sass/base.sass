@@ -18,15 +18,13 @@
     --sizeBody: 22px
 
 html
-  background: var(--bodyBackground)
+  background-color: var(--bodyBackground)
   font-size: var(--sizeBody)
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
   min-width: 320px
   overflow-y: scroll
   text-rendering: optimizeLegibility
-  transition-duration: $speed
-  transition-property: background
   --colorLink: #{$pink}
   --colorLinkInvert: #{$pink-invert}
   &.is-articles,
@@ -95,5 +93,5 @@ pre
   word-wrap: normal
 
 +selection
-  background: var(--colorLink)
+  background-color: var(--colorLink)
   color: var(--colorLinkInvert)
