@@ -76,18 +76,19 @@
     \::selection
       @content
 
-=underline($background: black)
+=underline
   position: relative
   &:after
-    background-color: var(--colorTitle)
+    background-color: currentColor
     content: ""
     display: block
     left: 0
-    height: 2px
+    height: 1px
     opacity: 0
     position: absolute
     top: 100%
     transform: scaleX(0) translateY(4px)
+    transform-origin: center left
     transition: none $speed $easing
     transition-property: opacity, transform
     width: 100%
@@ -95,7 +96,7 @@
   &.is-active
     text-decoration: none
     &:after
-      opacity: 0.1
+      opacity: 1
       transform: scaleX(1) translateY(4px)
 
 @function specialGradient($first, $second)

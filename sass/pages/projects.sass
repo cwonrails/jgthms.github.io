@@ -1,22 +1,27 @@
-=project($background, $color, $link, $color-light: $color, $color-strong: $link)
+=project($background, $color, $link, $color-light: $color, $color-strong: $link, $link-hover: $background)
   --projectBackground: $background
   --projectColor: $color
   --projectColorLight: $color-light
   --projectColorStrong: $color-strong
   --projectLink: $link
+  --projectLinkHover: $link-hover
 
 .project
-  background: var(--projectBackground)
+  background-color: var(--projectBackground)
   color: var(--projectColor)
   margin-bottom: 0
   padding: 2rem 1rem
+  .item-box-link
+    color: var(--projectLink)
+    z-index: 2
+    &:hover
+      color: var(--projectLinkHover)
+  .item-box-background
+    background-color: $white !important
   .item-link a
     &,
     &:visited
-      color: var(--projectLink)
-      &:hover
-        background: var(--projectColorStrong)
-        color: var(--projectBackground)
+      color: var(--projectColorLight)
   .item-info
     color: var(--projectColorLight)
   .item-title
@@ -39,22 +44,19 @@ $ivan-text: #4d4d4d
 $ivan-title: #1b1e21
 
 .project--ivan-ballini
-  +project($ivan-background, $ivan-text, $ivan-link, $ivan-text, #000)
+  +project($ivan-background, #000, $ivan-link, $ivan-text, #000, $ivan-link)
 
 .project--css-off-2013
-  +project(#cdc9dd, #6e6c77, #fff, #6e6c77, #000)
+  +project(#cdc9dd, #000, #fff, #6e6c77, #000)
 
 .project--juketube
-  +project(#cdc9dd, #6e6c77, #fff, #6e6c77, #000)
-
-.project--juketube
-  +project(#eee, #888, #df1f1f, #22242a, #000)
+  +project(#eee, #22242a, #df1f1f, #888, #000, #df1f1f)
 
 .project--bbxdesign
-  +project(#f5574c, rgba(#fff, 0.71), #fff)
+  +project(#f5574c, #fff, #fff, rgba(#fff, 0.71))
 
 .project--cambodia-vietnam-2010
-  +project(#dacfb1, #6b6450, #914839, #485c39, #3b5757)
+  +project(#dacfb1, #6b6450, #914839, #485c39, #3b5757, #914839)
 
 .project--yeek
   +project(#eeeff2, #4c566c, #0589f5, #040404)
@@ -81,3 +83,5 @@ $ivan-title: #1b1e21
     display: flex
     min-height: 100vh
     padding: 4rem
+    .item-image
+      height: 210px

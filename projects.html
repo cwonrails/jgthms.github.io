@@ -79,7 +79,7 @@ projects:
 
 - name: Cambodia Vietnam 2010
   device: macbook-air
-  url: http://cambodiavietnam2010.com
+  url: http://jgthms.com/cambodia-vietnam-2010/
   slug: cambodia-vietnam-2010
   date: April 2012
   content: >
@@ -137,8 +137,11 @@ projects:
         </div>
 
         <div class="column is-5">
-          <h2 class="item-title projects-title">
-            {{project.name}}
+          <h2 class="item-box projects-title">
+            <a class="item-box-link" href="{{project.url}}">
+              <span class="item-box-background"></span>
+              <span class="item-box-text">{{project.name}}</span>
+            </a>
           </h2>
 
           <p class="item-link">
